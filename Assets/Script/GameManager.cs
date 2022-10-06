@@ -7,18 +7,33 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-   
-    // Start is called before the first frame update
-    void Awake()
+    public enum GameMode
     {
+        MainMenu,
+        Ingame,
+        Credits
+    };
 
+    public GameMode currentGameMode;
+
+    public Animator levelChangeAnimator;
+
+    private string _nextSceneToLoad;
+    
+
+    public void SwitchScene(string _sceneNameToLoad)
+    {
+        levelChangeAnimator.SetTrigger("FadeOut");
+        _nextSceneToLoad = _sceneNameToLoad;
     }
 
-    void Start()
+    public void SceneFadeComplete()
     {
-
-
-
+        SceneManager.LoadScene(_nextSceneToLoad);
+    }
+    public void Quit()
+    {
+        Application.Quit();
     }
 
 }
