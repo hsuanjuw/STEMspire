@@ -6,7 +6,7 @@ using TMPro;
 using System.IO;
 using System.Linq;
 
-public class DialogueSystem : MonoBehaviour
+public class DialogueSystemVer1 : MonoBehaviour
 {
     public TextMeshProUGUI text;
     public static List<string> dialogues;
@@ -32,7 +32,7 @@ public class DialogueSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void StartDialogue(string path, Sprite npcSprite)
@@ -60,9 +60,9 @@ public class DialogueSystem : MonoBehaviour
 
     public void NextLine()
     {
-        Debug.Log("dialogues.Count:"+dialogues.Count);
+        Debug.Log("dialogues.Count:" + dialogues.Count);
         Debug.Log("dialogueNum:" + dialogueNum);
-        if (dialogueNum < dialogues.Count - 1 )
+        if (dialogueNum < dialogues.Count - 1)
         {
             dialogueNum++;
             if (dialogueNum == 1)
@@ -93,7 +93,7 @@ public class DialogueSystem : MonoBehaviour
     {
         dialogues = File.ReadAllLines(path).ToList();
 
-        foreach ( string d in dialogues)
+        foreach (string d in dialogues)
         {
             Debug.Log(d);
         }
@@ -112,5 +112,4 @@ public class DialogueSystem : MonoBehaviour
         dialoguePanel.SetActive(false);
         dialogueOpened = false;
     }
-
 }

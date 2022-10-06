@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Fireball
+  - ElectricTop
+  - ElectricBottom
+  - Screw
   layers:
   - Default
   - TransparentFX
@@ -11,11 +15,11 @@ TagManager:
   - 
   - Water
   - UI
+  - Dialogue
   - 
   - 
   - 
-  - 
-  - 
+  - BlackOutImage
   - 
   - 
   - 
@@ -40,4 +44,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 116122357
+    locked: 0
+  - name: BlackOut
+    uniqueID: 1530721597
     locked: 0

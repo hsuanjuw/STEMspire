@@ -1,46 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RPGM.Gameplay;
 
 public class NpcHandler : MonoBehaviour
 {
-    public int npcType;
-    public string npcTypeStr; 
-    private string dialoguePath;
+    private Sprite npcSprite;
 
     private DialogueSystem dialogueSystem;
-    private Player player;
+    private ConversationScript conversation;
 
+    private bool hasTask;
 
     // Start is called before the first frame update
     void Start()
     {
         dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
-        player = GameObject.FindObjectOfType<Player>();
-        npcTypeToString();
-        dialoguePath = "Assets/Dialogues/NPC/" + npcTypeStr + "_dialogue1.txt";
+        conversation = this.GetComponentInChildren<ConversationScript>();
+        npcSprite = GetComponentInParent<SpriteRenderer>().sprite;
+        if (this.GetComponentInChildren<Task>())
+        {
+            hasTask = true;
+        }
+        else
+        {
+            hasTask = false;
+        }
+
     }
 
-    private void npcTypeToString()
-    {
-        switch (npcType)
-        {
-            case 1:
-                npcTypeStr = "type1";
-                break;
-            case 2:
-                npcTypeStr = "type2";
-                break;
-        }
-    }
 
     public void OnMouseDown()
     {
         Debug.Log("clicked");
         if (!dialogueSystem.dialogueOpened)
         {
-            Vector2 npcPos = new Vector2(this.transform.position.x - 1f, this.transform.position.y);
-            dialogueSystem.StartDialogue(dialoguePath, this.gameObject.GetComponent<SpriteRenderer>().sprite);
+            dialogueSystem.StartDialogue(conversation, npcSprite, hasTask);
         }
     }
 }

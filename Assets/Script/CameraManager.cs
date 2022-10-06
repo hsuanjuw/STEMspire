@@ -11,14 +11,15 @@ public class CameraManager : MonoBehaviour
     {
         targetPlayer = GameObject.FindObjectOfType<Player>().transform;
         //cameraOffset = this.transform.position - targetPlayer.position;
-        cameraOffset = this.transform.position - new Vector3(0.06f, -2.73f, 0);
+        cameraOffset = this.transform.position - new Vector3(54f, -2.73f, 0); // offset count when player is in the middle
 
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        if (targetPlayer.position.x >= 0.06f && targetPlayer.position.x <= 71.81f)
+        //71.81
+        if (targetPlayer.position.x >= 0.06f && targetPlayer.position.x <= 54f)
         {
             this.transform.position = targetPlayer.position + cameraOffset;
         }
