@@ -8,8 +8,10 @@ public class Screws : MonoBehaviour
     public GameObject screwLong;
     public float timeGap = 10f; // Every 10f, a screw loosen
     [HideInInspector] public bool isFixed; // For future use
+    [HideInInspector] public bool gameStart;
 
     private MiniGameManager miniGameManager;
+    Coroutine gameCoroutine;
 
     // Start is called before the first frame update
     void Start()
@@ -28,13 +30,18 @@ public class Screws : MonoBehaviour
 
     public void StartGame()
     {
-        StartCoroutine(ScrewLoose());
+        gameStart = true;
+        gameCoroutine = StartCoroutine(ScrewLoose());
     }
 
     public IEnumerator ScrewLoose()
     {
         for (int i = 0; i < 4; i++)
         {
+            if (!gameStart)
+            {
+                break;
+            }
             yield return new WaitForSeconds(timeGap);
             screws[i].SetActive(false);
             float z;
@@ -63,5 +70,11 @@ public class Screws : MonoBehaviour
         {
             screws[i].SetActive(true);
         }
+    }
+
+    public void EndGame()
+    {
+        gameStart = false;
+        StopCoroutine(gameCoroutine);
     }
 }

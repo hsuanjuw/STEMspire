@@ -10,12 +10,14 @@ public class Player : MonoBehaviour
     public Vector2 npcPosition;
     private MiniGameManager miniGameManager;
     private Vector3 originalPos;
+    private DialogueSystem dialogueSystem;
 
 
     // Start is called before the first frame update
     void Start()
     {
         miniGameManager = GameObject.FindObjectOfType<MiniGameManager>();
+        dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
 /*        if (SceneManager.GetActiveScene().name == "SpaceStation")
         {
             this.transform.position
@@ -25,7 +27,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if (!dialogueSystem.dialogueOpened)
+        {
+            Move();
+        }
+        
     }
     
     public void Move()
@@ -48,7 +54,11 @@ public class Player : MonoBehaviour
     {
         if (col.gameObject.name == "EnterSpaceStationTrigger")
         {
-            miniGameManager.EnterSpaceStation();
+            miniGameManager.EnterSpaceStation(1);
+        }
+        if (col.gameObject.name == "EnterSpaceStationTrigger2")
+        {
+            miniGameManager.EnterSpaceStation(2);
         }
     }
 

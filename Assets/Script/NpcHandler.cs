@@ -32,10 +32,10 @@ public class NpcHandler : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Debug.Log("clicked");
+        //Debug.Log("clicked");
         if (!dialogueSystem.dialogueOpened)
         {
-            dialogueSystem.StartDialogue(conversation, npcSprite, hasTask);
+            dialogueSystem.StartDialogue(conversation, hasTask);
         }
     }
 }

@@ -29,13 +29,15 @@ public class DialogueSystem : MonoBehaviour
 
     public int currentConvIndex; // record which conversation we are at
 
-    
+
+    private void Awake()
+    {
+        dialogueOpened = false;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        text.text = string.Empty;
-        dialogueOpened = false;
         if (SceneManager.GetActiveScene().name == "SpaceStation")
         {
             StartDialogueIntro();
@@ -45,38 +47,47 @@ public class DialogueSystem : MonoBehaviour
 
     public void StartDialogueIntro()
     {
-        hasTask = false;
+        conversation = this.transform.GetChild(0).GetComponent<ConversationScript>();
+        /*hasTask = false;
         npcImage.sprite = guideRobotSprite;
-        //Debug.Log(conversation.items[0].text);
         currentConvIndex = 0;
-        bool isEnd = checkEndConversation();
+        bool isEnd = CheckEndConversation();
         OpenDialoguePanel(isEnd);
-        StartCoroutine(TypeLine(conversation.items[currentConvIndex].text, isEnd));
-        
+        StartCoroutine(TypeLine(conversation.items[currentConvIndex].text, isEnd));*/
+
+        StartDialogue(conversation, false);
     }
 
-    public void StartDialogue(ConversationScript npcConversation, Sprite sprite, bool _hasTask)
+    public void StartDialogue(ConversationScript npcConversation, bool _hasTask)
     {
         hasTask = _hasTask;
         conversation = npcConversation;
         //Debug.Log(conversation.items[0].text);
         currentConvIndex = 0;
-        bool isEnd = checkEndConversation();
-        npcImage.sprite = sprite;
+        bool isEnd = CheckEndConversation();
+        npcImage.sprite = conversation.items[currentConvIndex].image;
         OpenDialoguePanel(isEnd);
         StartCoroutine(TypeLine(conversation.items[currentConvIndex].text, isEnd));
     }
 
     private IEnumerator TypeLine(string dialogue, bool isEnd)
     {
+        Debug.Log("Type1");
         foreach (char c in dialogue.ToCharArray())
         {
-            text.text += c;
+            if (c == '\r' || c == '\n')
+            {
+                text.text += " ";
+            }
+            else
+            {
+                text.text += c;
+            }
             yield return new WaitForSeconds(textSpeed);
         }
         if (!isEnd)
         {
-            DisplayOption();
+            StartCoroutine(DisplayOption());
         }
         else
         {
@@ -86,8 +97,9 @@ public class DialogueSystem : MonoBehaviour
 
     }
 
-    private IEnumerator TypeLine(string dialogue, Sprite sprite)
+    private IEnumerator TypeLine(string dialogue, Sprite sprite) // pc talking
     {
+        Debug.Log("Type2");
         yield return new WaitForSeconds(2f);
         text.text = string.Empty;
         npcImage.gameObject.SetActive(false);
@@ -96,7 +108,13 @@ public class DialogueSystem : MonoBehaviour
 
         foreach (char c in dialogue.ToCharArray())
         {
-            text.text += c;
+            if (c == '\r' || c == '\n') {
+                text.text += " ";
+            }
+            else {
+                text.text += c;
+            }
+            
             yield return new WaitForSeconds(textSpeed);
         }
         yield return new WaitForSeconds(2f);
@@ -118,7 +136,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void NextLine(int optionNum)
     {
-        for (int i = currentConvIndex; i < conversation.items.Count; i++)
+        for (int i = 0; i < conversation.items.Count; i++)
         {
             if(conversation.items[i].id == conversation.items[currentConvIndex].options[optionNum].targetId)
             {
@@ -128,12 +146,23 @@ public class DialogueSystem : MonoBehaviour
         }
         option1Btn.gameObject.SetActive(false);
         option2Btn.gameObject.SetActive(false);
-        bool isEnd = checkEndConversation();
-        text.text = string.Empty;
-        StartCoroutine(TypeLine(conversation.items[currentConvIndex].text, isEnd));
+        Debug.Log(conversation.items[currentConvIndex].text);
+        if (conversation.items[currentConvIndex].text == "")
+        {
+            CloseDialoguePanel();
+            // do task
+        }
+        else
+        {
+            bool isEnd = CheckEndConversation();
+            npcImage.sprite = conversation.items[currentConvIndex].image;
+            text.text = string.Empty;
+            StartCoroutine(TypeLine(conversation.items[currentConvIndex].text, isEnd));
+        }
+
     }
 
-    public bool checkEndConversation()
+    public bool CheckEndConversation() // No option
     {
         if (conversation.items[currentConvIndex].options.Count == 0)
         {
@@ -145,11 +174,21 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
-    public void DisplayOption()
+
+    public IEnumerator DisplayOption()
     {
         if (conversation.items[currentConvIndex].options.Count == 1)
         {
-            StartCoroutine(TypeLine(conversation.items[currentConvIndex].options[0].text, conversation.items[currentConvIndex].options[0].image));
+            if (conversation.items[currentConvIndex].options[0].text == "")
+            {
+                yield return new WaitForSeconds(1f);
+                NextLine(0);
+            }
+            else
+            {
+                yield return new WaitForSeconds(2f);
+                StartCoroutine(TypeLine(conversation.items[currentConvIndex].options[0].text, conversation.items[currentConvIndex].options[0].image));
+            }
         }
         else
         {
@@ -187,8 +226,7 @@ public class DialogueSystem : MonoBehaviour
         if (hasTask)
         {
             actionbtn.SetActive(true);
-        }
-        
+        }   
     }
 
 }

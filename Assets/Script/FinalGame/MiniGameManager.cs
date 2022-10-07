@@ -7,11 +7,12 @@ using UnityEngine.SceneManagement;
 
 public class MiniGameManager : MonoBehaviour
 {
-    private DialogueSystem dialogueSystem;
+    private StoryManager storyManager;
     private SpawnFireballs spawnFireBalls;
     private Camera mainCamera;
     private Player player;
     private bool gameStarted;
+    private bool gamePlayed;
     private bool isCameraShake;
     public bool isCameraUp;
     private Analytic analytic;
@@ -38,7 +39,7 @@ public class MiniGameManager : MonoBehaviour
     void Start()
     {
         mainCamera = Camera.main;
-        dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
+        storyManager = GameObject.FindObjectOfType<StoryManager>();
         spawnFireBalls = GameObject.FindObjectOfType<SpawnFireballs>();
         player = GameObject.FindObjectOfType<Player>();
         analytic = GameObject.FindObjectOfType<Analytic>();
@@ -94,6 +95,7 @@ public class MiniGameManager : MonoBehaviour
             yield return new WaitForSeconds(.5f);
         }
         isCameraShake = false;
+        mainCamera.transform.eulerAngles = new Vector3(0f, 0f, 0f);
         // sth cracking??
         spawnFireBalls.CallStartFireballs();
         StartMiniGame();
@@ -110,7 +112,7 @@ public class MiniGameManager : MonoBehaviour
             mainCamera.transform.Rotate(new Vector3(0, 0, -cameraShakeSpeed * Time.deltaTime));
         }
 
-        Debug.Log(mainCamera.transform.eulerAngles.z);
+        
         if (mainCamera.transform.eulerAngles.z > 1.0f && mainCamera.transform.eulerAngles.z < 2.0f)
         {
             isCameraUp = false;
@@ -135,14 +137,27 @@ public class MiniGameManager : MonoBehaviour
         player.ResetPosition();
 
         FailImage.SetActive(false);
-        dialogueSystem.StartDialogueIntro();
-
+        //dialogueSystem.StartDialogueIntro();
+        storyManager.NextStatus();
+        EndMiniGame();
         Debug.Log("Restart");
+        gameStarted = false;
     }
 
-    public void EnterSpaceStation()
+    public void EnterSpaceStation(int num)
     {
-        SceneManager.LoadScene("SpaceStation");
+        if (!gameStarted)
+        {
+            if (num == 1)
+            {
+                SceneManager.LoadScene("SpaceStation");
+            }
+            else
+            {
+                SceneManager.LoadScene("SpaceStation" + num.ToString());
+            }
+        }
+
     }
 
     private void StartMiniGame()
@@ -151,5 +166,13 @@ public class MiniGameManager : MonoBehaviour
         screws.StartGame();
         systems.StartGame();
         power.StartGame();
+    }
+
+    private void EndMiniGame()
+    {
+        wheel.EndGame();
+        screws.EndGame();
+        systems.EndGame();
+        power.EndGame();
     }
 }

@@ -4,9 +4,5 @@ using UnityEngine;
 
 public class GameData : MonoBehaviour
 {
-    public int SceneNum;
-
-    public GameObject[] NPCs;
-
-
+    public int GameNum;
 }

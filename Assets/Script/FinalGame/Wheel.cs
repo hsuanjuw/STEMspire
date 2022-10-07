@@ -14,7 +14,7 @@ public class Wheel : MonoBehaviour
 
     private float time;
 
-
+    Coroutine gameCoroutine;
     void Start()
     {
         lastBtnClickedNum = 0;
@@ -39,7 +39,7 @@ public class Wheel : MonoBehaviour
 
     public void StartGame()
     {
-        StartCoroutine(StartNumFlash());
+        gameCoroutine = StartCoroutine(StartNumFlash());
     }
 
     public void ButtonClicked( int btnClickedNum)
@@ -120,8 +120,8 @@ public class Wheel : MonoBehaviour
         }
         else
         {
-            gameStarted = false;
             Debug.Log("Wheel Failure");
+            EndGame();
         }
         Text text = GameObject.Find("WheelCountDownTxt").GetComponent<Text>();
         DisplayTime(time, text);
@@ -130,5 +130,11 @@ public class Wheel : MonoBehaviour
     {
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         timeText.text = string.Format("{0:00}", seconds);
+    }
+
+    public void EndGame()
+    {
+        gameStarted = false;
+        StopCoroutine(gameCoroutine);
     }
 }

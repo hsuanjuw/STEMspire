@@ -39,8 +39,7 @@ public class Power : MonoBehaviour
             if (failCountTop == 3 || failCountBottom == 2)
             {
                 Debug.Log("Power Failure");
-                gameStart = false;
-                switchTimeStart = false;
+                EndGame();
             }
             if (switchTimeStart)
             {
@@ -78,6 +77,12 @@ public class Power : MonoBehaviour
         leftSwitchTime = 10f;
         rightSwitchTime = 15f;
         switchTimeStart = true;
+    }
+
+    public void EndGame()
+    {
+        gameStart = false;
+        switchTimeStart = false;
     }
 
     private void TimeReStart(string type)

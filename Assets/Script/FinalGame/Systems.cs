@@ -15,6 +15,8 @@ public class Systems : MonoBehaviour
     private bool timeStart = false;
     private bool gameStart = false;
 
+    Coroutine gameCoroutine;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +36,7 @@ public class Systems : MonoBehaviour
     public void StartGame()
     {
         gameStart = true;
-        StartCoroutine(ShowSymbols());
+        gameCoroutine = StartCoroutine(ShowSymbols());
     }
 
     private IEnumerator ShowSymbols()
@@ -76,7 +78,7 @@ public class Systems : MonoBehaviour
             bool isFail = CheckPatern();
             if (isFail)
             {
-                gameStart = false;
+                EndGame();
                 Debug.Log("Systems failure");
             }
             else
@@ -117,4 +119,10 @@ public class Systems : MonoBehaviour
         }
     }
 
+    public void EndGame()
+    {
+        gameStart = false;
+        timeStart = false;
+        StopCoroutine(gameCoroutine);
+    }
 }

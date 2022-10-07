@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Task : MonoBehaviour
 {
@@ -19,10 +20,10 @@ public class Task : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isStartTask)
+/*        if (isStartTask)
         {
             Follow();
-        }
+        }*/
     }
 
     public void StartTask()
@@ -32,8 +33,7 @@ public class Task : MonoBehaviour
         offsetPos = playerPos - this.transform.parent.position;
         actionbtn.gameObject.SetActive(false);
         isStartTask = true;
-        Debug.Log(this.transform.parent.name);
-        Debug.Log(this.transform.parent.position);
+        SceneManager.LoadScene("Game_2");
     }
 
     public void Follow()
@@ -41,5 +41,12 @@ public class Task : MonoBehaviour
         Player player = GameObject.FindObjectOfType<Player>();
         playerPos = player.transform.position;
         this.transform.parent.position = playerPos - offsetPos;
+    }
+
+    public void StartTask2()
+    {
+        actionbtn.gameObject.SetActive(false);
+
+        SceneManager.LoadScene("Game_3");
     }
 }
