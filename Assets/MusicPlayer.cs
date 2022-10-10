@@ -9,7 +9,31 @@ public class MusicPlayer : MonoBehaviour
     public float raiseVolumeDuration;
     public float muteVolume;
     public float normalVolume;
-  
+    public AudioClip startMusic;
+    public AudioClip finaleMusic;
+    public AudioClip otherMusic;
+
+
+    public void SetStartMusic()
+    {
+        SetMusic(startMusic);
+    }
+
+    public void SetFinaleMusic()
+    {
+        SetMusic(finaleMusic);
+    }
+
+    public void SetOtherMusic()
+    {
+        SetMusic(otherMusic);
+    }
+
+    public void SetMusic(AudioClip clip)
+    {
+        _source.clip = clip;
+        _source.Play();
+    }
     public void StartLoweringVolume()
     {
         StartCoroutine(LowerVolume());
