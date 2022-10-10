@@ -2307,7 +2307,7 @@ SpriteRenderer:
   m_SortingLayerID: 116122357
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: f580580ad18321e40b5b99b4d34d54d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10058,7 +10058,7 @@ SpriteRenderer:
   m_SortingLayerID: 116122357
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: b8869e2469dc898408a6a54d704c8a8d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 211af278745e9924ea04f61dd0e6b824, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10369,7 +10369,10 @@ MonoBehaviour:
   items:
   - id: 1
     text: "I tightened the screws on the protective casing and recalibrated the AFG\r
-      generator so you shouldn\u2019t be randomly flying off anymore. "
+      generator so you shouldn\u2019t be randomly flying off anymore. There are some
+      issues here\r that are too specialized for little ol\u2019 me, though. You\u2019ll
+      need to get someone else\r to fix those unless you want your ship to become
+      a pile of scrap metal. "
     image: {fileID: 21300000, guid: b8869e2469dc898408a6a54d704c8a8d, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -10388,7 +10391,7 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - text: R.C., can you find me another mechanic?
-      image: {fileID: 21300000, guid: f580580ad18321e40b5b99b4d34d54d7, type: 3}
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
       targetId: 3
       enabled: 0
@@ -10405,7 +10408,7 @@ MonoBehaviour:
       enabled: 0
   - id: 4
     text: What about Mechanic 2?
-    image: {fileID: 21300000, guid: b8869e2469dc898408a6a54d704c8a8d, type: 3}
+    image: {fileID: 21300000, guid: 211af278745e9924ea04f61dd0e6b824, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
@@ -10427,12 +10430,12 @@ MonoBehaviour:
       enabled: 0
   - id: 6
     text: "In my experience, Mechanic 2 is a great mechanic.\r"
-    image: {fileID: 21300000, guid: b8869e2469dc898408a6a54d704c8a8d, type: 3}
+    image: {fileID: 21300000, guid: 211af278745e9924ea04f61dd0e6b824, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - text: ' R.C. ... what is wrong with this person?'
-      image: {fileID: 21300000, guid: f580580ad18321e40b5b99b4d34d54d7, type: 3}
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
       targetId: 7
       enabled: 0
@@ -10443,12 +10446,12 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - text: R.C., elaborate...
-      image: {fileID: 21300000, guid: f580580ad18321e40b5b99b4d34d54d7, type: 3}
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
       targetId: 8.1
       enabled: 0
     - text: R.C., wait on the ship
-      image: {fileID: 21300000, guid: f580580ad18321e40b5b99b4d34d54d7, type: 3}
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
       targetId: 8.2
       enabled: 0
@@ -10460,7 +10463,7 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - text: R.C., wait on the ship
-      image: {fileID: 21300000, guid: f580580ad18321e40b5b99b4d34d54d7, type: 3}
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
       targetId: 8.2
       enabled: 0
