@@ -39,6 +39,11 @@ public class Player : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         Vector3 tempVect = new Vector3(h * speed * Time.deltaTime, 0, 0);
         this.transform.position += tempVect;
+        bool facingRight = GetComponent<SpriteRenderer>().flipX;
+        if (facingRight && tempVect.x < 0)
+            GetComponent<SpriteRenderer>().flipX = false;
+        else if(!facingRight && tempVect.x > 0)
+            GetComponent<SpriteRenderer>().flipX = true;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
