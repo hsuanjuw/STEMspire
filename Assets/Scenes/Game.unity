@@ -4145,12 +4145,12 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - text: Fine...
-      image: {fileID: 21300000, guid: f580580ad18321e40b5b99b4d34d54d7, type: 3}
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
     - text: No!
-      image: {fileID: 21300000, guid: f580580ad18321e40b5b99b4d34d54d7, type: 3}
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
@@ -5576,7 +5576,7 @@ SpriteRenderer:
   m_SortingLayerID: 116122357
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: f580580ad18321e40b5b99b4d34d54d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

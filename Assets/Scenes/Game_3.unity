@@ -6108,7 +6108,7 @@ SpriteRenderer:
   m_SortingLayerID: 116122357
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: a1d2c78aa058d734aa8261f5c7b5b70e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc4aeca6c7028ec45bf9d9bc0570884f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6180,7 +6180,7 @@ MonoBehaviour:
   - id: 1
     text: "Oh! You have an Eclipse Runner. Wow... you weren't\r exaggerating about
       the damage. I was mumbling, sorry."
-    image: {fileID: 21300000, guid: a1d2c78aa058d734aa8261f5c7b5b70e, type: 3}
+    image: {fileID: 21300000, guid: cc4aeca6c7028ec45bf9d9bc0570884f, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
@@ -8338,23 +8338,23 @@ MonoBehaviour:
   items:
   - id: 1
     text: ' That did it! You should be good to go!'
-    image: {fileID: 21300000, guid: a1d2c78aa058d734aa8261f5c7b5b70e, type: 3}
+    image: {fileID: 21300000, guid: cc4aeca6c7028ec45bf9d9bc0570884f, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - text: Thank you so much!
-      image: {fileID: 21300000, guid: f580580ad18321e40b5b99b4d34d54d7, type: 3}
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
   - id: 2
     text: ' It was nothing. I didn''t even do that much.'
-    image: {fileID: 21300000, guid: a1d2c78aa058d734aa8261f5c7b5b70e, type: 3}
+    image: {fileID: 21300000, guid: cc4aeca6c7028ec45bf9d9bc0570884f, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - text: Don't sell yourself short. We couldn't have done it without you!
-      image: {fileID: 21300000, guid: f580580ad18321e40b5b99b4d34d54d7, type: 3}
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
       targetId: 3
       enabled: 0
