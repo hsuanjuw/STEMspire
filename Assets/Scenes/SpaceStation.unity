@@ -2036,6 +2036,7 @@ GameObject:
   - component: {fileID: 1176524817}
   - component: {fileID: 1176524819}
   - component: {fileID: 1176524820}
+  - component: {fileID: 1176524821}
   m_Layer: 0
   m_Name: GuideRobot
   m_TagString: Untagged
@@ -2146,6 +2147,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
+--- !u!114 &1176524821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176524816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4119e248802c240a2aa1795cef7a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSpeed: 2
+  leftBound: -20
+  rightBound: 20
+  upBound: 20
+  downBound: 0
+  _currentDirection: {x: 0, y: 0}
 --- !u!1 &1285587890
 GameObject:
   m_ObjectHideFlags: 0
