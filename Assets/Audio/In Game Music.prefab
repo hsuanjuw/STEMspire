@@ -176,8 +176,26 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Music by <a href="https://pixabay.com/users/penguinmusic-24940186/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=14194">penguinmusic</a>
+  m_Text: 'Music by <a href="https://pixabay.com/users/penguinmusic-24940186/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=14194">penguinmusic</a>
     from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=14194">Pixabay</a>
+
+
+    "Phantom
+    from Space" Kevin MacLeod (incompetech.com)
+
+    Licensed under Creative Commons:
+    By Attribution 4.0 License
+
+    http://creativecommons.org/licenses/by/4.0/
+
+
+    "Black
+    Vortex" Kevin MacLeod (incompetech.com)
+
+    Licensed under Creative Commons:
+    By Attribution 4.0 License
+
+    http://creativecommons.org/licenses/by/4.0/'
 --- !u!114 &2977805873057510860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,3 +213,6 @@ MonoBehaviour:
   raiseVolumeDuration: 2
   muteVolume: 0
   normalVolume: 0.2
+  startMusic: {fileID: 8300000, guid: ae1ae915deb9bee4aab7350781200397, type: 3}
+  finaleMusic: {fileID: 8300000, guid: bdf12af3da33a5d4085e897bce3ae7ba, type: 3}
+  otherMusic: {fileID: 8300000, guid: 72b6665c1eef21e4db95acd08fd12ce3, type: 3}

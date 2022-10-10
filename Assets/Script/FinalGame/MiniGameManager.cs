@@ -83,6 +83,7 @@ public class MiniGameManager : MonoBehaviour
 
     private IEnumerator SpaceshipCrack()
     {
+        FindObjectOfType<MusicPlayer>().SetFinaleMusic();
         PostProcessVolume volume = mainCamera.gameObject.GetComponent<PostProcessVolume>();
         isCameraShake = true;
         for (int i = 0; i < 5; i++)
@@ -132,10 +133,11 @@ public class MiniGameManager : MonoBehaviour
     {
         spawnFireBalls.StopSpawning();
         FailImage.SetActive(true);
+        FindObjectOfType<MusicPlayer>().SetOtherMusic();
         yield return new WaitForSeconds(3f);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         player.ResetPosition();
-
+        FindObjectOfType<MusicPlayer>().SetStartMusic();
         FailImage.SetActive(false);
         //dialogueSystem.StartDialogueIntro();
         storyManager.NextStatus();
