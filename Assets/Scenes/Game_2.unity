@@ -11113,7 +11113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1782236667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11170,7 +11170,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4.45}
-  m_SizeDelta: {x: 2105.14, y: 1178.01}
+  m_SizeDelta: {x: 3000, y: 1178.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1810381924
 GameObject:
@@ -11539,7 +11539,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You failed
+  m_Text: 'Temporal Anomaly
+
+    Reverting...'
 --- !u!222 &1838933874
 CanvasRenderer:
   m_ObjectHideFlags: 0
