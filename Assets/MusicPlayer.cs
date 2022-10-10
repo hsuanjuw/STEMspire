@@ -31,8 +31,11 @@ public class MusicPlayer : MonoBehaviour
 
     public void SetMusic(AudioClip clip)
     {
-        _source.clip = clip;
-        _source.Play();
+        if (clip != _source.clip)
+        {
+            _source.clip = clip;
+            _source.Play();  
+        }
     }
     public void StartLoweringVolume()
     {
