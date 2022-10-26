@@ -53,6 +53,11 @@ public class Player : MonoBehaviour
         {
             miniGameManager.CallRestart();
         }
+        else if (col.name == "IntroDialogueTrigger")
+        {
+            dialogueSystem.StartDialogueIntro();
+            Destroy(col.gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)
