@@ -76,8 +76,7 @@ public class Power : MonoBehaviour
 
     public void ResetPower()
     {
-        TimeReStart("Left");
-        TimeReStart("Right");
+        TimeReStart("Both");
         leftFill.ResetFill();
         rightFill.ResetFill();
         currentStatus = MiniGameManager.GameStatus.NotStarted;
@@ -97,6 +96,16 @@ public class Power : MonoBehaviour
                 rightSwitchTimeRemaining = rightSwitchTime;
                 rightOnLight.SetActive(true);
                 rightDangerLight.SetActive(false);
+                DisplayTime(rightSwitchTimeRemaining, GameObject.Find("RCountDownTxt").GetComponent<Text>());
+                break;
+            case "Both":
+                leftSwitchTimeRemaining = leftSwitchTime;
+                leftDangerLight.SetActive(true);
+                leftOnLight.SetActive(false);
+                DisplayTime(leftSwitchTimeRemaining, GameObject.Find("LCountDownTxt").GetComponent<Text>());
+                rightSwitchTimeRemaining = rightSwitchTime;
+                rightOnLight.SetActive(false);
+                rightDangerLight.SetActive(true);
                 DisplayTime(rightSwitchTimeRemaining, GameObject.Find("RCountDownTxt").GetComponent<Text>());
                 break;
             default:

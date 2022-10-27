@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5171305791500529067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5171305791500529066}
+  - component: {fileID: 5171305791500529057}
+  - component: {fileID: 5171305791500529062}
+  - component: {fileID: 5171305791500529063}
+  - component: {fileID: 5171305791500529060}
+  - component: {fileID: 5171305791500529061}
+  m_Layer: 0
+  m_Name: MiniGameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5171305791500529066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5171305791500529067}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5171305791500529057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5171305791500529067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bb86bc597e7ce44910aeedd095dbd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStarted: 0
+  isCameraUp: 0
+  wheel: {fileID: 5171305791500529062}
+  shards: {fileID: 5171305791500529063}
+  systems: {fileID: 5171305791500529060}
+  power: {fileID: 5171305791500529061}
+  cameraShakeSpeed: 3
+  CountdownTxt: {fileID: 0}
+  ErrorTxt: {fileID: 0}
+--- !u!114 &5171305791500529062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5171305791500529067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af18561e864f6e64c94891be26f3595c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentStatus: 0
+  startGame: 0
+  wheelIDs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  numWheels: 5
+  timeAfterGameStart: 40
+  completionTime: 30
+--- !u!114 &5171305791500529063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5171305791500529067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d86ce235aa12ec34bb94b8a375f1a52f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brokenShard: {fileID: 8780710131084472094, guid: b89869b5a333bf84580cedff1b91fc1a, type: 3}
+  timeGap: 10
+  isFixed: 0
+  gameStart: 0
+--- !u!114 &5171305791500529060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5171305791500529067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1020263e81a1ab94ca107080fe558065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentStatus: 0
+  systemSymbols:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  systemInfoSymbols:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  symbolsClicked: 
+  timeAfterGameStart: 20
+  completionTime: 20
+  timeRemaining: 20
+--- !u!114 &5171305791500529061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5171305791500529067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba1e6861f50aab8449a145d97c82c23e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentStatus: 0
+  leftFill: {fileID: 0}
+  rightFill: {fileID: 0}
+  leftOnLight: {fileID: 0}
+  leftDangerLight: {fileID: 0}
+  rightOnLight: {fileID: 0}
+  rightDangerLight: {fileID: 0}
+  leftSwitchTime: 20
+  rightSwitchTime: 30
+  fillSpeed: 1
+  timeAfterGameStart: 1

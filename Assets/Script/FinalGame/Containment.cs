@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Containment : MonoBehaviour
 {
+    public MiniGameManager.GameStatus currentStatus = MiniGameManager.GameStatus.NotStarted;
     private GameObject[] shard;
     public GameObject brokenShard;
     public float timeGap = 10f; // Every 10f, a shard loosen
     [HideInInspector] public bool isFixed; // For future use
-    [HideInInspector] public bool gameStart;
 
     private MiniGameManager miniGameManager;
-    Coroutine gameCoroutine;
 
     // Start is called before the first frame update
     void Start()
@@ -24,15 +23,15 @@ public class Containment : MonoBehaviour
 
     public void StartGame()
     {
-        gameStart = true;
-        gameCoroutine = StartCoroutine(ShardLoose());
+        currentStatus = MiniGameManager.GameStatus.InProgress;
+        StartCoroutine(ShardLoose());
     }
 
     public IEnumerator ShardLoose()
     {
         for (int i = 0; i < shard.Length; i++)
         {
-            if (!gameStart)
+            if (currentStatus != MiniGameManager.GameStatus.InProgress)
             {
                 break;
             }
@@ -54,6 +53,7 @@ public class Containment : MonoBehaviour
             FindObjectOfType<PowerCoreExplosion>().Explode();
             if (i == shard.Length-1)
             {
+                currentStatus = MiniGameManager.GameStatus.Failed;
                 miniGameManager.CallRestart();
             }
         }
@@ -70,8 +70,7 @@ public class Containment : MonoBehaviour
 
     public void EndGame()
     {
-        gameStart = false;
+        currentStatus = MiniGameManager.GameStatus.NotStarted;
         Reset();
-        StopCoroutine(gameCoroutine);
     }
 }
