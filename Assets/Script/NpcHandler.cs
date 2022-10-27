@@ -17,7 +17,7 @@ public class NpcHandler : MonoBehaviour
     {
         dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
         conversation = this.GetComponentInChildren<ConversationScript>();
-        npcSprite = GetComponentInParent<SpriteRenderer>().sprite;
+        npcSprite = GetComponentInChildren<SpriteRenderer>().sprite;
         if (this.GetComponentInChildren<Task>())
         {
             hasTask = true;

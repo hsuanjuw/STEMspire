@@ -15,6 +15,9 @@ public class DialogueSystem : MonoBehaviour
     public TextMeshProUGUI text;
     public Button option1Btn;
     public Button option2Btn;
+    public Button continuePcBtn;
+    public Button continueNpcBtn;
+    public Button closeBtn;
     public Image npcImage;
     public Image pcImage;
     public Sprite guideRobotSprite;
@@ -35,26 +38,19 @@ public class DialogueSystem : MonoBehaviour
         dialogueOpened = false;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        if (SceneManager.GetActiveScene().name == "SpaceStation")
-        {
-            StartDialogueIntro();
-        }
-        //StartDialogueIntro();
+/*        text = GameObject.Find("DialogueText").GetComponent<TextMeshProUGUI>();
+        option1Btn = GameObject.Find("Option1Btn").GetComponent<Button>();
+        option2Btn = GameObject.Find("Option2Btn").GetComponent<Button>();
+        continuePcBtn = GameObject.Find("ContinuePcBtn").GetComponent<Button>();
+        continueNpcBtn = GameObject.Find("ContinueNpcBtn").GetComponent<Button>();
+        closeBtn = GameObject.Find("CloseBtn").GetComponent<Button>();*/
     }
 
     public void StartDialogueIntro()
     {
         conversation = this.transform.GetChild(0).GetComponent<ConversationScript>();
-        /*hasTask = false;
-        npcImage.sprite = guideRobotSprite;
-        currentConvIndex = 0;
-        bool isEnd = CheckEndConversation();
-        OpenDialoguePanel(isEnd);
-        StartCoroutine(TypeLine(conversation.items[currentConvIndex].text, isEnd));*/
-
         StartDialogue(conversation, false);
     }
 
@@ -87,12 +83,11 @@ public class DialogueSystem : MonoBehaviour
         }
         if (!isEnd)
         {
-            StartCoroutine(DisplayOption());
+            DisplayOption();
         }
         else
         {
-            yield return new WaitForSeconds(2f);
-            CloseDialoguePanel();
+            closeBtn.gameObject.SetActive(true);
         }
 
     }
@@ -100,7 +95,6 @@ public class DialogueSystem : MonoBehaviour
     private IEnumerator TypeLine(string dialogue, Sprite sprite) // pc talking
     {
         Debug.Log("Type2");
-        yield return new WaitForSeconds(2f);
         text.text = string.Empty;
         npcImage.gameObject.SetActive(false);
         pcImage.sprite = sprite;
@@ -117,11 +111,8 @@ public class DialogueSystem : MonoBehaviour
             
             yield return new WaitForSeconds(textSpeed);
         }
-        yield return new WaitForSeconds(2f);
 
-        pcImage.gameObject.SetActive(false);
-        npcImage.gameObject.SetActive(true);
-        NextLine(0);
+        continueNpcBtn.gameObject.SetActive(true);
     }
 
     public void option1BtnClicked()
@@ -175,22 +166,20 @@ public class DialogueSystem : MonoBehaviour
     }
 
 
-    public IEnumerator DisplayOption()
+    public void DisplayOption()
     {
         if (conversation.items[currentConvIndex].options.Count == 1)
         {
-            if (conversation.items[currentConvIndex].options[0].text == "")
+            if (conversation.items[currentConvIndex].options[0].text == "") // PC didn't talk, next NPC line
             {
-                yield return new WaitForSeconds(1f);
-                NextLine(0);
+                continueNpcBtn.gameObject.SetActive(true);
             }
-            else
+            else  // PC talk
             {
-                yield return new WaitForSeconds(2f);
-                StartCoroutine(TypeLine(conversation.items[currentConvIndex].options[0].text, conversation.items[currentConvIndex].options[0].image));
+                continuePcBtn.gameObject.SetActive(true);
             }
         }
-        else
+        else  // PC makes choice
         {
             option1Btn.GetComponentInChildren<Text>().text = conversation.items[currentConvIndex].options[0].text;
             option2Btn.GetComponentInChildren<Text>().text = conversation.items[currentConvIndex].options[1].text;
@@ -198,9 +187,18 @@ public class DialogueSystem : MonoBehaviour
             option2Btn.gameObject.SetActive(true);
         }
     }
-    public void BackLine()
+    public void ContinueNpcDialogue()
     {
+        pcImage.gameObject.SetActive(false);
+        npcImage.gameObject.SetActive(true);
+        continueNpcBtn.gameObject.SetActive(false);
+        NextLine(0);
+    }
 
+    public void ContinuePcDialogue()
+    {
+        continuePcBtn.gameObject.SetActive(false);
+        StartCoroutine(TypeLine(conversation.items[currentConvIndex].options[0].text, conversation.items[currentConvIndex].options[0].image));
     }
 
     public void OpenDialoguePanel(bool isEnd)
@@ -210,8 +208,6 @@ public class DialogueSystem : MonoBehaviour
         {
             option1Btn.onClick.AddListener(option1BtnClicked);
             option2Btn.onClick.AddListener(option2BtnClicked);
-            //option1Btn.GetComponentInChildren<Text>().text = conversation.items[currentConvIndex].options[0].text;
-            //option2Btn.GetComponentInChildren<Text>().text = conversation.items[currentConvIndex].options[1].text;
         }
         text.text = string.Empty;
         dialoguePanel.SetActive(true);
@@ -219,10 +215,11 @@ public class DialogueSystem : MonoBehaviour
 
     public void CloseDialoguePanel()
     {
+        closeBtn.gameObject.SetActive(false);
         dialoguePanel.SetActive(false);
         dialogueOpened = false;
-        option1Btn.onClick.RemoveListener(option1BtnClicked);
-        option2Btn.onClick.RemoveListener(option2BtnClicked);
+        //option1Btn.onClick.RemoveListener(option1BtnClicked);
+        //option2Btn.onClick.RemoveListener(option2BtnClicked);
         if (hasTask)
         {
             actionbtn.SetActive(true);

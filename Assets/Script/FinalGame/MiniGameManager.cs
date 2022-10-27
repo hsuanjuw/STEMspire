@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using RPGM.Gameplay;
 
 public class MiniGameManager : MonoBehaviour
 {
@@ -14,7 +15,6 @@ public class MiniGameManager : MonoBehaviour
         Failed,
         Completed
     };
-
     private StoryManager storyManager;
     private SpawnFireballs spawnFireBalls;
     private Camera mainCamera;
@@ -23,6 +23,7 @@ public class MiniGameManager : MonoBehaviour
     private bool gamePlayed;
     private bool isCameraShake;
     public bool isCameraUp;
+    private DialogueSystem dialogueSystem;
     private Analytic analytic;
 
     // Mini games
@@ -47,10 +48,11 @@ public class MiniGameManager : MonoBehaviour
     void Start()
     {
         mainCamera = Camera.main;
-        storyManager = GameObject.FindObjectOfType<StoryManager>();
         spawnFireBalls = GameObject.FindObjectOfType<SpawnFireballs>();
         player = GameObject.FindObjectOfType<Player>();
         analytic = GameObject.FindObjectOfType<Analytic>();
+        dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
+        dialogueSystem.StartDialogueIntro();
 
         wheel = GameObject.FindObjectOfType<Wheel>();
         screws = GameObject.FindObjectOfType<Screws>();
@@ -153,8 +155,9 @@ public class MiniGameManager : MonoBehaviour
         FindObjectOfType<PowerCoreExplosion>().ResetLightning();
         FindObjectOfType<ScreenFader>().levelChangeAnimator.SetTrigger("FinaleFadeIn");
         FailImage.SetActive(false);
-        //dialogueSystem.StartDialogueIntro();
-        storyManager.NextStatus();
+
+        StartRestartDialogue();
+        
         EndMiniGame();
         Debug.Log("Restart");
         gameStarted = false;
@@ -190,5 +193,11 @@ public class MiniGameManager : MonoBehaviour
         screws.EndGame();
         systems.EndGame();
         power.EndGame();
+    }
+
+    private void StartRestartDialogue()
+    {
+        ConversationScript npcConversation = dialogueSystem.transform.GetChild(1).GetComponent<ConversationScript>();
+        dialogueSystem.StartDialogue(npcConversation, false);
     }
 }
