@@ -353,6 +353,42 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1643820081}
+    - target: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ContinuePcDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DialogueSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894587091290202712, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1739588641}
+    - target: {fileID: 3894587091290202712, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GameStart
+      objectReference: {fileID: 0}
     - target: {fileID: 4303051250364219201, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_Name
       value: UI
@@ -401,6 +437,62 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1643820081}
+    - target: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ContinueNpcDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DialogueSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728227349770874217, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728227349770874217, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728227349770874217, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1643820081}
+    - target: {fileID: 8728227349770874217, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728227349770874217, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseDialoguePanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728227349770874217, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DialogueSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728227349770874217, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
 --- !u!1 &612175607 stripped
@@ -435,26 +527,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &612175611 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 41167369505259167, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+--- !u!114 &612175611 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8728227349770874217, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
   m_PrefabInstance: {fileID: 612175606}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &612175612 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 41167370290810218, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &612175612 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
   m_PrefabInstance: {fileID: 612175606}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &612175613 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 41167369545132360, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &612175613 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
   m_PrefabInstance: {fileID: 612175606}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &612175614 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 41167370495887235, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
-  m_PrefabInstance: {fileID: 612175606}
-  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &612175615 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 41167369513670683, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
@@ -781,7 +886,7 @@ SpriteRenderer:
   m_SortingLayerID: 116122357
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: cc4aeca6c7028ec45bf9d9bc0570884f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -852,8 +957,9 @@ MonoBehaviour:
   items:
   - id: 1
     text: "Oh! You have an Eclipse Runner. Wow... you weren't\r exaggerating about
-      the damage. I was mumbling, sorry."
-    image: {fileID: 21300000, guid: cc4aeca6c7028ec45bf9d9bc0570884f, type: 3}
+      the damage. You\u2019re lucky you made it here without any issues\u2026 I was
+      mumbling,"
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
@@ -1045,33 +1151,15 @@ MonoBehaviour:
   items:
   - id: 1
     text: ' That did it! You should be good to go!'
-    image: {fileID: 21300000, guid: cc4aeca6c7028ec45bf9d9bc0570884f, type: 3}
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - text: Thank you so much!
       image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
-      targetId: 2
+      targetId: 1
       enabled: 0
-  - id: 2
-    text: ' It was nothing. I didn''t even do that much.'
-    image: {fileID: 21300000, guid: cc4aeca6c7028ec45bf9d9bc0570884f, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - text: Don't sell yourself short. We couldn't have done it without you!
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
-      audio: {fileID: 0}
-      targetId: 3
-      enabled: 0
-  - id: 3
-    text: "I was wrong. How was the data incorrect? I have been working with corrupted\r
-      data."
-    image: {fileID: 21300000, guid: 240689bbbb9463847b0399668bdd9132, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options: []
 --- !u!1 &1597453605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,6 +1236,9 @@ MonoBehaviour:
   text: {fileID: 612175620}
   option1Btn: {fileID: 612175619}
   option2Btn: {fileID: 612175618}
+  continuePcBtn: {fileID: 612175613}
+  continueNpcBtn: {fileID: 612175612}
+  closeBtn: {fileID: 612175611}
   npcImage: {fileID: 612175622}
   pcImage: {fileID: 612175621}
   guideRobotSprite: {fileID: 21300000, guid: 240689bbbb9463847b0399668bdd9132, type: 3}
@@ -1237,14 +1328,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1020263e81a1ab94ca107080fe558065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  symbols:
-  - {fileID: 612175614}
-  - {fileID: 612175613}
-  - {fileID: 612175612}
-  - {fileID: 612175611}
+  currentStatus: 0
+  systemSymbols: []
+  systemInfoSymbols: []
   symbolsClicked: 
-  timeGap: 20
-  time: 10
+  timeAfterGameStart: 20
+  completionTime: 10
+  timeRemaining: 10
 --- !u!114 &1739588639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,8 +1363,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af18561e864f6e64c94891be26f3595c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStarted: 0
+  currentStatus: 0
+  startGame: 0
+  wheelIDs: []
+  numWheels: 5
   timeAfterGameStart: 30
+  completionTime: 20
 --- !u!114 &1739588641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1287,7 +1381,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73bb86bc597e7ce44910aeedd095dbd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStarted: 0
   isCameraUp: 0
+  wheel: {fileID: 0}
+  screws: {fileID: 0}
+  systems: {fileID: 0}
+  power: {fileID: 0}
   cameraShakeSpeed: 3
   CountdownTxt: {fileID: 612175610}
   ErrorTxt: {fileID: 612175609}

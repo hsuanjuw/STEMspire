@@ -243,6 +243,50 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 988719543}
+    - target: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ContinuePcDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DialogueSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894587091290202712, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1775131543}
+    - target: {fileID: 3894587091290202712, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GameStart
+      objectReference: {fileID: 0}
     - target: {fileID: 4303051250364219201, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_Name
       value: UI
@@ -295,6 +339,62 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 988719543}
+    - target: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ContinueNpcDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DialogueSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728227349770874217, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728227349770874217, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728227349770874217, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 988719543}
+    - target: {fileID: 8728227349770874217, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728227349770874217, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseDialoguePanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728227349770874217, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DialogueSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728227349770874217, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
 --- !u!1 &91415163 stripped
@@ -329,26 +429,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 41167370513950960, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
   m_PrefabInstance: {fileID: 91415162}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &91415167 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 41167369505259167, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+--- !u!114 &91415167 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8728227349770874217, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
   m_PrefabInstance: {fileID: 91415162}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &91415168 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 41167370290810218, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &91415168 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
   m_PrefabInstance: {fileID: 91415162}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &91415169 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 41167369545132360, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &91415169 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
   m_PrefabInstance: {fileID: 91415162}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &91415170 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 41167370495887235, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
-  m_PrefabInstance: {fileID: 91415162}
-  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &91415171 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 41167369513670683, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
@@ -478,6 +591,10 @@ PrefabInstance:
     - target: {fileID: 2061072598521101623, guid: c731628a0b5e6c449b60f6cd8736db87, type: 3}
       propertyPath: m_Name
       value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061072598652265168, guid: c731628a0b5e6c449b60f6cd8736db87, type: 3}
+      propertyPath: m_Name
+      value: EnterSpaceStationTrigger2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c731628a0b5e6c449b60f6cd8736db87, type: 3}
@@ -776,6 +893,9 @@ MonoBehaviour:
   text: {fileID: 91415176}
   option1Btn: {fileID: 91415175}
   option2Btn: {fileID: 91415174}
+  continuePcBtn: {fileID: 91415169}
+  continueNpcBtn: {fileID: 91415168}
+  closeBtn: {fileID: 91415167}
   npcImage: {fileID: 91415178}
   pcImage: {fileID: 91415177}
   guideRobotSprite: {fileID: 21300000, guid: 240689bbbb9463847b0399668bdd9132, type: 3}
@@ -967,7 +1087,7 @@ SpriteRenderer:
   m_SortingLayerID: 116122357
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 211af278745e9924ea04f61dd0e6b824, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1037,47 +1157,69 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
-    text: "I tightened the screws on the protective casing and recalibrated the AFG\r
-      generator so you shouldn\u2019t be randomly flying off anymore. There are some
-      issues here\r that are too specialized for little ol\u2019 me, though. You\u2019ll
-      need to get someone else\r to fix those unless you want your ship to become
-      a pile of scrap metal. "
-    image: {fileID: 21300000, guid: b8869e2469dc898408a6a54d704c8a8d, type: 3}
+    text: "I tightened the screws on the protective casing and recalibrated the artificial
+      gravity generator so you shouldn\u2019t be randomly flying off anymore."
+    image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - text: 
-      image: {fileID: 0}
+      image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
+      audio: {fileID: 0}
+      targetId: 1.1
+      enabled: 0
+  - id: 1.1
+    text: " There are some\r issues here that are too specialized for little ol\u2019
+      me, though. You\u2019ll need to get someone else to fix those unless you want
+      your ship to become a pile of scrap metal during\r take off."
+    image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: 
+      image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
+      audio: {fileID: 0}
+      targetId: 1.2
+      enabled: 0
+  - id: 1.2
+    text: ' I think Engineer 2 has a pretty good handle on this type of stuff. Why
+      don''t you try them?'
+    image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: 
+      image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
   - id: 2
-    text: "There are some issues here\r that are too specialized for little ol\u2019
-      me. You\u2019ll need to get someone else to fix\r those unless you want your
-      ship to become a pile of scrap metal."
-    image: {fileID: 21300000, guid: b8869e2469dc898408a6a54d704c8a8d, type: 3}
+    text: 'My system does not recommend that action. Suggested course of action:
+      contact employer and request aid. Help should arrive in 3 days.'
+    image: {fileID: 21300000, guid: 32d6f7bb5e985354da7fbe80b5b2fb7c, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: R.C., can you find me another mechanic?
+    - text: "I guess let\u2019s go with that plan. RC send, a distress signal."
       image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
-      targetId: 3
+      targetId: 3.1
       enabled: 0
-  - id: 3
-    text: According to the data, there is no other suitable mechanics on this port.
-    image: {fileID: 21300000, guid: 240689bbbb9463847b0399668bdd9132, type: 3}
+    - text: "Why should we do that when Engineer 2 might be able to help us? What\u2019s
+        wrong with Engineer 2?"
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.2
+      enabled: 0
+  - id: 3.1
+    text: 
+    image: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
-    options:
-    - text: 
-      image: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 4
-      enabled: 0
-  - id: 4
-    text: What about Mechanic 2?
-    image: {fileID: 21300000, guid: 211af278745e9924ea04f61dd0e6b824, type: 3}
+    options: []
+  - id: 3.2
+    text: What is that supposed to mean?
+    image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
@@ -1087,61 +1229,30 @@ MonoBehaviour:
       targetId: 5
       enabled: 0
   - id: 5
-    text: Data says that Mechanic 2 is not sufficient.
-    image: {fileID: 21300000, guid: 240689bbbb9463847b0399668bdd9132, type: 3}
+    text: "My creators programmed me to take in data and build skill profiles of
+      professionals my captain interacts with in order to give recommendations as
+      to people most likely to\r help. "
+    image: {fileID: 21300000, guid: 32d6f7bb5e985354da7fbe80b5b2fb7c, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - text: 
       image: {fileID: 0}
       audio: {fileID: 0}
-      targetId: 6
+      targetId: 5.1
       enabled: 0
-  - id: 6
-    text: "In my experience, Mechanic 2 is a great mechanic.\r"
-    image: {fileID: 21300000, guid: 211af278745e9924ea04f61dd0e6b824, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - text: ' R.C. ... what is wrong with this person?'
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
-      audio: {fileID: 0}
-      targetId: 7
-      enabled: 0
-  - id: 7
-    text: ' Mechanic 2 doesn''t fit the established profile for a mechanic.'
-    image: {fileID: 21300000, guid: 240689bbbb9463847b0399668bdd9132, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - text: R.C., elaborate...
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
-      audio: {fileID: 0}
-      targetId: 8.1
-      enabled: 0
-    - text: R.C., wait on the ship
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
-      audio: {fileID: 0}
-      targetId: 8.2
-      enabled: 0
-  - id: 8.1
-    text: "There is not enough data to ascertain the quality of [Mechanic 2]. Recommend\r
-      sending for a more qualified mechanic"
-    image: {fileID: 21300000, guid: 240689bbbb9463847b0399668bdd9132, type: 3}
+  - id: 5.1
+    text: According to the lack of reviews and other sources of data, Engineer 2
+      does not fit the profile of a qualified engineer.
+    image: {fileID: 21300000, guid: 32d6f7bb5e985354da7fbe80b5b2fb7c, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - text: R.C., wait on the ship
       image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
-      targetId: 8.2
+      targetId: 3.1
       enabled: 0
-  - id: 8.2
-    text: 
-    image: {fileID: 0}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options: []
 --- !u!1 &1775131537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,14 +1317,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1020263e81a1ab94ca107080fe558065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  symbols:
-  - {fileID: 91415170}
-  - {fileID: 91415169}
-  - {fileID: 91415168}
-  - {fileID: 91415167}
+  currentStatus: 0
+  systemSymbols: []
+  systemInfoSymbols: []
   symbolsClicked: 
-  timeGap: 20
-  time: 10
+  timeAfterGameStart: 20
+  completionTime: 10
+  timeRemaining: 10
 --- !u!114 &1775131541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1242,8 +1352,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af18561e864f6e64c94891be26f3595c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStarted: 0
+  currentStatus: 0
+  startGame: 0
+  wheelIDs: []
+  numWheels: 5
   timeAfterGameStart: 30
+  completionTime: 20
 --- !u!114 &1775131543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1256,7 +1370,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73bb86bc597e7ce44910aeedd095dbd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStarted: 0
   isCameraUp: 0
+  wheel: {fileID: 0}
+  screws: {fileID: 0}
+  systems: {fileID: 0}
+  power: {fileID: 0}
   cameraShakeSpeed: 3
   CountdownTxt: {fileID: 91415165}
   ErrorTxt: {fileID: 91415164}
@@ -1450,7 +1569,7 @@ MonoBehaviour:
   - id: 1
     text: "Well that asteroid certainly did a number on the... everything. Let's\r
       take a look and see if we can make her feel better, shall we? "
-    image: {fileID: 21300000, guid: b8869e2469dc898408a6a54d704c8a8d, type: 3}
+    image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []

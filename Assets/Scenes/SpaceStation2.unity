@@ -687,20 +687,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
-    text: H-hello, how can I help you?
-    image: {fileID: 21300000, guid: cc4aeca6c7028ec45bf9d9bc0570884f, type: 3}
+    text: Hi, how can I help you?
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: My ship is pretty banged up. Mechanic 1 says that I need someone specialized
+    - text: My ship is pretty banged up. Engineer 1 says that I need someone specialized
         in [insert thing here] and said you could help me. Is that true?
       image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
   - id: 2
-    text: "Well, um, yes, I think so... I'll do my best!\r"
-    image: {fileID: 21300000, guid: cc4aeca6c7028ec45bf9d9bc0570884f, type: 3}
+    text: "Oh definitely! I\u2019ve done it plenty of times."
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
@@ -721,9 +721,9 @@ MonoBehaviour:
     quest: {fileID: 0}
     options: []
   - id: 3.2
-    text: "I've only been working for a couple of years, but I've been studying\r
-      spaceship mechanics since I was a child."
-    image: {fileID: 21300000, guid: cc4aeca6c7028ec45bf9d9bc0570884f, type: 3}
+    text: ' I''ve been working for about a decade, but I''ve been studying spaceship
+      mechanics since I was a child.'
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
@@ -735,18 +735,49 @@ MonoBehaviour:
     - text: Oh really?
       image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
-      targetId: 1
+      targetId: 4.1
       enabled: 0
   - id: 4.1
-    text: "Yeah! My parents love to tell the story about when I first saw a\r spaceship.
-      Apparently, I stared at it like I had discovered the meaning of life\r itself.
-      Ever since then I\u2019ve been obsessed with figuring out how they work."
-    image: {fileID: 21300000, guid: cc4aeca6c7028ec45bf9d9bc0570884f, type: 3}
+    text: "Yeah! My parents love to tell the story about when I first saw a spaceship.
+      Apparently, I stared at it like I had discovered the meaning of life itself.
+      Ever since\r then I\u2019ve been obsessed with figuring out how they work. "
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: "Wow! That\u2019s so cool! Let\u2019s get going"
+    - text: 
       image: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 4.2
+      enabled: 0
+  - id: 4.2
+    text: "I got a job as a engineer in order to be able to work with rocket ships.
+      But what I really want to do is design them.\r But I guess that\u2019s not
+      going to happen."
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: Let's get started!
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.1
+      enabled: 0
+    - text: Why not?
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 5.1
+      enabled: 0
+  - id: 5.1
+    text: " I\u2019ve tried to apply to several companies. I\u2019ve gotten pretty
+      far in the interview process too. But they always choose someone else. Guess
+      it just isn\u2019t meant to be."
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: let's get started!
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
@@ -1877,7 +1908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1667820878
 Transform:
   m_ObjectHideFlags: 0
@@ -2097,13 +2128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 480bd61063c82b146a9105160f69b0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - id: 1
-    text: This person seems qualified, why don't we try them?
-    image: {fileID: 21300000, guid: 240689bbbb9463847b0399668bdd9132, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options: []
+  items: []
 --- !u!1 &1935766201
 GameObject:
   m_ObjectHideFlags: 0

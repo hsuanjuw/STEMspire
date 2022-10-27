@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         Debug.Log(col.tag);
-        if (col.CompareTag("Fireball"))
+        if (col.CompareTag("Fireball") && miniGameManager.gameStarted)
         {
             miniGameManager.CallRestart();
         }
