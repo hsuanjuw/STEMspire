@@ -24,6 +24,7 @@ public class ButtonFlash : Button
     {
         flashAllowed = false;
         flashButton = false;
+        btnImage.color = Color.white;
     }
     public override void OnPointerEnter(PointerEventData eventData)
     {

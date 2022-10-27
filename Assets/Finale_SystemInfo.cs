@@ -53,4 +53,9 @@ public class Finale_SystemInfo : MonoBehaviour
             symbolGroup.transform.Find("Inactive").gameObject.SetActive(false);
         }
     }
+
+    public void ResetSystemInfo()
+    {
+        currentPhase = Phase.Phase0;
+    }
 }

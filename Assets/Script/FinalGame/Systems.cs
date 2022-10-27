@@ -15,6 +15,10 @@ public class Systems : MonoBehaviour
     public float completionTime = 10f;
     public float timeRemaining = 10f; // 10 second for clicking the symbols
 
+    void Start()
+    {
+        DisplayTime(timeRemaining, GameObject.Find("SystemCountDownTxt").GetComponent<Text>());
+    }
     // Update is called once per frame
     void Update()
     {
@@ -32,9 +36,12 @@ public class Systems : MonoBehaviour
     private IEnumerator StartWait()
     {
         yield return new WaitForSeconds(timeAfterGameStart); // 10 Sec after launch, the wheel game started
-        timeRemaining = completionTime;
-        currentStatus = MiniGameManager.GameStatus.InProgress;
-        FindObjectOfType<Finale_SystemInfo>().NextPhase();
+        if (currentStatus == MiniGameManager.GameStatus.InProgress)
+        {
+            timeRemaining = completionTime;
+            currentStatus = MiniGameManager.GameStatus.InProgress;
+            FindObjectOfType<Finale_SystemInfo>().NextPhase();  
+        }
     }
 
     private void CountDown()
@@ -97,13 +104,13 @@ public class Systems : MonoBehaviour
     private void ResetSystem()
     {
         currentStatus = MiniGameManager.GameStatus.NotStarted;
-        Text text = GameObject.Find("SystemCountDownTxt").GetComponent<Text>();
-        DisplayTime(timeRemaining, text);
+        DisplayTime(timeRemaining, GameObject.Find("SystemCountDownTxt").GetComponent<Text>());
         for (int i = 0; i < systemSymbols.Length; i++)
         {
             systemSymbols[i].GetComponent<Image>().color = Color.white;
         }
         ResetSymbolStatus();
+        FindObjectOfType<Finale_SystemInfo>().ResetSystemInfo();
     }
 
     public void Fail()

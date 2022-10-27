@@ -8,6 +8,7 @@ TagManager:
   - ElectricTop
   - ElectricBottom
   - Screw
+  - Shard
   layers:
   - Default
   - TransparentFX

@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &115734432 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 41167370594087346, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
-  m_PrefabInstance: {fileID: 41167370558703122}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &302535417
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,11 +498,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameNum: 1
---- !u!1 &1034890978 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 41167370513950960, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
-  m_PrefabInstance: {fileID: 41167370558703122}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1102287245 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 41167369507084191, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
@@ -519,11 +509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1179524617 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 41167369513670683, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
-  m_PrefabInstance: {fileID: 41167370558703122}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1229115105
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,10 +617,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1e6861f50aab8449a145d97c82c23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftUpButton: {fileID: 1940538444}
-  leftDownButton: {fileID: 115734432}
-  rightUpButton: {fileID: 1179524617}
-  rightDownButton: {fileID: 1034890978}
+  currentStatus: 0
+  leftFill: {fileID: 0}
+  rightFill: {fileID: 0}
+  leftOnLight: {fileID: 0}
+  leftDangerLight: {fileID: 0}
+  rightOnLight: {fileID: 0}
+  rightDangerLight: {fileID: 0}
+  leftSwitchTime: 10
+  rightSwitchTime: 15
+  fillSpeed: 0.05
   timeAfterGameStart: 1
 --- !u!114 &1308835689
 MonoBehaviour:
@@ -783,7 +774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2975031367469670254, guid: d5f7a65fd4934094b94a12f40ed99810, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2975031367469670254, guid: d5f7a65fd4934094b94a12f40ed99810, type: 3}
       propertyPath: m_LocalPosition.x
@@ -835,11 +826,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5f7a65fd4934094b94a12f40ed99810, type: 3}
---- !u!1 &1940538444 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 41167369205662302, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
-  m_PrefabInstance: {fileID: 41167370558703122}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1984261731 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9142732555786729359, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
@@ -935,91 +921,6 @@ MonoBehaviour:
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
---- !u!1001 &2146920249
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2717597304078581363, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: m_Name
-      value: Power Core
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597304078581363, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597304078581364, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597304078581364, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597304078581364, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597304078581364, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597304078581364, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597304078581364, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597304078581364, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597304078581364, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597304078581364, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597304078581364, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597304078581364, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597304629659073, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: EndPosition.y
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597304631305983, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: m_SortingOrder
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597304782790832, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: m_SortingOrder
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597304784290702, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: EndPosition.y
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597305863299883, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: EndPosition.y
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717597305863880725, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
-      propertyPath: m_SortingOrder
-      value: 100
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 90bc91a5892842341a21a46a34fbc928, type: 3}
 --- !u!1001 &41167370558703122
 PrefabInstance:
   m_ObjectHideFlags: 0

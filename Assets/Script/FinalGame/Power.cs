@@ -1,88 +1,86 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.UI;
 
 public class Power : MonoBehaviour
 {
-    public GameObject leftUpButton;
-    public GameObject leftDownButton;
-    public GameObject rightUpButton;
-    public GameObject rightDownButton;
-    private bool[] electicTopStatus = new bool[3] { true, true, true};
-    private bool[] electicBottomStatus = new bool[2] { true, true};
+    public MiniGameManager.GameStatus currentStatus = MiniGameManager.GameStatus.NotStarted;
+    public PowerFill leftFill;
+    public PowerFill rightFill;
 
-    private int failCountTop = 0;
-    private int failCountBottom = 0;
+    public GameObject leftOnLight;
+    public GameObject leftDangerLight;
+    public GameObject rightOnLight;
+    public GameObject rightDangerLight;
+    
+    public float leftSwitchTime = 10f;
+    public float rightSwitchTime = 15f;
 
-    private float leftSwitchTime;
-    private float rightSwitchTime;
-
-    private bool switchTimeStart = false;
-    private bool gameStart = false;
+    public float fillSpeed = 0.05f;
+    private float leftSwitchTimeRemaining;
+    private float rightSwitchTimeRemaining;
 
     public float timeAfterGameStart = 3f; // 3f after the game start, the power start to count down;
 
-
-    void Start()
+    private void Start()
     {
-        //GameStart();
-        //electicTop = GameObject.FindGameObjectsWithTag("ElectricTop");
-        //electicBottom = GameObject.FindGameObjectsWithTag("ElectricBottom");
+        DisplayTime(leftSwitchTime, GameObject.Find("LCountDownTxt").GetComponent<Text>());
+        DisplayTime(rightSwitchTime, GameObject.Find("RCountDownTxt").GetComponent<Text>());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gameStart)
+        if (currentStatus == MiniGameManager.GameStatus.InProgress)
         {
-            if (failCountTop == 3 || failCountBottom == 2)
-            {
-                Debug.Log("Power Failure");
-                EndGame();
-            }
-            if (switchTimeStart)
-            {
+            if(leftFill.fillStatus == PowerFill.FillStatus.NotFilled)
                 LCountDown();
+            if(rightFill.fillStatus == PowerFill.FillStatus.NotFilled)
                 RCountDown();
-            }
+            if(rightFill.fillStatus == PowerFill.FillStatus.Filled && leftFill.fillStatus == PowerFill.FillStatus.Filled)
+                Succeed();
         }
     }
 
     public void LeftSwitchOnOff()
     {
-        StartCoroutine(SwitchOnOff(leftUpButton, leftDownButton));
-        TimeReStart("Left");
-
+        if(currentStatus == MiniGameManager.GameStatus.InProgress)
+            TimeReStart("Left");
     }
 
     public void RightSwitchOnOff()
     {
-        StartCoroutine(SwitchOnOff(rightUpButton, rightDownButton));
-        TimeReStart("Right");
-    }
-
-    private IEnumerator SwitchOnOff(GameObject switchUpClicked, GameObject switchDownClicked)
-    {
-        switchUpClicked.SetActive(false);
-        switchDownClicked.SetActive(true);
-        yield return new WaitForSeconds(.3f);
-        switchDownClicked.SetActive(false);
-        switchUpClicked.SetActive(true);
+        if(currentStatus == MiniGameManager.GameStatus.InProgress)
+            TimeReStart("Right");
     }
 
     public void StartGame()
     {
-        gameStart = true;
-        leftSwitchTime = 10f;
-        rightSwitchTime = 15f;
-        switchTimeStart = true;
+        StartCoroutine(StartWait());
     }
 
-    public void EndGame()
+    private IEnumerator StartWait()
     {
-        gameStart = false;
-        switchTimeStart = false;
+        yield return new WaitForSeconds(timeAfterGameStart); // 10 Sec after launch, the wheel game started
+        ResetPower();
+        currentStatus = MiniGameManager.GameStatus.InProgress;
+    }
+
+    public void RestartGame()
+    {
+        ResetPower();
+    }
+
+    public void ResetPower()
+    {
+        TimeReStart("Left");
+        TimeReStart("Right");
+        leftFill.ResetFill();
+        rightFill.ResetFill();
+        currentStatus = MiniGameManager.GameStatus.NotStarted;
     }
 
     private void TimeReStart(string type)
@@ -90,10 +88,16 @@ public class Power : MonoBehaviour
         switch (type)
         {
             case "Left":
-                leftSwitchTime = 10f;
+                leftSwitchTimeRemaining = leftSwitchTime;
+                leftOnLight.SetActive(true);
+                leftDangerLight.SetActive(false);
+                DisplayTime(leftSwitchTimeRemaining, GameObject.Find("LCountDownTxt").GetComponent<Text>());
                 break;
             case "Right":
-                rightSwitchTime = 15f;
+                rightSwitchTimeRemaining = rightSwitchTime;
+                rightOnLight.SetActive(true);
+                rightDangerLight.SetActive(false);
+                DisplayTime(rightSwitchTimeRemaining, GameObject.Find("RCountDownTxt").GetComponent<Text>());
                 break;
             default:
                 Debug.Log("Time restart Error");
@@ -103,45 +107,69 @@ public class Power : MonoBehaviour
 
     private void LCountDown()
     {
-        if (leftSwitchTime > 0)
+        if (leftSwitchTimeRemaining > 0)
         {
-            leftSwitchTime -= Time.deltaTime;
+            leftSwitchTimeRemaining -= Time.deltaTime;
+            if (leftSwitchTimeRemaining < 5)
+            {
+                if (leftDangerLight.activeSelf == false)
+                {
+                    leftDangerLight.SetActive(true);
+                    leftOnLight.SetActive(false);
+                }
+            }
+            leftFill.FillNextImage(Time.deltaTime * fillSpeed);
         }
         else
         {
-            Debug.Log("Left Switch Restart");
-            TimeReStart("Left");
-            GameObject eletricImg = GameObject.FindGameObjectsWithTag("ElectricTop")[failCountTop];
-            Debug.Log(eletricImg.name);
-            eletricImg.GetComponent<SpriteRenderer>().color = new Color(120f / 255f, 170f / 255f, 180f / 255f, 1f);
-            failCountTop++;
+            Fail();
         }
         Text text = GameObject.Find("LCountDownTxt").GetComponent<Text>();
-        DisplayTime(leftSwitchTime, text);
+        DisplayTime(leftSwitchTimeRemaining, text);
     }
-
+    
     private void RCountDown()
     {
-        if (rightSwitchTime > 0)
+        if (rightSwitchTimeRemaining > 0)
         {
-            rightSwitchTime -= Time.deltaTime;
+            rightSwitchTimeRemaining -= Time.deltaTime;
+            if (rightSwitchTimeRemaining < 5)
+            {
+                if (rightDangerLight.activeSelf == false)
+                {
+                    rightDangerLight.SetActive(true);
+                    rightOnLight.SetActive(false);
+                }
+            }
+            rightFill.FillNextImage(Time.deltaTime * fillSpeed);
         }
         else
         {
-            Debug.Log("Right Switch Restart");
-            TimeReStart("Right");
-            GameObject eletricImg = GameObject.FindGameObjectsWithTag("ElectricBottom")[failCountBottom];
-            eletricImg.GetComponent<SpriteRenderer>().color = new Color(120f / 255f, 170f / 255f, 180f / 255f, 1f);
-            failCountBottom++;
+            Fail();
         }
         Text text = GameObject.Find("RCountDownTxt").GetComponent<Text>();
-        DisplayTime(rightSwitchTime, text);
+        DisplayTime(rightSwitchTimeRemaining, text);
     }
 
     private void DisplayTime(float timeToDisplay, Text timeText)
     {
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         timeText.text = string.Format("{0:00}", seconds);
+    }
+    
+    public void Fail()
+    {
+        Debug.Log("power fail");
+        currentStatus = MiniGameManager.GameStatus.Failed;
+        FindObjectOfType<MiniGameManager>().CallRestart();
+    }
+
+    public void Succeed()
+    {
+        currentStatus = MiniGameManager.GameStatus.Completed;
+        GameObject.Find("LCountDownTxt").GetComponent<Text>().text = "";
+        GameObject.Find("RCountDownTxt").GetComponent<Text>().text = "";
+        FindObjectOfType<MiniGameManager>().CallSuccess();
     }
 
 }

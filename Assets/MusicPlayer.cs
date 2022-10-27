@@ -12,7 +12,7 @@ public class MusicPlayer : MonoBehaviour
     public AudioClip startMusic;
     public AudioClip finaleMusic;
     public AudioClip otherMusic;
-
+    public AudioClip victoryMusic;
 
     public void SetStartMusic()
     {
@@ -27,6 +27,11 @@ public class MusicPlayer : MonoBehaviour
     public void SetOtherMusic()
     {
         SetMusic(otherMusic);
+    }
+
+    public void SetVictoryMusic()
+    {
+        SetMusic(victoryMusic);
     }
 
     public void SetMusic(AudioClip clip)

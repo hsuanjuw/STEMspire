@@ -15,12 +15,24 @@ EditorBuildSettings:
     path: Assets/Scenes/SpaceStation.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Game_3.unity
-    guid: 792890159a065fb45b9f95e25b2521b2
-  - enabled: 1
     path: Assets/Scenes/Game_2.unity
     guid: ee4719806382df545a8a172894c08405
   - enabled: 1
     path: Assets/Scenes/SpaceStation2.unity
     guid: 763760283f6ba6444bc57cda90dcdbf4
+  - enabled: 1
+    path: Assets/Scenes/Game_3.unity
+    guid: 792890159a065fb45b9f95e25b2521b2
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: dcdec24e152cbe44aab1b7c6cd50bf40
+  - enabled: 1
+    path: Assets/Scenes/Thanks.unity
+    guid: d5590d8042f37cf4e8d5065a475e65d6
+  - enabled: 1
+    path: Assets/Scenes/FinaleTest.unity
+    guid: fe5b3532034212040af5877e2f5d5bc0
+  - enabled: 1
+    path: Assets/Scenes/PuzzleTest.unity
+    guid: e847b7579a3576c43b794d0f680e557a
   m_configObjects: {}

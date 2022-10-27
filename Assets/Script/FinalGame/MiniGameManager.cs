@@ -16,7 +16,7 @@ public class MiniGameManager : MonoBehaviour
         Completed
     };
    // private StoryManager storyManager;
-    private SpawnFireballs spawnFireBalls;
+    private SpawnLightningBalls lightningBalls;
     private Camera mainCamera;
     private Player player;
     public bool gameStarted;
@@ -28,14 +28,13 @@ public class MiniGameManager : MonoBehaviour
 
     // Mini games
     public Wheel wheel;
-    public Screws screws;
+    public Containment shards;
     public Systems systems;
     public Power power;
 
     [SerializeField] private int cameraShakeSpeed = 3;
     [SerializeField] private Text CountdownTxt;
     [SerializeField] private Text ErrorTxt;
-    [SerializeField] private GameObject FailImage;
 
 
     void Awake()
@@ -48,18 +47,11 @@ public class MiniGameManager : MonoBehaviour
     void Start()
     {
         mainCamera = Camera.main;
-        spawnFireBalls = GameObject.FindObjectOfType<SpawnFireballs>();
+        lightningBalls = GameObject.FindObjectOfType<SpawnLightningBalls>();
         player = GameObject.FindObjectOfType<Player>();
         analytic = GameObject.FindObjectOfType<Analytic>();
         dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
         dialogueSystem.StartDialogueIntro();
-
-        /*
-        wheel = GetComponent<Wheel>();
-        screws = GetComponent<Screws>();
-        systems = GetComponent<Systems>();
-        power = GetComponent<Power>();
-        */
     }
 
     // Update is called once per frame
@@ -111,8 +103,8 @@ public class MiniGameManager : MonoBehaviour
         isCameraShake = false;
         mainCamera.transform.eulerAngles = new Vector3(0f, 0f, 0f);
         // sth cracking??
-        spawnFireBalls.CallStartFireballs();
-        //StartMiniGame();
+        lightningBalls.CallStartLightningballs();
+        StartMiniGame();
     }
 
     private void CameraShake()
@@ -142,11 +134,25 @@ public class MiniGameManager : MonoBehaviour
         StartCoroutine(Restart());
     }
 
+    public void CallSuccess()
+    {
+        StartCoroutine(Victory());
+        
+    }
+
+    private IEnumerator Victory()
+    {
+        FindObjectOfType<MusicPlayer>().SetVictoryMusic();
+        lightningBalls.StopSpawning();
+        FindObjectOfType<PowerCoreExplosion>().ResetLightning();
+        yield return new WaitForSeconds(2f);
+        FindObjectOfType<ScreenFader>().SwitchScene("Thanks");
+    }
     private IEnumerator Restart()
     {
+        LoseAllMiniGames();
         FindObjectOfType<PowerCoreExplosion>().Explode();
-        spawnFireBalls.StopSpawning();
-        //FailImage.SetActive(true);
+        lightningBalls.StopSpawning();
         FindObjectOfType<MusicPlayer>().SetOtherMusic();
         yield return new WaitForSeconds(1f);
         FindObjectOfType<ScreenFader>().levelChangeAnimator.SetTrigger("FinaleFadeOut");
@@ -156,11 +162,10 @@ public class MiniGameManager : MonoBehaviour
         FindObjectOfType<MusicPlayer>().SetStartMusic();
         FindObjectOfType<PowerCoreExplosion>().ResetLightning();
         FindObjectOfType<ScreenFader>().levelChangeAnimator.SetTrigger("FinaleFadeIn");
-        FailImage.SetActive(false);
 
-        StartRestartDialogue();
+        //StartRestartDialogue();
         
-        //EndMiniGame();
+        EndMiniGame();
         Debug.Log("Restart");
         gameStarted = false;
     }
@@ -184,19 +189,26 @@ public class MiniGameManager : MonoBehaviour
     private void StartMiniGame()
     {
         wheel.StartGame();
-        screws.StartGame();
+        shards.StartGame();
         systems.StartGame();
         power.StartGame();
+    }
+
+    private void LoseAllMiniGames()
+    {
+        wheel.currentStatus = GameStatus.Failed;
+        systems.currentStatus = GameStatus.Failed;
+        power.currentStatus = GameStatus.Failed;
     }
 
     private void EndMiniGame()
     {
         wheel.RestartGame();
-        screws.EndGame();
+        shards.EndGame();
         systems.EndGame();
-        power.EndGame();
+        power.RestartGame();
     }
-
+    
     private void StartRestartDialogue()
     {
         ConversationScript npcConversation = dialogueSystem.transform.GetChild(1).GetComponent<ConversationScript>();
