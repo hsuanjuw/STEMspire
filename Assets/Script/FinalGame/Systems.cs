@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,29 +6,19 @@ using UnityEngine.UI;
 
 public class Systems : MonoBehaviour
 {
-    public GameObject[] symbols;
+    public MiniGameManager.GameStatus currentStatus = MiniGameManager.GameStatus.NotStarted;
+    public GameObject[] systemSymbols;
+    public GameObject[] systemInfoSymbols;
     [HideInInspector]public bool[] symbolsClicked;
-    public float timeGap = 20f; // every 20f, the symbol flashes
+    public float timeAfterGameStart = 20f; // every 20f, the symbol flashes
 
-    public float time = 10f; // 10 second for clicking the symbols
-    //public List<bool[]> paterns = new List<bool[]>();
-    private bool[] patern = new bool[4] { true, false, true, false };
-    private bool timeStart = false;
-    private bool gameStart = false;
-
-    Coroutine gameCoroutine;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        symbolsClicked = new bool[4] { false, false, false, false };
-        //StartGame();
-    }
+    public float completionTime = 10f;
+    public float timeRemaining = 10f; // 10 second for clicking the symbols
 
     // Update is called once per frame
     void Update()
     {
-        if (timeStart)
+        if (currentStatus == MiniGameManager.GameStatus.InProgress)
         {
             CountDown();
         }
@@ -35,56 +26,40 @@ public class Systems : MonoBehaviour
 
     public void StartGame()
     {
-        gameStart = true;
-        gameCoroutine = StartCoroutine(ShowSymbols());
+        StartCoroutine(StartWait());
     }
 
-    private IEnumerator ShowSymbols()
+    private IEnumerator StartWait()
     {
-        while (gameStart)
-        {
-            yield return new WaitForSeconds(timeGap);
-            timeStart = true;
-            foreach(GameObject symbol in symbols)
-            {
-                symbol.SetActive(true);
-            }
-            
-        }
-    }
-
-    private void CloseSymbols()
-    {
-        foreach (GameObject symbol in symbols)
-        {
-            symbol.SetActive(false);
-        }
+        yield return new WaitForSeconds(timeAfterGameStart); // 10 Sec after launch, the wheel game started
+        timeRemaining = completionTime;
+        currentStatus = MiniGameManager.GameStatus.InProgress;
+        FindObjectOfType<Finale_SystemInfo>().NextPhase();
     }
 
     private void CountDown()
     {
-        if (time > 0)
+        if (timeRemaining > 0)
         {
+            timeRemaining -= Time.deltaTime;
             Text text = GameObject.Find("SystemCountDownTxt").GetComponent<Text>();
-            DisplayTime(time, text);
-            time -= Time.deltaTime;
-            
+            DisplayTime(timeRemaining, text);
         }
         else
         {
-            timeStart = false;
-            time = 10f;
+            Text text = GameObject.Find("SystemCountDownTxt").GetComponent<Text>();
+            DisplayTime(0, text);
+            timeRemaining = completionTime;
 
-            bool isFail = CheckPatern();
-            if (isFail)
+            if (!CheckPattern())
             {
-                EndGame();
-                Debug.Log("Systems failure");
+                Fail();
             }
             else
             {
-                CloseSymbols();
-                ResetSymbolStatus();
+                FindObjectOfType<Finale_SystemInfo>().NextPhase();
+                if(FindObjectOfType<Finale_SystemInfo>().currentPhase == Finale_SystemInfo.Phase.Complete)
+                    Succeed();
             }
         }
         
@@ -95,34 +70,59 @@ public class Systems : MonoBehaviour
         timeText.text = string.Format("{0:00}", seconds);
     }
 
-    private bool CheckPatern()
+    private bool CheckPattern()
     {
-        bool isFail = false;
-        for (int i = 0; i < 4; i++)
+        for (int symbolIndex = 0; symbolIndex < systemSymbols.Length; symbolIndex++)
         {
-            if (symbolsClicked[i] != patern[i])
-            {
-                isFail = true;
-            }
+            if (systemSymbols[symbolIndex].transform.Find("Active").gameObject.activeSelf !=
+                systemInfoSymbols[symbolIndex].transform.Find("Active").gameObject.activeSelf)
+                return false;
         }
-        return isFail;
+
+        return true;
     }
 
     private void ResetSymbolStatus()
     {
-
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < systemSymbols.Length; i++)
         {
-            symbolsClicked[i] = false;
-            symbols[i].GetComponent<Image>().color = Color.white;
-
+            systemSymbols[i].transform.Find("Active").gameObject.SetActive(false);
+            systemSymbols[i].transform.Find("Inactive").gameObject.SetActive(true);
+            
+            systemInfoSymbols[i].transform.Find("Active").gameObject.SetActive(false);
+            systemInfoSymbols[i].transform.Find("Inactive").gameObject.SetActive(true);
         }
     }
 
+    private void ResetSystem()
+    {
+        currentStatus = MiniGameManager.GameStatus.NotStarted;
+        Text text = GameObject.Find("SystemCountDownTxt").GetComponent<Text>();
+        DisplayTime(timeRemaining, text);
+        for (int i = 0; i < systemSymbols.Length; i++)
+        {
+            systemSymbols[i].GetComponent<Image>().color = Color.white;
+        }
+        ResetSymbolStatus();
+    }
+
+    public void Fail()
+    {
+        currentStatus = MiniGameManager.GameStatus.Failed;
+        FindObjectOfType<MiniGameManager>().CallRestart();
+    }
+
+    public void Succeed()
+    {
+        currentStatus = MiniGameManager.GameStatus.Completed;
+        GameObject.Find("SystemCountDownTxt").GetComponent<Text>().text = "";
+        for (int i = 0; i < systemSymbols.Length; i++)
+        {
+            systemSymbols[i].GetComponent<Image>().color = Color.green;
+        }
+    }
     public void EndGame()
     {
-        gameStart = false;
-        timeStart = false;
-        StopCoroutine(gameCoroutine);
+        ResetSystem();
     }
 }

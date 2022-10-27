@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,33 +6,28 @@ using UnityEngine.UI;
 
 public class Wheel : MonoBehaviour
 {
-    private int lastBtnClickedNum;
-    private bool[] clickedBtns;
-    [HideInInspector]public bool gameStarted;
-    private GameObject[] numberCards;
+    public MiniGameManager.GameStatus currentStatus = MiniGameManager.GameStatus.NotStarted;
 
+    private int buttonToClick = 1;
+    private int restartButtonValue = 1;
+    [HideInInspector] public bool startGame = false;
+    public GameObject[] wheelIDs;
+    public int numWheels = 5;
     public float timeAfterGameStart = 10f; // 10f after game start, number card flash
 
-    private float time;
-
+    public float completionTime = 20f;
+    private float timeRemaining;
+    
     Coroutine gameCoroutine;
-    void Start()
+
+    private void Start()
     {
-        lastBtnClickedNum = 0;
-        clickedBtns = new bool[5] { false, false, false, false, false };
-        gameStarted = false;
-        numberCards = new GameObject[5];
-        for (int i = 0 ; i < 5 ; i++)
-        {
-            numberCards[i] = GameObject.Find((i+1).ToString());
-        }
-        //StartGame();
+        DisplayTime(completionTime,GameObject.Find("WheelCountDownTxt").GetComponent<Text>());
     }
 
-    
     void Update()
     {
-        if (gameStarted)
+        if (currentStatus == MiniGameManager.GameStatus.InProgress)
         {
             CountDown();
         }
@@ -44,69 +40,40 @@ public class Wheel : MonoBehaviour
 
     public void ButtonClicked( int btnClickedNum)
     {
-        clickedBtns[btnClickedNum - 1] = true;
-        if (btnClickedNum != lastBtnClickedNum + 1 || !clickedBtns[0])
+        if (btnClickedNum != buttonToClick)
         {
-            ResetBtnClicked();
+            if (btnClickedNum == 1)
+                buttonToClick = 2;
+            else buttonToClick = 1;
         }
-        if (btnClickedNum == 1)
-        {
-            clickedBtns[0] = true;
-        }
-        lastBtnClickedNum = btnClickedNum;
+        else buttonToClick++;
 
         if (CheckAllBtnClicked())
         {
-            Debug.Log("Finshed");
-            gameStarted = false;
-        }
-    }
-
-    public void ResetBtnClicked()
-    {
-        for (int i = 0; i < 5; i++ )
-        {
-            clickedBtns[i] = false;
+            Succeed();
         }
     }
 
     public bool CheckAllBtnClicked()
     {
-        int clickedBtnSum = 0;
-        for (int i = 0; i < 5; i++)
-        {
-            if (clickedBtns[i])
-            {
-                clickedBtnSum++;
-            }
-        }
-
-        if (clickedBtnSum == 5)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return (buttonToClick > numWheels);
     }
 
     private IEnumerator StartNumFlash()
     {
         yield return new WaitForSeconds(timeAfterGameStart); // 10 Sec after launch, the wheel game started
-        Debug.Log("Start Wheel game");
-        time = 10f;
-        gameStarted = true;
-        while (gameStarted)
+        timeRemaining = completionTime;
+        currentStatus = MiniGameManager.GameStatus.InProgress;
+        while (currentStatus == MiniGameManager.GameStatus.InProgress)
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < wheelIDs.Length; i++)
             {
-                numberCards[i].GetComponent<SpriteRenderer>().color = new Color(253f,255f,0f,255f);
+                wheelIDs[i].GetComponent<SpriteRenderer>().color = new Color(253f,255f,0f,255f);
             }
             yield return new WaitForSeconds(1f);
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < wheelIDs.Length; i++)
             {
-                numberCards[i].GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 255f, 255f);
+                wheelIDs[i].GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 255f, 255f);
             }
             yield return new WaitForSeconds(1f);
         }
@@ -114,17 +81,18 @@ public class Wheel : MonoBehaviour
 
     private void CountDown()
     {
-        if (time > 0)
+        if (timeRemaining > 0)
         {
-            time -= Time.deltaTime;
+            timeRemaining -= Time.deltaTime;
+            DisplayTime(timeRemaining, GameObject.Find("WheelCountDownTxt").GetComponent<Text>());
         }
         else
         {
             Debug.Log("Wheel Failure");
-            EndGame();
+            Fail();
+            DisplayTime(0, GameObject.Find("WheelCountDownTxt").GetComponent<Text>());
         }
-        Text text = GameObject.Find("WheelCountDownTxt").GetComponent<Text>();
-        DisplayTime(time, text);
+        
     }
     private void DisplayTime(float timeToDisplay, Text timeText)
     {
@@ -132,9 +100,31 @@ public class Wheel : MonoBehaviour
         timeText.text = string.Format("{0:00}", seconds);
     }
 
-    public void EndGame()
+    public void RestartGame()
     {
-        gameStarted = false;
+        Debug.Log("RESTARTING");
         StopCoroutine(gameCoroutine);
+        currentStatus = MiniGameManager.GameStatus.NotStarted;
+        buttonToClick = restartButtonValue;
+        for (int i = 0; i < wheelIDs.Length; i++)
+        {
+            wheelIDs[i].GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        DisplayTime(completionTime,GameObject.Find("WheelCountDownTxt").GetComponent<Text>());
+    }
+
+    public void Succeed()
+    {
+        currentStatus = MiniGameManager.GameStatus.Completed;
+        GameObject.Find("WheelCountDownTxt").GetComponent<Text>().text = "";
+        for (int i = 0; i < wheelIDs.Length; i++)
+        {
+            wheelIDs[i].GetComponent<SpriteRenderer>().color = Color.green;
+        }
+    }
+    public void Fail()
+    {
+        currentStatus = MiniGameManager.GameStatus.Failed;
+        FindObjectOfType<MiniGameManager>().CallRestart();
     }
 }

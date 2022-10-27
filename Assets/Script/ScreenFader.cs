@@ -31,9 +31,16 @@ public class ScreenFader : MonoBehaviour
     {
         SceneManager.LoadScene(_nextSceneToLoad);
     }
+    
+    
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void FindPowerCoreToExplode()
+    {
+        FindObjectOfType<PowerCoreExplosion>().Explode();
     }
 
 }

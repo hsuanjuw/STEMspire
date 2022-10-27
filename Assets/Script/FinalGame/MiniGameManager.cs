@@ -7,6 +7,14 @@ using UnityEngine.SceneManagement;
 
 public class MiniGameManager : MonoBehaviour
 {
+    public enum GameStatus
+    {
+        NotStarted,
+        InProgress,
+        Failed,
+        Completed
+    };
+
     private StoryManager storyManager;
     private SpawnFireballs spawnFireBalls;
     private Camera mainCamera;
@@ -134,13 +142,16 @@ public class MiniGameManager : MonoBehaviour
     {
         FindObjectOfType<PowerCoreExplosion>().Explode();
         spawnFireBalls.StopSpawning();
-        FailImage.SetActive(true);
+        //FailImage.SetActive(true);
         FindObjectOfType<MusicPlayer>().SetOtherMusic();
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
+        FindObjectOfType<ScreenFader>().levelChangeAnimator.SetTrigger("FinaleFadeOut");
+        yield return new WaitForSeconds(5f);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         player.ResetPosition();
         FindObjectOfType<MusicPlayer>().SetStartMusic();
         FindObjectOfType<PowerCoreExplosion>().ResetLightning();
+        FindObjectOfType<ScreenFader>().levelChangeAnimator.SetTrigger("FinaleFadeIn");
         FailImage.SetActive(false);
         //dialogueSystem.StartDialogueIntro();
         storyManager.NextStatus();
@@ -175,7 +186,7 @@ public class MiniGameManager : MonoBehaviour
 
     private void EndMiniGame()
     {
-        wheel.EndGame();
+        wheel.RestartGame();
         screws.EndGame();
         systems.EndGame();
         power.EndGame();

@@ -7,23 +7,21 @@ using System;
 public class NumberBtn : MonoBehaviour
 {
     public int num;
-
     private Wheel wheel;
 
     void Start()
     {
-        
-        num = (int)Char.GetNumericValue(this.name[7]);
         wheel = GameObject.FindObjectOfType<Wheel>();
     }
+   
 
     public void btnClicked()
     {
         //Debug.Log(num.ToString() + "Button Clicked");
-        if (wheel.gameStarted)
+        if (wheel.currentStatus == MiniGameManager.GameStatus.InProgress)
         {
             wheel.ButtonClicked(num);
         }
-        
+        GetComponent<Animator>().SetTrigger("SpinWheel");
     }
 }
