@@ -127,9 +127,14 @@ public class DialogueSystem : MonoBehaviour
 
     public void NextLine(int optionNum)
     {
+        Debug.Log("Count" + conversation.items.Count);
+
         for (int i = 0; i < conversation.items.Count; i++)
         {
-            if(conversation.items[i].id == conversation.items[currentConvIndex].options[optionNum].targetId)
+            Debug.Log("index" + currentConvIndex);
+            Debug.Log("optionCount" + conversation.items[currentConvIndex].options.Count);
+            Debug.Log("optionNum" + optionNum);
+            if (conversation.items[i].id == conversation.items[currentConvIndex].options[optionNum].targetId)
             {
                 currentConvIndex = i;
                 break;
@@ -137,7 +142,7 @@ public class DialogueSystem : MonoBehaviour
         }
         option1Btn.gameObject.SetActive(false);
         option2Btn.gameObject.SetActive(false);
-        Debug.Log(conversation.items[currentConvIndex].text);
+        //Debug.Log(conversation.items[currentConvIndex].text);
         if (conversation.items[currentConvIndex].text == "")
         {
             CloseDialoguePanel();
@@ -218,8 +223,8 @@ public class DialogueSystem : MonoBehaviour
         closeBtn.gameObject.SetActive(false);
         dialoguePanel.SetActive(false);
         dialogueOpened = false;
-        //option1Btn.onClick.RemoveListener(option1BtnClicked);
-        //option2Btn.onClick.RemoveListener(option2BtnClicked);
+        option1Btn.onClick.RemoveListener(option1BtnClicked);
+        option2Btn.onClick.RemoveListener(option2BtnClicked);
         if (hasTask)
         {
             actionbtn.SetActive(true);

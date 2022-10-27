@@ -19,7 +19,7 @@ public class MiniGameManager : MonoBehaviour
     private SpawnFireballs spawnFireBalls;
     private Camera mainCamera;
     private Player player;
-    private bool gameStarted;
+    public bool gameStarted;
     private bool gamePlayed;
     private bool isCameraShake;
     public bool isCameraUp;
@@ -112,7 +112,7 @@ public class MiniGameManager : MonoBehaviour
         mainCamera.transform.eulerAngles = new Vector3(0f, 0f, 0f);
         // sth cracking??
         spawnFireBalls.CallStartFireballs();
-        StartMiniGame();
+        //StartMiniGame();
     }
 
     private void CameraShake()
@@ -160,7 +160,7 @@ public class MiniGameManager : MonoBehaviour
 
         StartRestartDialogue();
         
-        EndMiniGame();
+        //EndMiniGame();
         Debug.Log("Restart");
         gameStarted = false;
     }
