@@ -1868,6 +1868,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a0c52765f5f81746961b98625e4cdb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueSystem: {fileID: 0}
+  status: 0
+  gameData: {fileID: 0}
 --- !u!4 &941505074
 Transform:
   m_ObjectHideFlags: 0
@@ -2753,6 +2756,9 @@ MonoBehaviour:
   text: {fileID: 8824315878382605775}
   option1Btn: {fileID: 8824315879280981760}
   option2Btn: {fileID: 8824315877690641415}
+  continuePcBtn: {fileID: 0}
+  continueNpcBtn: {fileID: 0}
+  closeBtn: {fileID: 0}
   npcImage: {fileID: 8824315877441387907}
   pcImage: {fileID: 8824315878391408590}
   guideRobotSprite: {fileID: 21300000, guid: 240689bbbb9463847b0399668bdd9132, type: 3}
@@ -2964,6 +2970,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCameraUp: 0
+  wheel: {fileID: 1308835691}
+  screws: {fileID: 1308835690}
+  systems: {fileID: 1308835689}
+  power: {fileID: 1308835688}
   cameraShakeSpeed: 3
   CountdownTxt: {fileID: 1102287245}
   ErrorTxt: {fileID: 1434100675}

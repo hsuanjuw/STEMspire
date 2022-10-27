@@ -15,7 +15,7 @@ public class MiniGameManager : MonoBehaviour
         Failed,
         Completed
     };
-    private StoryManager storyManager;
+   // private StoryManager storyManager;
     private SpawnFireballs spawnFireBalls;
     private Camera mainCamera;
     private Player player;
@@ -27,10 +27,10 @@ public class MiniGameManager : MonoBehaviour
     private Analytic analytic;
 
     // Mini games
-    private Wheel wheel;
-    private Screws screws;
-    private Systems systems;
-    private Power power;
+    public Wheel wheel;
+    public Screws screws;
+    public Systems systems;
+    public Power power;
 
     [SerializeField] private int cameraShakeSpeed = 3;
     [SerializeField] private Text CountdownTxt;
@@ -54,10 +54,12 @@ public class MiniGameManager : MonoBehaviour
         dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
         dialogueSystem.StartDialogueIntro();
 
-        wheel = GameObject.FindObjectOfType<Wheel>();
-        screws = GameObject.FindObjectOfType<Screws>();
-        systems = GameObject.FindObjectOfType<Systems>();
-        power = GameObject.FindObjectOfType<Power>();
+        /*
+        wheel = GetComponent<Wheel>();
+        screws = GetComponent<Screws>();
+        systems = GetComponent<Systems>();
+        power = GetComponent<Power>();
+        */
     }
 
     // Update is called once per frame
