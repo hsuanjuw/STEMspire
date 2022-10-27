@@ -285,6 +285,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniGameComponents
       objectReference: {fileID: 0}
+    - target: {fileID: 2845901309606841501, guid: 9ef8263a0f3fb664a8b0f0077f08aca2, type: 3}
+      propertyPath: m_Color.a
+      value: 0.49803922
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ef8263a0f3fb664a8b0f0077f08aca2, type: 3}
 --- !u!4 &2061072598109628574 stripped
