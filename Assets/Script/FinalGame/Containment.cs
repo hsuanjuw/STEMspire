@@ -23,41 +23,37 @@ public class Containment : MonoBehaviour
 
     public void StartGame()
     {
-        currentStatus = MiniGameManager.GameStatus.InProgress;
-        StartCoroutine(ShardLoose());
+        if (currentStatus == MiniGameManager.GameStatus.NotStarted)
+        {
+            currentStatus = MiniGameManager.GameStatus.InProgress;
+            StartCoroutine(ShardLoose(0));
+        }
     }
 
-    public IEnumerator ShardLoose()
+    public IEnumerator ShardLoose(int shardIndex)
     {
-        for (int i = 0; i < shard.Length; i++)
+        yield return new WaitForSeconds(timeGap);
+        if (currentStatus == MiniGameManager.GameStatus.InProgress)
         {
-            if (currentStatus != MiniGameManager.GameStatus.InProgress)
-            {
-                break;
-            }
-            yield return new WaitForSeconds(timeGap);
-            shard[i].SetActive(false);
+            Debug.Log("Shard "+shardIndex);
+            shard[shardIndex].SetActive(false);
             float z;
-            if ( i % 2 == 0)
+            if (shardIndex % 2 == 0)
             {
+                FindObjectOfType<PowerCoreExplosion>().Explode();
                 z = 135f;
             }
-            else
-            {
-                z = -135f;
-            }
-            
-            GameObject newShard = Instantiate(brokenShard, shard[i].transform.position, Quaternion.Euler(0, 0, z));
-            newShard.GetComponent<SpriteRenderer>().sprite = shard[i].GetComponent<SpriteRenderer>().sprite;
+            else z = -135f;
+            GameObject newShard = Instantiate(brokenShard, shard[shardIndex].transform.position, Quaternion.Euler(0, 0, z));
+            newShard.GetComponent<SpriteRenderer>().sprite = shard[shardIndex].GetComponent<SpriteRenderer>().sprite;
             newShard.GetComponent<Rigidbody2D>().AddForce(newShard.transform.up * 80f);
-            FindObjectOfType<PowerCoreExplosion>().Explode();
-            if (i == shard.Length-1)
+            if (shardIndex == shard.Length - 1)
             {
                 currentStatus = MiniGameManager.GameStatus.Failed;
                 miniGameManager.CallRestart();
             }
+            else StartCoroutine(ShardLoose(shardIndex + 1));
         }
-
     }
 
     private void Reset()
@@ -66,11 +62,11 @@ public class Containment : MonoBehaviour
         {
             shard[i].SetActive(true);
         }
+        currentStatus = MiniGameManager.GameStatus.NotStarted;
     }
 
     public void EndGame()
     {
-        currentStatus = MiniGameManager.GameStatus.NotStarted;
         Reset();
     }
 }

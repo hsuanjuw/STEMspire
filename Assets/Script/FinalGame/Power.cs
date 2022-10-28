@@ -24,11 +24,19 @@ public class Power : MonoBehaviour
     private float rightSwitchTimeRemaining;
 
     public float timeAfterGameStart = 3f; // 3f after the game start, the power start to count down;
-
+    public bool hintTextActive = false;
     private void Start()
     {
-        //DisplayTime(leftSwitchTime, GameObject.Find("LCountDownTxt").GetComponent<Text>());
-        //DisplayTime(rightSwitchTime, GameObject.Find("RCountDownTxt").GetComponent<Text>());
+        if (hintTextActive)
+        {
+            DisplayTime(leftSwitchTime, GameObject.Find("LCountDownTxt").GetComponent<Text>());
+            DisplayTime(rightSwitchTime, GameObject.Find("RCountDownTxt").GetComponent<Text>());
+        }
+        else
+        {
+            GameObject.Find("LCountDownTxt").GetComponent<Text>().text = "";
+            GameObject.Find("RCountDownTxt").GetComponent<Text>().text = "";
+        }
     }
 
     // Update is called once per frame
@@ -65,21 +73,23 @@ public class Power : MonoBehaviour
     private IEnumerator StartWait()
     {
         yield return new WaitForSeconds(timeAfterGameStart); // 10 Sec after launch, the wheel game started
-        ResetPower();
-        currentStatus = MiniGameManager.GameStatus.InProgress;
+        ResetPower("Start");
     }
 
     public void RestartGame()
     {
-        ResetPower();
+        ResetPower("End");
     }
 
-    public void ResetPower()
+    public void ResetPower(string mode)
     {
-        TimeReStart("Both");
+        TimeReStart(mode);
         leftFill.ResetFill();
         rightFill.ResetFill();
-        currentStatus = MiniGameManager.GameStatus.NotStarted;
+        if(mode == "End")
+            currentStatus = MiniGameManager.GameStatus.NotStarted;
+        else if (mode == "Start")
+            currentStatus = MiniGameManager.GameStatus.InProgress;
     }
 
     private void TimeReStart(string type)
@@ -90,23 +100,39 @@ public class Power : MonoBehaviour
                 leftSwitchTimeRemaining = leftSwitchTime;
                 leftOnLight.SetActive(true);
                 leftDangerLight.SetActive(false);
-                //DisplayTime(leftSwitchTimeRemaining, GameObject.Find("LCountDownTxt").GetComponent<Text>());
+                if(hintTextActive)
+                    DisplayTime(leftSwitchTimeRemaining, GameObject.Find("LCountDownTxt").GetComponent<Text>());
                 break;
             case "Right":
                 rightSwitchTimeRemaining = rightSwitchTime;
                 rightOnLight.SetActive(true);
                 rightDangerLight.SetActive(false);
-                //DisplayTime(rightSwitchTimeRemaining, GameObject.Find("RCountDownTxt").GetComponent<Text>());
+                if(hintTextActive)
+                    DisplayTime(rightSwitchTimeRemaining, GameObject.Find("RCountDownTxt").GetComponent<Text>());
                 break;
-            case "Both":
+            case "Start":
+                leftSwitchTimeRemaining = leftSwitchTime;
+                leftDangerLight.SetActive(false);
+                leftOnLight.SetActive(true);
+                if(hintTextActive)
+                    DisplayTime(leftSwitchTimeRemaining, GameObject.Find("LCountDownTxt").GetComponent<Text>());
+                rightSwitchTimeRemaining = rightSwitchTime;
+                rightOnLight.SetActive(true);
+                rightDangerLight.SetActive(false);
+                if(hintTextActive)
+                    DisplayTime(rightSwitchTimeRemaining, GameObject.Find("RCountDownTxt").GetComponent<Text>());
+                break;
+            case "End":
                 leftSwitchTimeRemaining = leftSwitchTime;
                 leftDangerLight.SetActive(true);
                 leftOnLight.SetActive(false);
-                //DisplayTime(leftSwitchTimeRemaining, GameObject.Find("LCountDownTxt").GetComponent<Text>());
+                if(hintTextActive)
+                    DisplayTime(leftSwitchTimeRemaining, GameObject.Find("LCountDownTxt").GetComponent<Text>());
                 rightSwitchTimeRemaining = rightSwitchTime;
                 rightOnLight.SetActive(false);
                 rightDangerLight.SetActive(true);
-                //DisplayTime(rightSwitchTimeRemaining, GameObject.Find("RCountDownTxt").GetComponent<Text>());
+                if(hintTextActive)
+                    DisplayTime(rightSwitchTimeRemaining, GameObject.Find("RCountDownTxt").GetComponent<Text>());
                 break;
             default:
                 Debug.Log("Time restart Error");
@@ -133,8 +159,12 @@ public class Power : MonoBehaviour
         {
             Fail();
         }
-        Text text = GameObject.Find("LCountDownTxt").GetComponent<Text>();
-        DisplayTime(leftSwitchTimeRemaining, text);
+
+        if (hintTextActive)
+        {
+            Text text = GameObject.Find("LCountDownTxt").GetComponent<Text>();
+            DisplayTime(leftSwitchTimeRemaining, text);  
+        }
     }
     
     private void RCountDown()
@@ -156,8 +186,12 @@ public class Power : MonoBehaviour
         {
             Fail();
         }
-        Text text = GameObject.Find("RCountDownTxt").GetComponent<Text>();
-        DisplayTime(rightSwitchTimeRemaining, text);
+
+        if (hintTextActive)
+        {
+            Text text = GameObject.Find("RCountDownTxt").GetComponent<Text>();
+            DisplayTime(rightSwitchTimeRemaining, text);
+        }
     }
 
     private void DisplayTime(float timeToDisplay, Text timeText)
@@ -168,7 +202,7 @@ public class Power : MonoBehaviour
     
     public void Fail()
     {
-        Debug.Log("power fail");
+        Debug.Log("Power Failed");
         currentStatus = MiniGameManager.GameStatus.Failed;
         FindObjectOfType<MiniGameManager>().CallRestart();
     }
@@ -176,8 +210,11 @@ public class Power : MonoBehaviour
     public void Succeed()
     {
         currentStatus = MiniGameManager.GameStatus.Completed;
-        GameObject.Find("LCountDownTxt").GetComponent<Text>().text = "";
-        GameObject.Find("RCountDownTxt").GetComponent<Text>().text = "";
+        if (hintTextActive)
+        {
+            GameObject.Find("LCountDownTxt").GetComponent<Text>().text = "";
+            GameObject.Find("RCountDownTxt").GetComponent<Text>().text = "";
+        }
         FindObjectOfType<MiniGameManager>().CallSuccess();
     }
 

@@ -16,6 +16,7 @@ public class ButtonFlash : Button
     void Start()
     {
         base.Start();
+        btnImage = GetComponent<Image>();
         if (flashButton)
             StartCoroutine(FlashWhite());
     }
@@ -54,6 +55,13 @@ public class ButtonFlash : Button
         yield return new WaitForSeconds(1f);
         if(flashButton && flashAllowed)
             StartCoroutine(FlashBlack());
+    }
+
+    public void ResetFlash()
+    {
+        flashAllowed = true;
+        flashButton = true;
+        StartCoroutine(FlashWhite());
     }
 
 }

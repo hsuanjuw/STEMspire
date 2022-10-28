@@ -19,10 +19,12 @@ public class Wheel : MonoBehaviour
     private float timeRemaining;
     
     Coroutine gameCoroutine;
-
+    public bool hintTextActive = false;
     private void Start()
     {
-        //DisplayTime(completionTime,GameObject.Find("WheelCountDownTxt").GetComponent<Text>());
+        if (hintTextActive)
+            DisplayTime(completionTime, GameObject.Find("WheelCountDownTxt").GetComponent<Text>());
+        else GameObject.Find("WheelCountDownTxt").GetComponent<Text>().text = "";
     }
 
     void Update()
@@ -84,13 +86,15 @@ public class Wheel : MonoBehaviour
         if (timeRemaining > 0)
         {
             timeRemaining -= Time.deltaTime;
-            DisplayTime(timeRemaining, GameObject.Find("WheelCountDownTxt").GetComponent<Text>());
+            if(hintTextActive)
+                DisplayTime(timeRemaining, GameObject.Find("WheelCountDownTxt").GetComponent<Text>());
         }
         else
         {
             Debug.Log("Wheel Failure");
             Fail();
-            DisplayTime(0, GameObject.Find("WheelCountDownTxt").GetComponent<Text>());
+            if(hintTextActive)
+                DisplayTime(0, GameObject.Find("WheelCountDownTxt").GetComponent<Text>());
         }
         
     }
@@ -102,7 +106,6 @@ public class Wheel : MonoBehaviour
 
     public void RestartGame()
     {
-        Debug.Log("RESTARTING");
         StopCoroutine(gameCoroutine);
         currentStatus = MiniGameManager.GameStatus.NotStarted;
         buttonToClick = restartButtonValue;
@@ -110,13 +113,15 @@ public class Wheel : MonoBehaviour
         {
             wheelIDs[i].GetComponent<SpriteRenderer>().color = Color.white;
         }
-        //DisplayTime(completionTime,GameObject.Find("WheelCountDownTxt").GetComponent<Text>());
+        if(hintTextActive)
+            DisplayTime(completionTime,GameObject.Find("WheelCountDownTxt").GetComponent<Text>());
     }
 
     public void Succeed()
     {
         currentStatus = MiniGameManager.GameStatus.Completed;
-        GameObject.Find("WheelCountDownTxt").GetComponent<Text>().text = "";
+        if(hintTextActive)
+            GameObject.Find("WheelCountDownTxt").GetComponent<Text>().text = "";
         for (int i = 0; i < wheelIDs.Length; i++)
         {
             wheelIDs[i].GetComponent<SpriteRenderer>().color = Color.green;
@@ -124,6 +129,7 @@ public class Wheel : MonoBehaviour
     }
     public void Fail()
     {
+        Debug.Log("Wheel Failed");
         currentStatus = MiniGameManager.GameStatus.Failed;
         FindObjectOfType<MiniGameManager>().CallRestart();
     }

@@ -966,7 +966,7 @@ GameObject:
   - component: {fileID: 3057575486390022222}
   m_Layer: 0
   m_Name: containmentRC
-  m_TagString: Untagged
+  m_TagString: Shard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1048,7 +1048,7 @@ GameObject:
   - component: {fileID: 8636199816780692190}
   m_Layer: 0
   m_Name: containmentLC
-  m_TagString: Untagged
+  m_TagString: Shard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1280,7 +1280,7 @@ GameObject:
   - component: {fileID: 6154459837398734843}
   m_Layer: 0
   m_Name: containmentL
-  m_TagString: Untagged
+  m_TagString: Shard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2074,7 +2074,7 @@ GameObject:
   - component: {fileID: 820064962999977654}
   m_Layer: 0
   m_Name: containmentR
-  m_TagString: Untagged
+  m_TagString: Shard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2581,7 +2581,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f97cdabb3b83a814983f9059ad8c0ba0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a83564c9943ed924fb36245abbf00993, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

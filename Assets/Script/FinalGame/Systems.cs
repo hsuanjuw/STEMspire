@@ -14,10 +14,12 @@ public class Systems : MonoBehaviour
 
     public float completionTime = 10f;
     public float timeRemaining = 10f; // 10 second for clicking the symbols
-
+    public bool hintTextActive = false;
     void Start()
     {
-        //DisplayTime(timeRemaining, GameObject.Find("SystemCountDownTxt").GetComponent<Text>());
+        if (hintTextActive)
+            DisplayTime(timeRemaining, GameObject.Find("SystemCountDownTxt").GetComponent<Text>());
+        else GameObject.Find("SystemCountDownTxt").GetComponent<Text>().text = "";
     }
     // Update is called once per frame
     void Update()
@@ -36,10 +38,10 @@ public class Systems : MonoBehaviour
     private IEnumerator StartWait()
     {
         yield return new WaitForSeconds(timeAfterGameStart); // 10 Sec after launch, the wheel game started
-        if (currentStatus == MiniGameManager.GameStatus.InProgress)
+        if (currentStatus == MiniGameManager.GameStatus.NotStarted)
         {
-            timeRemaining = completionTime;
             currentStatus = MiniGameManager.GameStatus.InProgress;
+            timeRemaining = completionTime;
             FindObjectOfType<Finale_SystemInfo>().NextPhase();  
         }
     }
@@ -49,13 +51,20 @@ public class Systems : MonoBehaviour
         if (timeRemaining > 0)
         {
             timeRemaining -= Time.deltaTime;
-            Text text = GameObject.Find("SystemCountDownTxt").GetComponent<Text>();
-            DisplayTime(timeRemaining, text);
+            if (hintTextActive)
+            {
+                Text text = GameObject.Find("SystemCountDownTxt").GetComponent<Text>();
+                DisplayTime(timeRemaining, text);
+            }
         }
         else
         {
-            Text text = GameObject.Find("SystemCountDownTxt").GetComponent<Text>();
-            DisplayTime(0, text);
+            if (hintTextActive)
+            {
+                Text text = GameObject.Find("SystemCountDownTxt").GetComponent<Text>();
+                DisplayTime(0, text);
+            }
+
             timeRemaining = completionTime;
 
             if (!CheckPattern())
@@ -104,7 +113,8 @@ public class Systems : MonoBehaviour
     private void ResetSystem()
     {
         currentStatus = MiniGameManager.GameStatus.NotStarted;
-        //DisplayTime(timeRemaining, GameObject.Find("SystemCountDownTxt").GetComponent<Text>());
+        if(hintTextActive)
+            DisplayTime(timeRemaining, GameObject.Find("SystemCountDownTxt").GetComponent<Text>());
         for (int i = 0; i < systemSymbols.Length; i++)
         {
             systemSymbols[i].GetComponent<Image>().color = Color.white;
@@ -115,6 +125,7 @@ public class Systems : MonoBehaviour
 
     public void Fail()
     {
+        Debug.Log("System Failed");
         currentStatus = MiniGameManager.GameStatus.Failed;
         FindObjectOfType<MiniGameManager>().CallRestart();
     }
@@ -122,7 +133,8 @@ public class Systems : MonoBehaviour
     public void Succeed()
     {
         currentStatus = MiniGameManager.GameStatus.Completed;
-        GameObject.Find("SystemCountDownTxt").GetComponent<Text>().text = "";
+        if(hintTextActive)
+            GameObject.Find("SystemCountDownTxt").GetComponent<Text>().text = "";
         for (int i = 0; i < systemSymbols.Length; i++)
         {
             systemSymbols[i].GetComponent<Image>().color = Color.green;

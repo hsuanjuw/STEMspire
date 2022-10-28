@@ -77,6 +77,7 @@ MonoBehaviour:
   numWheels: 5
   timeAfterGameStart: 40
   completionTime: 30
+  hintTextActive: 0
 --- !u!114 &5171305791500529063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,10 +90,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d86ce235aa12ec34bb94b8a375f1a52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStatus: 0
   brokenShard: {fileID: 8780710131084472094, guid: b89869b5a333bf84580cedff1b91fc1a, type: 3}
-  timeGap: 10
+  timeGap: 5
   isFixed: 0
-  gameStart: 0
 --- !u!114 &5171305791500529060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +121,7 @@ MonoBehaviour:
   timeAfterGameStart: 20
   completionTime: 20
   timeRemaining: 20
+  hintTextActive: 0
 --- !u!114 &5171305791500529061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,3 +145,4 @@ MonoBehaviour:
   rightSwitchTime: 30
   fillSpeed: 1
   timeAfterGameStart: 1
+  hintTextActive: 0

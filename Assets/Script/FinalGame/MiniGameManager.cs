@@ -207,6 +207,7 @@ public class MiniGameManager : MonoBehaviour
         shards.EndGame();
         systems.EndGame();
         power.RestartGame();
+        FindObjectOfType<ButtonFlash>().ResetFlash();
     }
     
     private void StartRestartDialogue()
