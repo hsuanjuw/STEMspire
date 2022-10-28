@@ -70,7 +70,7 @@ public class Analytic : MonoBehaviour
 
     public string FormatTime(float time)
     {
-        Debug.Log(time);
+        //Debug.Log(time);
         int minutes = (int)time / 60;
         int seconds = (int)time % 60;
         //int milliseconds = (int)time * 1000 % 1000;

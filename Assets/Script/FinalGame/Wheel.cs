@@ -22,7 +22,7 @@ public class Wheel : MonoBehaviour
 
     private void Start()
     {
-        DisplayTime(completionTime,GameObject.Find("WheelCountDownTxt").GetComponent<Text>());
+        //DisplayTime(completionTime,GameObject.Find("WheelCountDownTxt").GetComponent<Text>());
     }
 
     void Update()
@@ -110,7 +110,7 @@ public class Wheel : MonoBehaviour
         {
             wheelIDs[i].GetComponent<SpriteRenderer>().color = Color.white;
         }
-        DisplayTime(completionTime,GameObject.Find("WheelCountDownTxt").GetComponent<Text>());
+        //DisplayTime(completionTime,GameObject.Find("WheelCountDownTxt").GetComponent<Text>());
     }
 
     public void Succeed()

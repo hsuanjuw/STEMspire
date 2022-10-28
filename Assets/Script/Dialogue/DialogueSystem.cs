@@ -68,7 +68,7 @@ public class DialogueSystem : MonoBehaviour
 
     private IEnumerator TypeLine(string dialogue, bool isEnd)
     {
-        Debug.Log("Type1");
+        //Debug.Log("Type1");
         foreach (char c in dialogue.ToCharArray())
         {
             if (c == '\r' || c == '\n')
@@ -94,7 +94,7 @@ public class DialogueSystem : MonoBehaviour
 
     private IEnumerator TypeLine(string dialogue, Sprite sprite) // pc talking
     {
-        Debug.Log("Type2");
+        //Debug.Log("Type2");
         text.text = string.Empty;
         npcImage.gameObject.SetActive(false);
         pcImage.sprite = sprite;
@@ -127,13 +127,13 @@ public class DialogueSystem : MonoBehaviour
 
     public void NextLine(int optionNum)
     {
-        Debug.Log("Count" + conversation.items.Count);
+        //Debug.Log("Count" + conversation.items.Count);
 
         for (int i = 0; i < conversation.items.Count; i++)
         {
-            Debug.Log("index" + currentConvIndex);
-            Debug.Log("optionCount" + conversation.items[currentConvIndex].options.Count);
-            Debug.Log("optionNum" + optionNum);
+            //Debug.Log("index" + currentConvIndex);
+            //Debug.Log("optionCount" + conversation.items[currentConvIndex].options.Count);
+            //Debug.Log("optionNum" + optionNum);
             if (conversation.items[i].id == conversation.items[currentConvIndex].options[optionNum].targetId)
             {
                 currentConvIndex = i;

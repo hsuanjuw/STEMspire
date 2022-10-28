@@ -163,7 +163,7 @@ public class MiniGameManager : MonoBehaviour
         FindObjectOfType<PowerCoreExplosion>().ResetLightning();
         FindObjectOfType<ScreenFader>().levelChangeAnimator.SetTrigger("FinaleFadeIn");
 
-        //StartRestartDialogue();
+        StartRestartDialogue();
         
         EndMiniGame();
         Debug.Log("Restart");

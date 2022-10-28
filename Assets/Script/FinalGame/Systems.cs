@@ -17,7 +17,7 @@ public class Systems : MonoBehaviour
 
     void Start()
     {
-        DisplayTime(timeRemaining, GameObject.Find("SystemCountDownTxt").GetComponent<Text>());
+        //DisplayTime(timeRemaining, GameObject.Find("SystemCountDownTxt").GetComponent<Text>());
     }
     // Update is called once per frame
     void Update()
@@ -104,7 +104,7 @@ public class Systems : MonoBehaviour
     private void ResetSystem()
     {
         currentStatus = MiniGameManager.GameStatus.NotStarted;
-        DisplayTime(timeRemaining, GameObject.Find("SystemCountDownTxt").GetComponent<Text>());
+        //DisplayTime(timeRemaining, GameObject.Find("SystemCountDownTxt").GetComponent<Text>());
         for (int i = 0; i < systemSymbols.Length; i++)
         {
             systemSymbols[i].GetComponent<Image>().color = Color.white;

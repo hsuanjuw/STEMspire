@@ -27,8 +27,8 @@ public class Power : MonoBehaviour
 
     private void Start()
     {
-        DisplayTime(leftSwitchTime, GameObject.Find("LCountDownTxt").GetComponent<Text>());
-        DisplayTime(rightSwitchTime, GameObject.Find("RCountDownTxt").GetComponent<Text>());
+        //DisplayTime(leftSwitchTime, GameObject.Find("LCountDownTxt").GetComponent<Text>());
+        //DisplayTime(rightSwitchTime, GameObject.Find("RCountDownTxt").GetComponent<Text>());
     }
 
     // Update is called once per frame
@@ -90,23 +90,23 @@ public class Power : MonoBehaviour
                 leftSwitchTimeRemaining = leftSwitchTime;
                 leftOnLight.SetActive(true);
                 leftDangerLight.SetActive(false);
-                DisplayTime(leftSwitchTimeRemaining, GameObject.Find("LCountDownTxt").GetComponent<Text>());
+                //DisplayTime(leftSwitchTimeRemaining, GameObject.Find("LCountDownTxt").GetComponent<Text>());
                 break;
             case "Right":
                 rightSwitchTimeRemaining = rightSwitchTime;
                 rightOnLight.SetActive(true);
                 rightDangerLight.SetActive(false);
-                DisplayTime(rightSwitchTimeRemaining, GameObject.Find("RCountDownTxt").GetComponent<Text>());
+                //DisplayTime(rightSwitchTimeRemaining, GameObject.Find("RCountDownTxt").GetComponent<Text>());
                 break;
             case "Both":
                 leftSwitchTimeRemaining = leftSwitchTime;
                 leftDangerLight.SetActive(true);
                 leftOnLight.SetActive(false);
-                DisplayTime(leftSwitchTimeRemaining, GameObject.Find("LCountDownTxt").GetComponent<Text>());
+                //DisplayTime(leftSwitchTimeRemaining, GameObject.Find("LCountDownTxt").GetComponent<Text>());
                 rightSwitchTimeRemaining = rightSwitchTime;
                 rightOnLight.SetActive(false);
                 rightDangerLight.SetActive(true);
-                DisplayTime(rightSwitchTimeRemaining, GameObject.Find("RCountDownTxt").GetComponent<Text>());
+                //DisplayTime(rightSwitchTimeRemaining, GameObject.Find("RCountDownTxt").GetComponent<Text>());
                 break;
             default:
                 Debug.Log("Time restart Error");
