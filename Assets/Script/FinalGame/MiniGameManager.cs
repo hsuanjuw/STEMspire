@@ -27,7 +27,7 @@ public class MiniGameManager : MonoBehaviour
 
     //Analytics
     private Analytic analytic;
-    private int launchBtnPressedCount;
+    public int launchBtnPressedCount;
 
     // Mini games
     public Wheel wheel;
@@ -167,8 +167,10 @@ public class MiniGameManager : MonoBehaviour
         FindObjectOfType<MusicPlayer>().SetStartMusic();
         FindObjectOfType<PowerCoreExplosion>().ResetLightning();
         FindObjectOfType<ScreenFader>().levelChangeAnimator.SetTrigger("FinaleFadeIn");
-
-        StartRestartDialogue();
+        if (launchBtnPressedCount == 1)
+        {
+            StartRestartDialogue();
+        }
         
         EndMiniGame();
         Debug.Log("Restart");
