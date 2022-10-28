@@ -447,17 +447,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
-    text: Now that you have made the damage worse... Will you follow my advice?
+    text: Now that you have made the damage worse... Will you follow my advice and
+      go to the Main Commercial District?
     image: {fileID: 21300000, guid: 32d6f7bb5e985354da7fbe80b5b2fb7c, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Fine...
+    - text: Fine, let's go.
       image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
-    - text: No!
+    - text: No way! I've got this.
       image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
       targetId: 2
@@ -1062,8 +1063,8 @@ MonoBehaviour:
       targetId: 3
       enabled: 0
   - id: 3
-    text: '  I recommend finding an expert to aid in the repairs.  The Main Commercial
-      District likely has someone.'
+    text: I recommend finding an expert to aid in the repairs. We should be able
+      to find someone in the Main Commercial District.
     image: {fileID: 21300000, guid: 32d6f7bb5e985354da7fbe80b5b2fb7c, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}

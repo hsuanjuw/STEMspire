@@ -1545,8 +1545,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
-    text: "I tightened the screws on the protective casing and recalibrated the artificial
-      gravity generator so you shouldn\u2019t be randomly flying off anymore."
+    text: I reinforced the Power Core containment mechanism. If you had attempted
+      to launch the ship, the Power Core would have blown up!
     image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1557,7 +1557,7 @@ MonoBehaviour:
       targetId: 1.1
       enabled: 0
   - id: 1.1
-    text: " There are some\r issues here that are too specialized for little ol\u2019
+    text: "There are some\r issues here that are too specialized for little ol\u2019
       me, though. You\u2019ll need to get someone else to fix those unless you want
       your ship to become a pile of scrap metal during\r take off."
     image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
@@ -1570,8 +1570,8 @@ MonoBehaviour:
       targetId: 1.2
       enabled: 0
   - id: 1.2
-    text: ' I think Engineer 2 has a pretty good handle on this type of stuff. Why
-      don''t you try them?'
+    text: I think is another Engineer with a pretty good handle on this type of stuff.
+      Why don't you try them?
     image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1593,8 +1593,7 @@ MonoBehaviour:
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
-    - text: "Why should we do that when Engineer 2 might be able to help us? What\u2019s
-        wrong with Engineer 2?"
+    - text: Why should we do that when this Engineer might be able to help us?
       image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
       targetId: 3.2
@@ -1630,8 +1629,8 @@ MonoBehaviour:
       targetId: 5.1
       enabled: 0
   - id: 5.1
-    text: According to the lack of reviews and other sources of data, Engineer 2
-      does not fit the profile of a qualified engineer.
+    text: According to the lack of reviews and other sources of data, this other
+      Engineer does not fit the profile of a qualified engineer.
     image: {fileID: 21300000, guid: 32d6f7bb5e985354da7fbe80b5b2fb7c, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}

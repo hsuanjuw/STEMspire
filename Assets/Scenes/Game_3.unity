@@ -1226,8 +1226,8 @@ MonoBehaviour:
   items:
   - id: 1
     text: "Oh! You have an Eclipse Runner. Wow... you weren't\r exaggerating about
-      the damage. You\u2019re lucky you made it here without any issues\u2026 I was
-      mumbling,"
+      the damage. You\u2019re lucky you made it here without any issues\u2026 Fire
+      up this ship and show me what's going on."
     image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1430,7 +1430,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
-    text: ' That did it! You should be good to go!'
+    text: ' I took a look at your system. I upgraded some of your displays so you
+      should be good to go!'
     image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
