@@ -139,18 +139,18 @@ public class DialogueSystem : MonoBehaviour
     {
         //Debug.Log("Count" + conversation.items.Count);
 
+        if (conversation.items[currentConvIndex].options.Count == 2)
+        {
+            analytic.SaveData(
+                "DialogueChoices",
+                SceneManager.GetActiveScene().name,
+                Time.time,
+                conversation.items[currentConvIndex].text,
+                conversation.items[currentConvIndex].options[optionNum].text
+            );
+        }
         for (int i = 0; i < conversation.items.Count; i++)
         {
-            if (conversation.items[currentConvIndex].options.Count == 2)
-            {
-                analytic.SaveData(
-                    "DialogueChoices", 
-                    SceneManager.GetActiveScene().name, 
-                    Time.time, 
-                    conversation.items[currentConvIndex].text,
-                    conversation.items[currentConvIndex].options[optionNum].text
-                );
-            }
             //Debug.Log("index" + currentConvIndex);
             //Debug.Log("optionCount" + conversation.items[currentConvIndex].options.Count);
             //Debug.Log("optionNum" + optionNum);

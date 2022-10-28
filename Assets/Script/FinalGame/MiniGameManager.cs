@@ -24,7 +24,10 @@ public class MiniGameManager : MonoBehaviour
     private bool isCameraShake;
     public bool isCameraUp;
     private DialogueSystem dialogueSystem;
+
+    //Analytics
     private Analytic analytic;
+    private int launchBtnPressedCount;
 
     // Mini games
     public Wheel wheel;
@@ -46,6 +49,7 @@ public class MiniGameManager : MonoBehaviour
 
     void Start()
     {
+        launchBtnPressedCount = 0;
         mainCamera = Camera.main;
         lightningBalls = GameObject.FindObjectOfType<SpawnLightningBalls>();
         player = GameObject.FindObjectOfType<Player>();
@@ -67,6 +71,7 @@ public class MiniGameManager : MonoBehaviour
     {
         if (!gameStarted)
         {
+            launchBtnPressedCount++;
             gameStarted = true;
             CountdownTxt.gameObject.SetActive(true);
             StartCoroutine(Countdown());

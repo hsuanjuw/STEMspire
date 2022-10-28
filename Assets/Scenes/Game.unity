@@ -449,16 +449,16 @@ MonoBehaviour:
   - id: 1
     text: Now that you have made the damage worse... Will you follow my advice and
       go to the Main Commercial District?
-    image: {fileID: 21300000, guid: 32d6f7bb5e985354da7fbe80b5b2fb7c, type: 3}
+    image: {fileID: 21300000, guid: b4ce223f253985f498d802add2b965b2, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Fine, let's go.
+    - text: Fine ...
       image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
-    - text: No way! I've got this.
+    - text: No!
       image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
       targetId: 2
@@ -810,7 +810,6 @@ MonoBehaviour:
   guideRobotSprite: {fileID: 21300000, guid: 240689bbbb9463847b0399668bdd9132, type: 3}
   actionbtn: {fileID: 0}
   hasTask: 0
-  textSpeed: 0.05
   dialoguePanel: {fileID: 41167370558703128}
   dialogueOpened: 0
   currentConvIndex: 0
@@ -867,6 +866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1826306213}
   - component: {fileID: 1826306214}
+  - component: {fileID: 1826306215}
   m_Layer: 0
   m_Name: Analytic
   m_TagString: Untagged
@@ -898,6 +898,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9991aee20735f8e40a545f2b8027b0c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1826306215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826306212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad4116a5a9a33bc42a1b5d5df686b064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1833505089 stripped
@@ -1041,8 +1053,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
-    text: Ship damaged. Dock at nearest space port for repairs.
-    image: {fileID: 21300000, guid: 32d6f7bb5e985354da7fbe80b5b2fb7c, type: 3}
+    text: ' Robot Companion designation R.C. power on. Ship damaged. Dock at nearest
+      space station for repairs.'
+    image: {fileID: 21300000, guid: b4ce223f253985f498d802add2b965b2, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
@@ -1053,7 +1066,7 @@ MonoBehaviour:
       enabled: 0
   - id: 2
     text: Ship sustained major damage from the collision with the asteroid.
-    image: {fileID: 21300000, guid: 32d6f7bb5e985354da7fbe80b5b2fb7c, type: 3}
+    image: {fileID: 21300000, guid: b4ce223f253985f498d802add2b965b2, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
@@ -1063,9 +1076,9 @@ MonoBehaviour:
       targetId: 3
       enabled: 0
   - id: 3
-    text: I recommend finding an expert to aid in the repairs. We should be able
-      to find someone in the Main Commercial District.
-    image: {fileID: 21300000, guid: 32d6f7bb5e985354da7fbe80b5b2fb7c, type: 3}
+    text: "I recommend finding an expert to aid in the repairs. The Main Commercial
+      District likely has someone.\r"
+    image: {fileID: 21300000, guid: b4ce223f253985f498d802add2b965b2, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
@@ -1794,7 +1807,7 @@ PrefabInstance:
     - target: {fileID: 6726699698072373779, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 32d6f7bb5e985354da7fbe80b5b2fb7c, type: 3}
+      objectReference: {fileID: 21300000, guid: b4ce223f253985f498d802add2b965b2, type: 3}
     - target: {fileID: 6726699698072373779, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
