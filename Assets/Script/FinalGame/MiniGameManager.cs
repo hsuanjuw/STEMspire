@@ -176,10 +176,14 @@ public class MiniGameManager : MonoBehaviour
         {
             if (num == 1)
             {
+                analytic.SaveData("EnterSpaceStation", Time.time);
+                analytic.SaveData("LaunchBtnPressedCount", Time.time, launchBtnPressedCount);
                 SceneManager.LoadScene("SpaceStation");
             }
             else
             {
+                analytic.SaveData("EnterSpaceStation2", Time.time);
+                analytic.SaveData("LaunchBtnPressedCount", Time.time, launchBtnPressedCount);
                 SceneManager.LoadScene("SpaceStation" + num.ToString());
             }
         }

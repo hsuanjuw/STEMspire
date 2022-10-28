@@ -9,12 +9,14 @@ public class NpcHandler : MonoBehaviour
 
     private DialogueSystem dialogueSystem;
     private ConversationScript conversation;
+    private Analytic analytic;
 
     private bool hasTask;
 
     // Start is called before the first frame update
     void Start()
     {
+        analytic = GameObject.FindObjectOfType<Analytic>();
         dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
         conversation = this.GetComponentInChildren<ConversationScript>();
         npcSprite = GetComponentInChildren<SpriteRenderer>().sprite;
@@ -36,6 +38,8 @@ public class NpcHandler : MonoBehaviour
         if (!dialogueSystem.dialogueOpened)
         {
             dialogueSystem.StartDialogue(conversation, hasTask);
+            analytic.SaveData(this.name +"Clicked", Time.time);
+
         }
     }
 }

@@ -25,12 +25,15 @@ public class DialogueSystem : MonoBehaviour
     public GameObject actionbtn;
     public bool hasTask;
 
-    public float textSpeed;
+    private float textSpeed;
+    private bool dialogueIsStarted;
 
     public GameObject dialoguePanel;
     public bool dialogueOpened;
 
     public int currentConvIndex; // record which conversation we are at
+
+    private Analytic analytic;
 
 
     private void Awake()
@@ -40,12 +43,15 @@ public class DialogueSystem : MonoBehaviour
 
     void Start()
     {
-/*        text = GameObject.Find("DialogueText").GetComponent<TextMeshProUGUI>();
-        option1Btn = GameObject.Find("Option1Btn").GetComponent<Button>();
-        option2Btn = GameObject.Find("Option2Btn").GetComponent<Button>();
-        continuePcBtn = GameObject.Find("ContinuePcBtn").GetComponent<Button>();
-        continueNpcBtn = GameObject.Find("ContinueNpcBtn").GetComponent<Button>();
-        closeBtn = GameObject.Find("CloseBtn").GetComponent<Button>();*/
+        textSpeed = 0.01f;
+        dialogueIsStarted = false;
+        analytic = GameObject.FindObjectOfType<Analytic>();
+        /*        text = GameObject.Find("DialogueText").GetComponent<TextMeshProUGUI>();
+                option1Btn = GameObject.Find("Option1Btn").GetComponent<Button>();
+                option2Btn = GameObject.Find("Option2Btn").GetComponent<Button>();
+                continuePcBtn = GameObject.Find("ContinuePcBtn").GetComponent<Button>();
+                continueNpcBtn = GameObject.Find("ContinueNpcBtn").GetComponent<Button>();
+                closeBtn = GameObject.Find("CloseBtn").GetComponent<Button>();*/
     }
 
     public void StartDialogueIntro()
@@ -56,14 +62,18 @@ public class DialogueSystem : MonoBehaviour
 
     public void StartDialogue(ConversationScript npcConversation, bool _hasTask)
     {
-        hasTask = _hasTask;
-        conversation = npcConversation;
-        //Debug.Log(conversation.items[0].text);
-        currentConvIndex = 0;
-        bool isEnd = CheckEndConversation();
-        npcImage.sprite = conversation.items[currentConvIndex].image;
-        OpenDialoguePanel(isEnd);
-        StartCoroutine(TypeLine(conversation.items[currentConvIndex].text, isEnd));
+        if (!dialogueIsStarted)
+        {
+            dialogueIsStarted = true;
+            hasTask = _hasTask;
+            conversation = npcConversation;
+            //Debug.Log(conversation.items[0].text);
+            currentConvIndex = 0;
+            bool isEnd = CheckEndConversation();
+            npcImage.sprite = conversation.items[currentConvIndex].image;
+            OpenDialoguePanel(isEnd);
+            StartCoroutine(TypeLine(conversation.items[currentConvIndex].text, isEnd));
+        }
     }
 
     private IEnumerator TypeLine(string dialogue, bool isEnd)
@@ -131,6 +141,16 @@ public class DialogueSystem : MonoBehaviour
 
         for (int i = 0; i < conversation.items.Count; i++)
         {
+            if (conversation.items[currentConvIndex].options.Count == 2)
+            {
+                analytic.SaveData(
+                    "DialogueChoices", 
+                    SceneManager.GetActiveScene().name, 
+                    Time.time, 
+                    conversation.items[currentConvIndex].text,
+                    conversation.items[currentConvIndex].options[optionNum].text
+                );
+            }
             //Debug.Log("index" + currentConvIndex);
             //Debug.Log("optionCount" + conversation.items[currentConvIndex].options.Count);
             //Debug.Log("optionNum" + optionNum);
@@ -220,6 +240,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void CloseDialoguePanel()
     {
+        dialogueIsStarted = false;
         closeBtn.gameObject.SetActive(false);
         dialoguePanel.SetActive(false);
         dialogueOpened = false;
