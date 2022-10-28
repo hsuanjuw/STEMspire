@@ -73,11 +73,14 @@ public class Wheel : MonoBehaviour
                 wheelIDs[i].GetComponent<SpriteRenderer>().color = new Color(253f,255f,0f,255f);
             }
             yield return new WaitForSeconds(1f);
-            for (int i = 0; i < wheelIDs.Length; i++)
+            if (currentStatus == MiniGameManager.GameStatus.InProgress)
             {
-                wheelIDs[i].GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 255f, 255f);
+                for (int i = 0; i < wheelIDs.Length; i++)
+                {
+                    wheelIDs[i].GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 255f, 255f);
+                }
+                yield return new WaitForSeconds(1f);
             }
-            yield return new WaitForSeconds(1f);
         }
     }
 
