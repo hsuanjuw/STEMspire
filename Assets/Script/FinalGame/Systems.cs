@@ -15,6 +15,7 @@ public class Systems : MonoBehaviour
     public float completionTime = 10f;
     public float timeRemaining = 10f; // 10 second for clicking the symbols
     public bool hintTextActive = false;
+    private Coroutine gameCoroutine;
     void Start()
     {
         if (hintTextActive)
@@ -32,7 +33,7 @@ public class Systems : MonoBehaviour
 
     public void StartGame()
     {
-        StartCoroutine(StartWait());
+        gameCoroutine = StartCoroutine(StartWait());
     }
 
     private IEnumerator StartWait()
@@ -112,7 +113,9 @@ public class Systems : MonoBehaviour
 
     private void ResetSystem()
     {
+        StopCoroutine(gameCoroutine);
         currentStatus = MiniGameManager.GameStatus.NotStarted;
+        timeRemaining = completionTime;
         if(hintTextActive)
             DisplayTime(timeRemaining, GameObject.Find("SystemCountDownTxt").GetComponent<Text>());
         for (int i = 0; i < systemSymbols.Length; i++)
