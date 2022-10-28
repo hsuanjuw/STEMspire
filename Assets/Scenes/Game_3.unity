@@ -1288,8 +1288,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1643820082}
-  - {fileID: 2101835972}
   - {fileID: 2106064627}
+  - {fileID: 2101835972}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1509,8 +1509,14 @@ MonoBehaviour:
     - text: Thank you so much!
       image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
       audio: {fileID: 0}
-      targetId: 1
+      targetId: 2
       enabled: 0
+  - id: 2
+    text: 
+    image: {fileID: 0}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options: []
 --- !u!1 &1643820080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,7 +1815,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 869942610}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2106064628
 MonoBehaviour:
