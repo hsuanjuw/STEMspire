@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
         //Debug.Log(col.tag);
         if (col.CompareTag("Fireball") && miniGameManager.gameStarted)
         {
+            Destroy(col.gameObject);
             miniGameManager.CallRestart();
         }
         else if (col.name == "IntroDialogueTrigger")
