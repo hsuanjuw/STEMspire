@@ -215,7 +215,8 @@ public class MiniGameManager : MonoBehaviour
     private void EndMiniGame()
     {
         wheel.RestartGame();
-        shards.EndGame();
+        if(shards.currentStatus != GameStatus.Completed)
+            shards.EndGame();
         systems.EndGame();
         power.RestartGame();
         FindObjectOfType<ButtonFlash>().ResetFlash();
