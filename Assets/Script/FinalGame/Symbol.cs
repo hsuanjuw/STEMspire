@@ -22,7 +22,7 @@ public class Symbol : MonoBehaviour
 
     public void SymbolClicked()
     {
-        if (systems.currentStatus == MiniGameManager.GameStatus.InProgress)
+        if (systems.currentStatus != MiniGameManager.GameStatus.Failed)
         {
             switch (symbolActive)
             {
@@ -38,5 +38,12 @@ public class Symbol : MonoBehaviour
                     break;
             }
         }
+    }
+
+    public void ResetSymbol()
+    {
+        activeSymbol.SetActive(false);
+        inactiveSymbol.SetActive(true);
+        symbolActive = false;
     }
 }
