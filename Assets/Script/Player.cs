@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     private MiniGameManager miniGameManager;
     private Vector3 originalPos;
     private DialogueSystem dialogueSystem;
-
+    public GameObject hitByBallPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +51,8 @@ public class Player : MonoBehaviour
         //Debug.Log(col.tag);
         if (col.CompareTag("Fireball") && miniGameManager.gameStarted)
         {
-            Destroy(col.gameObject);
+            col.GetComponent<LightningBall>().KillBall();
+            Instantiate(hitByBallPrefab,col.transform.position,col.transform.rotation);
             miniGameManager.CallRestart();
         }
         else if (col.name == "IntroDialogueTrigger")
