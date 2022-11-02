@@ -9,16 +9,21 @@ public class LightningBall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(KillFireball());
+        StartCoroutine(IEKillBall());
     }
     void Update()
     {
         transform.position += transform.up * Time.deltaTime * speed;
     }
 
-    IEnumerator KillFireball()
+    IEnumerator IEKillBall()
     {
         yield return new WaitForSeconds(10f);
+        KillBall();
+    }
+
+    public void KillBall()
+    {
         Destroy(gameObject);
     }
     // Update is called once per frame

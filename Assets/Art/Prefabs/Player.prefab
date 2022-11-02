@@ -101,6 +101,7 @@ MonoBehaviour:
   speed: 3
   npcClicked: 0
   npcPosition: {x: 0, y: 0}
+  hitByBallPrefab: {fileID: 849475069255538034, guid: 0f44e303d1d4282478f3564d848ce68f, type: 3}
 --- !u!50 &6726699697676492321
 Rigidbody2D:
   serializedVersion: 4
