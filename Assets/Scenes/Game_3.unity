@@ -447,6 +447,10 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 470747365957170296, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 898252226737991351, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -562,6 +566,10 @@ PrefabInstance:
     - target: {fileID: 4415204969866751372, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936778031169787367, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5108678854211535368, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1306,8 +1314,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LightningBall: {fileID: 4864176524871421335, guid: 101085a93e3536e4bb54db9f4181605c, type: 3}
+  ballSpeed: 1.2
   spawning: 0
   gameStart: 0
+  nextPattern: 2
 --- !u!114 &869942612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1605,11 +1615,11 @@ PrefabInstance:
       objectReference: {fileID: 1837670827}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: timeRemaining
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: completionTime
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: hintTextActive
@@ -1621,7 +1631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: timeAfterGameStart
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: systemSymbols.Array.data[0]
@@ -1661,7 +1671,7 @@ PrefabInstance:
       objectReference: {fileID: 612175635}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: fillSpeed
-      value: 0.15
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: rightFill
@@ -1681,7 +1691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: leftSwitchTime
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: leftDangerLight
@@ -1689,19 +1699,23 @@ PrefabInstance:
       objectReference: {fileID: 612175632}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: rightSwitchTime
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: rightDangerLight
       value: 
       objectReference: {fileID: 612175607}
     - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: completionTime
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: hintTextActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: timeAfterGameStart
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: wheelIDs.Array.data[0]
@@ -1721,7 +1735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529066, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529066, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: m_LocalPosition.x
