@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7720836610447088074}
   - component: {fileID: 2089980367367789017}
   m_Layer: 0
-  m_Name: powerSwitchYellow
+  m_Name: powerSwitchL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2992a0e6c9f0ae342be7afbb3ebc1162, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8fd1e21393e7a454d88e013439f19612, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2992a0e6c9f0ae342be7afbb3ebc1162, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8fd1e21393e7a454d88e013439f19612, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9c652da9baa241a4b86773336daf3ff4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3cc3e222cba80374793ad1022114ba65, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -658,7 +658,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9c652da9baa241a4b86773336daf3ff4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3cc3e222cba80374793ad1022114ba65, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -683,7 +683,7 @@ GameObject:
   - component: {fileID: 2155334402757422125}
   - component: {fileID: 2287025537573225267}
   m_Layer: 0
-  m_Name: powerSwitchBlue
+  m_Name: powerSwitchR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1415,7 +1415,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9c652da9baa241a4b86773336daf3ff4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3cc3e222cba80374793ad1022114ba65, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1713,7 +1713,7 @@ GameObject:
   - component: {fileID: 3185285432292810352}
   - component: {fileID: 3412400939512690854}
   m_Layer: 0
-  m_Name: powerCoilYellow
+  m_Name: LpowerCoil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1773,7 +1773,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 9c652da9baa241a4b86773336daf3ff4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3cc3e222cba80374793ad1022114ba65, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1849,7 +1849,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9c652da9baa241a4b86773336daf3ff4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3cc3e222cba80374793ad1022114ba65, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2209,7 +2209,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9c652da9baa241a4b86773336daf3ff4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3cc3e222cba80374793ad1022114ba65, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2284,7 +2284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9c652da9baa241a4b86773336daf3ff4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3cc3e222cba80374793ad1022114ba65, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2380,7 +2380,7 @@ GameObject:
   - component: {fileID: 1902941975013801364}
   - component: {fileID: 7192903114673458352}
   m_Layer: 0
-  m_Name: YellowFill
+  m_Name: LeftFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2439,7 +2439,7 @@ GameObject:
   - component: {fileID: 8826532934074809114}
   - component: {fileID: 5731702518685858724}
   m_Layer: 0
-  m_Name: powerCoilBlue
+  m_Name: RpowerCoil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2603,7 +2603,7 @@ GameObject:
   - component: {fileID: 3176536350891961634}
   - component: {fileID: 6142158696980798094}
   m_Layer: 0
-  m_Name: BlueFill
+  m_Name: RightFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2796,7 +2796,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9c652da9baa241a4b86773336daf3ff4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3cc3e222cba80374793ad1022114ba65, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1

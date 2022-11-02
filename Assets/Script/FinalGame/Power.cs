@@ -168,7 +168,6 @@ public class Power : MonoBehaviour
 
     private void Countdown(string _side)
     {
-        
         switch (_side)
         {
             case "Left":
@@ -184,14 +183,14 @@ public class Power : MonoBehaviour
                     {
                         leftDangerLight.SetActive(true);
                         leftOnLight.SetActive(false);
-                        StartCoroutine(LeftFlash(leftDangerLight.transform.parent.Find("powerCoilYellow").GetComponent<SpriteRenderer>()));
+                        StartCoroutine(LeftFlash(leftDangerLight.transform.parent.Find("LpowerCoil").GetComponent<SpriteRenderer>()));
                     }
                     leftFill.FillNextImage(Time.deltaTime * fillSpeed);
                 }
                 if (hintTextActive)
                 {
                     Text text = GameObject.Find("LCountDownTxt").GetComponent<Text>();
-                    DisplayTime(rightSwitchTimeRemaining, text);
+                    DisplayTime(leftSwitchTimeRemaining, text);
                 }
                 break;
             case "Right":
@@ -207,7 +206,7 @@ public class Power : MonoBehaviour
                     {
                         rightDangerLight.SetActive(true);
                         rightOnLight.SetActive(false);
-                        StartCoroutine(RightFlash(rightDangerLight.transform.parent.Find("powerCoilBlue").GetComponent<SpriteRenderer>()));
+                        StartCoroutine(RightFlash(rightDangerLight.transform.parent.Find("RpowerCoil").GetComponent<SpriteRenderer>()));
                     }
                     rightFill.FillNextImage(Time.deltaTime * fillSpeed);
                 }
