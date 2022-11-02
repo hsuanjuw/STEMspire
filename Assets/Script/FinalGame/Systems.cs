@@ -44,7 +44,8 @@ public class Systems : MonoBehaviour
         {
             currentStatus = MiniGameManager.GameStatus.InProgress;
             timeRemaining = completionTime;
-            FindObjectOfType<Finale_SystemInfo>().NextPhase();  
+            FindObjectOfType<Finale_SystemInfo>().NextPhase();
+            StartCoroutine(StartFlash());
         }
     }
 
@@ -82,6 +83,21 @@ public class Systems : MonoBehaviour
         }
         
     }
+    private IEnumerator StartFlash()
+    {
+        SpriteRenderer sisBG = FindObjectOfType<Finale_SystemInfo>().transform.Find("systemsInfo")
+            .GetComponent<SpriteRenderer>();
+        if (sisBG != null)
+        {
+            while (currentStatus == MiniGameManager.GameStatus.InProgress)
+            {
+                sisBG.color = Color.yellow;
+                yield return new WaitForSeconds(1f);
+                sisBG.GetComponent<SpriteRenderer>().color = Color.white;
+                yield return new WaitForSeconds(1f);
+            } 
+        }
+    }
     private void DisplayTime(float timeToDisplay, Text timeText)
     {
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
@@ -104,8 +120,7 @@ public class Systems : MonoBehaviour
     {
         for (int i = 0; i < systemSymbols.Length; i++)
         {
-            systemSymbols[i].transform.Find("Active").gameObject.SetActive(false);
-            systemSymbols[i].transform.Find("Inactive").gameObject.SetActive(true);
+            systemSymbols[i].GetComponent<Symbol>().ResetSymbol();
             
             systemInfoSymbols[i].transform.Find("Active").gameObject.SetActive(false);
             systemInfoSymbols[i].transform.Find("Inactive").gameObject.SetActive(true);
@@ -117,7 +132,7 @@ public class Systems : MonoBehaviour
         currentStatus = MiniGameManager.GameStatus.NotStarted;
         StopCoroutine(coroutine);
         if(hintTextActive)
-            DisplayTime(timeRemaining, GameObject.Find("SystemCountDownTxt").GetComponent<Text>());
+            DisplayTime(completionTime, GameObject.Find("SystemCountDownTxt").GetComponent<Text>());
         for (int i = 0; i < systemSymbols.Length; i++)
         {
             systemSymbols[i].GetComponent<Image>().color = Color.white;
