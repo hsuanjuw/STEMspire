@@ -15,6 +15,8 @@ public class MiniGameManager : MonoBehaviour
         Failed,
         Completed
     };
+
+    public GameStatus currentStatus = GameStatus.NotStarted;
    // private StoryManager storyManager;
     private SpawnLightningBalls lightningBalls;
     private Camera mainCamera;
@@ -110,6 +112,7 @@ public class MiniGameManager : MonoBehaviour
         // sth cracking??
         lightningBalls.CallStartLightningballs();
         StartMiniGame();
+        currentStatus = GameStatus.InProgress;
     }
 
     private void CameraShake()
@@ -136,17 +139,24 @@ public class MiniGameManager : MonoBehaviour
 
     public void CallRestart()
     {
-        StartCoroutine(Restart());
+        if(currentStatus != GameStatus.Failed)
+            StartCoroutine(Restart());
     }
 
     public void CallSuccess()
     {
-        StartCoroutine(Victory());
-        
+        if(currentStatus != GameStatus.Failed)
+            StartCoroutine(Victory());
     }
 
     private IEnumerator Victory()
     {
+        currentStatus = GameStatus.Completed;
+        WinAllMiniGames();
+        foreach (var ball in FindObjectsOfType<LightningBall>())
+        {
+            ball.KillBall();
+        }
         FindObjectOfType<MusicPlayer>().SetVictoryMusic();
         lightningBalls.StopSpawning();
         FindObjectOfType<PowerCoreExplosion>().ResetLightning();
@@ -155,6 +165,11 @@ public class MiniGameManager : MonoBehaviour
     }
     private IEnumerator Restart()
     {
+        currentStatus = GameStatus.Failed;
+        foreach (var ball in FindObjectsOfType<LightningBall>())
+        {
+            ball.KillBall();
+        }
         LoseAllMiniGames();
         FindObjectOfType<PowerCoreExplosion>().Explode();
         lightningBalls.StopSpawning();
@@ -175,6 +190,7 @@ public class MiniGameManager : MonoBehaviour
         EndMiniGame();
         Debug.Log("Restart");
         gameStarted = false;
+        currentStatus = GameStatus.NotStarted;
     }
 
     public void EnterSpaceStation(int num)
@@ -210,6 +226,12 @@ public class MiniGameManager : MonoBehaviour
         wheel.currentStatus = GameStatus.Failed;
         systems.currentStatus = GameStatus.Failed;
         power.currentStatus = GameStatus.Failed;
+    }
+    private void WinAllMiniGames()
+    {
+        wheel.currentStatus = GameStatus.Completed;
+        systems.currentStatus = GameStatus.Completed;
+        power.currentStatus = GameStatus.Completed;
     }
 
     private void EndMiniGame()
