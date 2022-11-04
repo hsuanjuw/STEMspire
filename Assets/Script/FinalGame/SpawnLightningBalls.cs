@@ -36,11 +36,9 @@ public class SpawnLightningBalls : MonoBehaviour
         while (gameStart)
         {
             SpawnBalls(nextPattern);
-            /*
             nextPattern = nextPattern+1;
             if (nextPattern > (ProjectilePattern)2)
                 nextPattern = ProjectilePattern.Cross;
-                */
             yield return new WaitForSeconds(5f);
         }
     }
