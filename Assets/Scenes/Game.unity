@@ -567,8 +567,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LightningBall: {fileID: 4864176524871421335, guid: 101085a93e3536e4bb54db9f4181605c, type: 3}
+  ballSpeed: 2
   spawning: 0
   gameStart: 0
+  nextPattern: 2
 --- !u!114 &941505076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1762,7 +1764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6726699697676492332, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.54
+      value: -2.93
       objectReference: {fileID: 0}
     - target: {fileID: 6726699697676492332, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       propertyPath: m_LocalPosition.z
