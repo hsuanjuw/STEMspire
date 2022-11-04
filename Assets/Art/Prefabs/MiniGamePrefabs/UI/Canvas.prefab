@@ -693,6 +693,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1962717709674343511}
     - target: {fileID: 5517085262298870294, guid: f5a7779124bb5c842ba2bee95e82f14a, type: 3}
+      propertyPath: btnImage
+      value: 
+      objectReference: {fileID: 4705028023519900940}
+    - target: {fileID: 5517085262298870294, guid: f5a7779124bb5c842ba2bee95e82f14a, type: 3}
       propertyPath: m_TargetGraphic
       value: 
       objectReference: {fileID: 4705028023519900940}
