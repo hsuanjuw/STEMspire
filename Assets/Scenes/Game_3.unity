@@ -1321,7 +1321,7 @@ MonoBehaviour:
   ballSpeed: 1.2
   spawning: 0
   gameStart: 0
-  nextPattern: 2
+  nextPattern: 0
 --- !u!114 &869942612
 MonoBehaviour:
   m_ObjectHideFlags: 0
