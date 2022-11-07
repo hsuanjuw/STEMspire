@@ -24,9 +24,19 @@ public class EnvironmentTrigger : MonoBehaviour
     {
         
     }
+    void OnMouseEnter()
+    {
+        Hover();
+    }
+
+    private void OnMouseExit()
+    {
+        NotHover();
+    }
 
     void OnMouseDown()
     {
+        NotHover();
         if (!enviroDialogueIsStart)
         {
             enviroDialogueIsStart = true;
@@ -50,5 +60,19 @@ public class EnvironmentTrigger : MonoBehaviour
         environmentDialogue.SetActive(false);
         enviroDialogueIsStart = false;
 
+    }
+
+    private void Hover()
+    {
+        Color newColor = this.GetComponent<SpriteRenderer>().color;
+        newColor.a = 0.5f;
+        this.GetComponent<SpriteRenderer>().color = newColor;
+    }
+
+    private void NotHover()
+    {
+        Color newColor = this.GetComponent<SpriteRenderer>().color;
+        newColor.a = 1f;
+        this.GetComponent<SpriteRenderer>().color = newColor;
     }
 }
