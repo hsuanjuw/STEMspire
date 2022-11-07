@@ -809,7 +809,6 @@ MonoBehaviour:
   closeBtn: {fileID: 41167370558703130}
   npcImage: {fileID: 41167370558703127}
   pcImage: {fileID: 41167370558703126}
-  guideRobotSprite: {fileID: 21300000, guid: 240689bbbb9463847b0399668bdd9132, type: 3}
   actionbtn: {fileID: 0}
   hasTask: 0
   dialoguePanel: {fileID: 41167370558703128}

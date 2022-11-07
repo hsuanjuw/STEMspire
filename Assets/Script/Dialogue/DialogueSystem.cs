@@ -20,7 +20,6 @@ public class DialogueSystem : MonoBehaviour
     public Button closeBtn;
     public Image npcImage;
     public Image pcImage;
-    public Sprite guideRobotSprite;
 
     public GameObject actionbtn;
     public bool hasTask;

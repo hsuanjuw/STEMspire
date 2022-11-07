@@ -21,7 +21,7 @@ public class CameraManager : MonoBehaviour
     void LateUpdate()
     {
         //71.81
-        if (targetPlayer.position.x >= -71f && targetPlayer.position.x <= 47.2f)
+        if (targetPlayer.position.x >= -117.5f && targetPlayer.position.x <= 0f)
         {
             this.transform.position = targetPlayer.position + cameraOffset;
             canvas.transform.position = new Vector3( this.transform.position.x, 0f, 0f );

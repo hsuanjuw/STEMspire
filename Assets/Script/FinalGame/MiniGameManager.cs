@@ -57,7 +57,31 @@ public class MiniGameManager : MonoBehaviour
         player = GameObject.FindObjectOfType<Player>();
         analytic = GameObject.FindObjectOfType<Analytic>();
         dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
-        dialogueSystem.StartDialogueIntro();
+        CheckStartDialogue();
+    }
+
+    private void CheckStartDialogue()
+    {
+        string playerPrefsKey = "";
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Game":
+                playerPrefsKey = "Game1_dialogueStarted";
+                break;
+            case "Game_2":
+                playerPrefsKey = "Game2_dialogueStarted";
+                break;
+            case "Game_3":
+                playerPrefsKey = "Game3_dialogueStarted";
+                break;
+            default:
+                break;
+        }
+        if (PlayerPrefs.GetInt(playerPrefsKey) == 0)
+        {
+            PlayerPrefs.SetInt(playerPrefsKey, 1);
+            dialogueSystem.StartDialogueIntro();
+        }
     }
 
     // Update is called once per frame
