@@ -50,7 +50,7 @@ public class Finale_SystemInfo : MonoBehaviour
         foreach (var symbolGroup in symbolsToEnable)
         {
             symbolGroup.transform.Find("Active").gameObject.SetActive(true);
-            symbolGroup.transform.Find("Inactive").gameObject.SetActive(false);
+            //symbolGroup.transform.Find("Inactive").gameObject.SetActive(false);
         }
     }
 

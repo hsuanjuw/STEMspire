@@ -567,10 +567,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LightningBall: {fileID: 4864176524871421335, guid: 101085a93e3536e4bb54db9f4181605c, type: 3}
-  ballSpeed: 2
+  ballSpeed: 1.2
   spawning: 0
   gameStart: 0
-  nextPattern: 2
+  nextPattern: 0
 --- !u!114 &941505076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -583,7 +583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70feed7896219ee4fa2a15a2457d5697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameNum: 1
 --- !u!1 &1096685060 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6262599591234129183, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
@@ -675,7 +674,7 @@ PrefabInstance:
       objectReference: {fileID: 593489169}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: fillSpeed
-      value: 0.1
+      value: 0.115
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: rightFill
@@ -691,7 +690,7 @@ PrefabInstance:
       objectReference: {fileID: 1096685060}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: leftSwitchTime
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: leftDangerLight
@@ -699,15 +698,19 @@ PrefabInstance:
       objectReference: {fileID: 277157928}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: rightSwitchTime
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: rightDangerLight
       value: 
       objectReference: {fileID: 1131537912}
     - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
-      propertyPath: timeAfterGameStart
+      propertyPath: completionTime
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: timeAfterGameStart
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: wheelIDs.Array.data[0]
@@ -1162,6 +1165,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 374247888733318585, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 616961101213364584, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_TagString
       value: Shard
@@ -1370,6 +1377,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5748249657139659859, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6260930588378201905, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_Transition
       value: 1
@@ -1429,6 +1440,10 @@ PrefabInstance:
     - target: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002769938347323557, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7133468677271499628, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_TargetGraphic

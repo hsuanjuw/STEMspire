@@ -14,13 +14,13 @@ public class Systems : MonoBehaviour
 
     public float completionTime = 10f;
     public float timeRemaining = 10f; // 10 second for clicking the symbols
-    public bool hintTextActive = false;
+    public bool hintActive = false;
 
     Coroutine coroutine;
     void Start()
     {
-        if (hintTextActive)
-            DisplayTime(timeRemaining, GameObject.Find("SystemCountDownTxt").GetComponent<Text>());
+        if (hintActive)
+            DisplayTime(completionTime);
         else GameObject.Find("SystemCountDownTxt").GetComponent<Text>().text = "";
     }
     // Update is called once per frame
@@ -54,19 +54,19 @@ public class Systems : MonoBehaviour
         if (timeRemaining > 0)
         {
             timeRemaining -= Time.deltaTime;
-            if (hintTextActive)
+            DisplayTime(timeRemaining);
+            if (CheckPattern())
             {
-                Text text = GameObject.Find("SystemCountDownTxt").GetComponent<Text>();
-                DisplayTime(timeRemaining, text);
+                timeRemaining = completionTime;
+                FindObjectOfType<Finale_SystemInfo>().NextPhase();
+                if(FindObjectOfType<Finale_SystemInfo>().currentPhase == Finale_SystemInfo.Phase.Complete)
+                    Succeed();    
             }
         }
         else
         {
-            if (hintTextActive)
-            {
-                Text text = GameObject.Find("SystemCountDownTxt").GetComponent<Text>();
-                DisplayTime(0, text);
-            }
+            
+            DisplayTime(0);
 
             timeRemaining = completionTime;
 
@@ -98,10 +98,11 @@ public class Systems : MonoBehaviour
             } 
         }
     }
-    private void DisplayTime(float timeToDisplay, Text timeText)
+    private void DisplayTime(float timeToDisplay)
     {
-        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-        timeText.text = string.Format("{0:00}", seconds);
+        if(hintActive)
+            GameObject.Find("SystemCountDownTxt").transform.Find("Circle").GetComponent<Image>().fillAmount =
+                timeToDisplay / completionTime;
     }
 
     private bool CheckPattern()
@@ -123,7 +124,7 @@ public class Systems : MonoBehaviour
             systemSymbols[i].GetComponent<Symbol>().ResetSymbol();
             
             systemInfoSymbols[i].transform.Find("Active").gameObject.SetActive(false);
-            systemInfoSymbols[i].transform.Find("Inactive").gameObject.SetActive(true);
+            //systemInfoSymbols[i].transform.Find("Inactive").gameObject.SetActive(true);
         }
     }
 
@@ -131,8 +132,7 @@ public class Systems : MonoBehaviour
     {
         currentStatus = MiniGameManager.GameStatus.NotStarted;
         StopCoroutine(coroutine);
-        if(hintTextActive)
-            DisplayTime(completionTime, GameObject.Find("SystemCountDownTxt").GetComponent<Text>());
+        DisplayTime(completionTime);
         for (int i = 0; i < systemSymbols.Length; i++)
         {
             systemSymbols[i].GetComponent<Image>().color = Color.white;
@@ -151,8 +151,7 @@ public class Systems : MonoBehaviour
     public void Succeed()
     {
         currentStatus = MiniGameManager.GameStatus.Completed;
-        if(hintTextActive)
-            GameObject.Find("SystemCountDownTxt").GetComponent<Text>().text = "";
+        DisplayTime(completionTime);
         for (int i = 0; i < systemSymbols.Length; i++)
         {
             systemSymbols[i].GetComponent<Image>().color = Color.green;

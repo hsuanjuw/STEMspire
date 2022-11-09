@@ -635,6 +635,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748249657139659859, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1334,7 +1338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70feed7896219ee4fa2a15a2457d5697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameNum: 3
 --- !u!114 &932598042 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
@@ -1569,7 +1572,6 @@ MonoBehaviour:
   closeBtn: {fileID: 612175611}
   npcImage: {fileID: 612175622}
   pcImage: {fileID: 612175621}
-  guideRobotSprite: {fileID: 21300000, guid: 240689bbbb9463847b0399668bdd9132, type: 3}
   actionbtn: {fileID: 0}
   hasTask: 0
   dialoguePanel: {fileID: 612175623}
@@ -1617,6 +1619,10 @@ PrefabInstance:
       propertyPath: CountdownTxt
       value: 
       objectReference: {fileID: 1837670827}
+    - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: hintActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: timeRemaining
       value: 15
@@ -1682,6 +1688,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 612175634}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: hintActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: leftOnLight
       value: 
       objectReference: {fileID: 612175633}
@@ -1710,6 +1720,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 612175607}
     - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: hintActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: completionTime
       value: 25
       objectReference: {fileID: 0}
@@ -1719,7 +1733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: timeAfterGameStart
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: wheelIDs.Array.data[0]
