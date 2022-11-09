@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public Vector2 npcPosition;
     private MiniGameManager miniGameManager;
     private Vector3 originalPos;
+    public Vector3 resetPosition;
     private DialogueSystem dialogueSystem;
     public GameObject hitByBallPrefab;
 
@@ -76,7 +77,7 @@ public class Player : MonoBehaviour
 
     public void ResetPosition()
     {
-        this.transform.position = new Vector3(-5.44f, -2.73f, 0);
+        transform.position = resetPosition;
     }
 
 
