@@ -196,6 +196,145 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &114740450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 114740451}
+  - component: {fileID: 114740452}
+  m_Layer: 0
+  m_Name: ConversationScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &114740451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114740450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 34, y: 0.01, z: 0.12898424}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1038362776}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114740452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114740450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 480bd61063c82b146a9105160f69b0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - id: 1
+    text: Hi, how can I help you?
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: ' My ship is pretty banged up. Nan''oi says that I need someone specialized
+        in power cores and said you could help me. Is that true?'
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 2
+      enabled: 0
+  - id: 2
+    text: "Oh definitely! I\u2019ve done it plenty of times."
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: Okay then, let's get started!
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.1
+      enabled: 0
+    - text: So, how much experience do you have?
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.2
+      enabled: 0
+  - id: 3.1
+    text: 
+    image: {fileID: 0}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options: []
+  - id: 3.2
+    text: ' I''ve been working for about a decade, but I''ve been studying spaceship
+      mechanics since I was a child.'
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: Ready to go?
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.1
+      enabled: 0
+    - text: Oh really?
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 4.1
+      enabled: 0
+  - id: 4.1
+    text: "Yeah! My parents love to tell the story about when I first saw a spaceship.
+      Apparently, I stared at it like I had discovered the meaning of life itself.
+      Ever since\r then I\u2019ve been obsessed with figuring out how they work. "
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: 
+      image: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 4.2
+      enabled: 0
+  - id: 4.2
+    text: "I got a job as a engineer in order to be able to work with rocket ships.
+      But what I really want to do is design them.\r But I guess that\u2019s not
+      going to happen."
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: Let's get started!
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.1
+      enabled: 0
+    - text: Why not?
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 5.1
+      enabled: 0
+  - id: 5.1
+    text: " I\u2019ve tried to apply to several companies. I\u2019ve gotten pretty
+      far in the interview process too. But they always choose someone else. Guess
+      it just isn\u2019t meant to be."
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: let's get started!
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.1
+      enabled: 0
 --- !u!114 &220665317 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8979312317770090455, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
@@ -218,6 +357,284 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &283617928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 283617929}
+  - component: {fileID: 283617930}
+  m_Layer: 0
+  m_Name: ConversationScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &283617929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283617928}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 730234907}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &283617930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283617928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 480bd61063c82b146a9105160f69b0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - id: 1
+    text: Hi, how can I help you?
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: ' My ship is pretty banged up. Nan''oi says that I need someone specialized
+        in power cores and said you could help me. Is that true?'
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 2
+      enabled: 0
+  - id: 2
+    text: "Oh definitely! I\u2019ve done it plenty of times."
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: Okay then, let's get started!
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.1
+      enabled: 0
+    - text: So, how much experience do you have?
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.2
+      enabled: 0
+  - id: 3.1
+    text: 
+    image: {fileID: 0}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options: []
+  - id: 3.2
+    text: ' I''ve been working for about a decade, but I''ve been studying spaceship
+      mechanics since I was a child.'
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: Ready to go?
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.1
+      enabled: 0
+    - text: Oh really?
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 4.1
+      enabled: 0
+  - id: 4.1
+    text: "Yeah! My parents love to tell the story about when I first saw a spaceship.
+      Apparently, I stared at it like I had discovered the meaning of life itself.
+      Ever since\r then I\u2019ve been obsessed with figuring out how they work. "
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: 
+      image: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 4.2
+      enabled: 0
+  - id: 4.2
+    text: "I got a job as a engineer in order to be able to work with rocket ships.
+      But what I really want to do is design them.\r But I guess that\u2019s not
+      going to happen."
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: Let's get started!
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.1
+      enabled: 0
+    - text: Why not?
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 5.1
+      enabled: 0
+  - id: 5.1
+    text: " I\u2019ve tried to apply to several companies. I\u2019ve gotten pretty
+      far in the interview process too. But they always choose someone else. Guess
+      it just isn\u2019t meant to be."
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: let's get started!
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.1
+      enabled: 0
+--- !u!1 &284504972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 284504973}
+  - component: {fileID: 284504974}
+  m_Layer: 0
+  m_Name: ConversationScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &284504973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284504972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1837339144}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &284504974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284504972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 480bd61063c82b146a9105160f69b0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - id: 1
+    text: Hi, how can I help you?
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: ' My ship is pretty banged up. Nan''oi says that I need someone specialized
+        in power cores and said you could help me. Is that true?'
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 2
+      enabled: 0
+  - id: 2
+    text: "Oh definitely! I\u2019ve done it plenty of times."
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: Okay then, let's get started!
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.1
+      enabled: 0
+    - text: So, how much experience do you have?
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.2
+      enabled: 0
+  - id: 3.1
+    text: 
+    image: {fileID: 0}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options: []
+  - id: 3.2
+    text: ' I''ve been working for about a decade, but I''ve been studying spaceship
+      mechanics since I was a child.'
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: Ready to go?
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.1
+      enabled: 0
+    - text: Oh really?
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 4.1
+      enabled: 0
+  - id: 4.1
+    text: "Yeah! My parents love to tell the story about when I first saw a spaceship.
+      Apparently, I stared at it like I had discovered the meaning of life itself.
+      Ever since\r then I\u2019ve been obsessed with figuring out how they work. "
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: 
+      image: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 4.2
+      enabled: 0
+  - id: 4.2
+    text: "I got a job as a engineer in order to be able to work with rocket ships.
+      But what I really want to do is design them.\r But I guess that\u2019s not
+      going to happen."
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: Let's get started!
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.1
+      enabled: 0
+    - text: Why not?
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 5.1
+      enabled: 0
+  - id: 5.1
+    text: " I\u2019ve tried to apply to several companies. I\u2019ve gotten pretty
+      far in the interview process too. But they always choose someone else. Guess
+      it just isn\u2019t meant to be."
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: let's get started!
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.1
+      enabled: 0
 --- !u!114 &431861561 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 725029333574886261, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
@@ -368,6 +785,68 @@ MonoBehaviour:
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
+--- !u!1001 &486870068
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 730234907}
+    m_Modifications:
+    - target: {fileID: 13539909091326971, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
+      propertyPath: m_Name
+      value: shop keeper
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771825082778090757, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771825082778090757, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771825082778090757, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.13658786
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771825082778090757, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.12898424
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771825082778090757, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771825082778090757, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771825082778090757, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771825082778090757, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771825082778090757, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771825082778090757, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771825082778090757, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
+--- !u!4 &486870069 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6771825082778090757, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
+  m_PrefabInstance: {fileID: 486870068}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &494039077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -381,7 +860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6726699697676492332, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6726699697676492332, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -525,6 +1004,142 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &690805685
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1673268519}
+    m_Modifications:
+    - target: {fileID: 2701303623248345913, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
+      propertyPath: m_Name
+      value: restaurant guest 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2701303623248345919, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2701303623248345919, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2701303623248345919, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.38341212
+      objectReference: {fileID: 0}
+    - target: {fileID: 2701303623248345919, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.12898424
+      objectReference: {fileID: 0}
+    - target: {fileID: 2701303623248345919, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2701303623248345919, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2701303623248345919, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2701303623248345919, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2701303623248345919, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2701303623248345919, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2701303623248345919, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
+--- !u!4 &690805686 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2701303623248345919, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
+  m_PrefabInstance: {fileID: 690805685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &692462870
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1038362776}
+    m_Modifications:
+    - target: {fileID: 9011897280276515440, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+      propertyPath: m_Name
+      value: Customer Service(guide)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011897280276515447, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011897280276515447, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011897280276515447, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011897280276515447, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011897280276515447, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011897280276515447, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011897280276515447, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.12898424
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011897280276515447, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011897280276515447, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011897280276515447, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011897280276515447, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011897280276515447, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011897280276515447, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011897280276515447, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+--- !u!4 &692462871 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9011897280276515447, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+  m_PrefabInstance: {fileID: 692462870}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &723630918
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,6 +1196,78 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &730234906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 730234907}
+  - component: {fileID: 730234909}
+  - component: {fileID: 730234908}
+  m_Layer: 0
+  m_Name: shop keeper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &730234907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730234906}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -30.34, y: -2.846588, z: -0.12898424}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 486870069}
+  - {fileID: 283617929}
+  m_Father: {fileID: 1527359013}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &730234908
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730234906}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.16403508, y: 0.035241842}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 24.802656, y: 35.079998}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.3233628, y: 3.766983}
+  m_EdgeRadius: 0
+--- !u!114 &730234909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730234906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &754534041
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,11 +1438,222 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &842321954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 842321955}
+  - component: {fileID: 842321956}
+  m_Layer: 0
+  m_Name: ConversationScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &842321955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842321954}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1673268519}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &842321956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842321954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 480bd61063c82b146a9105160f69b0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - id: 1
+    text: Hi, how can I help you?
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: ' My ship is pretty banged up. Nan''oi says that I need someone specialized
+        in power cores and said you could help me. Is that true?'
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 2
+      enabled: 0
+  - id: 2
+    text: "Oh definitely! I\u2019ve done it plenty of times."
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: Okay then, let's get started!
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.1
+      enabled: 0
+    - text: So, how much experience do you have?
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.2
+      enabled: 0
+  - id: 3.1
+    text: 
+    image: {fileID: 0}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options: []
+  - id: 3.2
+    text: ' I''ve been working for about a decade, but I''ve been studying spaceship
+      mechanics since I was a child.'
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: Ready to go?
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.1
+      enabled: 0
+    - text: Oh really?
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 4.1
+      enabled: 0
+  - id: 4.1
+    text: "Yeah! My parents love to tell the story about when I first saw a spaceship.
+      Apparently, I stared at it like I had discovered the meaning of life itself.
+      Ever since\r then I\u2019ve been obsessed with figuring out how they work. "
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: 
+      image: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 4.2
+      enabled: 0
+  - id: 4.2
+    text: "I got a job as a engineer in order to be able to work with rocket ships.
+      But what I really want to do is design them.\r But I guess that\u2019s not
+      going to happen."
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: Let's get started!
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.1
+      enabled: 0
+    - text: Why not?
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 5.1
+      enabled: 0
+  - id: 5.1
+    text: " I\u2019ve tried to apply to several companies. I\u2019ve gotten pretty
+      far in the interview process too. But they always choose someone else. Guess
+      it just isn\u2019t meant to be."
+    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: let's get started!
+      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      audio: {fileID: 0}
+      targetId: 3.1
+      enabled: 0
 --- !u!1 &968053417 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8979312318302638899, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
   m_PrefabInstance: {fileID: 1655218630}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1038362775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1038362776}
+  - component: {fileID: 1038362778}
+  - component: {fileID: 1038362777}
+  m_Layer: 0
+  m_Name: Customer Service(guide)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1038362776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038362775}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.17, y: -2.846588, z: -0.12898424}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 692462871}
+  - {fileID: 114740451}
+  m_Father: {fileID: 1527359013}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1038362777
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038362775}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.16403508, y: 0.035241842}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 24.802656, y: 35.079998}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.3233628, y: 3.766983}
+  m_EdgeRadius: 0
+--- !u!114 &1038362778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038362775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1098492429 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8979312319267154974, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
@@ -830,7 +1728,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179801148}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -30.34, y: -2.846588, z: -0.12898424}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -838,8 +1736,8 @@ Transform:
   - {fileID: 440350237}
   - {fileID: 1438003306}
   - {fileID: 754534042}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1527359013}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1208214821
 GameObject:
@@ -870,7 +1768,7 @@ Transform:
   m_Children:
   - {fileID: 1667820878}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1434448263
 PrefabInstance:
@@ -881,7 +1779,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2995626666163368434, guid: 594de9a7dd27c394eb5286d04611ac4a, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2995626666163368434, guid: 594de9a7dd27c394eb5286d04611ac4a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1051,7 +1949,42 @@ Transform:
   m_Children:
   - {fileID: 1797437825}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1527359012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1527359013}
+  m_Layer: 0
+  m_Name: NPCs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1527359013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527359012}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1179801151}
+  - {fileID: 1673268519}
+  - {fileID: 1837339144}
+  - {fileID: 730234907}
+  - {fileID: 1038362776}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1534577845 stripped
 MonoBehaviour:
@@ -1402,6 +2335,78 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.886425, y: 3.69665}
   m_EdgeRadius: 0
+--- !u!1 &1673268518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1673268519}
+  - component: {fileID: 1673268521}
+  - component: {fileID: 1673268520}
+  m_Layer: 0
+  m_Name: restaurant guest 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1673268519
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673268518}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -94.5, y: -2.846588, z: -0.12898424}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 690805686}
+  - {fileID: 842321955}
+  m_Father: {fileID: 1527359013}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1673268520
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673268518}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.16403508, y: 0.035241842}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 24.802656, y: 35.079998}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.3233628, y: 3.766983}
+  m_EdgeRadius: 0
+--- !u!114 &1673268521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673268518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1718383757 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5884254563606799687, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
@@ -1413,6 +2418,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1742729762
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1837339144}
+    m_Modifications:
+    - target: {fileID: 5004795749433911940, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
+      propertyPath: m_Name
+      value: restaurant guest 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004795749433912058, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004795749433912058, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004795749433912058, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.47055697
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004795749433912058, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.12898424
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004795749433912058, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004795749433912058, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004795749433912058, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004795749433912058, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004795749433912058, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004795749433912058, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004795749433912058, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
+--- !u!4 &1742729763 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5004795749433912058, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
+  m_PrefabInstance: {fileID: 1742729762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1767468476 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8979312319310526873, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
@@ -1578,6 +2645,78 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
+--- !u!1 &1837339143
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1837339144}
+  - component: {fileID: 1837339146}
+  - component: {fileID: 1837339145}
+  m_Layer: 0
+  m_Name: restaurant guest 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1837339144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837339143}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -97.18, y: -2.846588, z: -0.12898424}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1742729763}
+  - {fileID: 284504973}
+  m_Father: {fileID: 1527359013}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1837339145
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837339143}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.16403508, y: 0.035241842}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 24.802656, y: 35.079998}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.3233628, y: 3.766983}
+  m_EdgeRadius: 0
+--- !u!114 &1837339146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837339143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1901752298 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8979312319259172383, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
