@@ -61,7 +61,10 @@ namespace RPGM.Gameplay
             i = EditorGUI.Popup(r, i, targets);
             r.x += r.width;
             item.targetId = targets[i];
-            item.image = (Sprite)EditorGUI.ObjectField(r, item.image, typeof(Sprite), false);
+            
+            item.name = EditorGUI.TextField(r, item.name);
+            r.x += r.width;
+            item.imagePrefab = (GameObject)EditorGUI.ObjectField(r, item.imagePrefab, typeof(GameObject), false);
             r.x += r.width;
             r.width = rect.width * 0.6f;
             item.text = EditorGUI.TextField(r, item.text);
@@ -70,7 +73,7 @@ namespace RPGM.Gameplay
 
         private void OnAdd(ReorderableList list)
         {
-            list.list.Add(new ConversationOption() { targetId = "", text = "", image = null, enabled = true });
+            list.list.Add(new ConversationOption() { targetId = "", text = "", imagePrefab = null, enabled = true });
         }
 
         void OnWizardCreate()
@@ -122,9 +125,10 @@ namespace RPGM.Gameplay
                     EditorGUILayout.HelpBox("ID has changed and will be updated in related records", MessageType.Warning);
                 }
             }
-
+            EditorGUILayout.PrefixLabel("Name (Optional)");
+            conversationPiece.name = EditorGUILayout.TextArea(conversationPiece.name);
             EditorGUILayout.PrefixLabel("Image (Optional)");
-            conversationPiece.image = (Sprite)EditorGUILayout.ObjectField(conversationPiece.image, typeof(Sprite), false);
+            conversationPiece.imagePrefab = (GameObject)EditorGUILayout.ObjectField(conversationPiece.imagePrefab, typeof(GameObject), false);
             EditorGUILayout.PrefixLabel("Text");
             conversationPiece.text = EditorGUILayout.TextArea(conversationPiece.text);
             conversationPiece.audio = (AudioClip)EditorGUILayout.ObjectField(conversationPiece.audio, typeof(AudioClip), false);

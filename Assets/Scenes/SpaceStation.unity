@@ -273,7 +273,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 203174657}
-  - component: {fileID: 203174659}
   - component: {fileID: 203174658}
   m_Layer: 0
   m_Name: restaurant guest 1
@@ -324,18 +323,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3233628, y: 3.766983}
   m_EdgeRadius: 0
---- !u!114 &203174659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 203174656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &214088546
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,97 +368,113 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
+    name: 
     text: Hi, how can I help you?
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: ' My ship is pretty banged up. Nan''oi says that I need someone specialized
+    - name: 
+      text: ' My ship is pretty banged up. Nan''oi says that I need someone specialized
         in power cores and said you could help me. Is that true?'
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
   - id: 2
+    name: 
     text: "Oh definitely! I\u2019ve done it plenty of times."
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Okay then, let's get started!
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Okay then, let's get started!
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
-    - text: So, how much experience do you have?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: So, how much experience do you have?
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.2
       enabled: 0
   - id: 3.1
+    name: 
     text: 
-    image: {fileID: 0}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
   - id: 3.2
+    name: 
     text: ' I''ve been working for about a decade, but I''ve been studying spaceship
       mechanics since I was a child.'
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Ready to go?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Ready to go?
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
-    - text: Oh really?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Oh really?
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 4.1
       enabled: 0
   - id: 4.1
+    name: 
     text: "Yeah! My parents love to tell the story about when I first saw a spaceship.
       Apparently, I stared at it like I had discovered the meaning of life itself.
       Ever since\r then I\u2019ve been obsessed with figuring out how they work. "
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: 
-      image: {fileID: 0}
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 4.2
       enabled: 0
   - id: 4.2
+    name: 
     text: "I got a job as a engineer in order to be able to work with rocket ships.
       But what I really want to do is design them.\r But I guess that\u2019s not
       going to happen."
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Let's get started!
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Let's get started!
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
-    - text: Why not?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Why not?
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 5.1
       enabled: 0
   - id: 5.1
+    name: 
     text: " I\u2019ve tried to apply to several companies. I\u2019ve gotten pretty
       far in the interview process too. But they always choose someone else. Guess
       it just isn\u2019t meant to be."
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: let's get started!
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: let's get started!
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
@@ -586,97 +589,113 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
+    name: 
     text: Hi, how can I help you?
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: ' My ship is pretty banged up. Nan''oi says that I need someone specialized
+    - name: 
+      text: ' My ship is pretty banged up. Nan''oi says that I need someone specialized
         in power cores and said you could help me. Is that true?'
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
   - id: 2
+    name: 
     text: "Oh definitely! I\u2019ve done it plenty of times."
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Okay then, let's get started!
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Okay then, let's get started!
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
-    - text: So, how much experience do you have?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: So, how much experience do you have?
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.2
       enabled: 0
   - id: 3.1
+    name: 
     text: 
-    image: {fileID: 0}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
   - id: 3.2
+    name: 
     text: ' I''ve been working for about a decade, but I''ve been studying spaceship
       mechanics since I was a child.'
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Ready to go?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Ready to go?
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
-    - text: Oh really?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Oh really?
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 4.1
       enabled: 0
   - id: 4.1
+    name: 
     text: "Yeah! My parents love to tell the story about when I first saw a spaceship.
       Apparently, I stared at it like I had discovered the meaning of life itself.
       Ever since\r then I\u2019ve been obsessed with figuring out how they work. "
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: 
-      image: {fileID: 0}
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 4.2
       enabled: 0
   - id: 4.2
+    name: 
     text: "I got a job as a engineer in order to be able to work with rocket ships.
       But what I really want to do is design them.\r But I guess that\u2019s not
       going to happen."
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Let's get started!
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Let's get started!
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
-    - text: Why not?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Why not?
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 5.1
       enabled: 0
   - id: 5.1
+    name: 
     text: " I\u2019ve tried to apply to several companies. I\u2019ve gotten pretty
       far in the interview process too. But they always choose someone else. Guess
       it just isn\u2019t meant to be."
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: let's get started!
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: let's get started!
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
@@ -725,66 +744,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
+    name: Nan'oi
     text: Hello! What can I do for you today?
-    image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Our ship was damaged by an asteroid.  We are looking for a qualified
+    - name: You
+      text: Our ship was damaged by an asteroid.  We are looking for a qualified
         engineer to fix it.
-      image: {fileID: 21300000, guid: b4ce223f253985f498d802add2b965b2, type: 3}
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 1.1
       enabled: 0
   - id: 1.1
+    name: Nan'oi
     text: "Well, I'm happy to take a look! Just show me to the ship when you're\r
       ready."
-    image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Right this way.
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: You
+      text: Right this way.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 2.1
       enabled: 0
-    - text: How long have you been on the space station?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: You
+      text: How long have you been on the space station?
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 2.2
       enabled: 0
   - id: 2.1
+    name: 
     text: 
-    image: {fileID: 0}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
   - id: 2.2
+    name: Nan'oi
     text: This has been my home for ten years. It's a nice place. Really going to
       miss this place when I Ieave.
-    image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Where are you going?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: You
+      text: Where are you going?
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
-    - text: Well, enough chit chat. Let's get going
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: You
+      text: Well, enough chit chat. Let's get going
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 2.1
       enabled: 0
   - id: 3.1
+    name: Nan'oi
     text: ' Planetside. I got hired through a friend for a position in a research
       and development company. I leave in a week.'
-    image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Congratulations!
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: You
+      text: Congratulations!
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 2.1
       enabled: 0
@@ -1093,7 +1123,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 602021268}
-  - component: {fileID: 602021270}
   - component: {fileID: 602021269}
   m_Layer: 0
   m_Name: Customer Service(guide)
@@ -1144,18 +1173,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3233628, y: 3.766983}
   m_EdgeRadius: 0
---- !u!114 &602021270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 602021267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &671319685 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8979312318302638899, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
@@ -1170,7 +1187,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 684590249}
-  - component: {fileID: 684590251}
   - component: {fileID: 684590250}
   m_Layer: 0
   m_Name: restaurant guest 2
@@ -1221,18 +1237,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3233628, y: 3.766983}
   m_EdgeRadius: 0
---- !u!114 &684590251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684590248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &764137608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1340,97 +1344,113 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
+    name: 
     text: Hi, how can I help you?
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: ' My ship is pretty banged up. Nan''oi says that I need someone specialized
+    - name: 
+      text: ' My ship is pretty banged up. Nan''oi says that I need someone specialized
         in power cores and said you could help me. Is that true?'
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
   - id: 2
+    name: 
     text: "Oh definitely! I\u2019ve done it plenty of times."
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Okay then, let's get started!
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Okay then, let's get started!
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
-    - text: So, how much experience do you have?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: So, how much experience do you have?
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.2
       enabled: 0
   - id: 3.1
+    name: 
     text: 
-    image: {fileID: 0}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
   - id: 3.2
+    name: 
     text: ' I''ve been working for about a decade, but I''ve been studying spaceship
       mechanics since I was a child.'
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Ready to go?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Ready to go?
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
-    - text: Oh really?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Oh really?
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 4.1
       enabled: 0
   - id: 4.1
+    name: 
     text: "Yeah! My parents love to tell the story about when I first saw a spaceship.
       Apparently, I stared at it like I had discovered the meaning of life itself.
       Ever since\r then I\u2019ve been obsessed with figuring out how they work. "
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: 
-      image: {fileID: 0}
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 4.2
       enabled: 0
   - id: 4.2
+    name: 
     text: "I got a job as a engineer in order to be able to work with rocket ships.
       But what I really want to do is design them.\r But I guess that\u2019s not
       going to happen."
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Let's get started!
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Let's get started!
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
-    - text: Why not?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Why not?
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 5.1
       enabled: 0
   - id: 5.1
+    name: 
     text: " I\u2019ve tried to apply to several companies. I\u2019ve gotten pretty
       far in the interview process too. But they always choose someone else. Guess
       it just isn\u2019t meant to be."
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: let's get started!
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: let's get started!
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
@@ -1479,8 +1499,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
+    name: R.C.
     text: This person seems qualified, why don't we try them?
-    image: {fileID: 21300000, guid: b4ce223f253985f498d802add2b965b2, type: 3}
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
@@ -1493,7 +1514,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1168962999}
-  - component: {fileID: 1168963001}
   - component: {fileID: 1168963000}
   m_Layer: 0
   m_Name: shop keeper
@@ -1544,18 +1564,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3233628, y: 3.766983}
   m_EdgeRadius: 0
---- !u!114 &1168963001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1168962998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1178271463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1634,9 +1642,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
+    name: 
     text: Damage to ship severe. Expert assistance recommended. Data suggests that
       there is a suitable mechanic in the Main Commercial District.
-    image: {fileID: 0}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
@@ -1654,6 +1663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversation: {fileID: 1285587892}
   text: {fileID: 1460603817}
+  name: {fileID: 8979312317899756983}
   option1Btn: {fileID: 1773873510}
   option2Btn: {fileID: 139301473}
   continuePcBtn: {fileID: 131146871002593521}
@@ -1790,97 +1800,113 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
+    name: 
     text: Hi, how can I help you?
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: ' My ship is pretty banged up. Nan''oi says that I need someone specialized
+    - name: 
+      text: ' My ship is pretty banged up. Nan''oi says that I need someone specialized
         in power cores and said you could help me. Is that true?'
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
   - id: 2
+    name: 
     text: "Oh definitely! I\u2019ve done it plenty of times."
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Okay then, let's get started!
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Okay then, let's get started!
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
-    - text: So, how much experience do you have?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: So, how much experience do you have?
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.2
       enabled: 0
   - id: 3.1
+    name: 
     text: 
-    image: {fileID: 0}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
   - id: 3.2
+    name: 
     text: ' I''ve been working for about a decade, but I''ve been studying spaceship
       mechanics since I was a child.'
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Ready to go?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Ready to go?
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
-    - text: Oh really?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Oh really?
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 4.1
       enabled: 0
   - id: 4.1
+    name: 
     text: "Yeah! My parents love to tell the story about when I first saw a spaceship.
       Apparently, I stared at it like I had discovered the meaning of life itself.
       Ever since\r then I\u2019ve been obsessed with figuring out how they work. "
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: 
-      image: {fileID: 0}
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 4.2
       enabled: 0
   - id: 4.2
+    name: 
     text: "I got a job as a engineer in order to be able to work with rocket ships.
       But what I really want to do is design them.\r But I guess that\u2019s not
       going to happen."
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Let's get started!
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Let's get started!
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
-    - text: Why not?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Why not?
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 5.1
       enabled: 0
   - id: 5.1
+    name: 
     text: " I\u2019ve tried to apply to several companies. I\u2019ve gotten pretty
       far in the interview process too. But they always choose someone else. Guess
       it just isn\u2019t meant to be."
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: let's get started!
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: let's get started!
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
@@ -2981,6 +3007,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 612808787788183301, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 709339207047758207, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
       propertyPath: text
       value: 
@@ -2999,6 +3029,10 @@ PrefabInstance:
       objectReference: {fileID: 1600459606}
     - target: {fileID: 1451429976283022075, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
       propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299645513216242042, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2731954648172513149, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
@@ -3029,6 +3063,14 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3527466763570878534, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4014788907893719141, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4111527014384279886, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
       propertyPath: text
       value: 
@@ -3053,6 +3095,10 @@ PrefabInstance:
       propertyPath: environmentDialogue
       value: 
       objectReference: {fileID: 1600459606}
+    - target: {fileID: 4858936867166301165, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4971986221206857414, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
       propertyPath: m_Name
       value: Environment
@@ -3120,6 +3166,10 @@ PrefabInstance:
     - target: {fileID: 6972243216285587044, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
       propertyPath: m_Offset.x
       value: -1.0019914
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147044000612209383, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8305529385500807168, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
       propertyPath: m_IsTrigger
@@ -3238,6 +3288,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 16.587
       objectReference: {fileID: 0}
+    - target: {fileID: 8979312318052922962, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -650
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979312318302638899, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8979312319310526855, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3248,3 +3306,14 @@ PrefabInstance:
       objectReference: {fileID: 1285587893}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
+--- !u!114 &8979312317899756983 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1217448504627113529, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
+  m_PrefabInstance: {fileID: 8979312317899756982}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
