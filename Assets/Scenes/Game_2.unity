@@ -729,6 +729,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7bd506d33af5294bb081a1f9a68f2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &91415191 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1629695054651253755, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+  m_PrefabInstance: {fileID: 91415162}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &104382617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1116,7 +1127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversation: {fileID: 0}
   text: {fileID: 91415176}
-  name: {fileID: 0}
+  name: {fileID: 91415191}
   option1Btn: {fileID: 91415175}
   option2Btn: {fileID: 91415174}
   continuePcBtn: {fileID: 91415169}
@@ -1636,11 +1647,11 @@ MonoBehaviour:
       targetId: 1.1
       enabled: 0
   - id: 1.1
-    name: 
+    name: Nan'oi
     text: "There are some\r issues here that are too specialized for little ol\u2019
       me, though. You\u2019ll need to get someone else to fix those unless you want
       your ship to become a pile of scrap metal during\r take off."
-    imagePrefab: {fileID: 0}
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
@@ -1651,10 +1662,10 @@ MonoBehaviour:
       targetId: 1.2
       enabled: 0
   - id: 1.2
-    name: 
+    name: Nan'oi
     text: "I think Zun has a pretty good handle on this type of stuff. Their shop
       is in the side district.\r Why don't you try them?"
-    imagePrefab: {fileID: 0}
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
@@ -1665,22 +1676,22 @@ MonoBehaviour:
       targetId: 2
       enabled: 0
   - id: 2
-    name: 
+    name: R.C.
     text: 'My system does not recommend that action. Suggested course of action:
       contact employer and request aid. Help should arrive in 3 days.'
-    imagePrefab: {fileID: 0}
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - name: 
+    - name: You
       text: "I guess let\u2019s go with that plan. RC send, a distress signal."
-      imagePrefab: {fileID: 0}
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
-    - name: 
+    - name: You
       text: Why should we do that when Zun might be able to help us?
-      imagePrefab: {fileID: 0}
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 3.2
       enabled: 0
@@ -1692,9 +1703,9 @@ MonoBehaviour:
     quest: {fileID: 0}
     options: []
   - id: 3.2
-    name: 
+    name: Nan'oi
     text: What is that supposed to mean?
-    imagePrefab: {fileID: 0}
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
@@ -1705,11 +1716,11 @@ MonoBehaviour:
       targetId: 5
       enabled: 0
   - id: 5
-    name: 
+    name: R.C.
     text: "My creators programmed me to take in data and build skill profiles of
       professionals my captain interacts with in order to give recommendations as
       to people most likely to\r help. "
-    imagePrefab: {fileID: 0}
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
@@ -1720,16 +1731,16 @@ MonoBehaviour:
       targetId: 5.1
       enabled: 0
   - id: 5.1
-    name: 
+    name: R.C.
     text: ' Based on the lack of reviews and other sources of data, Zun does not
       fit the profile of a qualified engineer.'
-    imagePrefab: {fileID: 0}
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - name: 
+    - name: You
       text: R.C., wait on the ship
-      imagePrefab: {fileID: 0}
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
@@ -1895,10 +1906,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
-    name: 
+    name: Nan'oi
     text: "Well that asteroid certainly did a number on the... everything. Let's\r
       take a look and see if we can make her feel better, shall we? "
-    imagePrefab: {fileID: 0}
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []

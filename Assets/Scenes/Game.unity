@@ -447,22 +447,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
-    name: 
+    name: R.C.
     text: Now that you have made the damage worse... Will you follow my advice and
       go to the Main Commercial District?
-    imagePrefab: {fileID: 0}
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - name: 
+    - name: You
       text: Fine ...
-      imagePrefab: {fileID: 0}
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
-    - name: 
+    - name: You
       text: No!
-      imagePrefab: {fileID: 0}
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
@@ -783,7 +783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversation: {fileID: 0}
   text: {fileID: 41167370558703125}
-  name: {fileID: 0}
+  name: {fileID: 41167370558703133}
   option1Btn: {fileID: 41167370558703124}
   option2Btn: {fileID: 41167370558703123}
   continuePcBtn: {fileID: 41167370558703132}
@@ -1065,10 +1065,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
-    name: 
+    name: R.C.
     text: ' Robot Companion designation R.C. power on. Ship damaged. Dock at nearest
       space station for repairs.'
-    imagePrefab: {fileID: 0}
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
@@ -1079,9 +1079,9 @@ MonoBehaviour:
       targetId: 2
       enabled: 0
   - id: 2
-    name: 
+    name: R.C.
     text: Ship sustained major damage from the collision with the asteroid.
-    imagePrefab: {fileID: 0}
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
@@ -1092,10 +1092,10 @@ MonoBehaviour:
       targetId: 3
       enabled: 0
   - id: 3
-    name: 
+    name: R.C.
     text: "I recommend finding an expert to aid in the repairs. The Main Commercial
       District likely has someone.\r"
-    imagePrefab: {fileID: 0}
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
@@ -1606,6 +1606,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &41167370558703133 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1629695054651253755, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+  m_PrefabInstance: {fileID: 41167370558703122}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2061072597677296297

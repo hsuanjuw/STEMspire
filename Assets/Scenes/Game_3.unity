@@ -778,6 +778,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2317863257994435146, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
   m_PrefabInstance: {fileID: 612175606}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &612175616 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1629695054651253755, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+  m_PrefabInstance: {fileID: 612175606}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &612175617 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 41167369505259167, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
@@ -1262,11 +1273,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
-    name: 
+    name: Zun
     text: "Oh! You have an Eclipse Runner. Wow... you weren't\r exaggerating about
       the damage. You\u2019re lucky you made it here without any issues\u2026 Fire
       up this ship and show me what's going on."
-    imagePrefab: {fileID: 0}
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
@@ -1500,16 +1511,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
-    name: 
+    name: Zun
     text: ' I took a look at your system. I upgraded some of your displays so you
       should be good to go!'
-    imagePrefab: {fileID: 0}
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - name: 
+    - name: You
       text: Thank you so much!
-      imagePrefab: {fileID: 0}
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
@@ -1551,7 +1562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversation: {fileID: 0}
   text: {fileID: 612175620}
-  name: {fileID: 0}
+  name: {fileID: 612175616}
   option1Btn: {fileID: 612175619}
   option2Btn: {fileID: 612175618}
   continuePcBtn: {fileID: 612175613}
