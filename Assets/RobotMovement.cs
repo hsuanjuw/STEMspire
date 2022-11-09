@@ -42,6 +42,10 @@ public class RobotMovement : MonoBehaviour
     {
         switch (currentMovement)
         {
+            case RobotMovementType.Idling:
+                if(_currentDirection!= Vector2.zero)
+                    _currentDirection = Vector2.zero;
+                break;
             case RobotMovementType.Hide:
                 if (GetComponent<SpriteRenderer>().sortingLayerID != _hidingLayer)
                     GetComponent<SpriteRenderer>().sortingLayerID = _hidingLayer;
