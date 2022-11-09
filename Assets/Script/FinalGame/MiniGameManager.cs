@@ -122,6 +122,9 @@ public class MiniGameManager : MonoBehaviour
         FindObjectOfType<PowerCoreExplosion>().Explode();
         FindObjectOfType<MusicPlayer>().SetFinaleMusic();
         PostProcessVolume volume = mainCamera.gameObject.GetComponent<PostProcessVolume>();
+        RobotMovement _robotMovement = FindObjectOfType<RobotMovement>();
+        if(_robotMovement!=null)
+            _robotMovement.ChangeMovement(RobotMovement.RobotMovementType.Hide);
         isCameraShake = true;
         for (int i = 0; i < 5; i++)
         {
@@ -217,6 +220,13 @@ public class MiniGameManager : MonoBehaviour
         gameStarted = false;
         currentStatus = GameStatus.NotStarted;
         GameObject.Find("Light").GetComponent<LightFade>().ResetAlpha();
+        RobotMovement _robotMovement = FindObjectOfType<RobotMovement>();
+        if (_robotMovement != null)
+        {
+            _robotMovement.ResetPosition();
+            _robotMovement.ChangeMovement(RobotMovement.RobotMovementType.Floating);
+        }
+            
     }
 
     public void EnterSpaceStation(int num)

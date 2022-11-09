@@ -849,6 +849,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1457410858
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8331382834660450069, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_Name
+      value: GuideRobot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
 --- !u!114 &1544387183 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7830259321284537731, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
