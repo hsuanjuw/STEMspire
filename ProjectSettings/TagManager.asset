@@ -9,6 +9,7 @@ TagManager:
   - ElectricBottom
   - Screw
   - Shard
+  - SequenceButton
   layers:
   - Default
   - TransparentFX

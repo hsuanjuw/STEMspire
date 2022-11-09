@@ -20,8 +20,43 @@ public class NumberBtn : MonoBehaviour
         //Debug.Log(num.ToString() + "Button Clicked");
         if (wheel.currentStatus == MiniGameManager.GameStatus.InProgress)
         {
+            if(wheel.buttonToClick == num)
+                SetGreen();
+            else SetRed();
             wheel.ButtonClicked(num);
         }
-        GetComponent<Animator>().SetTrigger("SpinWheel");
+        else SetYellow();
+    }
+
+    public void SetGreen()
+    {
+        GetComponent<Image>().color = Color.green;
+    }
+    public void SetRed()
+    {
+        GetComponent<Image>().color = Color.red;
+    }
+
+    public void SetYellow()
+    {
+        GetComponent<Image>().color = Color.yellow;
+        StartCoroutine(DelayRed());
+    }
+
+    private IEnumerator DelayRed()
+    {
+        yield return new WaitForSeconds(1f);
+        ResetColor();
+    }
+    public void ResetColor()
+    {
+        SetRed();
+        StartCoroutine(ResetFull());
+    }
+
+    private IEnumerator ResetFull()
+    {
+        yield return new WaitForSeconds(1f);
+        GetComponent<Image>().color = Color.white;
     }
 }

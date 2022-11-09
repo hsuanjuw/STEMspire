@@ -100,6 +100,7 @@ public class MiniGameManager : MonoBehaviour
             launchBtnPressedCount++;
             gameStarted = true;
             CountdownTxt.gameObject.SetActive(true);
+            GameObject.Find("Light").GetComponent<LightFade>().fading = true;
             StartCoroutine(Countdown());
         }
     }
@@ -215,6 +216,7 @@ public class MiniGameManager : MonoBehaviour
         Debug.Log("Restart");
         gameStarted = false;
         currentStatus = GameStatus.NotStarted;
+        GameObject.Find("Light").GetComponent<LightFade>().ResetAlpha();
     }
 
     public void EnterSpaceStation(int num)
