@@ -794,6 +794,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c731628a0b5e6c449b60f6cd8736db87, type: 3}
+--- !u!1001 &155975175
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8331382834660450069, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_Name
+      value: GuideRobot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
 --- !u!1001 &476520677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1059,6 +1116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversation: {fileID: 0}
   text: {fileID: 91415176}
+  name: {fileID: 0}
   option1Btn: {fileID: 91415175}
   option2Btn: {fileID: 91415174}
   continuePcBtn: {fileID: 91415169}
@@ -1564,98 +1622,114 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
+    name: 
     text: I reinforced the Power Core containment mechanism. If you had attempted
       to launch the ship, the Power Core would have blown up!
-    image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: 
-      image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 1.1
       enabled: 0
   - id: 1.1
+    name: 
     text: "There are some\r issues here that are too specialized for little ol\u2019
       me, though. You\u2019ll need to get someone else to fix those unless you want
       your ship to become a pile of scrap metal during\r take off."
-    image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: 
-      image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 1.2
       enabled: 0
   - id: 1.2
+    name: 
     text: "I think Zun has a pretty good handle on this type of stuff. Their shop
       is in the side district.\r Why don't you try them?"
-    image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: 
-      image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
   - id: 2
+    name: 
     text: 'My system does not recommend that action. Suggested course of action:
       contact employer and request aid. Help should arrive in 3 days.'
-    image: {fileID: 21300000, guid: b4ce223f253985f498d802add2b965b2, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: "I guess let\u2019s go with that plan. RC send, a distress signal."
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: "I guess let\u2019s go with that plan. RC send, a distress signal."
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
-    - text: Why should we do that when Zun might be able to help us?
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Why should we do that when Zun might be able to help us?
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.2
       enabled: 0
   - id: 3.1
+    name: 
     text: 
-    image: {fileID: 0}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
   - id: 3.2
+    name: 
     text: What is that supposed to mean?
-    image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: 
-      image: {fileID: 0}
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 5
       enabled: 0
   - id: 5
+    name: 
     text: "My creators programmed me to take in data and build skill profiles of
       professionals my captain interacts with in order to give recommendations as
       to people most likely to\r help. "
-    image: {fileID: 21300000, guid: b4ce223f253985f498d802add2b965b2, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: 
-      image: {fileID: 0}
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 5.1
       enabled: 0
   - id: 5.1
+    name: 
     text: ' Based on the lack of reviews and other sources of data, Zun does not
       fit the profile of a qualified engineer.'
-    image: {fileID: 21300000, guid: b4ce223f253985f498d802add2b965b2, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: R.C., wait on the ship
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: R.C., wait on the ship
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
@@ -1847,9 +1921,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
+    name: 
     text: "Well that asteroid certainly did a number on the... everything. Let's\r
       take a look and see if we can make her feel better, shall we? "
-    image: {fileID: 21300000, guid: 58430b5d901a4fd4a9eb9f41455e9110, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
