@@ -447,25 +447,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
+    name: 
     text: Now that you have made the damage worse... Will you follow my advice and
       go to the Main Commercial District?
-    image: {fileID: 21300000, guid: b4ce223f253985f498d802add2b965b2, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Fine ...
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Fine ...
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
-    - text: No!
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: No!
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
   - id: 2
+    name: 
     text: 
-    image: {fileID: 21300000, guid: 240689bbbb9463847b0399668bdd9132, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
@@ -516,8 +520,6 @@ GameObject:
   m_Component:
   - component: {fileID: 941505074}
   - component: {fileID: 941505075}
-  - component: {fileID: 941505073}
-  - component: {fileID: 941505076}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -525,18 +527,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &941505073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941505072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a0c52765f5f81746961b98625e4cdb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &941505074
 Transform:
   m_ObjectHideFlags: 0
@@ -571,18 +561,6 @@ MonoBehaviour:
   spawning: 0
   gameStart: 0
   nextPattern: 0
---- !u!114 &941505076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941505072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70feed7896219ee4fa2a15a2457d5697, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1096685060 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6262599591234129183, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
@@ -805,6 +783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversation: {fileID: 0}
   text: {fileID: 41167370558703125}
+  name: {fileID: 0}
   option1Btn: {fileID: 41167370558703124}
   option2Btn: {fileID: 41167370558703123}
   continuePcBtn: {fileID: 41167370558703132}
@@ -1086,32 +1065,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
+    name: 
     text: ' Robot Companion designation R.C. power on. Ship damaged. Dock at nearest
       space station for repairs.'
-    image: {fileID: 21300000, guid: b4ce223f253985f498d802add2b965b2, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: 
-      image: {fileID: 0}
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
   - id: 2
+    name: 
     text: Ship sustained major damage from the collision with the asteroid.
-    image: {fileID: 21300000, guid: b4ce223f253985f498d802add2b965b2, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: 
-      image: {fileID: 0}
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3
       enabled: 0
   - id: 3
+    name: 
     text: "I recommend finding an expert to aid in the repairs. The Main Commercial
       District likely has someone.\r"
-    image: {fileID: 21300000, guid: b4ce223f253985f498d802add2b965b2, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []

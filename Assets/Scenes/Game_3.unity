@@ -1258,10 +1258,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
+    name: 
     text: "Oh! You have an Eclipse Runner. Wow... you weren't\r exaggerating about
       the damage. You\u2019re lucky you made it here without any issues\u2026 Fire
       up this ship and show me what's going on."
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
@@ -1275,8 +1276,6 @@ GameObject:
   m_Component:
   - component: {fileID: 869942610}
   - component: {fileID: 869942611}
-  - component: {fileID: 869942612}
-  - component: {fileID: 869942609}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1284,18 +1283,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &869942609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869942608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a0c52765f5f81746961b98625e4cdb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &869942610
 Transform:
   m_ObjectHideFlags: 0
@@ -1330,18 +1317,6 @@ MonoBehaviour:
   spawning: 0
   gameStart: 0
   nextPattern: 0
---- !u!114 &869942612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869942608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70feed7896219ee4fa2a15a2457d5697, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &932598042 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
@@ -1521,20 +1496,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
+    name: 
     text: ' I took a look at your system. I upgraded some of your displays so you
       should be good to go!'
-    image: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - text: Thank you so much!
-      image: {fileID: 21300000, guid: 827c8c974537b03428ae3655c66d424a, type: 3}
+    - name: 
+      text: Thank you so much!
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
   - id: 2
+    name: 
     text: 
-    image: {fileID: 0}
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
@@ -1569,6 +1547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversation: {fileID: 0}
   text: {fileID: 612175620}
+  name: {fileID: 0}
   option1Btn: {fileID: 612175619}
   option2Btn: {fileID: 612175618}
   continuePcBtn: {fileID: 612175613}
