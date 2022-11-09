@@ -14,9 +14,11 @@ namespace RPGM.Gameplay
     public struct ConversationPiece
     {
         public string id;
+        public string name;
         [Multiline]
         public string text;
-        public Sprite image;
+        //public Sprite image;
+        public GameObject imagePrefab;
         public AudioClip audio;
         public Quest quest;
         public List<ConversationOption> options;

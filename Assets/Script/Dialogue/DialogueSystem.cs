@@ -13,6 +13,7 @@ public class DialogueSystem : MonoBehaviour
     public ConversationScript conversation;
 
     public TextMeshProUGUI text;
+    public TextMeshProUGUI name;
     public Button option1Btn;
     public Button option2Btn;
     public Button continuePcBtn;
@@ -69,15 +70,18 @@ public class DialogueSystem : MonoBehaviour
             //Debug.Log(conversation.items[0].text);
             currentConvIndex = 0;
             bool isEnd = CheckEndConversation();
-            npcImage.sprite = conversation.items[currentConvIndex].image;
+            npcImage.sprite = conversation.items[currentConvIndex].imagePrefab.GetComponent<SpriteRenderer>().sprite;
             OpenDialoguePanel(isEnd);
-            StartCoroutine(TypeLine(conversation.items[currentConvIndex].text, isEnd));
+            StartCoroutine(TypeLine(conversation.items[currentConvIndex], isEnd));
         }
     }
 
-    private IEnumerator TypeLine(string dialogue, bool isEnd)
+    private IEnumerator TypeLine(ConversationPiece conversationPiece, bool isEnd)
     {
         //Debug.Log("Type1");
+        string dialogue = conversationPiece.text;
+        name.text = conversationPiece.name;
+
         foreach (char c in dialogue.ToCharArray())
         {
             if (c == '\r' || c == '\n')
@@ -101,9 +105,12 @@ public class DialogueSystem : MonoBehaviour
 
     }
 
-    private IEnumerator TypeLine(string dialogue, Sprite sprite) // pc talking
+    private IEnumerator TypeLine(ConversationOption conversationOption, Sprite sprite) // pc talking
     {
         //Debug.Log("Type2");
+        string dialogue = conversationOption.text;
+        name.text = conversationOption.name;
+
         text.text = string.Empty;
         npcImage.gameObject.SetActive(false);
         pcImage.sprite = sprite;
@@ -170,9 +177,9 @@ public class DialogueSystem : MonoBehaviour
         else
         {
             bool isEnd = CheckEndConversation();
-            npcImage.sprite = conversation.items[currentConvIndex].image;
+            npcImage.sprite = conversation.items[currentConvIndex].imagePrefab.GetComponent<SpriteRenderer>().sprite;
             text.text = string.Empty;
-            StartCoroutine(TypeLine(conversation.items[currentConvIndex].text, isEnd));
+            StartCoroutine(TypeLine(conversation.items[currentConvIndex], isEnd));
         }
 
     }
@@ -222,7 +229,7 @@ public class DialogueSystem : MonoBehaviour
     public void ContinuePcDialogue()
     {
         continuePcBtn.gameObject.SetActive(false);
-        StartCoroutine(TypeLine(conversation.items[currentConvIndex].options[0].text, conversation.items[currentConvIndex].options[0].image));
+        StartCoroutine(TypeLine(conversation.items[currentConvIndex].options[0], conversation.items[currentConvIndex].options[0].imagePrefab.GetComponent<SpriteRenderer>().sprite));
     }
 
     public void OpenDialoguePanel(bool isEnd)

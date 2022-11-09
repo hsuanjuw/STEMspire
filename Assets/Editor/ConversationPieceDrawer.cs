@@ -4,7 +4,7 @@ using UnityEngine;
 namespace RPGM.Gameplay
 {
 
-    // [CustomPropertyDrawer(typeof(ConversationPiece))]
+    //[CustomPropertyDrawer(typeof(ConversationPiece))]
     public class ConversationPieceDrawer : PropertyDrawer
     {
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
@@ -21,7 +21,9 @@ namespace RPGM.Gameplay
             EditorGUIUtility.labelWidth = 32;
             EditorGUI.PropertyField(rect, property.FindPropertyRelative("id"), new GUIContent("ID"));
             rect.x += rect.width;
-            EditorGUI.PropertyField(rect, property.FindPropertyRelative("image"), GUIContent.none);
+            EditorGUI.PropertyField(rect, property.FindPropertyRelative("name"), GUIContent.none);
+            rect.x += rect.width;
+            EditorGUI.PropertyField(rect, property.FindPropertyRelative("imagePrefab"), GUIContent.none);
             rect.x += rect.width - 16;
             rect.x = position.width - rect.xMax;
             rect.width = position.width - rect.x;
@@ -34,7 +36,7 @@ namespace RPGM.Gameplay
         }
     }
 
-    // [CustomPropertyDrawer(typeof(ConversationOption))]
+    //[CustomPropertyDrawer(typeof(ConversationOption))]
     public class ConversationOptionDrawer : PropertyDrawer
     {
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
@@ -50,13 +52,17 @@ namespace RPGM.Gameplay
             EditorGUI.BeginProperty(rect, label, property);
             EditorGUI.PropertyField(rect, property.FindPropertyRelative("targetId"), GUIContent.none);
             rect.x += rect.width;
+            rect.width = position.width * 0.25f;
+            EditorGUI.PropertyField(rect, property.FindPropertyRelative("name"), GUIContent.none);
+            rect.x += rect.width;
             rect.width = 72;
-            EditorGUI.PropertyField(rect, property.FindPropertyRelative("image"), GUIContent.none);
+            EditorGUI.PropertyField(rect, property.FindPropertyRelative("imagePrefab"), GUIContent.none);
             rect.x += rect.width;
             rect.width = position.width * 0.25f;
             EditorGUI.PropertyField(rect, property.FindPropertyRelative("text"), GUIContent.none);
             rect.x += rect.width;
             EditorGUI.PropertyField(rect, property.FindPropertyRelative("enabled"), GUIContent.none);
+            rect.x += rect.width;
             EditorGUI.EndProperty();
         }
 
