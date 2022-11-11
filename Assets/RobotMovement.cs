@@ -11,7 +11,8 @@ public class RobotMovement : MonoBehaviour
         LeadPlayer,
         Hide,
         Random,
-        Idling
+        Idling,
+        Frozen
     };
 
     public RobotMovementType currentMovement = RobotMovementType.Floating;
@@ -32,6 +33,8 @@ public class RobotMovement : MonoBehaviour
     private bool peeking = false;
     private int peeks = 0;
     private float peekSpeed = 3000f;
+
+    private float prevFollowX = float.NaN;
     // Start is called before the first frame update
 
     public void StopPeeking()
@@ -42,9 +45,38 @@ public class RobotMovement : MonoBehaviour
     {
         switch (currentMovement)
         {
+            case RobotMovementType.FollowPlayer:
+                Player _p = FindObjectOfType<Player>();
+                float x_offset = 2f;
+                if(_currentDirection.y != 0)
+                _currentDirection.y = 0;
+
+                if (Input.GetAxisRaw("Horizontal") == 0)
+                {
+                    if (float.IsNaN(prevFollowX))
+                    {
+                        if (_p.GetComponent<SpriteRenderer>().flipX)
+                            x_offset *= -1;
+                        prevFollowX = _p.transform.position.x + x_offset;
+                    }
+                }
+                else
+                {
+                    if (Input.GetAxisRaw("Horizontal") > 0)
+                        x_offset *= -1;
+                    prevFollowX = _p.transform.position.x + x_offset;
+                }
+                
+                _currentDirection.x =  prevFollowX - transform.position.x;
+
+                if(Mathf.Abs(_currentDirection.x)<0.08)
+                    ChangeMovement(RobotMovementType.Idling);
+                break;
             case RobotMovementType.Idling:
                 if(_currentDirection!= Vector2.zero)
                     _currentDirection = Vector2.zero;
+                if(Input.GetAxisRaw("Horizontal") != 0)
+                    ChangeMovement(RobotMovementType.FollowPlayer);
                 break;
             case RobotMovementType.Hide:
                 if (GetComponent<SpriteRenderer>().sortingLayerID != _hidingLayer)
@@ -115,6 +147,7 @@ public class RobotMovement : MonoBehaviour
     {
         currentMovement = newMovement;
         _currentDirection = Vector2.zero;
+        prevFollowX = float.NaN;
     }
     void RandomizeDirection()
     {
