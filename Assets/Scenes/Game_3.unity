@@ -1331,6 +1331,7 @@ MonoBehaviour:
   ballSpeed: 1.2
   spawning: 0
   gameStart: 0
+  looping: 0
   nextPattern: 0
 --- !u!114 &932598042 stripped
 MonoBehaviour:
@@ -1639,7 +1640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: timeAfterGameStart
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: systemSymbols.Array.data[0]

@@ -8,6 +8,7 @@ public class SpawnLightningBalls : MonoBehaviour
     public float ballSpeed = 2f;
     public bool spawning;
     public bool gameStart;
+    public bool looping = true;
     Coroutine coroutine;
 
     public enum ProjectilePattern
@@ -38,7 +39,11 @@ public class SpawnLightningBalls : MonoBehaviour
             SpawnBalls(nextPattern);
             nextPattern = nextPattern+1;
             if (nextPattern > (ProjectilePattern)2)
-                nextPattern = ProjectilePattern.Cross;
+            {
+                if (looping)
+                    nextPattern = ProjectilePattern.Cross;
+                else gameStart = false;
+            }
             yield return new WaitForSeconds(5f);
         }
     }
