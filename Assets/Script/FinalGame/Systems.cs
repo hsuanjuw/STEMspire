@@ -85,6 +85,7 @@ public class Systems : MonoBehaviour
     }
     private IEnumerator StartFlash()
     {
+        GameObject.Find("SystemCountDownTxt").transform.Find("Spotlight").GetComponent<Spotlight>().StartFlashing();
         SpriteRenderer sisBG = FindObjectOfType<Finale_SystemInfo>().transform.Find("systemsInfo")
             .GetComponent<SpriteRenderer>();
         if (sisBG != null)
@@ -100,9 +101,15 @@ public class Systems : MonoBehaviour
     }
     private void DisplayTime(float timeToDisplay)
     {
-        if(hintActive)
+        if (hintActive)
+        {
             GameObject.Find("SystemCountDownTxt").transform.Find("Circle").GetComponent<Image>().fillAmount =
                 timeToDisplay / completionTime;
+            if(timeToDisplay / completionTime < 0.5f)
+                GameObject.Find("SystemCountDownTxt").transform.Find("Circle").GetComponent<Image>().color = Color.red;
+            else GameObject.Find("SystemCountDownTxt").transform.Find("Circle").GetComponent<Image>().color = Color.white;
+        }
+            
     }
 
     private bool CheckPattern()
@@ -152,6 +159,7 @@ public class Systems : MonoBehaviour
     {
         currentStatus = MiniGameManager.GameStatus.Completed;
         DisplayTime(completionTime);
+        GameObject.Find("SystemCountDownTxt").transform.Find("Circle").GetComponent<Image>().color = Color.green;
         for (int i = 0; i < systemSymbols.Length; i++)
         {
             systemSymbols[i].GetComponent<Image>().color = Color.green;

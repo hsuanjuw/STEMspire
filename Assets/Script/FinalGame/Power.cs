@@ -48,8 +48,19 @@ public class Power : MonoBehaviour
         {
             if(leftFill.fillStatus == PowerFill.FillStatus.NotFilled)
                 Countdown("Left");
+            else
+            {
+                if(hintActive)
+                GameObject.Find("LCountDownTxt").transform.Find("Circle").GetComponent<Image>().color = Color.green;
+                GameObject.Find("LCountDownTxt").transform.Find("Circle").GetComponent<Image>().fillAmount = 1f;
+            }
             if(rightFill.fillStatus == PowerFill.FillStatus.NotFilled)
                 Countdown("Right");
+            else
+            {
+                GameObject.Find("RCountDownTxt").transform.Find("Circle").GetComponent<Image>().color = Color.green;
+                GameObject.Find("RCountDownTxt").transform.Find("Circle").GetComponent<Image>().fillAmount = 1f;
+            }
             if(rightFill.fillStatus == PowerFill.FillStatus.Filled && leftFill.fillStatus == PowerFill.FillStatus.Filled)
                 Succeed();
         }
@@ -75,6 +86,7 @@ public class Power : MonoBehaviour
     private IEnumerator StartWait()
     {
         yield return new WaitForSeconds(timeAfterGameStart); // 10 Sec after launch, the wheel game started
+        GameObject.Find("PowerPanel").transform.Find("Spotlight").GetComponent<Spotlight>().StartFlashing();
         ResetPower("Start");
     }
 
@@ -211,9 +223,14 @@ public class Power : MonoBehaviour
 
     private void DisplayTime(float timeToDisplay, string countdownSide, float totalTime)
     {
-        if(hintActive)
-            GameObject.Find(countdownSide).transform.Find("Circle").GetComponent<Image>().fillAmount =
-                timeToDisplay / totalTime;
+        if (hintActive)
+        {
+            GameObject.Find(countdownSide).transform.Find("Circle").GetComponent<Image>().fillAmount = timeToDisplay / totalTime;
+            if(timeToDisplay / totalTime < 0.5f)
+            GameObject.Find(countdownSide).transform.Find("Circle").GetComponent<Image>().color = Color.red;
+            else GameObject.Find(countdownSide).transform.Find("Circle").GetComponent<Image>().color = Color.white;
+        }
+            
     }
     
     public void Fail()
@@ -229,11 +246,6 @@ public class Power : MonoBehaviour
     public void Succeed()
     {
         currentStatus = MiniGameManager.GameStatus.Completed;
-        if (hintActive)
-        {
-            DisplayTime(leftSwitchTime, "LCountDownTxt",leftSwitchTime);
-            DisplayTime(rightSwitchTime, "RCountDownTxt",rightSwitchTime);
-        }
         FindObjectOfType<MiniGameManager>().CallSuccess();
     }
 

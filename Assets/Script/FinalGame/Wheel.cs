@@ -72,23 +72,29 @@ public class Wheel : MonoBehaviour
 
     private IEnumerator StartNumFlash()
     {
-        yield return new WaitForSeconds(timeAfterGameStart); // 10 Sec after launch, the wheel game started
-        timeRemaining = completionTime;
-        currentStatus = MiniGameManager.GameStatus.InProgress;
-        while (currentStatus == MiniGameManager.GameStatus.InProgress)
+        yield return new WaitForSeconds(timeAfterGameStart);
+        if (currentStatus == MiniGameManager.GameStatus.NotStarted)
         {
-            for (int i = 0; i < wheelIDs.Length; i++)
-            {
-                wheelIDs[i].GetComponent<SpriteRenderer>().color = new Color(253f,255f,0f,255f);
-            }
-            yield return new WaitForSeconds(1f);
-            if (currentStatus == MiniGameManager.GameStatus.InProgress)
+            GameObject.Find("WheelCountDownTxt").transform.Find("Spotlight").GetComponent<Spotlight>().StartFlashing();
+            timeRemaining = completionTime;
+            currentStatus = MiniGameManager.GameStatus.InProgress;
+            while (currentStatus == MiniGameManager.GameStatus.InProgress)
             {
                 for (int i = 0; i < wheelIDs.Length; i++)
                 {
-                    wheelIDs[i].GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 255f, 255f);
+                    wheelIDs[i].GetComponent<SpriteRenderer>().color = new Color(253f, 255f, 0f, 255f);
                 }
+
                 yield return new WaitForSeconds(1f);
+                if (currentStatus == MiniGameManager.GameStatus.InProgress)
+                {
+                    for (int i = 0; i < wheelIDs.Length; i++)
+                    {
+                        wheelIDs[i].GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 255f, 255f);
+                    }
+
+                    yield return new WaitForSeconds(1f);
+                }
             }
         }
     }
@@ -110,9 +116,15 @@ public class Wheel : MonoBehaviour
     }
     private void DisplayTime(float timeToDisplay)
     {
-        if(hintActive)
-        GameObject.Find("WheelCountDownTxt").transform.Find("Circle").GetComponent<Image>().fillAmount =
-            timeToDisplay / completionTime;
+        if (hintActive)
+        {
+            GameObject.Find("WheelCountDownTxt").transform.Find("Circle").GetComponent<Image>().fillAmount =
+                timeToDisplay / completionTime;
+            if(timeToDisplay / completionTime < 0.5f)
+                GameObject.Find("WheelCountDownTxt").transform.Find("Circle").GetComponent<Image>().color = Color.red;
+            else GameObject.Find("WheelCountDownTxt").transform.Find("Circle").GetComponent<Image>().color = Color.white;
+        }
+        
     }
 
     public void RestartGame()
@@ -131,6 +143,7 @@ public class Wheel : MonoBehaviour
     {
         currentStatus = MiniGameManager.GameStatus.Completed;
         DisplayTime(completionTime);
+        GameObject.Find("WheelCountDownTxt").transform.Find("Circle").GetComponent<Image>().color = Color.green;
         for (int i = 0; i < wheelIDs.Length; i++)
         {
             wheelIDs[i].GetComponent<SpriteRenderer>().color = Color.green;
