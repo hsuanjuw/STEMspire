@@ -10,6 +10,7 @@ public class SpawnLightningBalls : MonoBehaviour
     public bool gameStart;
     public bool looping = true;
     Coroutine coroutine;
+    private bool finishedLoop = false;
 
     public enum ProjectilePattern
     {
@@ -34,7 +35,7 @@ public class SpawnLightningBalls : MonoBehaviour
 
     public IEnumerator StartLightningBalls()
     {
-        while (gameStart)
+        while (gameStart && !finishedLoop)
         {
             SpawnBalls(nextPattern);
             nextPattern = nextPattern+1;
@@ -42,7 +43,7 @@ public class SpawnLightningBalls : MonoBehaviour
             {
                 if (looping)
                     nextPattern = ProjectilePattern.Cross;
-                else gameStart = false;
+                else finishedLoop = true;
             }
             yield return new WaitForSeconds(5f);
         }

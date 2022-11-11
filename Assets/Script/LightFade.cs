@@ -10,9 +10,26 @@ public class LightFade : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(Blink());
     }
 
+    private IEnumerator Blink()
+    {
+        while (!fading)
+        {
+            Color _col = GetComponent<SpriteRenderer>().color;
+            _col.a = defaultAlpha/255;
+            GetComponent<SpriteRenderer>().color = _col;
+            yield return new WaitForSeconds(Random.Range(0.7f,2f));
+            if (!fading)
+            {
+                _col = GetComponent<SpriteRenderer>().color;
+                _col.a = defaultAlpha/255/2;
+                GetComponent<SpriteRenderer>().color = _col;
+                yield return new WaitForSeconds(Random.Range(0.2f,0.4f)); 
+            }
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -37,5 +54,6 @@ public class LightFade : MonoBehaviour
         Color _col = GetComponent<SpriteRenderer>().color;
         _col.a = defaultAlpha/255;
         GetComponent<SpriteRenderer>().color = _col;
+        StartCoroutine(Blink());
     }
 }
