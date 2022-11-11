@@ -13,10 +13,13 @@ public class EnvironmentTrigger : MonoBehaviour
     public TextMeshProUGUI text;
 
     private ConversationScript conversation;
+
+    private DialogueSystem dialogueSystem;
     // Start is called before the first frame update
     void Start()
     {
         conversation = this.GetComponent<ConversationScript>();
+        dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
     }
 
     // Update is called once per frame
@@ -37,13 +40,18 @@ public class EnvironmentTrigger : MonoBehaviour
     void OnMouseDown()
     {
         NotHover();
-        if (!enviroDialogueIsStart)
+        if (!enviroDialogueIsStart && !dialogueSystem.dialogueOpened)
         {
             enviroDialogueIsStart = true;
             text.text = conversation.items[0].text;
             coroutine = StartCoroutine(OpenPanel());
+
+            if (this.GetComponentInChildren<InteractionIcon>())
+            {
+                Destroy(this.GetComponentInChildren<InteractionIcon>().gameObject);
+            }
         }
-        else
+        else if(enviroDialogueIsStart)
         {
             StopCoroutine(coroutine);
             text.text = conversation.items[0].text;

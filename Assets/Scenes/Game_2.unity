@@ -1634,8 +1634,8 @@ MonoBehaviour:
   items:
   - id: 1
     name: 
-    text: I reinforced the Power Core containment mechanism. If you had attempted
-      to launch the ship, the Power Core would have blown up!
+    text: " I reinforced the protective casing. There are some\r issues here that
+      are too specialized for little ol\u2019 me, though. "
     imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1648,9 +1648,8 @@ MonoBehaviour:
       enabled: 0
   - id: 1.1
     name: Nan'oi
-    text: "There are some\r issues here that are too specialized for little ol\u2019
-      me, though. You\u2019ll need to get someone else to fix those unless you want
-      your ship to become a pile of scrap metal during\r take off."
+    text: "You\u2019ll need to get someone else to fix those unless you want your
+      ship to become a pile of scrap metal during\r take off."
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1907,8 +1906,8 @@ MonoBehaviour:
   items:
   - id: 1
     name: Nan'oi
-    text: "Well that asteroid certainly did a number on the... everything. Let's\r
-      take a look and see if we can make her feel better, shall we? "
+    text: Well, that asteroid certainly messed up the... everything. Let's take a
+      look and see if we can make it feel better, shall we?
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
