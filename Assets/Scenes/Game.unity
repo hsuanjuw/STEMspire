@@ -560,6 +560,7 @@ MonoBehaviour:
   ballSpeed: 1.2
   spawning: 0
   gameStart: 0
+  looping: 1
   nextPattern: 0
 --- !u!1 &1096685060 stripped
 GameObject:

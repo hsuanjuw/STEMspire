@@ -43,6 +43,9 @@ public class RobotMovement : MonoBehaviour
     }
     void MoveRobot()
     {
+        DialogueSystem _ds = FindObjectOfType<DialogueSystem>();
+        if (_ds != null && _ds.dialogueOpened)
+            return;
         switch (currentMovement)
         {
             case RobotMovementType.FollowPlayer:
@@ -130,7 +133,7 @@ public class RobotMovement : MonoBehaviour
                 break;
         }
         Vector3 tempVect = new Vector3(_currentDirection.x*hoverSpeed * Time.deltaTime, _currentDirection.y*hoverSpeed * Time.deltaTime, 0);
-        this.transform.position += tempVect;
+        transform.position += tempVect;
     }
     // Update is called once per frame
     void Update()
