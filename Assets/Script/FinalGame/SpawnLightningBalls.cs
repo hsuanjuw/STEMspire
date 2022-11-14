@@ -6,11 +6,11 @@ public class SpawnLightningBalls : MonoBehaviour
 {
     public GameObject LightningBall;
     public float ballSpeed = 2f;
-    public bool spawning;
     public bool gameStart;
     public bool looping = true;
     Coroutine coroutine;
-    private bool finishedLoop = false;
+    [HideInInspector]
+    public bool finishedLoop = false;
 
     public enum ProjectilePattern
     {

@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScroll: 2
-  scrollSpeed: 0.1
+  scrollSpeed: 0.02
 --- !u!1 &1600219523331058248
 GameObject:
   m_ObjectHideFlags: 0

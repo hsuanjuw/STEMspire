@@ -37,7 +37,7 @@ public class Wheel : MonoBehaviour
 
     public void StartGame()
     {
-        gameCoroutine = StartCoroutine(StartNumFlash());
+        gameCoroutine = StartCoroutine(StartNumFlash(timeAfterGameStart));
     }
 
     public void ButtonClicked(int btnClickedNum)
@@ -70,11 +70,12 @@ public class Wheel : MonoBehaviour
         return (buttonToClick > numWheels);
     }
 
-    private IEnumerator StartNumFlash()
+    private IEnumerator StartNumFlash(float seconds)
     {
-        yield return new WaitForSeconds(timeAfterGameStart);
+        yield return new WaitForSeconds(seconds);
         if (currentStatus == MiniGameManager.GameStatus.NotStarted)
         {
+            RestartGame();
             GameObject.Find("WheelCountDownTxt").transform.Find("Spotlight").GetComponent<Spotlight>().StartFlashing();
             timeRemaining = completionTime;
             currentStatus = MiniGameManager.GameStatus.InProgress;
@@ -108,9 +109,17 @@ public class Wheel : MonoBehaviour
         }
         else
         {
-            Debug.Log("Wheel Failure");
-            Fail();
-            DisplayTime(0);
+            if (FindObjectOfType<MiniGameManager>().currentIntegrity == MiniGameManager.ShipIntegrity.Fixed)
+            {
+                RestartGame();
+                StartCoroutine(StartNumFlash(1f));
+            }
+            else
+            {
+                Debug.Log("Wheel Failure");
+                Fail();
+                DisplayTime(0);  
+            }
         }
         
     }
@@ -135,6 +144,10 @@ public class Wheel : MonoBehaviour
         for (int i = 0; i < wheelIDs.Length; i++)
         {
             wheelIDs[i].GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        foreach (var button in GameObject.FindGameObjectsWithTag("SequenceButton"))
+        {
+            button.GetComponent<Image>().color = Color.white;
         }
         DisplayTime(completionTime);
     }

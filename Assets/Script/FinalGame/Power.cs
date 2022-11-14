@@ -7,6 +7,13 @@ using UnityEngine.UI;
 
 public class Power : MonoBehaviour
 {
+    public enum ChargeMode
+    {
+        Broken,
+        Fixed
+    };
+
+    public ChargeMode currentCharge = ChargeMode.Broken;
     public MiniGameManager.GameStatus currentStatus = MiniGameManager.GameStatus.NotStarted;
     public PowerFill leftFill;
     public PowerFill rightFill;
@@ -32,13 +39,6 @@ public class Power : MonoBehaviour
             DisplayTime(leftSwitchTime, "LCountDownTxt",leftSwitchTime);
             DisplayTime(rightSwitchTime, "RCountDownTxt",rightSwitchTime);
         }
-        /*
-         else
-        {
-            GameObject.Find("LCountDownTxt").GetComponent<Text>().text = "";
-            GameObject.Find("RCountDownTxt").GetComponent<Text>().text = "";
-        }
-        */
     }
 
     // Update is called once per frame
@@ -50,7 +50,7 @@ public class Power : MonoBehaviour
                 Countdown("Left");
             else
             {
-                if(hintActive)
+                TimeReStart("Left");
                 GameObject.Find("LCountDownTxt").transform.Find("Circle").GetComponent<Image>().color = Color.green;
                 GameObject.Find("LCountDownTxt").transform.Find("Circle").GetComponent<Image>().fillAmount = 1f;
             }
@@ -58,6 +58,7 @@ public class Power : MonoBehaviour
                 Countdown("Right");
             else
             {
+                TimeReStart("Right");
                 GameObject.Find("RCountDownTxt").transform.Find("Circle").GetComponent<Image>().color = Color.green;
                 GameObject.Find("RCountDownTxt").transform.Find("Circle").GetComponent<Image>().fillAmount = 1f;
             }
@@ -87,6 +88,7 @@ public class Power : MonoBehaviour
     {
         yield return new WaitForSeconds(timeAfterGameStart); // 10 Sec after launch, the wheel game started
         GameObject.Find("PowerPanel").transform.Find("Spotlight").GetComponent<Spotlight>().StartFlashing();
+        
         ResetPower("Start");
     }
 
@@ -97,7 +99,9 @@ public class Power : MonoBehaviour
 
     public void ResetPower(string mode)
     {
+        if(currentCharge == ChargeMode.Broken)
         TimeReStart(mode);
+        else TimeReStart("Fixed");
         leftFill.ResetFill();
         rightFill.ResetFill();
         if(mode == "End")
@@ -130,6 +134,16 @@ public class Power : MonoBehaviour
                 rightSwitchTimeRemaining = rightSwitchTime;
                 rightOnLight.SetActive(true);
                 rightDangerLight.SetActive(false);
+                DisplayTime(rightSwitchTimeRemaining, "RCountDownTxt",rightSwitchTime);
+                break;
+            case "Fixed":
+                leftSwitchTimeRemaining = 0;
+                leftDangerLight.SetActive(true);
+                leftOnLight.SetActive(false);
+                DisplayTime(leftSwitchTimeRemaining, "LCountDownTxt",leftSwitchTime);
+                rightSwitchTimeRemaining = 0;
+                rightOnLight.SetActive(false);
+                rightDangerLight.SetActive(true);
                 DisplayTime(rightSwitchTimeRemaining, "RCountDownTxt",rightSwitchTime);
                 break;
             case "End":
@@ -183,6 +197,7 @@ public class Power : MonoBehaviour
                 if (leftSwitchTimeRemaining <= 0)
                 {
                     leftSwitchTimeRemaining = 0;
+                    if(currentCharge == ChargeMode.Broken)
                     Fail();
                 }
                 else
@@ -202,6 +217,7 @@ public class Power : MonoBehaviour
                 if (rightSwitchTimeRemaining <= 0)
                 {
                     rightSwitchTimeRemaining = 0;
+                    if(currentCharge == ChargeMode.Broken)
                     Fail();
                 }
                 else
@@ -245,8 +261,15 @@ public class Power : MonoBehaviour
 
     public void Succeed()
     {
+        TimeReStart("Left");
+        TimeReStart("Right");
+        GameObject.Find("LCountDownTxt").transform.Find("Circle").GetComponent<Image>().color = Color.green;
+        GameObject.Find("LCountDownTxt").transform.Find("Circle").GetComponent<Image>().fillAmount = 1f;
+        GameObject.Find("RCountDownTxt").transform.Find("Circle").GetComponent<Image>().color = Color.green;
+        GameObject.Find("RCountDownTxt").transform.Find("Circle").GetComponent<Image>().fillAmount = 1f;
+        
         currentStatus = MiniGameManager.GameStatus.Completed;
-        FindObjectOfType<MiniGameManager>().CallSuccess();
+        //FindObjectOfType<MiniGameManager>().CallSuccess();
     }
 
 }

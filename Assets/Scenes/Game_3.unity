@@ -537,7 +537,7 @@ PrefabInstance:
       objectReference: {fileID: 2101835973}
     - target: {fileID: 3894587091290202712, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: GameStart
+      value: InitiateFinalLaunch
       objectReference: {fileID: 0}
     - target: {fileID: 4303051250364219201, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_Name
@@ -1352,9 +1352,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightningBall: {fileID: 4864176524871421335, guid: 101085a93e3536e4bb54db9f4181605c, type: 3}
   ballSpeed: 1.2
-  spawning: 0
   gameStart: 0
   looping: 0
+  finishedLoop: 0
   nextPattern: 0
 --- !u!114 &932598042 stripped
 MonoBehaviour:
@@ -1641,6 +1641,10 @@ PrefabInstance:
       propertyPath: CountdownTxt
       value: 
       objectReference: {fileID: 1837670827}
+    - target: {fileID: 5171305791500529057, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: currentIntegrity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: hintActive
       value: 1
@@ -1703,7 +1707,7 @@ PrefabInstance:
       objectReference: {fileID: 612175635}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: fillSpeed
-      value: 0.115
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: rightFill
@@ -1721,6 +1725,10 @@ PrefabInstance:
       propertyPath: rightOnLight
       value: 
       objectReference: {fileID: 612175631}
+    - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: currentCharge
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: hintTextActive
       value: 1

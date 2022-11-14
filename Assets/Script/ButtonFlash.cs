@@ -17,8 +17,13 @@ public class ButtonFlash : Button
     {
         base.Start();
         btnImage = GetComponent<Image>();
-        if (flashButton)
-            StartCoroutine(FlashWhite());
+        if (FindObjectOfType<MiniGameManager>().currentIntegrity == MiniGameManager.ShipIntegrity.Fixed)
+            MakeNotClickable();
+        else
+        {
+            if (flashButton)
+                StartCoroutine(FlashWhite());
+        }
     }
     
     public void RemoveFlashAbility()
@@ -36,8 +41,11 @@ public class ButtonFlash : Button
     public override void OnPointerExit(PointerEventData eventData)
     {
         base.OnPointerExit(eventData);
-        flashButton = true;
-        StartCoroutine(FlashWhite());
+        if (IsInteractable())
+        {
+            flashButton = true;
+            StartCoroutine(FlashWhite()); 
+        }
     }
 
     private IEnumerator FlashBlack()
@@ -63,5 +71,17 @@ public class ButtonFlash : Button
         flashButton = true;
         StartCoroutine(FlashWhite());
     }
+
+    public void MakeNotClickable()
+    {
+        interactable = false;
+    }
+
+    public void MakeClickable()
+    {
+        interactable = true;
+        ResetFlash();
+    }
+    
 
 }
