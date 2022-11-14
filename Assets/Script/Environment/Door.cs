@@ -12,6 +12,7 @@ public class Door : MonoBehaviour
     private float originalDistance;
 
     private GameStatus gameStatus;
+    private DialogueSystem dialogueSystem;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class Door : MonoBehaviour
         rightDoor = this.transform.GetChild(1).gameObject;
         originalDistance = Vector3.Distance(leftDoor.transform.position, rightDoor.transform.position);
         gameStatus = GameObject.FindObjectOfType<GameStatus>();
+        dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
     }
 
     // Update is called once per frame
@@ -32,48 +34,57 @@ public class Door : MonoBehaviour
     {
         //If your mouse hovers over the GameObject with the script attached, output this message
         //Debug.Log("Mouse is over GameObject.");
-        if (!doorIsOpen)
+        if (!dialogueSystem.dialogueOpened)
         {
-            doorIsOpen = true;
-            StartCoroutine(OpenDoor());
+            if (!doorIsOpen)
+            {
+                doorIsOpen = true;
+                StartCoroutine(OpenDoor());
+            }
         }
     }
 
     void OnMouseExit()
     {
-        if (doorIsOpen)
+        if (!dialogueSystem.dialogueOpened)
         {
-            doorIsOpen = false;
-            StartCoroutine(CloseDoor());
+            if (doorIsOpen)
+            {
+                doorIsOpen = false;
+                StartCoroutine(CloseDoor());
+            }
         }
     }
 
     void OnMouseDown()
     {
-        switch (gameStatus.status)
+        if (!dialogueSystem.dialogueOpened)
         {
-            case GameStatus.Status.spaceStation:
-                if (gameStatus.isFinishedDialogue)
-                {
-                    SceneManager.LoadScene("Game_2");
-                }
-                else
-                {
-                    SceneManager.LoadScene("Game");
-                }
-                break;
-            case GameStatus.Status.spaceStation2:
-                if (gameStatus.isFinishedDialogue)
-                {
-                    SceneManager.LoadScene("Game_3");
-                }
-                else
-                {
-                    SceneManager.LoadScene("Game_2");
-                }
-                break;
-            default:
-                break;
+            switch (gameStatus.status)
+            {
+                case GameStatus.Status.spaceStation:
+                    if (gameStatus.isFinishedDialogue)
+                    {
+                        SceneManager.LoadScene("Game_2");
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("Game");
+                    }
+                    break;
+                case GameStatus.Status.spaceStation2:
+                    if (gameStatus.isFinishedDialogue)
+                    {
+                        SceneManager.LoadScene("Game_3");
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("Game_2");
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
     }
 

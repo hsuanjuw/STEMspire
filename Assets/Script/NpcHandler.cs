@@ -38,8 +38,11 @@ public class NpcHandler : MonoBehaviour
         if (!dialogueSystem.dialogueOpened)
         {
             dialogueSystem.StartDialogue(conversation, hasTask);
-            analytic.SaveData(this.name +"Clicked", Time.time);
-
+            if (this.GetComponentInChildren<InteractionIcon>())
+            {
+                Destroy(this.GetComponentInChildren<InteractionIcon>().gameObject);
+            }
+            analytic.SaveData(this.name + "Clicked", Time.time);
         }
     }
 }

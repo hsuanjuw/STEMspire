@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractionIcon : MonoBehaviour
 {
-    public bool isInteracted = true;
+    public bool isInteracted = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class InteractionIcon : MonoBehaviour
 
     IEnumerator zoomInOut()
     {
-        while (isInteracted)
+        while (!isInteracted)
         {
             yield return new WaitForSeconds(0.3f);
             this.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);

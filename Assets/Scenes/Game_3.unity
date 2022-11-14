@@ -1298,9 +1298,8 @@ MonoBehaviour:
   items:
   - id: 1
     name: Zun
-    text: "Oh! You have an Eclipse Runner. Wow... you weren't\r exaggerating about
-      the damage. You\u2019re lucky you made it here without any issues\u2026 Fire
-      up this ship and show me what's going on."
+    text: "Oh! You have an Eclipse Runner. Wow... you weren't exaggerating about
+      the damage. You\u2019re lucky you made it here without any issues."
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1537,8 +1536,7 @@ MonoBehaviour:
   items:
   - id: 1
     name: Zun
-    text: ' I took a look at your system. I upgraded some of your displays so you
-      should be good to go!'
+    text: That did it! You should be good to go!
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1550,9 +1548,10 @@ MonoBehaviour:
       targetId: 2
       enabled: 0
   - id: 2
-    name: 
-    text: 
-    imagePrefab: {fileID: 0}
+    name: Zun
+    text: No problem! The issue seems complicated, but is actually very simple to
+      fix once you learn how.
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []

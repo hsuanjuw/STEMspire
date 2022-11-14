@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using RPGM.Gameplay;
 
 public class Player : MonoBehaviour
 {
@@ -59,6 +60,12 @@ public class Player : MonoBehaviour
         else if (col.name == "IntroDialogueTrigger")
         {
             dialogueSystem.StartDialogueIntro();
+            Destroy(col.gameObject);
+        }
+        else if (col.name == "Engineer2DialogueTrigger")
+        {
+            ConversationScript conversation = GameObject.Find("Engineer 2").GetComponentInChildren<ConversationScript>();
+            dialogueSystem.StartDialogue(conversation, false);
             Destroy(col.gameObject);
         }
     }

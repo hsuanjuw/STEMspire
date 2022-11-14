@@ -448,20 +448,19 @@ MonoBehaviour:
   items:
   - id: 1
     name: R.C.
-    text: Now that you have made the damage worse... Will you follow my advice and
-      go to the Main Commercial District?
+    text: Now that you have made the damage worse... Will you follow my advice?
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - name: You
-      text: Fine ...
+      text: No!
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
     - name: You
-      text: No!
+      text: Fine...
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 2
@@ -1067,8 +1066,7 @@ MonoBehaviour:
   items:
   - id: 1
     name: R.C.
-    text: ' Robot Companion designation R.C. power on. Ship damaged. Dock at nearest
-      space station for repairs.'
+    text: Ship damaged. Dock at nearest space station for repairs.
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1081,7 +1079,8 @@ MonoBehaviour:
       enabled: 0
   - id: 2
     name: R.C.
-    text: Ship sustained major damage from the collision with the asteroid.
+    text: "That asteroid really did a number on the ship! I don't think we can fix
+      this by\r ourselves."
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1094,8 +1093,8 @@ MonoBehaviour:
       enabled: 0
   - id: 3
     name: R.C.
-    text: "I recommend finding an expert to aid in the repairs. The Main Commercial
-      District likely has someone.\r"
+    text: "Why don't we go look in the Main Commercial District to see if we can
+      find\r an expert there?"
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
