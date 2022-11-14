@@ -34,12 +34,12 @@ public class Systems : MonoBehaviour
 
     public void StartGame()
     {
-        coroutine = StartCoroutine(StartWait());
+        coroutine = StartCoroutine(StartWait(timeAfterGameStart));
     }
 
-    private IEnumerator StartWait()
+    private IEnumerator StartWait(float seconds)
     {
-        yield return new WaitForSeconds(timeAfterGameStart); // 10 Sec after launch, the wheel game started
+        yield return new WaitForSeconds(seconds); // 10 Sec after launch, the wheel game started
         if (currentStatus == MiniGameManager.GameStatus.NotStarted)
         {
             currentStatus = MiniGameManager.GameStatus.InProgress;
@@ -72,7 +72,15 @@ public class Systems : MonoBehaviour
 
             if (!CheckPattern())
             {
-                Fail();
+                if (FindObjectOfType<MiniGameManager>().currentIntegrity == MiniGameManager.ShipIntegrity.Fixed)
+                {
+                    ResetSystem();
+                    StartCoroutine(StartWait(1f));
+                }
+                else
+                {
+                    Fail();  
+                }
             }
             else
             {

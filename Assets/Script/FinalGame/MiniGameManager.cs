@@ -16,6 +16,13 @@ public class MiniGameManager : MonoBehaviour
         Completed
     };
 
+    public enum ShipIntegrity
+    {
+        Broken,
+        Fixed
+    };
+
+    public ShipIntegrity currentIntegrity = ShipIntegrity.Broken;
     public GameStatus currentStatus = GameStatus.NotStarted;
    // private StoryManager storyManager;
     private SpawnLightningBalls lightningBalls;
@@ -26,6 +33,7 @@ public class MiniGameManager : MonoBehaviour
     private bool isCameraShake;
     public bool isCameraUp;
     private DialogueSystem dialogueSystem;
+    private bool notFinished = true;
 
     //Analytics
     private Analytic analytic;
@@ -58,6 +66,8 @@ public class MiniGameManager : MonoBehaviour
         analytic = GameObject.FindObjectOfType<Analytic>();
         dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
         CheckStartDialogue();
+        if(currentIntegrity == ShipIntegrity.Fixed)
+            GameStart();
     }
 
     private void CheckStartDialogue()
@@ -91,17 +101,42 @@ public class MiniGameManager : MonoBehaviour
         {
             CameraShake();
         }
+
+        if (currentStatus == GameStatus.InProgress && AllMinigameStatus() == GameStatus.Completed)
+        {
+            currentStatus = GameStatus.Completed;
+            FindObjectOfType<ButtonFlash>().MakeClickable();
+        }
     }
 
     public void GameStart()
     {
         if (!gameStarted)
         {
-            launchBtnPressedCount++;
             gameStarted = true;
+            if (currentIntegrity == ShipIntegrity.Broken)
+            {
+                launchBtnPressedCount++;
+                CountdownTxt.gameObject.SetActive(true);
+                GameObject.Find("Light").GetComponent<LightFade>().fading = true;
+                StartCoroutine(Countdown()); 
+            }
+            else
+            {
+                StartMiniGame();
+                currentStatus = GameStatus.InProgress; 
+            }
+        }
+    }
+
+    public void InitiateFinalLaunch()
+    {
+        if (currentStatus == GameStatus.Completed)
+        {
+            launchBtnPressedCount++;
             CountdownTxt.gameObject.SetActive(true);
             GameObject.Find("Light").GetComponent<LightFade>().fading = true;
-            StartCoroutine(Countdown());
+            StartCoroutine(Countdown());   
         }
     }
     private IEnumerator Countdown()
@@ -113,12 +148,30 @@ public class MiniGameManager : MonoBehaviour
             CountdownTxt.text = i.ToString();
             yield return new WaitForSeconds(1f);
         }
-        CountdownTxt.gameObject.SetActive(false);
-        StartCoroutine(SpaceshipCrack());
+
+        if (currentIntegrity == ShipIntegrity.Broken)
+        {
+            CountdownTxt.gameObject.SetActive(false);
+            StartCoroutine(SpaceshipCrack()); 
+        }
+        else
+        {
+            for (int i = 2; i > 0; i--)
+            {
+                CountdownTxt.text = i.ToString();
+                yield return new WaitForSeconds(1f);
+            }
+            CountdownTxt.text = "Launch!";
+            FindObjectOfType<SpaceScrolling>().currentScroll = SpaceScrolling.ScrollType.Up;
+            yield return new WaitForSeconds(1f);
+            CountdownTxt.gameObject.SetActive(false);
+            CallSuccess();
+        }
     }
 
     private IEnumerator SpaceshipCrack()
     {
+        FindObjectOfType<SpaceScrolling>().currentScroll = SpaceScrolling.ScrollType.Angle;
         FindObjectOfType<PowerCoreExplosion>().Explode();
         FindObjectOfType<MusicPlayer>().SetFinaleMusic();
         PostProcessVolume volume = mainCamera.gameObject.GetComponent<PostProcessVolume>();
@@ -179,14 +232,14 @@ public class MiniGameManager : MonoBehaviour
 
     private IEnumerator Victory()
     {
-        currentStatus = GameStatus.Completed;
         WinAllMiniGames();
         foreach (var ball in FindObjectsOfType<LightningBall>())
         {
             ball.KillBall();
         }
         FindObjectOfType<MusicPlayer>().SetVictoryMusic();
-        lightningBalls.StopSpawning();
+        if(!lightningBalls.finishedLoop && lightningBalls.gameStart)
+            lightningBalls.StopSpawning();
         FindObjectOfType<PowerCoreExplosion>().ResetLightning();
         yield return new WaitForSeconds(2f);
         FindObjectOfType<ScreenFader>().SwitchScene("Thanks");
@@ -270,6 +323,13 @@ public class MiniGameManager : MonoBehaviour
         power.currentStatus = GameStatus.Completed;
     }
 
+    public GameStatus AllMinigameStatus()
+    {
+        if (wheel.currentStatus == GameStatus.Completed && systems.currentStatus == GameStatus.Completed &&
+            power.currentStatus == GameStatus.Completed)
+            return GameStatus.Completed;
+        else return GameStatus.InProgress;
+    }
     private void EndMiniGame()
     {
         wheel.RestartGame();
