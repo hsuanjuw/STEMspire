@@ -75,6 +75,7 @@ public class Wheel : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         if (currentStatus == MiniGameManager.GameStatus.NotStarted)
         {
+            RestartGame();
             GameObject.Find("WheelCountDownTxt").transform.Find("Spotlight").GetComponent<Spotlight>().StartFlashing();
             timeRemaining = completionTime;
             currentStatus = MiniGameManager.GameStatus.InProgress;

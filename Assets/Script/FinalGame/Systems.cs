@@ -42,6 +42,7 @@ public class Systems : MonoBehaviour
         yield return new WaitForSeconds(seconds); // 10 Sec after launch, the wheel game started
         if (currentStatus == MiniGameManager.GameStatus.NotStarted)
         {
+            ResetSystem();
             currentStatus = MiniGameManager.GameStatus.InProgress;
             timeRemaining = completionTime;
             FindObjectOfType<Finale_SystemInfo>().NextPhase();

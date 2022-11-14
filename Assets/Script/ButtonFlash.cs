@@ -80,7 +80,7 @@ public class ButtonFlash : Button
     public void MakeClickable()
     {
         interactable = true;
-        StartCoroutine(FlashWhite());
+        ResetFlash();
     }
     
 

@@ -14,7 +14,7 @@ public class SpaceScrolling : MonoBehaviour
     };
 
     public ScrollType currentScroll = ScrollType.Side;
-    public float scrollSpeed = 0.08f;
+    public float scrollSpeed = 0.02f;
 
     // Update is called once per frame
     void Update()
@@ -28,10 +28,10 @@ public class SpaceScrolling : MonoBehaviour
         switch (currentScroll)
         {
             case ScrollType.Up:
-                _img.uvRect = new Rect(_img.uvRect.position + new Vector2(0f, scrollSpeed) * Time.deltaTime, _img.uvRect.size);
+                _img.uvRect = new Rect(_img.uvRect.position + new Vector2(0f, 20 * scrollSpeed) * Time.deltaTime, _img.uvRect.size);
                 break;
             case ScrollType.Angle:
-                _img.uvRect = new Rect(_img.uvRect.position + new Vector2(2 * scrollSpeed, 2 * scrollSpeed) * Time.deltaTime, _img.uvRect.size);
+                _img.uvRect = new Rect(_img.uvRect.position + new Vector2(8 * scrollSpeed, 8 * scrollSpeed) * Time.deltaTime, _img.uvRect.size);
                 break;
             case ScrollType.Side:
                 _img.uvRect = new Rect(_img.uvRect.position + new Vector2(scrollSpeed, 0f) * Time.deltaTime, _img.uvRect.size);
