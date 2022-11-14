@@ -31,8 +31,6 @@ public class RobotMovement : MonoBehaviour
     public int _hidingLayer;
 
     private bool peeking = false;
-    private int peeks = 0;
-    private float peekSpeed = 3000f;
 
     private float prevFollowX = float.NaN;
     // Start is called before the first frame update

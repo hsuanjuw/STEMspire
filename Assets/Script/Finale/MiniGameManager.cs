@@ -33,7 +33,6 @@ public class MiniGameManager : MonoBehaviour
     private bool isCameraShake;
     public bool isCameraUp;
     private DialogueSystem dialogueSystem;
-    private bool notFinished = true;
 
     //Analytics
     private Analytic analytic;

@@ -85,7 +85,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4555493688081119113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,6 +371,10 @@ PrefabInstance:
       propertyPath: btnImage
       value: 
       objectReference: {fileID: 4705028023519900940}
+    - target: {fileID: 5517085262298870294, guid: f5a7779124bb5c842ba2bee95e82f14a, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5517085262298870294, guid: f5a7779124bb5c842ba2bee95e82f14a, type: 3}
       propertyPath: m_TargetGraphic
       value: 

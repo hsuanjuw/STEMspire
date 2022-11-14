@@ -13,7 +13,7 @@ public class ButtonFlash : Button
     public Image btnImage;
 
     // Update is called once per frame
-    void Start()
+    protected override void Start()
     {
         base.Start();
         btnImage = GetComponent<Image>();
