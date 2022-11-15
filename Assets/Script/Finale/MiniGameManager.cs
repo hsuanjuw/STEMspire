@@ -110,6 +110,7 @@ public class MiniGameManager : MonoBehaviour
 
     public void GameStart()
     {
+        Debug.Log("GameStart");
         if (!gameStarted)
         {
             gameStarted = true;

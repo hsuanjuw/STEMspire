@@ -1735,12 +1735,6 @@ MonoBehaviour:
       audio: {fileID: 0}
       targetId: 4
       enabled: 0
-    - name: 
-      text: "R.C., we\u2019re going to find Zun. Come with me."
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 4
-      enabled: 0
   - id: 4
     name: 
     text: 
@@ -1862,9 +1856,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightningBall: {fileID: 4864176524871421335, guid: 101085a93e3536e4bb54db9f4181605c, type: 3}
   ballSpeed: 1.2
-  spawning: 0
   gameStart: 0
   looping: 1
+  finishedLoop: 0
   nextPattern: 0
 --- !u!1 &2089568439
 GameObject:
