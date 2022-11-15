@@ -557,9 +557,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightningBall: {fileID: 4864176524871421335, guid: 101085a93e3536e4bb54db9f4181605c, type: 3}
   ballSpeed: 1.2
-  spawning: 0
   gameStart: 0
   looping: 1
+  finishedLoop: 0
   nextPattern: 0
 --- !u!1 &1096685060 stripped
 GameObject:

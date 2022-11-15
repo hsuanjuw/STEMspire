@@ -18,7 +18,9 @@ public class ButtonFlash : Button
         base.Start();
         btnImage = GetComponent<Image>();
         if (FindObjectOfType<MiniGameManager>().currentIntegrity == MiniGameManager.ShipIntegrity.Fixed)
+        {
             MakeNotClickable();
+        }
         else
         {
             if (flashButton)
@@ -74,11 +76,13 @@ public class ButtonFlash : Button
 
     public void MakeNotClickable()
     {
+        //Debug.Log("Not Clickable");
         interactable = false;
     }
 
     public void MakeClickable()
     {
+        //Debug.Log("Clickable");
         interactable = true;
         ResetFlash();
     }
