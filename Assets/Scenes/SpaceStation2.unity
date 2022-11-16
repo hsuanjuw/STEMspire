@@ -2269,7 +2269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8979312317813973282, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
       propertyPath: m_Text
-      value: Bring Engineer 2 to ship
+      value: Bring Zun to ship
       objectReference: {fileID: 0}
     - target: {fileID: 8979312317896414161, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
       propertyPath: m_Name
