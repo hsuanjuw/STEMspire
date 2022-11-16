@@ -19,7 +19,7 @@ public class SpawnLightningBalls : MonoBehaviour
         Wave
     };
 
-    public ProjectilePattern nextPattern = ProjectilePattern.Wave;
+    public ProjectilePattern nextPattern = ProjectilePattern.Cross;
 
     // Start is called before the first frame update
     void Start()
@@ -121,6 +121,7 @@ public class SpawnLightningBalls : MonoBehaviour
     public void StopSpawning()
     {
         StopCoroutine(coroutine);
+        nextPattern = ProjectilePattern.Cross;
         gameStart = false;
     }
 }
