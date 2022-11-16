@@ -494,6 +494,7 @@ GameObject:
   - component: {fileID: 3997688245029095543}
   - component: {fileID: 2434584977020454510}
   - component: {fileID: 7935148085698822486}
+  - component: {fileID: 1041450773651174761}
   m_Layer: 0
   m_Name: Static
   m_TagString: Untagged
@@ -584,7 +585,7 @@ VideoPlayer:
   m_TargetMaterialProperty: _MainTex
   m_RenderMode: 3
   m_AspectRatio: 2
-  m_DataSource: 0
+  m_DataSource: 1
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
   m_TargetAudioSources:
@@ -601,6 +602,20 @@ VideoPlayer:
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
+--- !u!114 &1041450773651174761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2667958262485003288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9b2bef4f06ad546a6f70d8654ae080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myVideoPlayer: {fileID: 7935148085698822486}
+  videoName: screenStatic
 --- !u!1 &3112573337989607597
 GameObject:
   m_ObjectHideFlags: 0
