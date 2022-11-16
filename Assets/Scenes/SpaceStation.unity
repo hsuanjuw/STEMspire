@@ -711,7 +711,7 @@ MonoBehaviour:
       targetId: 3.2.1
       enabled: 0
   - id: 3.2.1
-    name: Bot Enthusiast
+    name: R.C.
     text: Conversational partner has confirmed lack of spaceship knowledge. There
       is no further value in continuing this conversation, Captain.
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
