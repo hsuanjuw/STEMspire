@@ -1187,6 +1187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterPrefs: 0
 --- !u!212 &770266686
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1312,8 +1313,8 @@ MonoBehaviour:
       targetId: 2
       enabled: 0
   - id: 2
-    name: 
-    text: '[...]'
+    name: Zun
+    text: '[Zun working...]'
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}

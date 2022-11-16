@@ -4139,6 +4139,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2885033665884380753, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
+      propertyPath: items.Array.data[0].text
+      value: Attention! Outdoor seating is not avaliable at the Gravi-Tea.
+      objectReference: {fileID: 0}
     - target: {fileID: 2985492060564425627, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.04
@@ -4367,6 +4371,10 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: -1.0019914
       objectReference: {fileID: 0}
+    - target: {fileID: 7236813545996079293, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
+      propertyPath: items.Array.data[0].text
+      value: Spaceships may be accessed through the spaceport doors.
+      objectReference: {fileID: 0}
     - target: {fileID: 7293297244471530828, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
       propertyPath: m_SortingLayer
       value: 0
@@ -4374,6 +4382,15 @@ PrefabInstance:
     - target: {fileID: 7293297244471530828, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016247150519098432, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
+      propertyPath: items.Array.data[0].text
+      value: For sale. Only one hundred starbucks.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128304128852001871, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
+      propertyPath: items.Array.data[0].text
+      value: Now featuring a never before seen documentary on the invention of robotic
+        companions!
       objectReference: {fileID: 0}
     - target: {fileID: 8147044000612209383, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
       propertyPath: m_IsTrigger
