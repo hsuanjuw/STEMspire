@@ -260,6 +260,13 @@ public class MiniGameManager : MonoBehaviour
         yield return new WaitForSeconds(5f);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         player.ResetPosition();
+        RobotMovement _robotMovement = FindObjectOfType<RobotMovement>();
+        if (_robotMovement != null)
+        {
+            _robotMovement.ResetPosition();
+            _robotMovement.ChangeMovement(RobotMovement.RobotMovementType.Floating);
+            _robotMovement.GetComponent<Animator>().SetTrigger("StopPeek");
+        }
         FindObjectOfType<MusicPlayer>().SetStartMusic();
         FindObjectOfType<PowerCoreExplosion>().ResetLightning();
         FindObjectOfType<ScreenFader>().levelChangeAnimator.SetTrigger("FinaleFadeIn");
@@ -273,12 +280,7 @@ public class MiniGameManager : MonoBehaviour
         gameStarted = false;
         currentStatus = GameStatus.NotStarted;
         GameObject.Find("Light").GetComponent<LightFade>().ResetAlpha();
-        RobotMovement _robotMovement = FindObjectOfType<RobotMovement>();
-        if (_robotMovement != null)
-        {
-            _robotMovement.ResetPosition();
-            _robotMovement.ChangeMovement(RobotMovement.RobotMovementType.Floating);
-        }
+        
             
     }
 
