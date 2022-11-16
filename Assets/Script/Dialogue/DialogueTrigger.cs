@@ -4,7 +4,11 @@ using UnityEngine;
 using RPGM.Gameplay;
 
 public class DialogueTrigger : MonoBehaviour
-{
+{    
+    /// <summary>
+    /// Show corresponding dialogue if the player collides with this trigger object.   
+    /// </summary>
+
     private DialogueSystem dialogueSystem;
     // Start is called before the first frame update
     void Start()
@@ -40,15 +44,12 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Engineer2DialogueTrigger()
     {
-        ConversationScript conversation = GameObject.Find("Engineer 2").GetComponentInChildren<ConversationScript>();
-        dialogueSystem.StartDialogue(conversation, false);
-        Destroy(this.gameObject);
-/*        if (PlayerPrefs.GetInt("Zun_Chat") == 0)
+        if (PlayerPrefs.GetInt("Zun_Chat") == 0)
         {
             PlayerPrefs.SetInt("Zun_Chat", 1);
             ConversationScript conversation = GameObject.Find("Engineer 2").GetComponentInChildren<ConversationScript>();
             dialogueSystem.StartDialogue(conversation, false);
             Destroy(this.gameObject);
-        }*/
+        }
     }
 }
