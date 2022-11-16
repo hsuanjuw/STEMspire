@@ -1228,6 +1228,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 91415165}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: hintActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: timeRemaining
       value: 15
       objectReference: {fileID: 0}
@@ -1284,6 +1288,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 91415189}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: hintActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: leftOnLight
       value: 
       objectReference: {fileID: 91415188}
@@ -1307,6 +1315,10 @@ PrefabInstance:
       propertyPath: rightDangerLight
       value: 
       objectReference: {fileID: 91415163}
+    - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: hintActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: completionTime
       value: 25
