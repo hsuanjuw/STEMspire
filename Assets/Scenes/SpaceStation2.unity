@@ -1129,6 +1129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterPrefs: 0
 --- !u!1 &842321954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,6 +1237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterPrefs: 0
 --- !u!114 &1098492429 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8979312319267154974, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
@@ -1303,6 +1305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterPrefs: 0
 --- !u!4 &1179801151
 Transform:
   m_ObjectHideFlags: 0
@@ -1702,8 +1705,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversation: {fileID: 1483925181}
-  text: {fileID: 1901752298}
-  name: {fileID: 184227025}
+  dialogueText: {fileID: 1901752298}
+  dialogueName: {fileID: 184227025}
   option1Btn: {fileID: 283538105}
   option2Btn: {fileID: 220665317}
   continuePcBtn: {fileID: 431861561}
@@ -2215,6 +2218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterPrefs: 0
 --- !u!114 &1718383757 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5884254563606799687, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
@@ -2616,6 +2620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterPrefs: 0
 --- !u!114 &1901752298 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8979312319259172383, guid: 2890174877be21d45baa4f8126670f7a, type: 3}

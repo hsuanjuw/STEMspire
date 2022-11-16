@@ -1158,8 +1158,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversation: {fileID: 0}
-  text: {fileID: 91415176}
-  name: {fileID: 91415191}
+  dialogueText: {fileID: 91415176}
+  dialogueName: {fileID: 91415191}
   option1Btn: {fileID: 91415175}
   option2Btn: {fileID: 91415174}
   continuePcBtn: {fileID: 91415169}
@@ -1563,6 +1563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterPrefs: 0
 --- !u!212 &1576857128
 SpriteRenderer:
   m_ObjectHideFlags: 0

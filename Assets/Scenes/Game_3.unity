@@ -1653,8 +1653,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversation: {fileID: 0}
-  text: {fileID: 612175620}
-  name: {fileID: 612175616}
+  dialogueText: {fileID: 612175620}
+  dialogueName: {fileID: 612175616}
   option1Btn: {fileID: 612175619}
   option2Btn: {fileID: 612175618}
   continuePcBtn: {fileID: 612175613}
