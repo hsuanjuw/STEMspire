@@ -75,13 +75,13 @@ public class MiniGameManager : MonoBehaviour
         switch (SceneManager.GetActiveScene().name)
         {
             case "Game":
-                playerPrefsKey = "Game1_dialogueStarted";
+                playerPrefsKey = "Game1_DialogueStarted";
                 break;
             case "Game_2":
-                playerPrefsKey = "Game2_dialogueStarted";
+                playerPrefsKey = "Game2_DialogueStarted";
                 break;
             case "Game_3":
-                playerPrefsKey = "Game3_dialogueStarted";
+                playerPrefsKey = "Game3_DialogueStarted";
                 break;
             default:
                 break;

@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
             Instantiate(hitByBallPrefab,col.transform.position,col.transform.rotation);
             miniGameManager.CallRestart();
         }
-        else if (col.name == "IntroDialogueTrigger")
+/*        else if (col.name == "IntroDialogueTrigger")
         {
             dialogueSystem.StartDialogueIntro();
             Destroy(col.gameObject);
@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
             ConversationScript conversation = GameObject.Find("Engineer 2").GetComponentInChildren<ConversationScript>();
             dialogueSystem.StartDialogue(conversation, false);
             Destroy(col.gameObject);
-        }
+        }*/
     }
 
     private void OnCollisionEnter2D(Collision2D col)

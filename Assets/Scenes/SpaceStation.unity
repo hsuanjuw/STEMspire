@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 32615598}
   - component: {fileID: 32615599}
+  - component: {fileID: 32615600}
   m_Layer: 0
   m_Name: IntroDialogueTrigger
   m_TagString: Untagged
@@ -180,6 +181,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.886425, y: 3.69665}
   m_EdgeRadius: 0
+--- !u!114 &32615600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32615597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64ee3ab6857332940850cc67cdede063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &66663422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -368,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07977e8d09e896f4d93458c2e78dda58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInteracted: 1
+  isInteracted: 0
 --- !u!212 &116274520
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2099,7 +2112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07977e8d09e896f4d93458c2e78dda58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInteracted: 1
+  isInteracted: 0
 --- !u!212 &791299648
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2358,7 +2371,7 @@ GameObject:
   - component: {fileID: 1153174686}
   - component: {fileID: 1153174685}
   m_Layer: 0
-  m_Name: sun (2)
+  m_Name: InteractionIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2390,7 +2403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07977e8d09e896f4d93458c2e78dda58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInteracted: 1
+  isInteracted: 0
 --- !u!212 &1153174686
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3133,7 +3146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07977e8d09e896f4d93458c2e78dda58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInteracted: 1
+  isInteracted: 0
 --- !u!212 &1521557471
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3333,7 +3346,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       propertyPath: m_Name
-      value: 'Player '
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6726699697676492332, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       propertyPath: m_RootOrder
@@ -3815,6 +3828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2025610139}
   - component: {fileID: 2025610140}
+  - component: {fileID: 2025610141}
   m_Layer: 0
   m_Name: Engineer2DialogueTrigger
   m_TagString: Untagged
@@ -3862,6 +3876,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.886425, y: 3.69665}
   m_EdgeRadius: 0
+--- !u!114 &2025610141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025610138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64ee3ab6857332940850cc67cdede063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2129492639
 GameObject:
   m_ObjectHideFlags: 0
