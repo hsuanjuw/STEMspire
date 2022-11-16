@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6726699697676492334}
   - component: {fileID: 6726699697676492321}
   - component: {fileID: 6726699697676492320}
+  - component: {fileID: 9194664148844877193}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -101,6 +102,7 @@ MonoBehaviour:
   npcClicked: 0
   npcPosition: {x: 0, y: 0}
   resetPosition: {x: 1.64, y: -2.93, z: 0}
+  altSpawnPosition: {x: 0, y: 0, z: 0}
   hitByBallPrefab: {fileID: 849475069255538034, guid: 0f44e303d1d4282478f3564d848ce68f, type: 3}
 --- !u!50 &6726699697676492321
 Rigidbody2D:
@@ -149,3 +151,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 17.342201, y: 26.68467}
   m_EdgeRadius: 0
+--- !u!95 &9194664148844877193
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6726699697676492323}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bfd0d4f26c916e34b93af0eab3d7b217, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -50,6 +50,9 @@ public class Player : MonoBehaviour
     public void Move()
     {
         float h = Input.GetAxisRaw("Horizontal");
+        if(h.Equals(0f))
+            GetComponent<Animator>().SetBool("Walking",false);
+        else GetComponent<Animator>().SetBool("Walking",true);
         Vector3 tempVect = new Vector3(h * speed * Time.deltaTime, 0, 0);
         this.transform.position += tempVect;
         bool facingRight = GetComponent<SpriteRenderer>().flipX;
