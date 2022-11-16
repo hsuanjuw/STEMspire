@@ -1730,7 +1730,7 @@ MonoBehaviour:
       enabled: 0
   - id: 2.2
     name: "Nan\u2019oi"
-    text: ' You could try the side district. We passed it on our way to the ship.'
+    text: You could try the side district. We passed it on our way to the ship.
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
