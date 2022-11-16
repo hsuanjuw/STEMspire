@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private MiniGameManager miniGameManager;
     private Vector3 originalPos;
     public Vector3 resetPosition;
+    public Vector3 altSpawnPosition;
     private DialogueSystem dialogueSystem;
     public GameObject hitByBallPrefab;
 
@@ -20,6 +21,16 @@ public class Player : MonoBehaviour
     {
         miniGameManager = GameObject.FindObjectOfType<MiniGameManager>();
         dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Game":
+                if (PlayerPrefs.GetInt("Game1_dialogueStarted") == 1)
+                {
+                    transform.position = altSpawnPosition;
+                    GetComponent<SpriteRenderer>().flipX = true;
+                }
+                break;
+        }
 /*        if (SceneManager.GetActiveScene().name == "SpaceStation")
         {
             this.transform.position

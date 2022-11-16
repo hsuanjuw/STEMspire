@@ -1840,6 +1840,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6726699697676492334, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      propertyPath: altSpawnPosition.x
+      value: -7.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726699697676492334, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      propertyPath: altSpawnPosition.y
+      value: -2.93
+      objectReference: {fileID: 0}
     - target: {fileID: 6726699698072373779, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       propertyPath: m_Size.x
       value: 24.802656
