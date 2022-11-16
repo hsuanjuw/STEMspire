@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
+    /// <summary>
+    /// Handle whether the charactor should be show or not. 
+    /// The charactor would be destoryed if it shouldn't be shown.
+    /// </summary>
     private GameObject leftDoor;
     private GameObject rightDoor;
     private float speed = 3;
@@ -32,9 +36,7 @@ public class Door : MonoBehaviour
 
     void OnMouseEnter()
     {
-        //If your mouse hovers over the GameObject with the script attached, output this message
-        //Debug.Log("Mouse is over GameObject.");
-        if (!dialogueSystem.dialogueOpened)
+        if (!dialogueSystem.dialogueOpened) // if dialogue is not opened && 
         {
             if (!doorIsOpen)
             {

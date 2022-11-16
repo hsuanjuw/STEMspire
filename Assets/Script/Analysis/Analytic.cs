@@ -6,10 +6,19 @@ using Unity.Services.Analytics;
 
 public class Analytic : MonoBehaviour
 {
-    void Awake()
-    {
+    /// <summary>
+    /// Handle uploading data to Unity Analytics
+    /// There are three type of data:
+    /// Type 1. Includes eventname, time
+    /// Type 2. Includes eventname, time, number of the button being pressed
+    /// Type 3. Includes eventname, time, dialogue, choice
+    /// 
+    /// Events included:
+    /// Type 1: GameStart, Engineer1Clicked, Engineer2Clicked, EnterSpaceStation, EnterSpaceStation2
+    /// Type 2: LaunchBtnPressedCount
+    /// Type 3: DialogueChoices
+    /// </summary>
 
-    }
     void Start()
     {
         SaveData("GameStart", Time.time);
@@ -43,9 +52,10 @@ public class Analytic : MonoBehaviour
                 {"count", count}
             }
         );
+        AnalyticsService.Instance.Flush();
     }
 
-    public void SaveData(string eventName, string sceneName, float time, string question, string choice)
+    public void SaveData(string eventName, string sceneName, float time, string dialogue, string choice)
     {
         string formatTime = FormatTime(time);
         AnalyticsService.Instance.CustomData(
@@ -53,10 +63,11 @@ public class Analytic : MonoBehaviour
             new Dictionary<string, object> {
                 {"scene", sceneName},
                 {"time", formatTime},
-                {"dialogue", question},
+                {"dialogue", dialogue},
                 {"choice", choice}
             }
         );
+        AnalyticsService.Instance.Flush();
     }
 
     public string FormatTime(float time)
