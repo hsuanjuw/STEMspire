@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3027886152852263436}
   - component: {fileID: 4803017089689479053}
   - component: {fileID: -6304768343924636945}
-  - component: {fileID: 5850394972463827775}
+  - component: {fileID: 5181387246029288524}
   m_Layer: 0
   m_Name: BrokenShard
   m_TagString: Untagged
@@ -105,15 +105,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5850394972463827775
+--- !u!114 &5181387246029288524
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8780710131084472094}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2211d17d8214bc045b1eb8f0ba664654, type: 3}
+  m_Script: {fileID: 11500000, guid: 1189e44b0f242e24bbb61d2ac7e6eba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
