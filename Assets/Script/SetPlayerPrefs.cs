@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class SetPlayerPrefs : MonoBehaviour
 {
+    /// <summary>
+    /// Reset all the PlayerPrefs to 0
+    /// </summary>
+    /// 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +19,8 @@ public class SetPlayerPrefs : MonoBehaviour
         // Space Station 1
         PlayerPrefs.SetInt("Zun_Chat", 0);
         PlayerPrefs.SetInt("Bot_Enthusiast_Chat", 0);
+        PlayerPrefs.SetInt("Parents_Chat", 0);
+        PlayerPrefs.SetInt("Service_Guide_Chat", 0);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
