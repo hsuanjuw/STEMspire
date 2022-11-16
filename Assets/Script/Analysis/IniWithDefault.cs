@@ -6,6 +6,9 @@ using Unity.Services.Analytics;
 
 public class IniWithDefault : MonoBehaviour
 {
+    /// <summary>
+    /// Initial Default when starting Unity Analytics   
+    /// </summary>
     async void Start()
     {
         try

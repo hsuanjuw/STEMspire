@@ -11,12 +11,14 @@ public class Analytic : MonoBehaviour
     /// There are three type of data:
     /// Type 1. Includes eventname, time
     /// Type 2. Includes eventname, time, number of the button being pressed
-    /// Type 3. Includes eventname, time, dialogue, choice
+    /// Type 3. Includes eventname, sceneName, time, dialogue, choice
+    /// Type 4. Includes eventname, timePassed, objName
     /// 
     /// Events included:
     /// Type 1: GameStart, Engineer1Clicked, Engineer2Clicked, EnterSpaceStation, EnterSpaceStation2
     /// Type 2: LaunchBtnPressedCount
     /// Type 3: DialogueChoices
+    /// Type 4: EnvirObjClicked
     /// </summary>
 
     void Start()
@@ -55,16 +57,28 @@ public class Analytic : MonoBehaviour
         AnalyticsService.Instance.Flush();
     }
 
-    public void SaveData(string eventName, string sceneName, float time, string dialogue, string choice)
+    public void SaveData(string eventName, string sceneName, float timePassed, string dialogue, string choice)
     {
-        string formatTime = FormatTime(time);
         AnalyticsService.Instance.CustomData(
             eventName,
             new Dictionary<string, object> {
                 {"scene", sceneName},
-                {"time", formatTime},
+                {"timePassed", timePassed},
                 {"dialogue", dialogue},
                 {"choice", choice}
+            }
+        );
+        AnalyticsService.Instance.Flush();
+    }
+
+    public void SaveData(string eventName, float timePassed, string objName)
+    {
+ 
+        AnalyticsService.Instance.CustomData(
+            eventName,
+            new Dictionary<string, object> {
+                {"timePassed", timePassed},
+                {"objName", objName}
             }
         );
         AnalyticsService.Instance.Flush();

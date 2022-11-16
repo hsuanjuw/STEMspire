@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class Door : MonoBehaviour
 {
     /// <summary>
-    /// Handle whether the charactor should be show or not. 
-    /// The charactor would be destoryed if it shouldn't be shown.
+    /// Handle door close or open and which scene to enter.
     /// </summary>
+    
     private GameObject leftDoor;
     private GameObject rightDoor;
     private float speed = 3;
@@ -36,7 +36,8 @@ public class Door : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (!dialogueSystem.dialogueOpened) // if dialogue is not opened && 
+        // Open the door if dialogue is not opened &&  door is not open
+        if (!dialogueSystem.dialogueOpened) 
         {
             if (!doorIsOpen)
             {
@@ -48,6 +49,7 @@ public class Door : MonoBehaviour
 
     void OnMouseExit()
     {
+        // Close the door if dialogue is not opened &&  door is open
         if (!dialogueSystem.dialogueOpened)
         {
             if (doorIsOpen)
@@ -60,8 +62,11 @@ public class Door : MonoBehaviour
 
     void OnMouseDown()
     {
+        // Change scene if the dialogue is not opened
         if (!dialogueSystem.dialogueOpened)
         {
+            // If the main dialogue is finished,
+            // change to the next finale otherwise stay at original finale 
             switch (gameStatus.status)
             {
                 case GameStatus.Status.spaceStation:
@@ -90,6 +95,7 @@ public class Door : MonoBehaviour
         }
     }
 
+    // Door Open movement
     IEnumerator OpenDoor()
     {
         while (Vector3.Distance(leftDoor.transform.position,rightDoor.transform.position) < 4.8f)
@@ -101,6 +107,8 @@ public class Door : MonoBehaviour
             yield return null; 
         }
     }
+
+    // Door close movement
     IEnumerator CloseDoor()
     {
         while (Vector3.Distance(leftDoor.transform.position, rightDoor.transform.position) > originalDistance)

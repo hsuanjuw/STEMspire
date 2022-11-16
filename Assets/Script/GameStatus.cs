@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class GameStatus : MonoBehaviour
 {
-    public bool isFinishedDialogue = false;
+    /// <summary>
+    /// Show Game status. 
+    /// Will be used in changing scene in door.cs   
+    /// </summary>
+    
+    public bool isFinishedDialogue = false; // whether the main dialogue is finished 
     public enum Status
     {
         spaceStation,

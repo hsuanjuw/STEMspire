@@ -1174,7 +1174,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1038362776}
-  - component: {fileID: 1038362778}
   - component: {fileID: 1038362777}
   m_Layer: 0
   m_Name: Customer Service(guide)
@@ -1225,19 +1224,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3233628, y: 3.766983}
   m_EdgeRadius: 0
---- !u!114 &1038362778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1038362775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterPrefs: 0
 --- !u!114 &1098492429 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8979312319267154974, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
@@ -2041,7 +2027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9176099040014819499, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9176099040014819499, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -2049,6 +2035,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9176099040014819499, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1483925182}
+    - target: {fileID: 9176099040014819499, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1483925182}
     - target: {fileID: 9176099040014819499, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
@@ -2061,7 +2051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9176099040014819499, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: CloseDialoguePanel
+      value: saveContinueBtnData
       objectReference: {fileID: 0}
     - target: {fileID: 9176099040014819499, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName

@@ -11,10 +11,9 @@ using UnityEngine.SceneManagement;
 public class DialogueSystem : MonoBehaviour
 {
     /// <summary>
-    /// Handle whether the charactor should be show or not. 
-    /// The charactor would be destoryed if it shouldn't be shown.
+    /// Handle the dialogue panel open/close, start Dialogues
     /// </summary>
-    
+
     public ConversationScript conversation;
 
     public TextMeshProUGUI dialogueText;
@@ -39,7 +38,9 @@ public class DialogueSystem : MonoBehaviour
     public int currentConvIndex; // record which conversation we are at
 
     private Analytic analytic;
-
+    //For recording time that popups on
+    private float startTime;
+    private float endTime;
 
     private void Awake()
     {
@@ -65,6 +66,9 @@ public class DialogueSystem : MonoBehaviour
         StartDialogue(conversation, false);
     }
 
+
+    // Start dialogue if dialogue is not started. 
+    // Check if there is task and whether the converstion is end 
     public void StartDialogue(ConversationScript npcConversation, bool _hasTask)
     {
         if (!dialogueIsStarted)
@@ -81,15 +85,17 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
-    private IEnumerator TypeLine(ConversationPiece conversationPiece, bool isEnd)
+    private IEnumerator TypeLine(ConversationPiece conversationPiece, bool isEnd) 
     {
+        startTime = Time.time;
         //Debug.Log("Type1");
-        string dialogue = conversationPiece.text;
-        dialogueName.text = conversationPiece.name;
+        string dialogue = conversationPiece.text; // Set dialogue texts 
+        dialogueName.text = conversationPiece.name; // Set dialogue name
 
-        foreach (char c in dialogue.ToCharArray())
+        foreach (char c in dialogue.ToCharArray()) // Display char by char
         {
-            if (c == '\r' || c == '\n')
+            // Convert '\r', '\n' to " " because it will cause formatting issue in textmeshpro
+            if (c == '\r' || c == '\n')   
             {
                 dialogueText.text += " ";
             }
@@ -99,6 +105,8 @@ public class DialogueSystem : MonoBehaviour
             }
             yield return new WaitForSeconds(textSpeed);
         }
+
+        // Set close button active if this dialogue ends or else display dialogue choices 
         if (!isEnd)
         {
             DisplayOption();
@@ -107,11 +115,11 @@ public class DialogueSystem : MonoBehaviour
         {
             closeBtn.gameObject.SetActive(true);
         }
-
     }
 
     private IEnumerator TypeLine(ConversationOption conversationOption, Sprite sprite) // pc talking
     {
+        startTime = Time.time;
         //Debug.Log("Type2");
         string dialogue = conversationOption.text;
         dialogueName.text = conversationOption.name;
@@ -138,33 +146,22 @@ public class DialogueSystem : MonoBehaviour
 
     public void option1BtnClicked()
     {
+        endTime = Time.time;
+        SaveAnalyticData(0, true);
         NextLine(0);
     }
 
     public void option2BtnClicked()
     {
+        endTime = Time.time;
+        SaveAnalyticData(1, true);
         NextLine(1);
     }
 
     public void NextLine(int optionNum)
     {
-        //Debug.Log("Count" + conversation.items.Count);
-
-        if (conversation.items[currentConvIndex].options.Count == 2)
-        {
-            analytic.SaveData(
-                "DialogueChoices",
-                SceneManager.GetActiveScene().name,
-                Time.time,
-                conversation.items[currentConvIndex].text,
-                conversation.items[currentConvIndex].options[optionNum].text
-            );
-        }
         for (int i = 0; i < conversation.items.Count; i++)
         {
-            //Debug.Log("index" + currentConvIndex);
-            //Debug.Log("optionCount" + conversation.items[currentConvIndex].options.Count);
-            //Debug.Log("optionNum" + optionNum);
             if (conversation.items[i].id == conversation.items[currentConvIndex].options[optionNum].targetId)
             {
                 currentConvIndex = i;
@@ -173,8 +170,8 @@ public class DialogueSystem : MonoBehaviour
         }
         option1Btn.gameObject.SetActive(false);
         option2Btn.gameObject.SetActive(false);
-        //Debug.Log(conversation.items[currentConvIndex].text);
-        if (conversation.items[currentConvIndex].text == "")
+
+        if (conversation.items[currentConvIndex].text == "") // close panel when player clicked the choice and there's no following NPC talking
         {
             CloseDialoguePanel();
             // do task
@@ -225,6 +222,7 @@ public class DialogueSystem : MonoBehaviour
     }
     public void ContinueNpcDialogue()
     {
+        saveContinueBtnData();
         pcImage.gameObject.SetActive(false);
         npcImage.gameObject.SetActive(true);
         continueNpcBtn.gameObject.SetActive(false);
@@ -233,6 +231,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void ContinuePcDialogue()
     {
+        saveContinueBtnData();
         continuePcBtn.gameObject.SetActive(false);
         StartCoroutine(TypeLine(conversation.items[currentConvIndex].options[0], conversation.items[currentConvIndex].options[0].imagePrefab.GetComponent<SpriteRenderer>().sprite));
     }
@@ -261,6 +260,37 @@ public class DialogueSystem : MonoBehaviour
         {
             actionbtn.SetActive(true);
         }   
+    }
+
+    public void saveContinueBtnData()
+    {
+        endTime = Time.time;
+        SaveAnalyticData(0, false); 
+    }
+
+    private void SaveAnalyticData(int optionNum, bool hasChoice)
+    {
+        float timePassed = Mathf.Round((endTime - startTime) * 100f) / 100f;
+
+        if (hasChoice)
+        {
+            analytic.SaveData(
+                "DialogueChoices",
+                SceneManager.GetActiveScene().name,
+                timePassed,
+                conversation.items[currentConvIndex].text,
+                conversation.items[currentConvIndex].options[optionNum].text
+            );
+        }
+        else{
+            analytic.SaveData(
+                "DialogueChoices",
+                SceneManager.GetActiveScene().name,
+                timePassed,
+                conversation.items[currentConvIndex].text,
+                "No choice"
+            );
+        }
     }
 
 }
