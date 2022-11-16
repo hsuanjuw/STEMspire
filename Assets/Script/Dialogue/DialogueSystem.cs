@@ -10,10 +10,15 @@ using UnityEngine.SceneManagement;
 
 public class DialogueSystem : MonoBehaviour
 {
+    /// <summary>
+    /// Handle whether the charactor should be show or not. 
+    /// The charactor would be destoryed if it shouldn't be shown.
+    /// </summary>
+    
     public ConversationScript conversation;
 
-    public TextMeshProUGUI text;
-    public TextMeshProUGUI name;
+    public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI dialogueName;
     public Button option1Btn;
     public Button option2Btn;
     public Button continuePcBtn;
@@ -80,17 +85,17 @@ public class DialogueSystem : MonoBehaviour
     {
         //Debug.Log("Type1");
         string dialogue = conversationPiece.text;
-        name.text = conversationPiece.name;
+        dialogueName.text = conversationPiece.name;
 
         foreach (char c in dialogue.ToCharArray())
         {
             if (c == '\r' || c == '\n')
             {
-                text.text += " ";
+                dialogueText.text += " ";
             }
             else
             {
-                text.text += c;
+                dialogueText.text += c;
             }
             yield return new WaitForSeconds(textSpeed);
         }
@@ -109,9 +114,9 @@ public class DialogueSystem : MonoBehaviour
     {
         //Debug.Log("Type2");
         string dialogue = conversationOption.text;
-        name.text = conversationOption.name;
+        dialogueName.text = conversationOption.name;
 
-        text.text = string.Empty;
+        dialogueText.text = string.Empty;
         npcImage.gameObject.SetActive(false);
         pcImage.sprite = sprite;
         pcImage.gameObject.SetActive(true);
@@ -119,10 +124,10 @@ public class DialogueSystem : MonoBehaviour
         foreach (char c in dialogue.ToCharArray())
         {
             if (c == '\r' || c == '\n') {
-                text.text += " ";
+                dialogueText.text += " ";
             }
             else {
-                text.text += c;
+                dialogueText.text += c;
             }
             
             yield return new WaitForSeconds(textSpeed);
@@ -178,7 +183,7 @@ public class DialogueSystem : MonoBehaviour
         {
             bool isEnd = CheckEndConversation();
             npcImage.sprite = conversation.items[currentConvIndex].imagePrefab.GetComponent<SpriteRenderer>().sprite;
-            text.text = string.Empty;
+            dialogueText.text = string.Empty;
             StartCoroutine(TypeLine(conversation.items[currentConvIndex], isEnd));
         }
 
@@ -240,7 +245,7 @@ public class DialogueSystem : MonoBehaviour
             option1Btn.onClick.AddListener(option1BtnClicked);
             option2Btn.onClick.AddListener(option2BtnClicked);
         }
-        text.text = string.Empty;
+        dialogueText.text = string.Empty;
         dialoguePanel.SetActive(true);
     }
 
