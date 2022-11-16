@@ -1238,6 +1238,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2973039290199724945, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973039290199724945, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3133662182774935571, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
