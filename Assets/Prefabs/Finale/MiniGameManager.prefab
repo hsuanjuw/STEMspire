@@ -47,8 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73bb86bc597e7ce44910aeedd095dbd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentIntegrity: 0
+  currentStatus: 0
   gameStarted: 0
   isCameraUp: 0
+  launchBtnPressedCount: 0
   wheel: {fileID: 5171305791500529062}
   shards: {fileID: 5171305791500529063}
   systems: {fileID: 5171305791500529060}
@@ -69,6 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStatus: 0
+  buttonToClick: 1
   startGame: 0
   wheelIDs:
   - {fileID: 0}
@@ -77,7 +81,7 @@ MonoBehaviour:
   numWheels: 5
   timeAfterGameStart: 40
   completionTime: 30
-  hintTextActive: 0
+  hintActive: 0
 --- !u!114 &5171305791500529063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +125,7 @@ MonoBehaviour:
   timeAfterGameStart: 20
   completionTime: 20
   timeRemaining: 20
-  hintTextActive: 0
+  hintActive: 0
 --- !u!114 &5171305791500529061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1e6861f50aab8449a145d97c82c23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentCharge: 0
   currentStatus: 0
   leftFill: {fileID: 0}
   rightFill: {fileID: 0}
@@ -143,6 +148,6 @@ MonoBehaviour:
   rightDangerLight: {fileID: 0}
   leftSwitchTime: 20
   rightSwitchTime: 30
-  fillSpeed: 1
+  fillSpeed: 0.115
   timeAfterGameStart: 1
-  hintTextActive: 0
+  hintActive: 0

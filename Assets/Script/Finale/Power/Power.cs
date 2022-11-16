@@ -99,9 +99,12 @@ public class Power : MonoBehaviour
 
     public void ResetPower(string mode)
     {
+        TimeReStart(mode);
+        /*
         if(currentCharge == ChargeMode.Broken)
         TimeReStart(mode);
         else TimeReStart("Fixed");
+        */
         leftFill.ResetFill();
         rightFill.ResetFill();
         if(mode == "End")

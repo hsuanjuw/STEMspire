@@ -1706,10 +1706,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 612175635}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
-      propertyPath: fillSpeed
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: rightFill
       value: 
       objectReference: {fileID: 612175634}
