@@ -1622,7 +1622,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576857125}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.61, y: -2.86, z: 0}
+  m_LocalPosition: {x: 2.45, y: -2.86, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1674,8 +1674,8 @@ MonoBehaviour:
   items:
   - id: 1
     name: "Nan\u2019oi"
-    text: "I reinforced the protective casing. There are some issues here that are
-      too specialized for little ol\u2019 me, though."
+    text: "Wow that power core sure is something else. I think some of the issues
+      here are just too specialized for little ol\u2019 me."
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1735,16 +1735,17 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - name: 
-      text: Thank you.
+      text: Ok R.C. you stay here and chart a course for our next destination. I'll
+        follow Nan'oi's advice.
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 4
+      targetId: 5
       enabled: 0
     - name: 
-      text: TBD
+      text: I might try to figure this out on my own. R.C. watch the ship.
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 4
+      targetId: 5
       enabled: 0
   - id: 3.1
     name: R.C.
@@ -1770,12 +1771,39 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - name: 
-      text: R.C., wait on the ship.
+      text: The profile? You don't know anything about Zun.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 4
+      enabled: 0
+    - name: 
+      text: Well can Zun help us or not? That's my concern.
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 4
       enabled: 0
   - id: 4
+    name: R.C.
+    text: Listen to my directive. Zun does not compute.
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: I thought I could trust you, R.C. I need Zun's help, but not yours. Stay
+        here, I'll handle this.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 5
+      enabled: 0
+    - name: 
+      text: R.C. perhaps you would be of better use here on the ship, not getting
+        in my way.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 5
+      enabled: 0
+  - id: 5
     name: 
     text: 
     imagePrefab: {fileID: 0}
@@ -1980,9 +2008,9 @@ MonoBehaviour:
       enabled: 0
   - id: 2.1
     name: Nan'oi
-    text: "I noticed you were having trouble with the control buttons. Whenever a
-      symbol on the panel turns blue, you need to make sure the button for that symbol
-      is also blue.\r Keep an eye on the timer too!"
+    text: "For the systems above me, make sure the color of the button matches the
+      symbol on the panel.\r I added some timers that should help you know when you're
+      about to have a system meltdown, you'll see what I mean!"
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -2035,7 +2063,8 @@ MonoBehaviour:
       enabled: 0
   - id: 2.1.4
     name: "Nan\u2019oi"
-    text: "I\u2019m not going to guess!"
+    text: Without specialized knowledge, I'd just be guessing! I don't want to risk
+      your whole ship because I'm guessing.
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
