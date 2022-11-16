@@ -143,6 +143,7 @@ public class RobotMovement : MonoBehaviour
     {
         transform.position = defaultPosition;
         transform.rotation = Quaternion.identity;
+        StopPeeking();
     }
     public void ChangeMovement(RobotMovementType newMovement)
     {
