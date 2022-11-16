@@ -30,9 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Thanks.unity
     guid: d5590d8042f37cf4e8d5065a475e65d6
   - enabled: 0
-    path: Assets/Scenes/FinaleTest.unity
-    guid: fe5b3532034212040af5877e2f5d5bc0
-  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/TEST ONLY/PuzzleTest.unity
     guid: e847b7579a3576c43b794d0f680e557a
   m_configObjects: {}

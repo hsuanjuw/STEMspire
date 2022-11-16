@@ -65,7 +65,7 @@ public class MiniGameManager : MonoBehaviour
         analytic = GameObject.FindObjectOfType<Analytic>();
         dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
         CheckStartDialogue();
-        if(currentIntegrity == ShipIntegrity.Fixed)
+        if(currentIntegrity == ShipIntegrity.Fixed) // trigger this after introDialogue
             GameStart();
     }
 
