@@ -87,13 +87,14 @@ public class Analytic : MonoBehaviour
         AnalyticsService.Instance.Flush();
     }
 
-    public void SaveNPCData(float timePassed, string npcName)
+    public void SaveNPCData(float time, string npcName)
     {
+        string formatTime = FormatTime(time);
         //Debug.Log(timePassed);
         AnalyticsService.Instance.CustomData(
             "NPCClicked",
             new Dictionary<string, object> {
-                {"time", timePassed},
+                {"time", time},
                 {"npcName", npcName}
             }
         );
