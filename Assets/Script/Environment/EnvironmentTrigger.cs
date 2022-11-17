@@ -56,7 +56,7 @@ public class EnvironmentTrigger : MonoBehaviour
         else if(enviroDialogueIsStart)
         {
             endTime = Time.time;
-            float timePassed = Mathf.Round((endTime - startTime) * 100f) / 100f;
+            float timePassed = (int)Mathf.Round((endTime - startTime) * 100f) / 100f;
 
             analytic.SaveData("EnvirObjClicked", timePassed, objPressedName);
             //Debug.Log(objPressedName + " :" + timePassed.ToString());
@@ -81,7 +81,7 @@ public class EnvironmentTrigger : MonoBehaviour
         environmentDialogue.SetActive(false);
         enviroDialogueIsStart = false;
         endTime = Time.time;
-        float timePassed = Mathf.Round((endTime - startTime) * 100f) / 100f;
+        float timePassed = (int)Mathf.Round((endTime - startTime) * 100f) / 100f;
         analytic.SaveData("EnvirObjClicked", timePassed, objPressedName);
         //Debug.Log(objPressedName + " :" + timePassed.ToString());
     }

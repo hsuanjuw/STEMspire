@@ -270,7 +270,7 @@ public class DialogueSystem : MonoBehaviour
 
     private void SaveAnalyticData(int optionNum, bool hasChoice)
     {
-        float timePassed = Mathf.Round((endTime - startTime) * 100f) / 100f;
+        float timePassed = (int)Mathf.Round((endTime - startTime) * 100f) / 100f;
 
         if (hasChoice)
         {

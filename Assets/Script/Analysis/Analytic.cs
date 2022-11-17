@@ -13,12 +13,14 @@ public class Analytic : MonoBehaviour
     /// Type 2. Includes eventname, time, number of the button being pressed
     /// Type 3. Includes eventname, sceneName, time, dialogue, choice
     /// Type 4. Includes eventname, timePassed, objName
+    /// Type 5. Includes eventname, time, npcName
     /// 
     /// Events included:
-    /// Type 1: GameStart, Engineer1Clicked, Engineer2Clicked, EnterSpaceStation, EnterSpaceStation2
+    /// Type 1: GameStart, EnterSpaceStation, EnterSpaceStation2
     /// Type 2: LaunchBtnPressedCount
     /// Type 3: DialogueChoices
     /// Type 4: EnvirObjClicked
+    /// Type 5: NPCClicked
     /// </summary>
 
     void Start()
@@ -59,6 +61,7 @@ public class Analytic : MonoBehaviour
 
     public void SaveData(string eventName, string sceneName, float timePassed, string dialogue, string choice)
     {
+        //Debug.Log(timePassed);
         AnalyticsService.Instance.CustomData(
             eventName,
             new Dictionary<string, object> {
@@ -73,12 +76,25 @@ public class Analytic : MonoBehaviour
 
     public void SaveData(string eventName, float timePassed, string objName)
     {
- 
+        //Debug.Log(timePassed);
         AnalyticsService.Instance.CustomData(
             eventName,
             new Dictionary<string, object> {
                 {"timePassed", timePassed},
                 {"objName", objName}
+            }
+        );
+        AnalyticsService.Instance.Flush();
+    }
+
+    public void SaveNPCData(float timePassed, string npcName)
+    {
+        //Debug.Log(timePassed);
+        AnalyticsService.Instance.CustomData(
+            "NPCClicked",
+            new Dictionary<string, object> {
+                {"time", timePassed},
+                {"npcName", npcName}
             }
         );
         AnalyticsService.Instance.Flush();

@@ -64,7 +64,7 @@ public class NpcHandler : MonoBehaviour
             }
 
             // Save data to analytic
-            analytic.SaveData(this.name + "Clicked", Time.time);
+            analytic.SaveNPCData(Time.time, this.name);
         }
     }
 }

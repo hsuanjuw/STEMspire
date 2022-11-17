@@ -1068,7 +1068,7 @@ GameObject:
   - component: {fileID: 730234909}
   - component: {fileID: 730234908}
   m_Layer: 0
-  m_Name: shop keeper
+  m_Name: ShopKeeper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1176,7 +1176,7 @@ GameObject:
   - component: {fileID: 1038362776}
   - component: {fileID: 1038362777}
   m_Layer: 0
-  m_Name: Customer Service(guide)
+  m_Name: CustomerService
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1247,7 +1247,7 @@ GameObject:
   - component: {fileID: 1179801150}
   - component: {fileID: 1179801149}
   m_Layer: 0
-  m_Name: Engineer 2
+  m_Name: Engineer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2145,7 +2145,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1673268519}
-  - component: {fileID: 1673268521}
   - component: {fileID: 1673268520}
   m_Layer: 0
   m_Name: restaurant guest 2
@@ -2196,19 +2195,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3233628, y: 3.766983}
   m_EdgeRadius: 0
---- !u!114 &1673268521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1673268518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterPrefs: 0
 --- !u!114 &1718383757 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5884254563606799687, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
@@ -2547,7 +2533,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1837339144}
-  - component: {fileID: 1837339146}
   - component: {fileID: 1837339145}
   m_Layer: 0
   m_Name: restaurant guest 1
@@ -2598,19 +2583,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3233628, y: 3.766983}
   m_EdgeRadius: 0
---- !u!114 &1837339146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837339143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterPrefs: 0
 --- !u!114 &1901752298 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8979312319259172383, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
