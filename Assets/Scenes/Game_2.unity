@@ -868,6 +868,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8331382834660450065, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8331382834660450069, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
       propertyPath: m_Name
       value: GuideRobot
@@ -1542,6 +1546,8 @@ GameObject:
   - component: {fileID: 1576857128}
   - component: {fileID: 1576857127}
   - component: {fileID: 1576857126}
+  - component: {fileID: 1576857130}
+  - component: {fileID: 1576857131}
   m_Layer: 0
   m_Name: Engineer
   m_TagString: Untagged
@@ -1653,6 +1659,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1576857130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576857125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13d95aa63f9b1142a4f338363f49856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMovement: 5
+  hoverSpeed: 1.4
+  leftBound: 0
+  rightBound: 0
+  upBound: 0
+  downBound: 0
+  _currentDirection: {x: 0, y: 0}
+  defaultPosition: {x: 0, y: 0, z: 0}
+  _hidingPlace: {x: 0, y: 0, z: 0}
+  _hidingLayer: 0
+--- !u!95 &1576857131
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576857125}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dac337a55a9e7384eb5888954adce4a5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1610809916
 GameObject:
   m_ObjectHideFlags: 0

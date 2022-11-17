@@ -177,7 +177,7 @@ public class MiniGameManager : MonoBehaviour
         PostProcessVolume volume = mainCamera.gameObject.GetComponent<PostProcessVolume>();
         RobotMovement _robotMovement = FindObjectOfType<RobotMovement>();
         if(_robotMovement!=null)
-            _robotMovement.ChangeMovement(RobotMovement.RobotMovementType.Hide);
+            _robotMovement.ChangeMovement(RobotMovement.MovementType.Hide);
         isCameraShake = true;
         for (int i = 0; i < 5; i++)
         {
@@ -264,7 +264,7 @@ public class MiniGameManager : MonoBehaviour
         if (_robotMovement != null)
         {
             _robotMovement.ResetPosition();
-            _robotMovement.ChangeMovement(RobotMovement.RobotMovementType.Floating);
+            _robotMovement.ChangeMovement(RobotMovement.MovementType.Floating);
             _robotMovement.GetComponent<Animator>().SetTrigger("StopPeek");
         }
         FindObjectOfType<MusicPlayer>().SetStartMusic();
