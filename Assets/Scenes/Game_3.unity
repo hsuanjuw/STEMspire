@@ -1154,6 +1154,8 @@ GameObject:
   - component: {fileID: 770266686}
   - component: {fileID: 770266685}
   - component: {fileID: 770266684}
+  - component: {fileID: 770266688}
+  - component: {fileID: 770266689}
   m_Layer: 0
   m_Name: Engineer
   m_TagString: Untagged
@@ -1265,6 +1267,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &770266688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770266683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13d95aa63f9b1142a4f338363f49856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMovement: 1
+  hoverSpeed: 1.4
+  leftBound: 0
+  rightBound: 0
+  upBound: 0
+  downBound: 0
+  _currentDirection: {x: 0, y: 0}
+  defaultPosition: {x: 0, y: 0, z: 0}
+  _hidingPlace: {x: 0, y: 0, z: 0}
+  _hidingLayer: 0
+--- !u!95 &770266689
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770266683}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dac337a55a9e7384eb5888954adce4a5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &794762429
 GameObject:
   m_ObjectHideFlags: 0

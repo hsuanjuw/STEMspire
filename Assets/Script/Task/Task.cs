@@ -56,4 +56,9 @@ public class Task : MonoBehaviour
         gameStatus.isFinishedDialogue = true;
         //SceneManager.LoadScene("Game_3");
     }
+
+    public void F2_UnlockExit()
+    {
+        FindObjectOfType<LevelChanger>().triggerActive = true;
+    }
 }

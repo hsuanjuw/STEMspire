@@ -43,7 +43,6 @@ public class PowerCoreColorChanger : MonoBehaviour
                 GetComponent<SpriteRenderer>().color = Color.red;
                 break;
         }
-
         _trueColor = currentColor;
     }
 }

@@ -84,18 +84,6 @@ public class Player : MonoBehaviour
         }*/
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.name == "EnterSpaceStationTrigger")
-        {
-            miniGameManager.EnterSpaceStation(1);
-        }
-        if (col.gameObject.name == "EnterSpaceStationTrigger2")
-        {
-            miniGameManager.EnterSpaceStation(2);
-        }
-    }
-
     public void ResetPosition()
     {
         transform.position = resetPosition;
