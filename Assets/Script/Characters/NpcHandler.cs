@@ -15,7 +15,7 @@ public class NpcHandler : MonoBehaviour
     private ConversationScript conversation;
     private Analytic analytic;
 
-    private bool hasTask;
+    private Task task;
     public enum CharacterPrefs
     {
         Bot_Enthusiast_Chat,
@@ -33,15 +33,17 @@ public class NpcHandler : MonoBehaviour
         conversation = this.GetComponentInChildren<ConversationScript>();
         npcSprite = GetComponentInChildren<SpriteRenderer>().sprite;
 
-        // See if there is task object in the children 
-        if (this.GetComponentInChildren<Task>()) 
+        // See if there is task object in the children
+        task = this.GetComponentInChildren<Task>();
+
+/*        if (this.GetComponentInChildren<Task>()) 
         {
-            hasTask = true;
+            task = true;
         }
         else
         {
-            hasTask = false;
-        }
+            task = null;
+        }*/
 
     }
 
@@ -50,7 +52,7 @@ public class NpcHandler : MonoBehaviour
     {
         if (!dialogueSystem.dialogueOpened)
         {
-            dialogueSystem.StartDialogue(conversation, hasTask);
+            dialogueSystem.StartDialogue(conversation, task);
             // Destroy interaction icon if is triggered
             if (this.GetComponentInChildren<InteractionIcon>())
             {

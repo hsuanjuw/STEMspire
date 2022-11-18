@@ -23,11 +23,14 @@ public class DialogueSystem : MonoBehaviour
     public Button continuePcBtn;
     public Button continueNpcBtn;
     public Button closeBtn;
+    public Button taskBtn;
     public Image npcImage;
     public Image pcImage;
 
+    //Task
     public GameObject actionbtn;
     public bool hasTask;
+    public Task task;
 
     private float textSpeed;
     private bool dialogueIsStarted;
@@ -38,6 +41,7 @@ public class DialogueSystem : MonoBehaviour
     public int currentConvIndex; // record which conversation we are at
 
     private Analytic analytic;
+
     //For recording time that popups on
     private float startTime;
     private float endTime;
@@ -63,18 +67,18 @@ public class DialogueSystem : MonoBehaviour
     public void StartDialogueIntro()
     {
         conversation = this.transform.GetChild(0).GetComponent<ConversationScript>();
-        StartDialogue(conversation, false);
+        StartDialogue(conversation, null);
     }
 
 
     // Start dialogue if dialogue is not started. 
     // Check if there is task and whether the converstion is end 
-    public void StartDialogue(ConversationScript npcConversation, bool _hasTask)
+    public void StartDialogue(ConversationScript npcConversation, Task _task)
     {
         if (!dialogueIsStarted)
         {
             dialogueIsStarted = true;
-            hasTask = _hasTask;
+            task = _task;
             conversation = npcConversation;
             //Debug.Log(conversation.items[0].text);
             currentConvIndex = 0;
@@ -113,7 +117,16 @@ public class DialogueSystem : MonoBehaviour
         }
         else
         {
+            if (task == null)
+            {
+                closeBtn.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "Continue";
+            }
+            else
+            {
+                closeBtn.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = task.startTaskBtntxt;
+            }
             closeBtn.gameObject.SetActive(true);
+
         }
     }
 
@@ -256,9 +269,9 @@ public class DialogueSystem : MonoBehaviour
         dialogueOpened = false;
         option1Btn.onClick.RemoveListener(option1BtnClicked);
         option2Btn.onClick.RemoveListener(option2BtnClicked);
-        if (hasTask)
+        if (task != null)
         {
-            actionbtn.SetActive(true);
+            task.StartTask();
         }   
     }
 
