@@ -2857,6 +2857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8669374378993582071}
   - component: {fileID: 1213057010789295260}
+  - component: {fileID: 1367502747033917842}
   m_Layer: 0
   m_Name: powerSource
   m_TagString: Untagged
@@ -2929,6 +2930,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1367502747033917842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6349659855179188165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3344a1a55b69848baa443283922d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentColor: 1
 --- !u!1 &7047253899358614870
 GameObject:
   m_ObjectHideFlags: 0

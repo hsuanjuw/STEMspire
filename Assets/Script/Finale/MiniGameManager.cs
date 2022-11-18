@@ -284,24 +284,20 @@ public class MiniGameManager : MonoBehaviour
             
     }
 
-    public void EnterSpaceStation(int num)
+    public void EnterSpaceStation(int _sceneToLoad)
     {
-        if (!gameStarted)
+        if (_sceneToLoad == 1)
         {
-            if (num == 1)
-            {
-                analytic.SaveData("EnterSpaceStation", Time.time);
-                analytic.SaveData("LaunchBtnPressedCount", Time.time, launchBtnPressedCount);
-                SceneManager.LoadScene("SpaceStation");
-            }
-            else
-            {
-                analytic.SaveData("EnterSpaceStation2", Time.time);
-                analytic.SaveData("LaunchBtnPressedCount", Time.time, launchBtnPressedCount);
-                SceneManager.LoadScene("SpaceStation" + num.ToString());
-            }
+            analytic.SaveData("EnterSpaceStation", Time.time);
+            analytic.SaveData("LaunchBtnPressedCount", Time.time, launchBtnPressedCount);
+            SceneManager.LoadScene("SpaceStation");
         }
-
+        else
+        {
+            analytic.SaveData("EnterSpaceStation2", Time.time);
+            analytic.SaveData("LaunchBtnPressedCount", Time.time, launchBtnPressedCount);
+            SceneManager.LoadScene("SpaceStation" + _sceneToLoad.ToString());
+        }
     }
 
     private void StartMiniGame()

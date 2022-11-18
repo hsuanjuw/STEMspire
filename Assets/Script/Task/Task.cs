@@ -33,4 +33,9 @@ public abstract class Task : MonoBehaviour
     {
         startTaskBtntxt = txt;
     }
+
+    public void F2_UnlockExit()
+    {
+        FindObjectOfType<LevelChanger>().triggerActive = true;
+    }
 }

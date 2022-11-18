@@ -1154,8 +1154,10 @@ GameObject:
   - component: {fileID: 770266686}
   - component: {fileID: 770266685}
   - component: {fileID: 770266684}
+  - component: {fileID: 770266688}
+  - component: {fileID: 770266689}
   m_Layer: 0
-  m_Name: Engineer
+  m_Name: Zun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1240,7 +1242,7 @@ SpriteRenderer:
   m_SortingLayerID: 116122357
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 8caa363f2a6e1a04f9c560de12d2c659, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9ab2127b54ba45a4c9360d17623a159e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1265,6 +1267,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &770266688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770266683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13d95aa63f9b1142a4f338363f49856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMovement: 1
+  hoverSpeed: 1.4
+  leftBound: 0
+  rightBound: 0
+  upBound: 0
+  downBound: 0
+  _currentDirection: {x: 0, y: 0}
+  defaultPosition: {x: 0, y: 0, z: 0}
+  _hidingPlace: {x: 0, y: 0, z: 0}
+  _hidingLayer: 0
+--- !u!95 &770266689
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770266683}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2e785c3473524594a89f937a0e30b4d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &794762429
 GameObject:
   m_ObjectHideFlags: 0
