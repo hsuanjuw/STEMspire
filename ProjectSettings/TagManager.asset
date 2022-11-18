@@ -10,6 +10,8 @@ TagManager:
   - Screw
   - Shard
   - SequenceButton
+  - NPCInteractionIcon
+  - EnvirInteractionIcon
   layers:
   - Default
   - TransparentFX

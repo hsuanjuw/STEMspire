@@ -47,7 +47,7 @@ public class DialogueTrigger : MonoBehaviour
         if (PlayerPrefs.GetInt("Zun_Chat") == 0)
         {
             PlayerPrefs.SetInt("Zun_Chat", 1);
-            ConversationScript conversation = GameObject.Find("Engineer 2").GetComponentInChildren<ConversationScript>();
+            ConversationScript conversation = GameObject.Find("Engineer2").GetComponentInChildren<ConversationScript>();
             dialogueSystem.StartDialogue(conversation, false);
             Destroy(this.gameObject);
         }

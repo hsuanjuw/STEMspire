@@ -1,18 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractionIcon : MonoBehaviour
 {
     /// <summary>
-    /// Handle InteractionIcon zoomInOut Effect
+    /// Handle InteractionIcon Shine Effect
     /// </summary>
     /// 
     public bool isInteracted = false;
+
+    public Sprite orgrinalSprite;
+    public Sprite envirShineInteractionIcon;
+    public Sprite npcShineInteractionIcon;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(zoomInOut());
+        orgrinalSprite = this.GetComponent<SpriteRenderer>().sprite;
+        if (this.tag == "NPCInteractionIcon")
+        {
+            StartCoroutine(Shine(npcShineInteractionIcon));
+        }
+        else if (this.tag == "EnvirInteractionIcon")
+        {
+            StartCoroutine(Shine(envirShineInteractionIcon));
+        }
+
     }
 
     // Update is called once per frame
@@ -21,22 +37,21 @@ public class InteractionIcon : MonoBehaviour
         
     }
 
-    IEnumerator zoomInOut()
+    IEnumerator Shine(Sprite shineSprite)
     {
         while (!isInteracted)
         {
-            yield return new WaitForSeconds(0.3f);
-            this.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-            yield return new WaitForSeconds(0.3f);
-            this.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
-            yield return new WaitForSeconds(0.3f);
-            this.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-            yield return new WaitForSeconds(0.3f);
-            this.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
-            yield return new WaitForSeconds(0.3f);
-            this.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-            yield return new WaitForSeconds(0.3f);
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(0.2f);
+            this.GetComponent<SpriteRenderer>().sprite = shineSprite;
+            yield return new WaitForSeconds(0.2f);
+            this.GetComponent<SpriteRenderer>().sprite = orgrinalSprite;
+            yield return new WaitForSeconds(0.2f);
+            this.GetComponent<SpriteRenderer>().sprite = shineSprite;
+            yield return new WaitForSeconds(0.2f);
+            this.GetComponent<SpriteRenderer>().sprite = orgrinalSprite;
+
+            yield return new WaitForSeconds(1.5f);
         }
     }
+
 }
