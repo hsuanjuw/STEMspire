@@ -1279,7 +1279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13d95aa63f9b1142a4f338363f49856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMovement: 1
+  currentMovement: 6
   hoverSpeed: 1.4
   leftBound: 0
   rightBound: 0
@@ -1289,6 +1289,10 @@ MonoBehaviour:
   defaultPosition: {x: 0, y: 0, z: 0}
   _hidingPlace: {x: 0, y: 0, z: 0}
   _hidingLayer: 0
+  patrolWait: 10
+  patrolLocations:
+  - -4.1
+  - 2.3
 --- !u!95 &770266689
 Animator:
   serializedVersion: 3
@@ -1715,10 +1719,12 @@ MonoBehaviour:
   continuePcBtn: {fileID: 612175613}
   continueNpcBtn: {fileID: 612175612}
   closeBtn: {fileID: 612175611}
+  taskBtn: {fileID: 0}
   npcImage: {fileID: 612175622}
   pcImage: {fileID: 612175621}
   actionbtn: {fileID: 0}
   hasTask: 0
+  task: {fileID: 0}
   dialoguePanel: {fileID: 612175623}
   dialogueOpened: 0
   currentConvIndex: 0

@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class EngineerMovement : CharacterMovement
 {
+    public float patrolWait;
+    private bool patrolDone = true;
+    public float[] patrolLocations;
+    private int patrolIndex = 0;
+    private IEnumerator Patrol()
+    {
+        prevFollowX = patrolLocations[patrolIndex];
+        yield return new WaitForSeconds(patrolWait);
+        patrolIndex++;
+        patrolIndex %= patrolLocations.Length;
+        patrolDone = true;
+    }
     public override void Move()
     {
         DialogueSystem _ds = FindObjectOfType<DialogueSystem>();
@@ -34,26 +46,21 @@ public class EngineerMovement : CharacterMovement
                 }
                 
                 _currentDirection.x =  prevFollowX - transform.position.x;
-                if (_currentDirection.x > 0)
-                {
-                    if(_currentDirection.x > 1)
-                    _currentDirection.x = 1;
-                    GetComponent<SpriteRenderer>().flipX = false;
-                }
-                else if (_currentDirection.x < 0)
-                {
-                    if(_currentDirection.x < -1)
-                    _currentDirection.x = -1;
-                    GetComponent<SpriteRenderer>().flipX = true;
-                }
-
                 if (Mathf.Abs(_currentDirection.x) < 0.08)
                 {
-                    GetComponent<Animator>().SetBool("Walking", false);
                     ChangeMovement(MovementType.Waiting);
                 }
-                else GetComponent<Animator>().SetBool("Walking", true);
-
+                break;
+            case MovementType.Patrol:
+                if (patrolDone)
+                {
+                    patrolDone = false;
+                    StartCoroutine(Patrol());
+                }
+                else
+                {
+                    _currentDirection.x = prevFollowX - transform.position.x;
+                }
                 break;
             case MovementType.Waiting:
                 if(_currentDirection!= Vector2.zero)
@@ -74,6 +81,24 @@ public class EngineerMovement : CharacterMovement
                 }
                 break;
         }
+        if (_currentDirection.x > 0)
+        {
+            if(_currentDirection.x > 1)
+                _currentDirection.x = 1;
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else if (_currentDirection.x < 0)
+        {
+            if(_currentDirection.x < -1)
+                _currentDirection.x = -1;
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+
+        if (Mathf.Abs(_currentDirection.x) < 0.08)
+        {
+            GetComponent<Animator>().SetBool("Walking", false);
+        }
+        else GetComponent<Animator>().SetBool("Walking", true);
         Vector3 tempVect = new Vector3(_currentDirection.x*hoverSpeed * Time.deltaTime, _currentDirection.y*hoverSpeed * Time.deltaTime, 0);
         transform.position += tempVect;
     }
@@ -81,6 +106,8 @@ public class EngineerMovement : CharacterMovement
     public override void ResetPosition()
     {
         base.ResetPosition();
+        patrolIndex = 0;
+        patrolDone = true;
         GetComponent<SpriteRenderer>().flipX = false;
     }
 }
