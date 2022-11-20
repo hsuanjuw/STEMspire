@@ -781,7 +781,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e95cd62258e95c428a72545571c54c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: {fileID: 0}
+  dialogueOpened: 0
+  playerChoice: 0
+  dialoguePanel: {fileID: 41167370558703128}
   dialogueText: {fileID: 41167370558703125}
   dialogueName: {fileID: 41167370558703133}
   option1Btn: {fileID: 41167370558703124}
@@ -789,13 +791,9 @@ MonoBehaviour:
   continuePcBtn: {fileID: 41167370558703132}
   continueNpcBtn: {fileID: 41167370558703131}
   closeBtn: {fileID: 41167370558703130}
+  taskBtn: {fileID: 0}
   npcImage: {fileID: 41167370558703127}
   pcImage: {fileID: 41167370558703126}
-  actionbtn: {fileID: 0}
-  hasTask: 0
-  dialoguePanel: {fileID: 41167370558703128}
-  dialogueOpened: 0
-  currentConvIndex: 0
 --- !u!4 &1229115108
 Transform:
   m_ObjectHideFlags: 0
@@ -1065,8 +1063,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
-    name: R.C.
-    text: Ship damaged. Dock at nearest space station for repairs.
+    name: 'Robot Companion:'
+    text: Captain, the ship is damaged. We have docked at the nearest space port
+      for repairs.
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1079,8 +1078,8 @@ MonoBehaviour:
       enabled: 0
   - id: 2
     name: R.C.
-    text: "That asteroid really did a number on the ship! I don't think we can fix
-      this by\r ourselves."
+    text: The ship sustained major damage from an asteroid collision. As your personal
+      robot companion, I recommend getting an expert to aid in repairs.
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1093,8 +1092,8 @@ MonoBehaviour:
       enabled: 0
   - id: 3
     name: R.C.
-    text: "Why don't we go look in the Main Commercial District to see if we can
-      find\r an expert there?"
+    text: "The probability of finding\r such an expert is highest in the Main Commercial
+      District."
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}

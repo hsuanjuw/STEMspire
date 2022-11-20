@@ -25,20 +25,21 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (col.name == "Player")
         {
-            if (this.name == "IntroDialogueTrigger")
-            {
-                IntroDialogueTrigger();
-            }
-            else if (this.name == "Engineer2DialogueTrigger")
+            if (this.name == "Engineer2DialogueTrigger")
             {
                 Engineer2DialogueTrigger();
+            }
+            else
+            {
+                StartDialogue();
             }
         }
     }
 
-    private void IntroDialogueTrigger()
+    private void StartDialogue()
     {
-        dialogueSystem.StartDialogueIntro();
+        ConversationScript conversation = this.GetComponentInChildren<ConversationScript>();
+        dialogueSystem.StartDialogue(conversation, null);
         Destroy(this.gameObject);
     }
 
@@ -47,9 +48,7 @@ public class DialogueTrigger : MonoBehaviour
         if (PlayerPrefs.GetInt("Zun_Chat") == 0)
         {
             PlayerPrefs.SetInt("Zun_Chat", 1);
-            ConversationScript conversation = GameObject.Find("Engineer2").GetComponentInChildren<ConversationScript>();
-            dialogueSystem.StartDialogue(conversation, null);
-            Destroy(this.gameObject);
+            StartDialogue();
         }
     }
 }

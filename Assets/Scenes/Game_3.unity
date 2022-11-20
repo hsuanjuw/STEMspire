@@ -944,6 +944,97 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7bd506d33af5294bb081a1f9a68f2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &704023566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 704023567}
+  - component: {fileID: 704023569}
+  - component: {fileID: 704023568}
+  - component: {fileID: 704023570}
+  m_Layer: 5
+  m_Name: BlackScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &704023567
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704023566}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1034792028}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 2000, y: 1100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &704023568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704023566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.09433961, g: 0.09433961, b: 0.09433961, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &704023569
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704023566}
+  m_CullTransparentMesh: 1
+--- !u!114 &704023570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704023566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d414384a80963142855a49b25a10edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeInTime: 0.1
+  stayTime: 0.05
+  Img: {fileID: 0}
 --- !u!1001 &704581169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1339,7 +1430,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.976979, y: -2.1207285, z: 1.4607432}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
-  m_Children: []
+  m_Children:
+  - {fileID: 1964878381}
   m_Father: {fileID: 1643820082}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1359,8 +1451,7 @@ MonoBehaviour:
   - id: 1
     name: Zun
     text: "Oh! You have an Eclipse Runner. Wow... you weren't exaggerating about
-      the damage. You\u2019re lucky you made it here without any issues. Let me take
-      a look and see what I can do."
+      the damage. You\u2019re lucky you made it here without any issues."
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1373,61 +1464,63 @@ MonoBehaviour:
       enabled: 0
   - id: 2
     name: Zun
-    text: '[Zun working...]'
+    text: Can you power up the ship? I need it running for repairs. If you need instructions
+      on the different modules, I can help.
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - name: 
-      text: 
-      imagePrefab: {fileID: 0}
+      text: Advice would be great.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 3
       enabled: 0
+    - name: 
+      text: I think I know how it works.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 5
+      enabled: 0
   - id: 3
     name: Zun
-    text: Alright I'm all done! Everything is fixed, let's boot this ship up together,
-      one system at a time.
+    text: "Okay. You can use the levers to make sure the electricity makes it to
+      the power core. You also have to turn on the different systems at the correct
+      time by pushing the \rbutton whenever the corresponding symbol lights up blue."
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - name: You
-      text: I couldn't have done this without you.
+      text: 
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 4
       enabled: 0
-    - name: You
-      text: I've got this from here.
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 5
-      enabled: 0
   - id: 4
     name: Zun
-    text: No problem! The issue seems complicated, but is actually very simple to
-      fix once you learn how.
+    text: "Finally, in order to turn off the emergency systems, you need to press
+      the buttons on the screen in numerical order. Got \rit?"
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - name: You
-      text: No way! I had no idea what to do before you came along.
+      text: Yep!
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 5
       enabled: 0
     - name: You
-      text: If you say so.
+      text: Can you run that by me again?
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 5
+      targetId: 3
       enabled: 0
   - id: 5
-    name: 
-    text: 
-    imagePrefab: {fileID: 0}
+    name: Zun
+    text: "Well then! Let\u2019s get started!"
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
@@ -1494,6 +1587,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1e6861f50aab8449a145d97c82c23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &1034792028 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 41167370038307433, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+  m_PrefabInstance: {fileID: 612175606}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1062278213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1682,6 +1780,51 @@ MonoBehaviour:
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
+--- !u!1 &1563672404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1563672405}
+  - component: {fileID: 1563672406}
+  m_Layer: 0
+  m_Name: LoadEndTask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1563672405
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563672404}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1966294344}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1563672406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563672404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92680fdf64030584d845a90c6cf9dc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStartTask: 0
+  startTaskBtntxt: 
 --- !u!1 &1643820080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,7 +1854,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e95cd62258e95c428a72545571c54c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: {fileID: 0}
+  dialogueOpened: 0
+  playerChoice: 0
+  dialoguePanel: {fileID: 612175623}
   dialogueText: {fileID: 612175620}
   dialogueName: {fileID: 612175616}
   option1Btn: {fileID: 612175619}
@@ -1722,12 +1867,6 @@ MonoBehaviour:
   taskBtn: {fileID: 0}
   npcImage: {fileID: 612175622}
   pcImage: {fileID: 612175621}
-  actionbtn: {fileID: 0}
-  hasTask: 0
-  task: {fileID: 0}
-  dialoguePanel: {fileID: 612175623}
-  dialogueOpened: 0
-  currentConvIndex: 0
 --- !u!4 &1643820082
 Transform:
   m_ObjectHideFlags: 0
@@ -1741,6 +1880,7 @@ Transform:
   m_Children:
   - {fileID: 794762430}
   - {fileID: 1180850645}
+  - {fileID: 1966294344}
   m_Father: {fileID: 869942610}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1755,6 +1895,144 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1964878380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1964878381}
+  - component: {fileID: 1964878382}
+  m_Layer: 0
+  m_Name: FixShipTask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1964878381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964878380}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 794762430}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1964878382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964878380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29b39d42e23f3484d9c1ed1064904355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStartTask: 0
+  startTaskBtntxt: Continue
+  blackScreen: {fileID: 704023566}
+--- !u!1 &1966294343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1966294344}
+  - component: {fileID: 1966294345}
+  m_Layer: 0
+  m_Name: ConversationScript_Leave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1966294344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966294343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1563672405}
+  m_Father: {fileID: 1643820082}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1966294345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966294343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 480bd61063c82b146a9105160f69b0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - id: 1
+    name: Zun
+    text: So, what are you going to do with R.C.? If you want I could try teaching
+      it more?
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: What would you be teaching it?
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 2
+      enabled: 0
+    - name: 
+      text: I was thinking of scrapping it.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 3
+      enabled: 0
+  - id: 2
+    name: Zun
+    text: I would be updating the data to make it more open minded. Perhaps it will
+      be able to help teach others.
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: Well, that sounds like a good idea. RC, go with Zun.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 3
+      enabled: 0
+    - name: 
+      text: I was planning on scrapping it.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 3
+      enabled: 0
+  - id: 3
+    name: 
+    text: 
+    imagePrefab: {fileID: 0}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options: []
 --- !u!1001 &2101835971
 PrefabInstance:
   m_ObjectHideFlags: 0

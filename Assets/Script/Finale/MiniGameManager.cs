@@ -242,7 +242,8 @@ public class MiniGameManager : MonoBehaviour
             lightningBalls.StopSpawning();
         FindObjectOfType<PowerCoreExplosion>().ResetLightning();
         yield return new WaitForSeconds(2f);
-        FindObjectOfType<ScreenFader>().SwitchScene("Thanks");
+        StartLeaveDialogue();
+        //FindObjectOfType<ScreenFader>().SwitchScene("Thanks");
     }
     private IEnumerator Restart()
     {
@@ -341,6 +342,14 @@ public class MiniGameManager : MonoBehaviour
     private void StartRestartDialogue()
     {
         ConversationScript npcConversation = dialogueSystem.transform.GetChild(1).GetComponent<ConversationScript>();
-        dialogueSystem.StartDialogue(npcConversation, null);
+        Task task = dialogueSystem.transform.GetChild(1).GetComponentInChildren<Task>();
+        dialogueSystem.StartDialogue(npcConversation, task);
+    }
+
+    private void StartLeaveDialogue()
+    {
+        ConversationScript npcConversation = dialogueSystem.transform.GetChild(2).GetComponent<ConversationScript>();
+        Task task = dialogueSystem.transform.GetChild(2).GetComponentInChildren<Task>();
+        dialogueSystem.StartDialogue(npcConversation, task);
     }
 }

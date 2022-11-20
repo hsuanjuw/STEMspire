@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 32615599}
   - component: {fileID: 32615600}
   m_Layer: 0
-  m_Name: IntroDialogueTrigger
+  m_Name: MeetEngineer1DialogueTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -208,7 +208,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -110.37, y: -1.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1163348651}
   m_Father: {fileID: 1178271464}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -816,14 +817,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
-    name: Nan'oi
-    text: Hi!
+    name: Nanoi
+    text: Hi there!
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - name: You
-      text: "Hello! Are you Nan\u2019oi?"
+      text: Are you the engineer running this shop?
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 2.1
@@ -835,7 +836,7 @@ MonoBehaviour:
       targetId: 2.2
       enabled: 0
   - id: 2.1
-    name: "Nan\u2019oi"
+    name: Nanoi
     text: I certainly am! What can I do for you?
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
@@ -845,68 +846,115 @@ MonoBehaviour:
       text: My ship is damaged. Can you fix it?
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 3.1
+      targetId: 2.3
       enabled: 0
     - name: You
-      text: "I\u2019m looking for someone to fix my ship the customer service representative
-        recommended you."
+      text: "We\u2019ve been searching for someone to fix our ship."
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 3.1
+      targetId: 2.3
       enabled: 0
   - id: 2.2
-    name: Nan'oi
+    name: Nanoi
     text: "Well, I can certainly help with that! I\u2019m an engineer. My name\u2019s
-      Nan\u2019oi."
+      Nanoi. Would you mind giving me more information about what\u2019s wrong?"
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - name: 
-      text: 
+      text: Well we got hit by an asteroid, so it might have something to do with
+        that.
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 2.2.2
+      targetId: 2.4
       enabled: 0
-  - id: 2.2.2
-    name: R.C.
-    text: ' So you are the person we were recommended! Thank you for helping us!'
-    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: You
-      text: The ship is this way.
+    - name: 
+      text: "I\u2019m not exactly sure. The monitors aren\u2019t working properly."
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 4
+      targetId: 2.5
       enabled: 0
-    - name: You
-      text: Thank you. The ship is at the dock.
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 4
-      enabled: 0
-  - id: 3.1
-    name: Nan'oi
-    text: I can certainly take a look! Where is it?
+  - id: 2.3
+    name: Nanoi
+    text: "I can certainly take a look! Would you mind giving me more information
+      about what\u2019s wrong?"
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - name: You
-      text: "It\u2019s at the dock."
+    - name: 
+      text: Well we got hit by an asteroid, so it might have something to do with
+        that.
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 4
+      targetId: 2.4
       enabled: 0
-    - name: You
-      text: "Come with me. I\u2019ll show you!"
+    - name: 
+      text: "I\u2019m not exactly sure. The monitors aren\u2019t working properly."
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 4
+      targetId: 2.5
       enabled: 0
-  - id: 4
+  - id: 2.4
+    name: Nanoi
+    text: Yep. That would do it. What are you having issues with?
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: The monitors are showing static.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 2.5
+      enabled: 0
+    - name: 
+      text: Perhaps it would be best to show you
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 3
+      enabled: 0
+  - id: 2.5
+    name: Nanoi
+    text: "Well, I can certainly help with that! I\u2019m specialized in systems
+      repair. Can you show me to the ship?"
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: Certainly!
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 3
+      enabled: 0
+    - name: 
+      text: "It\u2019s in the docks"
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 3
+      enabled: 0
+  - id: 2.6
+    name: Nanoi
+    text: Well then, lead the way!
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: Sure thing!
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 3
+      enabled: 0
+    - name: 
+      text: "It\u2019s this way"
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 3
+      enabled: 0
+  - id: 3
     name: 
     text: 
     imagePrefab: {fileID: 0}
@@ -1322,12 +1370,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551386741}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.68, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -58.799995, y: -0.7299999, z: -0.99843216}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 601637539}
-  m_RootOrder: 1
+  m_Father: {fileID: 2025610139}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &551386743
 MonoBehaviour:
@@ -1342,29 +1390,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - id: 1
+  - id: 9
     name: Zun
-    text: "Hello, my name is Zun and I\u2019m an engineer on the space station. I
-      have general knowledge as well as a specialization in power cores."
+    text: "Excuse me if I\u2019m interrupting something, but you seem a bit lost.
+      Do you need any help? My name is Zun, by the way."
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - name: You
-      text: We need help fixing our ship!
+      text: We are trying to find someone to fix our ship.
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 2.1
+      targetId: 9.1
       enabled: 0
     - name: You
-      text: "We are looking for Nan\u2019oi."
+      text: Could you point us in the direction of the Main Commercial District?
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 2.2
+      targetId: 9.2
       enabled: 0
-  - id: 2.1
+  - id: 9.1
     name: Zun
-    text: "I can definitely take a look at it! Just show me to the \u2013"
+    text: "Oh! I\u2019m an engineer! If you can show me to the \u2013"
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1373,23 +1421,9 @@ MonoBehaviour:
       text: 
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
-      targetId: 2.1.1
+      targetId: 9.1.1
       enabled: 0
-  - id: 2.2
-    name: Zun
-    text: ' Certainly! Their shop is at the end of the main commercial district.
-      If you need any more help let me know, I guess.'
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: 
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 2.2.1
-      enabled: 0
-  - id: 2.1.1
+  - id: 9.1.1
     name: R.C.
     text: ' I do not believe we can trust this person with repairing the ship.'
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
@@ -1400,9 +1434,9 @@ MonoBehaviour:
       text: 
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
-      targetId: 2.1.2
+      targetId: 9.1.2
       enabled: 0
-  - id: 2.1.2
+  - id: 9.1.2
     name: Zun
     text: "What\u2019s that supposed to mean?"
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
@@ -1413,32 +1447,39 @@ MonoBehaviour:
       text: "R.C., explain your reasoning\u2026"
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 3.1
+      targetId: 9.3
       enabled: 0
     - name: 
-      text: "Well, let\u2019s go, I guess."
+      text: Zun, can you tell me more about your experience?
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 3
+      targetId: 9.4
       enabled: 0
-  - id: 2.2.1
-    name: R.C.
-    text: Additional help will not be required. Thank you.
-    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+  - id: 9.2
+    name: Zun
+    text: "Sure! It\u2019s actually right beyond my shop here. It is quite a large
+      area, though. What are you looking for? I might be able to give more specific
+      directions."
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
-    options: []
-  - id: 3
-    name: 
-    text: 
-    imagePrefab: {fileID: 0}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options: []
-  - id: 3.1
+    options:
+    - name: 
+      text: Our ship was damaged. We need someone to fix it.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 9.5
+      enabled: 0
+    - name: 
+      text: "We\u2019re looking for an engineer to fix our ship."
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 9.5
+      enabled: 0
+  - id: 9.3
     name: R.C.
-    text: "There is not sufficient data to determine Professional: Zun\u2019s abilities.
-      We need to find someone else."
+    text: "There is not sufficient data to determine Zun\u2019s abilities. We need
+      to find someone else."
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1447,14 +1488,86 @@ MonoBehaviour:
       text: "I guess we\u2019ll look for someone else then\u2026"
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 3
+      targetId: 10
       enabled: 0
     - name: 
-      text: "Let\u2019s go then, RC"
+      text: "Let\u2019s go then, RC."
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 3
+      targetId: 10
       enabled: 0
+  - id: 9.4
+    name: Zun
+    text: In addition to general knowledge, I also have expertise in power cores.
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: Well, R.C.? Zun sounds qualified to me.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 9.3
+      enabled: 0
+    - name: 
+      text: "Thanks for the offer, but we\u2019ll find someone else."
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 10
+      enabled: 0
+  - id: 9.5
+    name: Zun
+    text: "There is a shop at the end of the Main Commercial District but I can help
+      you out! I\u2019m an engineer! If you can show me to the \u2013\r"
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 9.5.1
+      enabled: 0
+  - id: 9.5.1
+    name: R.C.
+    text: I do not believe we can trust this person with repairing the ship.
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 9.5.2
+      enabled: 0
+  - id: 9.5.2
+    name: Zun
+    text: "What\u2019s that supposed to mean?"
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: "R.C., explain your reasoning\u2026"
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 9.3
+      enabled: 0
+    - name: 
+      text: Zun, can you tell me more about your experience?
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 9.4
+      enabled: 0
+  - id: 10
+    name: 
+    text: 
+    imagePrefab: {fileID: 0}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options: []
 --- !u!1 &601637536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,7 +1637,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1322580630}
-  - {fileID: 551386742}
   m_Father: {fileID: 1461940210}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2400,7 +2512,7 @@ MonoBehaviour:
   items:
   - id: 1
     name: Customer Service
-    text: Hi, how can I help you?
+    text: Hello! How can I help you today?
     imagePrefab: {fileID: 9011897280276515440, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -2419,8 +2531,62 @@ MonoBehaviour:
       enabled: 0
   - id: 2.1
     name: Customer Service
-    text: "Oh sure! Most people who need help go to Nan\u2019oi in the Main Commercial
-      District."
+    text: "Oh sure! There\u2019s a engineer shop that\u2019s pretty popular in the
+      Main Commercial District. I would try looking there."
+    imagePrefab: {fileID: 9011897280276515440, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: "We\u2019ll check there."
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 3
+      enabled: 0
+    - name: 
+      text: Would you be able to give us more information?
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 2.2
+      enabled: 0
+  - id: 2.2
+    name: Customer Service
+    text: "Yeah! Nanoi \u2013 that\u2019s the engineer\u2019s name \u2013 comes down
+      here fairly often to work on the ships. Hasn\u2019t come down today, though,
+      so I\u2019d check the shop."
+    imagePrefab: {fileID: 9011897280276515440, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 2.2.1
+      enabled: 0
+  - id: 2.2.1
+    name: Customer Service
+    text: "Some sort of \rspecialist, I think, but Nanoi has enough general knowledge
+      to deal with most of the problems that crop up around here."
+    imagePrefab: {fileID: 9011897280276515440, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: In the Main Commercial District, right?
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 2.3
+      enabled: 0
+    - name: 
+      text: Right. Thank you so much for the help.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 3
+      enabled: 0
+  - id: 2.3
+    name: Customer Service
+    text: Yep! Blue sign with white letters. Last shop you see.
     imagePrefab: {fileID: 9011897280276515440, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -2429,23 +2595,24 @@ MonoBehaviour:
       text: 
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
-      targetId: 2.1.1
+      targetId: 2.3.1
       enabled: 0
-  - id: 2.1.1
+  - id: 2.3.1
     name: R.C.
-    text: 'Sounds perfect! Thank you. '
+    text: "I\u2019ll store this information in my database. Your cooperation has
+      been noted."
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - name: 
-      text: "Thank you! We\u2019ll check there"
+      text: What R.C. means is thanks for your help.
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 3
       enabled: 0
     - name: 
-      text: "You\u2019ve been extremely helpful. Thank you!"
+      text: '[We better get going.'
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 3
@@ -2468,7 +2635,7 @@ GameObject:
   - component: {fileID: 1163348651}
   - component: {fileID: 1163348652}
   m_Layer: 0
-  m_Name: IntroDialogue
+  m_Name: ConversationScript
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2481,11 +2648,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163348650}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 112.36698, y: 1.3407283, z: -1.4607432}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1285587891}
+  m_Father: {fileID: 32615598}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1163348652
@@ -2503,8 +2670,8 @@ MonoBehaviour:
   items:
   - id: 1
     name: R.C.
-    text: "This must be Nan\u2019oi\u2019s shop.There are so many positive reviews!
-      We should definitely ask them for help."
+    text: We have located an engineer shop. These reviews suggest this person is
+      reliable. I recommend asking for assistance.
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -2607,7 +2774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1178271464}
   m_Layer: 0
-  m_Name: Triggers
+  m_Name: DialogueTriggers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2662,8 +2829,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.9969794, y: -0.5292717, z: -1.4607432}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1163348651}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2700,7 +2866,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e95cd62258e95c428a72545571c54c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: {fileID: 1285587892}
+  dialogueOpened: 0
+  playerChoice: 0
+  dialoguePanel: {fileID: 671319685}
   dialogueText: {fileID: 1460603817}
   dialogueName: {fileID: 8979312317899756983}
   option1Btn: {fileID: 1773873510}
@@ -2711,12 +2879,6 @@ MonoBehaviour:
   taskBtn: {fileID: 0}
   npcImage: {fileID: 526459877}
   pcImage: {fileID: 1451325864}
-  actionbtn: {fileID: 1417587759}
-  hasTask: 0
-  task: {fileID: 0}
-  dialoguePanel: {fileID: 671319685}
-  dialogueOpened: 0
-  currentConvIndex: 0
 --- !u!4 &1322580630 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 265952113170092821, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
@@ -2795,11 +2957,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 9011897280276515447, guid: 0a3698695ee37604fb15cd7f8243e24a, type: 3}
   m_PrefabInstance: {fileID: 1373162215}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1417587759 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8979312319310526873, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
-  m_PrefabInstance: {fileID: 8979312317899756982}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1451325864 stripped
 MonoBehaviour:
@@ -3492,9 +3649,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025610138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.79, y: -1.87, z: 0}
+  m_LocalPosition: {x: -40.7, y: -1.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 551386742}
   m_Father: {fileID: 1178271464}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

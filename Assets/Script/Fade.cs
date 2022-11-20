@@ -12,7 +12,7 @@ public class Fade : MonoBehaviour
     public float stayTime = 0.05f;
 
 
-    public GameObject teamLogo;
+    public GameObject Img;
 
     // Start is called before the first frame update
     private void Awake()
@@ -28,6 +28,19 @@ public class Fade : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void CallFadeInOut()
+    {
+        StartCoroutine(FadeInAndOut(this.gameObject));
+    }
+    public void CallFadeIn()
+    {
+        StartCoroutine(FadeIn(this.gameObject));
+    }
+    public void CallFadeOut()
+    {
+        StartCoroutine(FadeOut(this.gameObject));
     }
     public IEnumerator FadeInAndOut(GameObject sprite)
     {

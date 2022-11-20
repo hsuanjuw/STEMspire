@@ -380,6 +380,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: e8286e931f42a3a45b5bd402c5dbf131, type: 3}
     - target: {fileID: 3894587091290202712, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894587091290202712, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1550824785}
@@ -1164,6 +1168,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &928453962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 928453963}
+  - component: {fileID: 928453964}
+  m_Layer: 0
+  m_Name: Task
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &928453963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928453962}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1610809917}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &928453964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928453962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483920469b1c37f41a16f97b4741dd75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStartTask: 0
+  startTaskBtntxt: 
 --- !u!114 &980654370 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
@@ -1204,7 +1253,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e95cd62258e95c428a72545571c54c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: {fileID: 0}
+  dialogueOpened: 0
+  playerChoice: 0
+  dialoguePanel: {fileID: 91415179}
   dialogueText: {fileID: 91415176}
   dialogueName: {fileID: 91415191}
   option1Btn: {fileID: 91415175}
@@ -1212,13 +1263,9 @@ MonoBehaviour:
   continuePcBtn: {fileID: 91415169}
   continueNpcBtn: {fileID: 91415168}
   closeBtn: {fileID: 91415167}
+  taskBtn: {fileID: 0}
   npcImage: {fileID: 91415178}
   pcImage: {fileID: 91415177}
-  actionbtn: {fileID: 0}
-  hasTask: 0
-  dialoguePanel: {fileID: 91415179}
-  dialogueOpened: 0
-  currentConvIndex: 0
 --- !u!4 &988719544
 Transform:
   m_ObjectHideFlags: 0
@@ -1700,6 +1747,8 @@ MonoBehaviour:
   defaultPosition: {x: 0, y: 0, z: 0}
   _hidingPlace: {x: 0, y: 0, z: 0}
   _hidingLayer: 0
+  patrolWait: 0
+  patrolLocations: []
 --- !u!95 &1576857131
 Animator:
   serializedVersion: 3
@@ -1746,7 +1795,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.976979, y: -2.1207285, z: 1.4607432}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
-  m_Children: []
+  m_Children:
+  - {fileID: 928453963}
   m_Father: {fileID: 988719544}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1763,86 +1813,85 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - id: 1
-    name: "Nan\u2019oi"
-    text: "Wow that power core sure is something else. I think some of the issues
-      here are just too specialized for little ol\u2019 me."
+  - id: 14.3
+    name: Nanoi
+    text: "I fixed your displays. You need to find someone else who is specialized
+      in power cores to fix everything else unless you want your ship to become a
+      pile of scrap metal \rduring take off."
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - name: 
-      text: 
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 1.1
-      enabled: 0
-  - id: 1.1
-    name: Nan'oi
-    text: "You\u2019ll need to get someone else to fix those unless\r you want your
-      ship to become a pile of scrap metal during take off. Look for someone familiar
-      with power cores."
-    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: "Hey R.C., didn\u2019t Zun say that they were specialized in power cores?"
+      text: "Hey R.C., wasn\u2019t Zun an engineer?"
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 2.1
+      targetId: 14.5
       enabled: 0
     - name: 
       text: Do you know where we could look for a specialist?
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 2.2
+      targetId: 14.6
       enabled: 0
-  - id: 2.1
+  - id: 14.5
     name: R.C.
-    text: 'My system does not recommend using Zun. Suggested course of action: contact
-      your employer and request aid. Help should arrive in 3 days.'
+    text: "My algorithm does not recommend using Zun. Suggested course of action:
+      contact your employer and request aid. Help should arrive in 3 days.\r"
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - name: You
+    - name: 
       text: Why should we do that when Zun might be able to help us?
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 3.1
+      targetId: 15.1
       enabled: 0
-    - name: You
+    - name: 
       text: "That doesn\u2019t make any sense!"
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 3.1
+      targetId: 15.1
       enabled: 0
-  - id: 2.2
-    name: "Nan\u2019oi"
+  - id: 14.6
+    name: Nanoi
     text: You could try the side district. We passed it on our way to the ship.
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - name: 
-      text: Ok R.C. you stay here and chart a course for our next destination. I'll
-        follow Nan'oi's advice.
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 14.6.1
+      enabled: 0
+  - id: 14.6.1
+    name: R.C.
+    text: Searching the Side District is not advised. I recommend contacting your
+      employer and request aid. Help should arrive in 3 days.
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: Should we atleast check the side district before waiting 3 days?
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 5
+      targetId: 15.3
       enabled: 0
     - name: 
-      text: I might try to figure this out on my own. R.C. watch the ship.
+      text: "That\u2019s not logical"
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 5
+      targetId: 15.3
       enabled: 0
-  - id: 3.1
+  - id: 15.1
     name: R.C.
     text: "My creators programmed me to take in data to build skill profiles of professionals.
       I then use these profiles to give recommendations to my user on which people
-      are most\r able to help."
+      are most \rable to help."
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1851,9 +1900,9 @@ MonoBehaviour:
       text: 
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
-      targetId: 3.1.1
+      targetId: 15.2
       enabled: 0
-  - id: 3.1.1
+  - id: 15.2
     name: R.C.
     text: Based on the lack of reviews and other sources of data, Zun does not fit
       the profile of a qualified engineer.
@@ -1862,39 +1911,39 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - name: 
-      text: The profile? You don't know anything about Zun.
+      text: R.C., wait on the ship.
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 4
+      targetId: 16
       enabled: 0
     - name: 
-      text: Well can Zun help us or not? That's my concern.
+      text: "R.C., we\u2019re going to find Zun. Keep quiet and come with me."
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 4
+      targetId: 16
       enabled: 0
-  - id: 4
+  - id: 15.3
     name: R.C.
-    text: Listen to my directive. Zun does not compute.
+    text: "My creators programmed me to take in data to build profiles of locations.
+      I then use these profiles to give recommendations to my user on which areas
+      are most able to have \rqualified help."
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - name: 
-      text: I thought I could trust you, R.C. I need Zun's help, but not yours. Stay
-        here, I'll handle this.
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      text: R.C., wait on the ship.
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
-      targetId: 5
+      targetId: 16
       enabled: 0
     - name: 
-      text: R.C. perhaps you would be of better use here on the ship, not getting
-        in my way.
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      text: "R.C., we\u2019re going to find Zun. Keep quiet and come with me."
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
-      targetId: 5
+      targetId: 16
       enabled: 0
-  - id: 5
+  - id: 16
     name: 
     text: 
     imagePrefab: {fileID: 0}
@@ -2063,8 +2112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - id: 1
-    name: Nan'oi
+  - id: 14
+    name: Nanoi
     text: Well, that asteroid certainly messed up the... everything. Let's take a
       look and see if we can make it feel better, shall we?
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
@@ -2075,33 +2124,52 @@ MonoBehaviour:
       text: 
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
-      targetId: 1.1
+      targetId: 14.1
       enabled: 0
-  - id: 1.1
-    name: "Nan\u2019oi"
-    text: "Start up the engine and I\u2019ll see what\u2019s going on. Do you want
+  - id: 14.1
+    name: R.C.
+    text: "Turn on the power and I\u2019ll see what\u2019s going on. Do you want
       advice on how to start the ship?"
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: Yes
+      imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+      audio: {fileID: 0}
+      targetId: 14.2
+      enabled: 0
+    - name: 
+      text: No
+      imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+      audio: {fileID: 0}
+      targetId: 14.3
+      enabled: 0
+  - id: 14.2
+    name: Nanoi
+    text: I noticed you were having trouble with the control buttons. Whenever a
+      symbol on the panel turns blue, you need to make sure the button for that symbol
+      is also blue.  Keep an eye on the timer too!
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - name: You
-      text: Yes
+    - name: 
+      text: What about the other tasks?
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 2.1
+      targetId: 14.4
       enabled: 0
-    - name: You
-      text: No
+    - name: 
+      text: "I\u2019ll keep that in mind"
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 3
+      targetId: 14.7
       enabled: 0
-  - id: 2.1
-    name: Nan'oi
-    text: "For the systems above me, make sure the color of the button matches the
-      symbol on the panel.\r I added some timers that should help you know when you're
-      about to have a system meltdown, you'll see what I mean!"
+  - id: 14.4
+    name: Nanoi
+    text: "Well, I\u2019m not quite sure about those myself. "
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -2110,9 +2178,36 @@ MonoBehaviour:
       text: 
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
-      targetId: 2.1.1
+      targetId: 14.4.1
       enabled: 0
-  - id: 2.1.1
+  - id: 14.4.1
+    name: R.C.
+    text: 'Nonsense. My algorithm has identified you as a reliable source of information.
+      I am sure any guidance you give will be correct. '
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 14.4.2
+      enabled: 0
+  - id: 14.4.2
+    name: R.C.
+    text: "Captain, start up the ship so Nanoi can see \rwhat\u2019s wrong."
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 14.3
+      enabled: 0
+  - id: 14.7
     name: R.C.
     text: What about the other tasks?
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
@@ -2123,10 +2218,10 @@ MonoBehaviour:
       text: 
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
-      targetId: 2.1.2
+      targetId: 14.7.1
       enabled: 0
-  - id: 2.1.2
-    name: Nan'oi
+  - id: 14.7.1
+    name: Nanoi
     text: "Well, I\u2019m not quite sure about those myself."
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
@@ -2136,11 +2231,11 @@ MonoBehaviour:
       text: 
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
-      targetId: 2.1.3
+      targetId: 14.7.2
       enabled: 0
-  - id: 2.1.3
+  - id: 14.7.2
     name: R.C.
-    text: Nonsense! My algorithm has identified you as a reliable source of information.
+    text: Nonsense. My algorithm has identified you as a reliable source of information.
       I am sure any guidance you give will be correct.
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
@@ -2150,17 +2245,22 @@ MonoBehaviour:
       text: 
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
-      targetId: 2.1.4
+      targetId: 14.7.3
       enabled: 0
-  - id: 2.1.4
-    name: "Nan\u2019oi"
-    text: Without specialized knowledge, I'd just be guessing! I don't want to risk
-      your whole ship because I'm guessing.
-    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
+  - id: 14.7.3
+    name: R.C.
+    text: "Captain, start up the ship so Nanoi can see \rwhat\u2019s wrong."
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
-    options: []
-  - id: 3
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 14.3
+      enabled: 0
+  - id: 14.3
     name: 
     text: 
     imagePrefab: {fileID: 0}

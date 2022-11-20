@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 283617929}
   - component: {fileID: 283617930}
   m_Layer: 0
-  m_Name: ConversationScript
+  m_Name: ConversationScript_RCNotPresent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -531,7 +531,7 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - name: You
-      text: "I\u2019m sorry about R.C. I will be dealing with them later."
+      text: "I\u2019m sorry about R.C. I will be dealing with it later."
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 2
@@ -1053,6 +1053,7 @@ Transform:
   m_Children:
   - {fileID: 486870069}
   - {fileID: 283617929}
+  - {fileID: 1161527495}
   - {fileID: 1174097958}
   m_Father: {fileID: 1527359013}
   m_RootOrder: 3
@@ -1301,6 +1302,116 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1102806125
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8331382834660450069, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_Name
+      value: GuideRobot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8331382834660450064, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+--- !u!1 &1161527494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1161527495}
+  - component: {fileID: 1161527496}
+  m_Layer: 0
+  m_Name: ConversationScript_RCPresent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1161527495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161527494}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 730234907}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1161527496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161527494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 480bd61063c82b146a9105160f69b0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - id: 1
+    name: Bot Enthusiast
+    text: "Your little buddy there isn\u2019t looking too happy. Better be going,
+      eh? "
+    imagePrefab: {fileID: 13539909091326971, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options: []
 --- !u!1001 &1174097957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1310,7 +1421,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9060469154403475577, guid: 4c2e851ac4ac59648b5766017cd629cd, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9060469154403475577, guid: 4c2e851ac4ac59648b5766017cd629cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1807,6 +1918,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 594de9a7dd27c394eb5286d04611ac4a, type: 3}
+--- !u!1 &1434448264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2995626666163368437, guid: 594de9a7dd27c394eb5286d04611ac4a, type: 3}
+  m_PrefabInstance: {fileID: 1434448263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1434448265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434448264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d631037c25768d4da3c5e1987d5feda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1483925180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,7 +1986,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e95cd62258e95c428a72545571c54c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: {fileID: 1483925181}
+  dialogueOpened: 0
+  playerChoice: 0
+  dialoguePanel: {fileID: 968053417}
   dialogueText: {fileID: 1901752298}
   dialogueName: {fileID: 184227025}
   option1Btn: {fileID: 283538105}
@@ -1869,12 +1999,6 @@ MonoBehaviour:
   taskBtn: {fileID: 0}
   npcImage: {fileID: 1534577845}
   pcImage: {fileID: 1098492429}
-  actionbtn: {fileID: 1767468476}
-  hasTask: 0
-  task: {fileID: 0}
-  dialoguePanel: {fileID: 968053417}
-  dialogueOpened: 0
-  currentConvIndex: 0
 --- !u!4 &1483925183
 Transform:
   m_ObjectHideFlags: 0
@@ -2469,11 +2593,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5004795749433912058, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
   m_PrefabInstance: {fileID: 1742729762}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1767468476 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8979312319310526873, guid: 2890174877be21d45baa4f8126670f7a, type: 3}
-  m_PrefabInstance: {fileID: 1655218630}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1782801092
 PrefabInstance:

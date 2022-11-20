@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.IO;
-using System.Linq;
 using RPGM.Gameplay;
 using UnityEngine.SceneManagement;
 
@@ -14,8 +12,17 @@ public class DialogueSystem : MonoBehaviour
     /// Handle the dialogue panel open/close, start Dialogues
     /// </summary>
 
-    public ConversationScript conversation;
+    private ConversationScript conversation;
+    private float textSpeed;
+    private bool dialogueIsStarted;
+    private int currentConvIndex; // record which conversation we are at
 
+    [HideInInspector] public bool dialogueOpened;
+    [HideInInspector] public int playerChoice; // record which dialogue did the player made 
+
+
+    //Dialogue UIs
+    public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI dialogueName;
     public Button option1Btn;
@@ -28,17 +35,7 @@ public class DialogueSystem : MonoBehaviour
     public Image pcImage;
 
     //Task
-    public GameObject actionbtn;
-    public bool hasTask;
-    public Task task;
-
-    private float textSpeed;
-    private bool dialogueIsStarted;
-
-    public GameObject dialoguePanel;
-    public bool dialogueOpened;
-
-    public int currentConvIndex; // record which conversation we are at
+    private Task task;
 
     private Analytic analytic;
 
@@ -67,7 +64,8 @@ public class DialogueSystem : MonoBehaviour
     public void StartDialogueIntro()
     {
         conversation = this.transform.GetChild(0).GetComponent<ConversationScript>();
-        StartDialogue(conversation, null);
+        task = this.transform.GetChild(0).GetComponentInChildren<Task>();
+        StartDialogue(conversation, task);
     }
 
 
@@ -161,6 +159,7 @@ public class DialogueSystem : MonoBehaviour
     {
         endTime = Time.time;
         SaveAnalyticData(0, true);
+        playerChoice = 0;
         NextLine(0);
     }
 
@@ -168,6 +167,7 @@ public class DialogueSystem : MonoBehaviour
     {
         endTime = Time.time;
         SaveAnalyticData(1, true);
+        playerChoice = 1;
         NextLine(1);
     }
 
