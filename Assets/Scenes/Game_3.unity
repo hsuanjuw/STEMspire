@@ -1181,7 +1181,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 24.802656, y: 35.079998}
-    newSize: {x: 5.12, y: 5.12}
+    newSize: {x: 24.802656, y: 35.079998}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1242,12 +1242,12 @@ SpriteRenderer:
   m_SortingLayerID: 116122357
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 9ab2127b54ba45a4c9360d17623a159e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6cb26c86411773b4c99175b223605977, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 24.802656, y: 35.079998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1279,7 +1279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13d95aa63f9b1142a4f338363f49856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMovement: 1
+  currentMovement: 6
   hoverSpeed: 1.4
   leftBound: 0
   rightBound: 0
@@ -1289,6 +1289,10 @@ MonoBehaviour:
   defaultPosition: {x: 0, y: 0, z: 0}
   _hidingPlace: {x: 0, y: 0, z: 0}
   _hidingLayer: 0
+  patrolWait: 10
+  patrolLocations:
+  - -4.1
+  - 2.3
 --- !u!95 &770266689
 Animator:
   serializedVersion: 3
@@ -1715,10 +1719,12 @@ MonoBehaviour:
   continuePcBtn: {fileID: 612175613}
   continueNpcBtn: {fileID: 612175612}
   closeBtn: {fileID: 612175611}
+  taskBtn: {fileID: 0}
   npcImage: {fileID: 612175622}
   pcImage: {fileID: 612175621}
   actionbtn: {fileID: 0}
   hasTask: 0
+  task: {fileID: 0}
   dialoguePanel: {fileID: 612175623}
   dialogueOpened: 0
   currentConvIndex: 0

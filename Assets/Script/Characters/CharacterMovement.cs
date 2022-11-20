@@ -10,6 +10,7 @@ public class CharacterMovement : MonoBehaviour
         Hide,
         Random,
         Waiting,
+        Patrol,
         Idling,
         Frozen
     };
