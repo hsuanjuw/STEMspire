@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6840194769377718111}
   - component: {fileID: 5498298581573460844}
   m_Layer: 0
-  m_Name: GuideRobot
+  m_Name: GuideRobotMove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

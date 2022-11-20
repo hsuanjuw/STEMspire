@@ -11,7 +11,6 @@ public class LightFlashing : MonoBehaviour
     void Start()
     {
         Color color = new Color(1f, 1f, 1f, 1f);
-        Debug.Log(color);
         StartCoroutine(flash());
     }
 
@@ -37,7 +36,7 @@ public class LightFlashing : MonoBehaviour
                 yield return new WaitForSeconds(0.2f);
                 color = new Color(1f, 1f, 1f, 1f);
                 this.GetComponent<SpriteRenderer>().color = color;
-                Debug.Log(this.GetComponent<SpriteRenderer>().color);
+                
                 randomWaitTime = Random.Range(0f, 0.8f);
                 yield return new WaitForSeconds(randomWaitTime);
             }

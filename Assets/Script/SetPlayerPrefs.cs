@@ -21,6 +21,7 @@ public class SetPlayerPrefs : MonoBehaviour
         PlayerPrefs.SetInt("Bot_Enthusiast_Chat", 0);
         PlayerPrefs.SetInt("Parents_Chat", 0);
         PlayerPrefs.SetInt("Service_Guide_Chat", 0);
+        PlayerPrefs.SetInt("Family_Chat", 0);
 
         // Game 2 Robot status 
         PlayerPrefs.SetInt("Robot_Stay", 0);

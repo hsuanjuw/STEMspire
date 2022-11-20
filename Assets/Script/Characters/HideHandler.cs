@@ -13,14 +13,15 @@ public class HideHandler : MonoBehaviour
         Zun_Chat,
         Bot_Enthusiast_Chat,
         Parents_Chat,
-        Service_Guide_Chat
+        Service_Guide_Chat,
+        Family_Chat
     }
 
     public CharacterPrefs characterPrefs;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

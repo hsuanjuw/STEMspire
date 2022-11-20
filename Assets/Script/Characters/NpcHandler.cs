@@ -20,7 +20,8 @@ public class NpcHandler : MonoBehaviour
     {
         Bot_Enthusiast_Chat,
         Parents_Chat,
-        Service_Guide_Chat
+        Service_Guide_Chat,
+        Family_Chat
     }
 
     public CharacterPrefs characterPrefs;
@@ -63,6 +64,7 @@ public class NpcHandler : MonoBehaviour
             if (PlayerPrefs.GetInt(characterPrefs.ToString()) == 0) 
             {
                 PlayerPrefs.SetInt(characterPrefs.ToString(), 1);
+                Debug.Log(PlayerPrefs.GetInt(characterPrefs.ToString()));
             }
 
             // Save data to analytic
