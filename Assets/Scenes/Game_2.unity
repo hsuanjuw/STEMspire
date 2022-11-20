@@ -2127,10 +2127,10 @@ MonoBehaviour:
       targetId: 14.1
       enabled: 0
   - id: 14.1
-    name: R.C.
+    name: Nanoi
     text: "Turn on the power and I\u2019ll see what\u2019s going on. Do you want
       advice on how to start the ship?"
-    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
@@ -2148,9 +2148,21 @@ MonoBehaviour:
       enabled: 0
   - id: 14.2
     name: Nanoi
-    text: I noticed you were having trouble with the control buttons. Whenever a
-      symbol on the panel turns blue, you need to make sure the button for that symbol
-      is also blue.  Keep an eye on the timer too!
+    text: 'I noticed you were having trouble with the control buttons. '
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 14.2.1
+      enabled: 0
+  - id: 14.2.1
+    name: Nanoi
+    text: Whenever a symbol on the panel turns blue, you need to make sure the button
+      for that symbol is also blue.  Keep an eye on the timer too!
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}

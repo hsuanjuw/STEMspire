@@ -1286,6 +1286,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1984261731}
     - target: {fileID: 3894587091290202712, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894587091290202712, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_TargetGraphic
       value: 
       objectReference: {fileID: 1984261731}

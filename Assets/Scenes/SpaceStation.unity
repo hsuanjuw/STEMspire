@@ -4255,6 +4255,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Engineer2Img
       objectReference: {fileID: 0}
+    - target: {fileID: 265952113170092826, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
 --- !u!1001 &2056659803573439839
