@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
         switch (SceneManager.GetActiveScene().name)
         {
             case "Game":
-                if (PlayerPrefs.GetInt("Game1_dialogueStarted") == 1)
+                if (PlayerPrefs.GetInt("Game1_DialogueStarted") == 1)
                 {
                     transform.position = altSpawnPosition;
                     GetComponent<SpriteRenderer>().flipX = true;
