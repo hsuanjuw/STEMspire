@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     private DialogueSystem dialogueSystem;
     public GameObject hitByBallPrefab;
 
+    private float animatorSpeed = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +43,12 @@ public class Player : MonoBehaviour
     {
         if (!dialogueSystem.dialogueOpened)
         {
+            GetComponent<Animator>().speed = animatorSpeed;
             Move();
+        }
+        else
+        {
+            GetComponent<Animator>().speed = 0f;
         }
         
     }
