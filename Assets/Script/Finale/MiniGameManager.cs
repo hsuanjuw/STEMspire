@@ -138,7 +138,6 @@ public class MiniGameManager : MonoBehaviour
         {
             launchBtnPressedCount++;
             CountdownTxt.gameObject.SetActive(true);
-            GameObject.Find("Light").GetComponent<LightFade>().fading = true;
             StartCoroutine(Countdown());   
         }
     }
