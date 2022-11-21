@@ -37,7 +37,7 @@ public class UnlockFinaleTask : Task
         DialogueSystem dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
         int playerChoice = dialogueSystem.playerChoice;
 
-        if (playerChoice == 1)
+        if (playerChoice == 0)
         {
             PlayerPrefs.SetInt("Robot_Stay", 1);
         }
