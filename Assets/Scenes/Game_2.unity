@@ -1876,7 +1876,7 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - name: 
-      text: Should we atleast check the side district before waiting 3 days?
+      text: Should we at least check the side district before waiting 3 days?
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 15.3

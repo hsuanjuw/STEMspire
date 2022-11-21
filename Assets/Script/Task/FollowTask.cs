@@ -48,9 +48,12 @@ public class FollowTask : Task
 
     public void Follow()
     {
+        /*
         Player player = GameObject.FindObjectOfType<Player>();
         playerPos = player.transform.position;
         this.transform.parent.position = playerPos - offsetPos;
+        */
+        FindObjectOfType<EngineerMovement>().ChangeMovement(CharacterMovement.MovementType.FollowPlayer);
     }
 
 }
