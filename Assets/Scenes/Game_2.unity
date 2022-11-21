@@ -1882,7 +1882,7 @@ MonoBehaviour:
       targetId: 15.3
       enabled: 0
     - name: 
-      text: "That\u2019s not logical"
+      text: "That\u2019s not logical."
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 15.3
