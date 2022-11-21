@@ -1889,9 +1889,9 @@ MonoBehaviour:
       enabled: 0
   - id: 15.1
     name: R.C.
-    text: "My creators programmed me to take in data to build skill profiles of professionals.
-      I then use these profiles to give recommendations to my user on which people
-      are most \rable to help."
+    text: "My creators programmed me to take in data to build skill profiles. I use
+      these profiles to give recommendations to my user on which people are most
+      \rable to help."
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1924,9 +1924,9 @@ MonoBehaviour:
       enabled: 0
   - id: 15.3
     name: R.C.
-    text: "My creators programmed me to take in data to build profiles of locations.
-      I then use these profiles to give recommendations to my user on which areas
-      are most able to have \rqualified help."
+    text: "My creators programmed me to take in data to build skill profiles. I use
+      these profiles to give recommendations to my user on which people are most
+      \rable to help."
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
