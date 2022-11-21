@@ -122,6 +122,7 @@ public class MiniGameManager : MonoBehaviour
                 launchBtnPressedCount++;
                 CountdownTxt.gameObject.SetActive(true);
                 GameObject.Find("Light").GetComponent<LightFade>().fading = true;
+                FindObjectOfType<LevelChanger>().triggerActive = false;
                 StartCoroutine(Countdown()); 
             }
             else
@@ -282,8 +283,7 @@ public class MiniGameManager : MonoBehaviour
         gameStarted = false;
         currentStatus = GameStatus.NotStarted;
         GameObject.Find("Light").GetComponent<LightFade>().ResetAlpha();
-        
-            
+        FindObjectOfType<LevelChanger>().triggerActive = true;
     }
 
     public void EnterSpaceStation(int _sceneToLoad)
