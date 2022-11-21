@@ -1147,6 +1147,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1600219523331058248, guid: c731628a0b5e6c449b60f6cd8736db87, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2061072598109628575, guid: c731628a0b5e6c449b60f6cd8736db87, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1378,7 +1382,7 @@ MonoBehaviour:
   downBound: 0
   _currentDirection: {x: 0, y: 0}
   defaultPosition: {x: 0, y: 0, z: 0}
-  _hidingPlace: {x: 0, y: 0, z: 0}
+  _hidingPlace: {x: -11, y: 0, z: 0}
   _hidingLayer: 0
   patrolWait: 10
   patrolLocations:
@@ -1464,62 +1468,8 @@ MonoBehaviour:
       enabled: 0
   - id: 2
     name: Zun
-    text: Can you power up the ship? I need it running for repairs. If you need instructions
-      on the different modules, I can help.
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: Advice would be great.
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 3
-      enabled: 0
-    - name: 
-      text: I think I know how it works.
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 5
-      enabled: 0
-  - id: 3
-    name: Zun
-    text: "Okay. You can use the levers to make sure the electricity makes it to
-      the power core. You also have to turn on the different systems at the correct
-      time by pushing the \rbutton whenever the corresponding symbol lights up blue."
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: You
-      text: 
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 4
-      enabled: 0
-  - id: 4
-    name: Zun
-    text: "Finally, in order to turn off the emergency systems, you need to press
-      the buttons on the screen in numerical order. Got \rit?"
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: You
-      text: Yep!
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 5
-      enabled: 0
-    - name: You
-      text: Can you run that by me again?
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 3
-      enabled: 0
-  - id: 5
-    name: Zun
-    text: "Well then! Let\u2019s get started!"
+    text: I notice a couple repairs straight away, so I'll get started with those.
+      Give me a moment.
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1592,6 +1542,51 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 41167370038307433, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
   m_PrefabInstance: {fileID: 612175606}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1041977706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1041977707}
+  - component: {fileID: 1041977708}
+  m_Layer: 0
+  m_Name: StartFinaleTask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1041977707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041977706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1180850645}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1041977708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041977706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c1b26344341c484fb9799add219f2cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStartTask: 0
+  startTaskBtntxt: 
 --- !u!1 &1062278213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,7 +1737,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.976979, y: -2.1207285, z: 1.4607432}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
-  m_Children: []
+  m_Children:
+  - {fileID: 1041977707}
   m_Father: {fileID: 1643820082}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1759,9 +1755,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - id: 1
+  - id: 0
     name: Zun
-    text: That did it! You should be good to go!
+    text: Alright! I fixed the power core, that should be good as new.
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1779,7 +1775,94 @@ MonoBehaviour:
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
+    options:
+    - name: You
+      text: No way! I couldn't have done that without you!
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 5
+      enabled: 0
+    - name: You
+      text: Oh alright, if you say so!
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 5
+      enabled: 0
+  - id: 5
+    name: Zun
+    text: I'll power up the ship to make the last few repairs. I could use your help
+      on the different modules, do you want instructions on what to do?
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: You
+      text: Advice would be great.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 5.1
+      enabled: 0
+    - name: You
+      text: I think I know how it works.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 6
+      enabled: 0
+  - id: 6
+    name: Zun
+    text: Well then! Let's get started!
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
     options: []
+  - id: 5.1
+    name: Zun
+    text: Okay. You can use the levers on the left to make sure the electricity makes
+      it to the power core.
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 5.2
+      enabled: 0
+  - id: 5.2
+    name: Zun
+    text: You also have to turn on the different systems in the top right by making
+      sure the color of the buttons match  the screen above.
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 5.3
+      enabled: 0
+  - id: 5.3
+    name: Zun
+    text: Finally, in order to turn off the emergency systems, click the buttons
+      in the bottom right in ascending order. Got it?
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: You
+      text: Yep!
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 6
+      enabled: 0
+    - name: You
+      text: Can you run that by me again?
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 5.1
+      enabled: 0
 --- !u!1 &1563672404
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,9 +2110,10 @@ MonoBehaviour:
       targetId: 3
       enabled: 0
   - id: 3
-    name: 
-    text: 
-    imagePrefab: {fileID: 0}
+    name: Zun
+    text: Well, I have to get back. I have more work to do. Have a safe launch and
+      good luck in your travels!
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []

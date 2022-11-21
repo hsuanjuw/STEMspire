@@ -6,12 +6,7 @@ using RPGM.Gameplay;
 public class FixShipTask : Task
 {
     public GameObject blackScreen;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
+    
     public override void StartTask()
     {
         base.StartTask();
@@ -25,14 +20,15 @@ public class FixShipTask : Task
 
     IEnumerator FixShip()
     {
-        blackScreen.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        FindObjectOfType<ScreenFader>().levelChangeAnimator.SetTrigger("FinaleFadeOut");
+        yield return new WaitForSeconds(6f);
         FindObjectOfType<PowerCoreColorChanger>().SetColor(PowerCoreColorChanger.CoreColor.Blue);
-        blackScreen.SetActive(false);
-
+        FindObjectOfType<ScreenFader>().levelChangeAnimator.SetTrigger("FinaleFadeIn");
+        
         DialogueSystem dialogueSystem = FindObjectOfType<DialogueSystem>();
         ConversationScript npcConversation = dialogueSystem.transform.GetChild(1).GetComponent<ConversationScript>();
-        dialogueSystem.StartDialogue(npcConversation, null);
+        Task _task = dialogueSystem.transform.Find("ConversationScript").transform.Find("StartFinaleTask").GetComponent<Task>();
+        dialogueSystem.StartDialogue(npcConversation, _task);
     }
 
 }

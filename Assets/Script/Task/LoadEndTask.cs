@@ -18,6 +18,7 @@ public class LoadEndTask : Task
     public override void DoTask()
     {
         base.DoTask();
-        FindObjectOfType<ScreenFader>().SwitchScene("Thanks");
+        //FindObjectOfType<ScreenFader>().SwitchScene("Thanks");
+        FindObjectOfType<EngineerMovement>().ChangeMovement(CharacterMovement.MovementType.Hide);
     }
 }

@@ -8,6 +8,7 @@ public class EngineerMovement : CharacterMovement
     private bool patrolDone = true;
     public float[] patrolLocations;
     private int patrolIndex = 0;
+    private float animatorSpeed = 1f;
     private IEnumerator Patrol()
     {
         prevFollowX = patrolLocations[patrolIndex];
@@ -20,9 +21,25 @@ public class EngineerMovement : CharacterMovement
     {
         DialogueSystem _ds = FindObjectOfType<DialogueSystem>();
         if (_ds != null && _ds.dialogueOpened)
+        {
+            GetComponent<Animator>().speed = 0f;
             return;
+        }
+        else
+        {
+            GetComponent<Animator>().speed = animatorSpeed;
+        }
+            
         switch (currentMovement)
         {
+            case MovementType.Hide:
+                _currentDirection = _hidingPlace - transform.position;
+                _currentDirection.y = 0;
+                if (_currentDirection.magnitude < .1)
+                {
+                    _currentDirection = Vector2.zero;
+                }
+                break;
             case MovementType.FollowPlayer:
                 Player _p = FindObjectOfType<Player>();
                 float x_offset = 2f;

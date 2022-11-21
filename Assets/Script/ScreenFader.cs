@@ -40,7 +40,8 @@ public class ScreenFader : MonoBehaviour
 
     public void FindPowerCoreToExplode()
     {
-        FindObjectOfType<PowerCoreExplosion>().Explode();
+        if(FindObjectOfType<MiniGameManager>().currentIntegrity == MiniGameManager.ShipIntegrity.Broken)
+            FindObjectOfType<PowerCoreExplosion>().Explode();
     }
 
 }

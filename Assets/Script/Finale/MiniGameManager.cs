@@ -65,8 +65,10 @@ public class MiniGameManager : MonoBehaviour
         analytic = GameObject.FindObjectOfType<Analytic>();
         dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
         CheckStartDialogue();
+        /*
         if(currentIntegrity == ShipIntegrity.Fixed) // trigger this after introDialogue
             GameStart();
+            */
     }
 
     private void CheckStartDialogue()
@@ -104,6 +106,7 @@ public class MiniGameManager : MonoBehaviour
         if (currentStatus == GameStatus.InProgress && AllMinigameStatus() == GameStatus.Completed)
         {
             currentStatus = GameStatus.Completed;
+            StartLeaveDialogue();
             FindObjectOfType<ButtonFlash>().MakeClickable();
         }
     }
@@ -241,9 +244,8 @@ public class MiniGameManager : MonoBehaviour
         if(!lightningBalls.finishedLoop && lightningBalls.gameStart)
             lightningBalls.StopSpawning();
         FindObjectOfType<PowerCoreExplosion>().ResetLightning();
-        yield return new WaitForSeconds(2f);
-        StartLeaveDialogue();
-        //FindObjectOfType<ScreenFader>().SwitchScene("Thanks");
+        yield return new WaitForSeconds(3f);
+        FindObjectOfType<ScreenFader>().SwitchScene("Thanks");
     }
     private IEnumerator Restart()
     {
