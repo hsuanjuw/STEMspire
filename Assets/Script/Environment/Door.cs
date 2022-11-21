@@ -37,7 +37,7 @@ public class Door : MonoBehaviour
     void OnMouseEnter()
     {
         // Open the door if dialogue is not opened &&  door is not open
-        if (!dialogueSystem.dialogueOpened) 
+        if (!dialogueSystem.dialogueOpened && !(gameStatus.status == GameStatus.Status.spaceStation2 && !gameStatus.isFinishedDialogue)) 
         {
             if (!doorIsOpen)
             {
@@ -50,7 +50,7 @@ public class Door : MonoBehaviour
     void OnMouseExit()
     {
         // Close the door if dialogue is not opened &&  door is open
-        if (!dialogueSystem.dialogueOpened)
+        if (!dialogueSystem.dialogueOpened && !(gameStatus.status == GameStatus.Status.spaceStation2 && !gameStatus.isFinishedDialogue))
         {
             if (doorIsOpen)
             {
@@ -83,10 +83,6 @@ public class Door : MonoBehaviour
                     if (gameStatus.isFinishedDialogue)
                     {
                         SceneManager.LoadScene("Game_3");
-                    }
-                    else
-                    {
-                        SceneManager.LoadScene("Game_2");
                     }
                     break;
                 default:

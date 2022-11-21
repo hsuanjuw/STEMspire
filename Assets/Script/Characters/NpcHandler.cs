@@ -8,7 +8,9 @@ public class NpcHandler : MonoBehaviour
     /// <summary>
     /// Handle NPC being clicked by the player
     /// </summary>
- 
+    public bool dialogueNotRepeatable = false;
+    private bool isClicked = false;
+
     private Sprite npcSprite;
 
     private DialogueSystem dialogueSystem;
@@ -37,15 +39,6 @@ public class NpcHandler : MonoBehaviour
         // See if there is task object in the children
         task = this.GetComponentInChildren<Task>();
 
-/*        if (this.GetComponentInChildren<Task>()) 
-        {
-            task = true;
-        }
-        else
-        {
-            task = null;
-        }*/
-
     }
 
 
@@ -53,22 +46,27 @@ public class NpcHandler : MonoBehaviour
     {
         if (!dialogueSystem.dialogueOpened)
         {
-            dialogueSystem.StartDialogue(conversation, task);
-            // Destroy interaction icon if is triggered
-            if (this.GetComponentInChildren<InteractionIcon>())
+            if (!(dialogueNotRepeatable && isClicked))
             {
-                Destroy(this.GetComponentInChildren<InteractionIcon>().gameObject);
+                isClicked = true;
+                dialogueSystem.StartDialogue(conversation, task);
+                // Destroy interaction icon if is triggered
+                if (this.GetComponentInChildren<InteractionIcon>())
+                {
+                    Destroy(this.GetComponentInChildren<InteractionIcon>().gameObject);
+                }
+
+                // Set Player Prefs after the interaction icon is triggered
+                if (PlayerPrefs.GetInt(characterPrefs.ToString()) == 0) 
+                {
+                    PlayerPrefs.SetInt(characterPrefs.ToString(), 1);
+                    Debug.Log(PlayerPrefs.GetInt(characterPrefs.ToString()));
+                }
+
+                // Save data to analytic
+                analytic.SaveNPCData(Time.time, this.name);
             }
 
-            // Set Player Prefs after the interaction icon is triggered
-            if (PlayerPrefs.GetInt(characterPrefs.ToString()) == 0) 
-            {
-                PlayerPrefs.SetInt(characterPrefs.ToString(), 1);
-                Debug.Log(PlayerPrefs.GetInt(characterPrefs.ToString()));
-            }
-
-            // Save data to analytic
-            analytic.SaveNPCData(Time.time, this.name);
         }
     }
 }

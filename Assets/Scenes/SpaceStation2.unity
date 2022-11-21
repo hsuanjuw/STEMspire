@@ -1112,6 +1112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueNotRepeatable: 0
   characterPrefs: 0
 --- !u!1 &842321954
 GameObject:
@@ -1553,6 +1554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueNotRepeatable: 1
   characterPrefs: 0
 --- !u!4 &1179801151
 Transform:
