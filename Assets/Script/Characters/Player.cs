@@ -17,6 +17,11 @@ public class Player : MonoBehaviour
     public GameObject hitByBallPrefab;
 
     private float animatorSpeed = 1f;
+
+    private float runSpeed = 6f;
+
+    private float walkSpeed = 3f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +64,9 @@ public class Player : MonoBehaviour
         if(h.Equals(0f))
             GetComponent<Animator>().SetBool("Walking",false);
         else GetComponent<Animator>().SetBool("Walking",true);
+        if (Input.GetKey(KeyCode.LeftShift))
+            speed = runSpeed;
+        else speed = walkSpeed;
         Vector3 tempVect = new Vector3(h * speed * Time.deltaTime, 0, 0);
         this.transform.position += tempVect;
         bool facingRight = GetComponent<SpriteRenderer>().flipX;

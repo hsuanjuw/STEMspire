@@ -9,23 +9,12 @@ public class UnlockFinaleTask : Task
     {
         base.isStartTask = false;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    
     public override void StartTask()
     {
         base.StartTask();
         Unlock();
     }
-    public override void DoTask()
-    {
-        base.DoTask();
-    }
-
     public void Unlock()
     {
         FindObjectOfType<LevelChanger>().triggerActive = true;
@@ -40,6 +29,11 @@ public class UnlockFinaleTask : Task
         if (playerChoice == 0)
         {
             PlayerPrefs.SetInt("Robot_Stay", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Robot_Stay", 0);
+            FindObjectOfType<RobotMovement>().ChangeMovement(CharacterMovement.MovementType.FollowPlayer);
         }
 
     }
