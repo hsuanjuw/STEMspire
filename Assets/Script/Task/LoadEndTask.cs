@@ -20,5 +20,17 @@ public class LoadEndTask : Task
         base.DoTask();
         //FindObjectOfType<ScreenFader>().SwitchScene("Thanks");
         FindObjectOfType<EngineerMovement>().ChangeMovement(CharacterMovement.MovementType.Hide);
+        SetRobotStatus();
     }
+    private void SetRobotStatus()
+    {
+        DialogueSystem dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
+        int playerChoice = dialogueSystem.playerChoice;
+
+        if (playerChoice == 0)
+        {
+            FindObjectOfType<RobotMovement>().ChangeMovement(CharacterMovement.MovementType.FollowEngineer);
+        }
+
+    } 
 }

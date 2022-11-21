@@ -1247,7 +1247,6 @@ GameObject:
   m_Component:
   - component: {fileID: 770266687}
   - component: {fileID: 770266686}
-  - component: {fileID: 770266685}
   - component: {fileID: 770266684}
   - component: {fileID: 770266688}
   - component: {fileID: 770266689}
@@ -1284,19 +1283,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
---- !u!114 &770266685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770266683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterPrefs: 0
 --- !u!212 &770266686
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1863,6 +1849,67 @@ MonoBehaviour:
       audio: {fileID: 0}
       targetId: 5.1
       enabled: 0
+--- !u!1001 &1315811405
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6840194769377718111, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: currentMovement
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450069, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_Name
+      value: GuideRobotMove
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
 --- !u!1 &1563672404
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,10 +2116,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
+  - id: 0
+    name: Zun
+    text: That's the last repair! You're all set.
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 3
+      enabled: 0
+  - id: 3
+    name: Zun
+    text: Well, I have to get back. I have more work to do. Have a safe launch and
+      good luck in your travels!
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 4
+      enabled: 0
+  - id: 4
+    name: Zun
+    text: Oh, wait! One last thing!
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 1
+      enabled: 0
   - id: 1
     name: Zun
-    text: So, what are you going to do with R.C.? If you want I could try teaching
-      it more?
+    text: Now that you are ready to leave, what are you going to do with R.C.? If
+      you want, I could try teaching it more?
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -2087,7 +2174,7 @@ MonoBehaviour:
       text: I was thinking of scrapping it.
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 3
+      targetId: 5
       enabled: 0
   - id: 2
     name: Zun
@@ -2101,19 +2188,18 @@ MonoBehaviour:
       text: Well, that sounds like a good idea. RC, go with Zun.
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 3
+      targetId: 5
       enabled: 0
     - name: 
       text: I was planning on scrapping it.
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 3
+      targetId: 5
       enabled: 0
-  - id: 3
-    name: Zun
-    text: Well, I have to get back. I have more work to do. Have a safe launch and
-      good luck in your travels!
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+  - id: 5
+    name: 
+    text: 
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []

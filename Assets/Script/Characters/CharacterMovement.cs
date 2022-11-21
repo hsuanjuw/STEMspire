@@ -12,7 +12,8 @@ public class CharacterMovement : MonoBehaviour
         Waiting,
         Patrol,
         Idling,
-        Frozen
+        Frozen,
+        FollowEngineer,
     };
 
     public MovementType currentMovement = MovementType.Floating;
@@ -45,6 +46,14 @@ public class CharacterMovement : MonoBehaviour
             return;
         switch (currentMovement)
         {
+            case MovementType.FollowEngineer:
+                EngineerMovement _em = FindObjectOfType<EngineerMovement>();
+                if(_currentDirection.y != 0)
+                    _currentDirection.y = 0;
+                
+                _currentDirection.x = _em.transform.position.x - transform.position.x;
+                
+                break;
             case MovementType.FollowPlayer:
                 Player _p = FindObjectOfType<Player>();
                 float x_offset = 2f;
