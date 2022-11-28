@@ -2071,6 +2071,7 @@ MonoBehaviour:
   isStartTask: 0
   startTaskBtntxt: Continue
   blackScreen: {fileID: 704023566}
+  fixTime: 6
 --- !u!1 &1966294343
 GameObject:
   m_ObjectHideFlags: 0
