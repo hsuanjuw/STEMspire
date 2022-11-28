@@ -1659,6 +1659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71124b718386bbf4b9c0558e3612b62f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueNotRepeatable: 0
   characterPrefs: 0
 --- !u!212 &1576857128
 SpriteRenderer:
@@ -1815,9 +1816,9 @@ MonoBehaviour:
   items:
   - id: 14.3
     name: Nanoi
-    text: "I fixed your displays. You need to find someone else who is specialized
-      in power cores to fix everything else unless you want your ship to become a
-      pile of scrap metal \rduring take off."
+    text: "You need to find someone else who is specialized in power cores to fix
+      everything else unless you want your ship to become a pile of scrap metal \rduring
+      take off."
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -2148,7 +2149,7 @@ MonoBehaviour:
       enabled: 0
   - id: 14.2
     name: Nanoi
-    text: 'I noticed you were having trouble with the control buttons. '
+    text: 'I noticed there were some issues with the system control buttons. '
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -2174,7 +2175,7 @@ MonoBehaviour:
       targetId: 14.4
       enabled: 0
     - name: 
-      text: "I\u2019ll keep that in mind"
+      text: "I\u2019ll keep that in mind."
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 14.7
