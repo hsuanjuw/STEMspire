@@ -6,7 +6,7 @@ using RPGM.Gameplay;
 public class FixShipTask : Task
 {
     public GameObject blackScreen;
-    
+    public float fixTime;
     public override void StartTask()
     {
         base.StartTask();
@@ -15,13 +15,13 @@ public class FixShipTask : Task
     public override void DoTask()
     {
         base.DoTask();
-        StartCoroutine(FixShip());
+        StartCoroutine(FixShip(fixTime));
     }
 
-    IEnumerator FixShip()
+    IEnumerator FixShip(float _t)
     {
         FindObjectOfType<ScreenFader>().levelChangeAnimator.SetTrigger("FinaleFadeOut");
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(_t);
         FindObjectOfType<PowerCoreColorChanger>().SetColor(PowerCoreColorChanger.CoreColor.Blue);
         FindObjectOfType<ScreenFader>().levelChangeAnimator.SetTrigger("FinaleFadeIn");
         

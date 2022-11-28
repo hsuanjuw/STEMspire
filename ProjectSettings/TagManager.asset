@@ -12,6 +12,7 @@ TagManager:
   - SequenceButton
   - NPCInteractionIcon
   - EnvirInteractionIcon
+  - Static
   layers:
   - Default
   - TransparentFX
