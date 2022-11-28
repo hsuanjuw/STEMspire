@@ -1438,20 +1438,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - id: 1
-    name: Zun
-    text: "Oh! You have an Eclipse Runner. Wow... you weren't exaggerating about
-      the damage. You\u2019re lucky you made it here without any issues."
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: 
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 2
-      enabled: 0
   - id: 2
     name: Zun
     text: I notice a couple repairs straight away, so I'll get started with those.
