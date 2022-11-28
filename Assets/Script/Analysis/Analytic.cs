@@ -94,7 +94,7 @@ public class Analytic : MonoBehaviour
         AnalyticsService.Instance.CustomData(
             "NPCClicked",
             new Dictionary<string, object> {
-                {"time", time},
+                {"time", formatTime},
                 {"npcName", npcName}
             }
         );

@@ -9,12 +9,13 @@ public class NpcHandler : MonoBehaviour
     /// Handle NPC being clicked by the player
     /// </summary>
     public bool dialogueNotRepeatable = false;
-    private bool isClicked = false;
+    public bool isClicked = false;
 
     private Sprite npcSprite;
 
     private DialogueSystem dialogueSystem;
-    private ConversationScript conversation;
+    private ConversationScript[] conversations;
+    //private GameObject conversationObjs;
     private Analytic analytic;
 
     private Task task;
@@ -33,7 +34,7 @@ public class NpcHandler : MonoBehaviour
     {
         analytic = GameObject.FindObjectOfType<Analytic>();
         dialogueSystem = GameObject.FindObjectOfType<DialogueSystem>();
-        conversation = this.GetComponentInChildren<ConversationScript>();
+        conversations = this.GetComponentsInChildren<ConversationScript>();
         npcSprite = GetComponentInChildren<SpriteRenderer>().sprite;
 
         // See if there is task object in the children
@@ -44,12 +45,12 @@ public class NpcHandler : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (!dialogueSystem.dialogueOpened)
+        if (!dialogueSystem.dialogueOpened && !dialogueNotRepeatable)
         {
-            if (!(dialogueNotRepeatable && isClicked))
+            if (!isClicked)
             {
                 isClicked = true;
-                dialogueSystem.StartDialogue(conversation, task);
+                dialogueSystem.StartDialogue(conversations[0], task);
                 // Destroy interaction icon if is triggered
                 if (this.GetComponentInChildren<InteractionIcon>())
                 {
@@ -65,6 +66,11 @@ public class NpcHandler : MonoBehaviour
 
                 // Save data to analytic
                 analytic.SaveNPCData(Time.time, this.name);
+            }
+            else
+            {
+                dialogueSystem.StartDialogue(conversations[1], null);
+                analytic.SaveNPCData(Time.time, this.name+"_FollowUp");
             }
 
         }
