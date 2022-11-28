@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MusicPlayer : MonoBehaviour
 {
@@ -14,6 +15,20 @@ public class MusicPlayer : MonoBehaviour
     public AudioClip otherMusic;
     public AudioClip victoryMusic;
 
+    public void Start()
+    {
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Main Menu":
+                PlayerPrefs.SetString("Volume","Normal");
+                break;
+            default:
+                if(PlayerPrefs.GetString("Volume")=="Muted")
+                    MuteVolume();
+                else SetVolume();
+                break;
+        }
+    }
     public void SetStartMusic()
     {
         SetMusic(startMusic);
@@ -77,5 +92,17 @@ public class MusicPlayer : MonoBehaviour
         }
 
         yield break;
+    }
+
+    public void MuteVolume()
+    {
+        _source.volume = muteVolume;
+        PlayerPrefs.SetString("Volume","Muted");
+    }
+
+    public void SetVolume()
+    {
+        _source.volume = normalVolume;
+        PlayerPrefs.SetString("Volume","Normal");
     }
 }
