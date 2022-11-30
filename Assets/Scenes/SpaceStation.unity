@@ -755,7 +755,7 @@ MonoBehaviour:
   - id: 5.1
     name: Proud Parent
     text: "What? Can\u2019t you see we\u2019re having a private conversation here."
-    imagePrefab: {fileID: 2701303623248345913, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
+    imagePrefab: {fileID: 2701303623248345913, guid: dfcddcb716b7af843838f826ad62d97f, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
@@ -4549,7 +4549,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9060469154403475577, guid: 4c2e851ac4ac59648b5766017cd629cd, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9060469154403475577, guid: 4c2e851ac4ac59648b5766017cd629cd, type: 3}
       propertyPath: m_LocalPosition.x
