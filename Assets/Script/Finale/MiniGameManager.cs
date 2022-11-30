@@ -342,7 +342,7 @@ public class MiniGameManager : MonoBehaviour
     
     private void StartRestartDialogue()
     {
-        ConversationScript npcConversation = dialogueSystem.transform.GetChild(1).GetComponent<ConversationScript>();
+        ConversationScript npcConversation = GameObject.Find("ConversationScript_Restart").GetComponent<ConversationScript>();
         Task task = dialogueSystem.transform.GetChild(1).GetComponentInChildren<Task>();
         dialogueSystem.StartDialogue(npcConversation, task);
     }
