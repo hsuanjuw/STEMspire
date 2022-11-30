@@ -1290,7 +1290,7 @@ MonoBehaviour:
       enabled: 0
   - id: 14.2
     name: Nanoi
-    text: I noticed there were some issues with the system buttons.
+    text: I noticed there were some issues with the system control buttons.
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1350,7 +1350,7 @@ MonoBehaviour:
       enabled: 0
   - id: 14.4.2
     name: R.C.
-    text: "Captain, start up the ship so Nanoi can see \rwhat\u2019s wrong."
+    text: "Captain, start launching the ship so Nanoi can see \rwhat\u2019s wrong."
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1403,7 +1403,7 @@ MonoBehaviour:
       enabled: 0
   - id: 14.7.3
     name: R.C.
-    text: "Captain, start up the ship so Nanoi can see \rwhat\u2019s wrong."
+    text: "Captain, start launching the ship so Nanoi can see \rwhat\u2019s wrong."
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
