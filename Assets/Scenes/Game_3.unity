@@ -2213,24 +2213,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
-      propertyPath: timeRemaining
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
-      propertyPath: completionTime
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: hintTextActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: systemInfoActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
-      propertyPath: timeAfterGameStart
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: systemSymbols.Array.data[0]
@@ -2293,17 +2281,9 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
-      propertyPath: leftSwitchTime
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: leftDangerLight
       value: 
       objectReference: {fileID: 612175632}
-    - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
-      propertyPath: rightSwitchTime
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: rightDangerLight
       value: 
@@ -2313,16 +2293,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
-      propertyPath: completionTime
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: hintTextActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
-      propertyPath: timeAfterGameStart
-      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: wheelIDs.Array.data[0]

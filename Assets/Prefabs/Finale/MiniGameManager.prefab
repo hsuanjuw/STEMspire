@@ -79,8 +79,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   numWheels: 5
-  timeAfterGameStart: 25
-  completionTime: 25
+  timeAfterGameStart: 30
+  completionTime: 30
   hintActive: 0
 --- !u!114 &5171305791500529063
 MonoBehaviour:
@@ -122,9 +122,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   symbolsClicked: 
-  timeAfterGameStart: 15
-  completionTime: 15
-  timeRemaining: 15
+  timeAfterGameStart: 20
+  completionTime: 20
+  timeRemaining: 20
   hintActive: 0
 --- !u!114 &5171305791500529061
 MonoBehaviour:
@@ -148,6 +148,6 @@ MonoBehaviour:
   rightDangerLight: {fileID: 0}
   leftSwitchTime: 20
   rightSwitchTime: 25
-  fillSpeed: 0.115
+  fillSpeed: 0.12
   timeAfterGameStart: 1
   hintActive: 0
