@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SetPlayerPrefs : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class SetPlayerPrefs : MonoBehaviour
     /// </summary>
     /// 
 
+    public Toggle analyticCheckbox;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,24 @@ public class SetPlayerPrefs : MonoBehaviour
 
         // Game 2 Robot status 
         PlayerPrefs.SetInt("Robot_Stay", 0);
+
+        // Analytic 
+        PlayerPrefs.SetInt("Analytic", 1);
     }
+
+    public void setAnalyticPrfabs()
+    {
+        if (analyticCheckbox.isOn)
+        {
+            PlayerPrefs.SetInt("Analytic", 1);
+            //Debug.Log("Checked");
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Analytic", 0);
+            //Debug.Log("NotChecked");
+        }
+    }
+
 
 }
