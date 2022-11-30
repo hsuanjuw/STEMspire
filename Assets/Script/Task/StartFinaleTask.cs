@@ -13,6 +13,7 @@ public class StartFinaleTask : Task
     {
         base.DoTask();
         FindObjectOfType<MiniGameManager>().GameStart();
+        FindObjectOfType<PityTimer>().StartTimer();
     }
 
     

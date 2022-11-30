@@ -271,6 +271,9 @@ public class Power : MonoBehaviour
         GameObject.Find("RCountDownTxt").transform.Find("Circle").GetComponent<Image>().color = Color.green;
         GameObject.Find("RCountDownTxt").transform.Find("Circle").GetComponent<Image>().fillAmount = 1f;
         
+        if(FindObjectOfType<PityTimer>() != null)
+            FindObjectOfType<PityTimer>().StartTimer();
+        
         currentStatus = MiniGameManager.GameStatus.Completed;
         //FindObjectOfType<MiniGameManager>().CallSuccess();
     }
