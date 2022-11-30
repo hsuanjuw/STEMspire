@@ -948,6 +948,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6840194769377718111, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: upBound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840194769377718111, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
+      propertyPath: downBound
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 8331382834660450065, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -962,11 +970,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.62
+      value: -1.12
       objectReference: {fileID: 0}
     - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.81
       objectReference: {fileID: 0}
     - target: {fileID: 8331382834660450070, guid: 0ede9a42d65fe7a41a160c907b3b1bab, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1252,7 +1260,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.976979, y: -2.1207285, z: 1.4607432}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
-  m_Children: []
+  m_Children:
+  - {fileID: 651178073}
   m_Father: {fileID: 988719544}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1271,26 +1280,28 @@ MonoBehaviour:
   items:
   - id: 14.1
     name: Nanoi
-    text: Do you want advice on how to start the ship?
+    text: Alright your monitors should display more useful information. However,
+      you aren't quite ready to launch yet.
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - name: 
-      text: Yes
-      imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+      text: What still needs done?
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 14.2
       enabled: 0
     - name: 
-      text: No
-      imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+      text: R.C. what do you think?
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 14.3
+      targetId: 14.7.3
       enabled: 0
   - id: 14.2
     name: Nanoi
-    text: I noticed there were some issues with the system control buttons.
+    text: Well I'll start with what I fixed. There were issues with the system control
+      buttons.
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1303,80 +1314,61 @@ MonoBehaviour:
       enabled: 0
   - id: 14.2.1
     name: Nanoi
-    text: Whenever a symbol on the panel turns blue, you need to make sure the button
-      for that symbol is also blue.  Keep an eye on the timer too!
+    text: You should now be able to activate the buttons to match the color of the
+      symbol on the monitors. I also repaired the timers below each module.
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - name: 
-      text: What about the other tasks?
+      text: Wait, what are these timers for?
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 14.4
+      targetId: TIMER
       enabled: 0
     - name: 
-      text: "I\u2019ll keep that in mind."
+      text: That sounds good to me, are we good to go?
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 14.7
+      targetId: 14.7.1
       enabled: 0
-  - id: 14.4
+  - id: TIMER
     name: Nanoi
-    text: "Well, I\u2019m not quite sure about those myself. "
+    text: Well if the individual modules are active for too long while they are still
+      broken, the ship will have a catastrophic failure.
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: You
+      text: 
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: TIMER2
+      enabled: 0
+  - id: TIMER2
+    name: Nanoi
+    text: The timers help you know when that is about to happen.
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - name: 
-      text: 
-      imagePrefab: {fileID: 0}
+      text: Sorry, I missed that. Can you run it by me again?
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 14.4.1
+      targetId: TIMER
       enabled: 0
-  - id: 14.4.1
-    name: R.C.
-    text: 'Nonsense. My algorithm has identified you as a reliable source of information.
-      I am sure any guidance you give will be correct. '
-    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
     - name: 
-      text: 
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 14.4.2
-      enabled: 0
-  - id: 14.4.2
-    name: R.C.
-    text: "Captain, start launching the ship so Nanoi can see \rwhat\u2019s wrong."
-    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: 
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 14.3
-      enabled: 0
-  - id: 14.7
-    name: R.C.
-    text: What about the other tasks?
-    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: 
-      imagePrefab: {fileID: 0}
+      text: Good to know. Does that mean everything is fixed?
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 14.7.1
       enabled: 0
   - id: 14.7.1
     name: Nanoi
-    text: "Well, I\u2019m not quite sure about those myself."
+    text: No. There are still some issues that would break the ship on launch. I'd
+      be careful, I don't know how to fix everything.
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1403,24 +1395,88 @@ MonoBehaviour:
       enabled: 0
   - id: 14.7.3
     name: R.C.
-    text: "Captain, start launching the ship so Nanoi can see \rwhat\u2019s wrong."
+    text: Captain, perhaps Nanoi is unable to identify issues while the ship is inactive.
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
-    - name: 
+    - name: You
       text: 
-      imagePrefab: {fileID: 0}
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 14.3
       enabled: 0
   - id: 14.3
+    name: R.C.
+    text: Therefore, I'm initiating launch. My protocol dictates I take action.
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: You
+      text: No wait!
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: END
+      enabled: 0
+    - name: You
+      text: Good call, let's launch.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: END
+      enabled: 0
+  - id: END
     name: 
     text: 
     imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
+--- !u!1 &651178072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 651178073}
+  - component: {fileID: 651178074}
+  m_Layer: 0
+  m_Name: Task
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &651178073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651178072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 606100288}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &651178074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651178072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3995cd850c3d6d841a15f183e91379b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStartTask: 0
+  startTaskBtntxt: 
 --- !u!1 &928453962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,8 +2455,8 @@ MonoBehaviour:
       enabled: 0
   - id: 14.1
     name: Nanoi
-    text: "I noticed there were some issues with the system control buttons. Let
-      me deal with\r that real quick\u2026\r"
+    text: I noticed a couple fixes I'm pretty familiar with, so let me get those
+      repairs completed, then we can talk more.
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
