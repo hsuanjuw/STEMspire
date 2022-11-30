@@ -2035,7 +2035,7 @@ GameObject:
   - component: {fileID: 1610809917}
   - component: {fileID: 1610809918}
   m_Layer: 0
-  m_Name: ConversationScript
+  m_Name: ConversationScript_Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
