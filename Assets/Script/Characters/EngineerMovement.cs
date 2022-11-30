@@ -9,6 +9,21 @@ public class EngineerMovement : CharacterMovement
     public float[] patrolLocations;
     private int patrolIndex = 0;
     private float animatorSpeed = 1f;
+    private Animator _engiAnimator;
+    private SpriteRenderer _spriteRenderer;
+
+    protected virtual void Start()
+    {
+        Animator _a = GetComponent<Animator>();
+        if (_a == null)
+            _a = GetComponentInChildren<Animator>();
+        _engiAnimator = _a;
+        
+        SpriteRenderer _s = GetComponent<SpriteRenderer>();
+        if (_s == null)
+            _s = GetComponentInChildren<SpriteRenderer>();
+        _spriteRenderer = _s;
+    }
     private IEnumerator Patrol()
     {
         prevFollowX = patrolLocations[patrolIndex];
@@ -22,12 +37,12 @@ public class EngineerMovement : CharacterMovement
         DialogueSystem _ds = FindObjectOfType<DialogueSystem>();
         if (_ds != null && _ds.dialogueOpened)
         {
-            GetComponent<Animator>().speed = 0f;
+            _engiAnimator.speed = 0f;
             return;
         }
         else
         {
-            GetComponent<Animator>().speed = animatorSpeed;
+            _engiAnimator.speed = animatorSpeed;
         }
             
         switch (currentMovement)
@@ -102,20 +117,20 @@ public class EngineerMovement : CharacterMovement
         {
             if(_currentDirection.x > 1)
                 _currentDirection.x = 1;
-            GetComponent<SpriteRenderer>().flipX = false;
+            _spriteRenderer.flipX = false;
         }
         else if (_currentDirection.x < 0)
         {
             if(_currentDirection.x < -1)
                 _currentDirection.x = -1;
-            GetComponent<SpriteRenderer>().flipX = true;
+            _spriteRenderer.flipX = true;
         }
 
         if (Mathf.Abs(_currentDirection.x) < 0.08)
         {
-            GetComponent<Animator>().SetBool("Walking", false);
+            _engiAnimator.SetBool("Walking", false);
         }
-        else GetComponent<Animator>().SetBool("Walking", true);
+        else _engiAnimator.SetBool("Walking", true);
         Vector3 tempVect = new Vector3(_currentDirection.x*hoverSpeed * Time.deltaTime, _currentDirection.y*hoverSpeed * Time.deltaTime, 0);
         transform.position += tempVect;
     }
@@ -125,6 +140,6 @@ public class EngineerMovement : CharacterMovement
         base.ResetPosition();
         patrolIndex = 0;
         patrolDone = true;
-        GetComponent<SpriteRenderer>().flipX = false;
+        _spriteRenderer.flipX = false;
     }
 }

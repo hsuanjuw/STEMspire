@@ -19,7 +19,7 @@ public class ScreenFader : MonoBehaviour
     public Animator levelChangeAnimator;
 
     private string _nextSceneToLoad;
-    
+    public bool pauseExplosion = false;
 
     public void SwitchScene(string _sceneNameToLoad)
     {
@@ -40,7 +40,7 @@ public class ScreenFader : MonoBehaviour
 
     public void FindPowerCoreToExplode()
     {
-        if(FindObjectOfType<MiniGameManager>().currentIntegrity == MiniGameManager.ShipIntegrity.Broken)
+        if(FindObjectOfType<MiniGameManager>().currentIntegrity == MiniGameManager.ShipIntegrity.Broken && !pauseExplosion)
             FindObjectOfType<PowerCoreExplosion>().Explode();
     }
 

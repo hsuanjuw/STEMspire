@@ -1290,7 +1290,7 @@ MonoBehaviour:
       enabled: 0
   - id: 14.2
     name: Nanoi
-    text: I noticed you were having trouble with the control buttons.
+    text: I noticed there were some issues with the system buttons.
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -2112,7 +2112,7 @@ MonoBehaviour:
       enabled: 0
   - id: 14.6
     name: Nanoi
-    text: You could try the side district. We passed it on our way to the ship.
+    text: You could try the Side District. We passed it on our way to the ship.
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -2132,7 +2132,7 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - name: 
-      text: Should we at least check the side district before waiting 3 days?
+      text: Should we at least check the Side District before waiting 3 days?
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 15.3
@@ -2195,7 +2195,7 @@ MonoBehaviour:
       enabled: 0
   - id: 15.3.1
     name: R.C.
-    text: "Based on visual data, the side district does not have any qualified\r
+    text: "Based on visual data, the Side District does not have any qualified\r
       engineers."
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
