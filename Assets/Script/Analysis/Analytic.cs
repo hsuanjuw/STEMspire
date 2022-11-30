@@ -25,7 +25,11 @@ public class Analytic : MonoBehaviour
 
     void Start()
     {
-        SaveData("GameStart", Time.time);
+        if (PlayerPrefs.GetInt("Analytic") == 1)
+        {
+            SaveData("GameStart", Time.time);
+        }
+            
     }
 
     // Update is called once per frame
@@ -36,69 +40,84 @@ public class Analytic : MonoBehaviour
 
     public void SaveData(string eventName, float time)
     {
-        string formatTime = FormatTime(time);
-
-        AnalyticsService.Instance.CustomData(
-            eventName,
-            new Dictionary<string, object> {
-                {"time", formatTime}
-            }
-        );
-        AnalyticsService.Instance.Flush();
+        if (PlayerPrefs.GetInt("Analytic") == 1)
+        {
+            string formatTime = FormatTime(time);
+            AnalyticsService.Instance.CustomData(
+                eventName,
+                new Dictionary<string, object> {
+                    {"time", formatTime}
+                }
+            );
+            AnalyticsService.Instance.Flush();
+        }
     }
     public void SaveData(string eventName, float time, int count)
     {
-        string formatTime = FormatTime(time);
-        AnalyticsService.Instance.CustomData(
-            eventName,
-            new Dictionary<string, object> {
-                {"time", formatTime},
-                {"count", count}
-            }
-        );
-        AnalyticsService.Instance.Flush();
+        if (PlayerPrefs.GetInt("Analytic") == 1)
+        {
+            string formatTime = FormatTime(time);
+            AnalyticsService.Instance.CustomData(
+                eventName,
+                new Dictionary<string, object> {
+                    {"time", formatTime},
+                    {"count", count}
+                }
+            );
+            AnalyticsService.Instance.Flush();
+        }
     }
 
     public void SaveData(string eventName, string sceneName, float timePassed, string dialogue, string choice)
     {
         //Debug.Log(timePassed);
-        AnalyticsService.Instance.CustomData(
-            eventName,
-            new Dictionary<string, object> {
-                {"scene", sceneName},
-                {"timePassed", timePassed},
-                {"dialogue", dialogue},
-                {"choice", choice}
-            }
-        );
-        AnalyticsService.Instance.Flush();
+        if (PlayerPrefs.GetInt("Analytic") == 1)
+        {
+            AnalyticsService.Instance.CustomData(
+                eventName,
+                new Dictionary<string, object> {
+                    {"scene", sceneName},
+                    {"timePassed", timePassed},
+                    {"dialogue", dialogue},
+                    {"choice", choice}
+                }
+            );
+            AnalyticsService.Instance.Flush();
+        }
+
     }
 
     public void SaveData(string eventName, float timePassed, string objName)
     {
         //Debug.Log(timePassed);
-        AnalyticsService.Instance.CustomData(
-            eventName,
-            new Dictionary<string, object> {
-                {"timePassed", timePassed},
-                {"objName", objName}
-            }
-        );
-        AnalyticsService.Instance.Flush();
+        if (PlayerPrefs.GetInt("Analytic") == 1)
+        {
+            AnalyticsService.Instance.CustomData(
+                eventName,
+                new Dictionary<string, object> {
+                    {"timePassed", timePassed},
+                    {"objName", objName}
+                }
+            );
+            AnalyticsService.Instance.Flush();
+        }
+
     }
 
     public void SaveNPCData(float time, string npcName)
     {
-        string formatTime = FormatTime(time);
-        //Debug.Log(timePassed);
-        AnalyticsService.Instance.CustomData(
-            "NPCClicked",
-            new Dictionary<string, object> {
-                {"time", formatTime},
-                {"npcName", npcName}
-            }
-        );
-        AnalyticsService.Instance.Flush();
+        if (PlayerPrefs.GetInt("Analytic") == 1)
+        {
+            string formatTime = FormatTime(time);
+            AnalyticsService.Instance.CustomData(
+                "NPCClicked",
+                new Dictionary<string, object> {
+                    {"time", formatTime},
+                    {"npcName", npcName}
+                }
+            );
+            AnalyticsService.Instance.Flush();
+        }
     }
 
     public string FormatTime(float time)
