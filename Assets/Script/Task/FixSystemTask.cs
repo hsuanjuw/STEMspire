@@ -20,11 +20,13 @@ public class FixSystemTask : Task
 
     IEnumerator FixSystem()
     {
+        FindObjectOfType<ScreenFader>().pauseExplosion = true;
         FindObjectOfType<ScreenFader>().levelChangeAnimator.SetTrigger("FinaleFadeOut");
         yield return new WaitForSeconds(6f);
         systemStatic.SetActive(false);
         wheelStatic.SetActive(false);
         FindObjectOfType<ScreenFader>().levelChangeAnimator.SetTrigger("FinaleFadeIn");
+        FindObjectOfType<ScreenFader>().pauseExplosion = false;
 
         DialogueSystem dialogueSystem = FindObjectOfType<DialogueSystem>();
         ConversationScript npcConversation = dialogueSystem.transform.GetChild(1).GetComponent<ConversationScript>();
