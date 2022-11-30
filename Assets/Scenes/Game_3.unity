@@ -1440,9 +1440,9 @@ MonoBehaviour:
   items:
   - id: 1
     name: Zun
-    text: "Oh! You have a Voyager Model 3... top of the line controls, state of the\r
-      art enginine, and the newest power source. Wow... you weren't exaggerating
-      about the damage.\r You\u2019re lucky you made it here without any issues."
+    text: "Oh! Your spaceship is a Voyager Model 3... state of the\r art engine and
+      a next-gen power source. Wow... you weren't exaggerating about the damage.\r
+      You\u2019re lucky you made it here without any issues."
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
