@@ -996,7 +996,8 @@ MonoBehaviour:
       enabled: 0
   - id: 2.5
     name: Nanoi
-    text: We had a collision with an astroid and our ship is in drastic need of repairs.
+    text: We had a collision with an asteroid and our ship is in drastic need of
+      repairs.
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -2668,7 +2669,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bring Nanoi to dock.
+  m_text: Bring Nanoi to spaceport.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52c9496f40fad9849b71e7d109517c77, type: 2}
   m_sharedMaterial: {fileID: -7116709845014496572, guid: 52c9496f40fad9849b71e7d109517c77, type: 2}
