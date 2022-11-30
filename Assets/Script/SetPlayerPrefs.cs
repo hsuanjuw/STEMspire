@@ -18,6 +18,7 @@ public class SetPlayerPrefs : MonoBehaviour
 
         // Space Station 1
         PlayerPrefs.SetInt("Zun_Chat", 0);
+        //PlayerPrefs.SetInt("Engineer1_Chat", 0);
         PlayerPrefs.SetInt("Bot_Enthusiast_Chat", 0);
         PlayerPrefs.SetInt("Parents_Chat", 0);
         PlayerPrefs.SetInt("Service_Guide_Chat", 0);

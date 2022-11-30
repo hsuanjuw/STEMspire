@@ -74,5 +74,19 @@ public class NpcHandler : MonoBehaviour
             }
 
         }
+        else if (!dialogueSystem.dialogueOpened && dialogueNotRepeatable)
+        {
+            if (!isClicked)
+            {
+                isClicked = true;
+                dialogueSystem.StartDialogue(conversations[0], task);
+                if (this.GetComponentInChildren<InteractionIcon>())
+                {
+                    Destroy(this.GetComponentInChildren<InteractionIcon>().gameObject);
+                }
+                analytic.SaveNPCData(Time.time, this.name);
+            }
+
+        }
     }
 }

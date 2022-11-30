@@ -938,7 +938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStartTask: 0
-  startTaskBtntxt: 
+  startTaskBtntxt: Continue
   systemStatic: {fileID: 91415192}
   wheelStatic: {fileID: 91415193}
 --- !u!1001 &155975175
@@ -1465,7 +1465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStartTask: 0
-  startTaskBtntxt: 
+  startTaskBtntxt: Continue
 --- !u!114 &980654370 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}

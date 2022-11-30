@@ -1627,7 +1627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStartTask: 0
-  startTaskBtntxt: 
+  startTaskBtntxt: Continue
 --- !u!1 &1062278213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1941,7 +1941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStartTask: 0
-  startTaskBtntxt: 
+  startTaskBtntxt: Continue
 --- !u!1 &1643820080
 GameObject:
   m_ObjectHideFlags: 0
