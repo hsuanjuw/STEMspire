@@ -688,8 +688,7 @@ MonoBehaviour:
       enabled: 0
   - id: 2
     name: Diligent Parent
-    text: "Congrats to the both of you! I know my Arix is thinking of applying there
-      next year\u2026"
+    text: "Congrats to the both of you! My Arix had applied as well, but\u2026"
     imagePrefab: {fileID: 5004795749433911940, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -702,7 +701,7 @@ MonoBehaviour:
       enabled: 0
   - id: 3
     name: Proud Parent
-    text: ' Oh? How nice it would be if our kids could be classmates!'
+    text: 'Oh? What happened?  '
     imagePrefab: {fileID: 2701303623248345913, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -720,10 +719,10 @@ MonoBehaviour:
       targetId: 4.1
       enabled: 0
   - id: 4.1
-    name: Proud Parent
-    text: 'So are you doing any prep? I hired an academic consulting firm to help
-      my Yenni with her application. '
-    imagePrefab: {fileID: 2701303623248345913, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
+    name: Diligent Parent
+    text: "Rejected, unfortunately. We thought it was a shoo-in what with Arix\u2019s
+      grades and extracurriculars. I don\u2019t understand where we went wrong."
+    imagePrefab: {fileID: 5004795749433911940, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
@@ -734,10 +733,10 @@ MonoBehaviour:
       targetId: 4.1.1
       enabled: 0
   - id: 4.1.1
-    name: Diligent Parent
-    text: "We tried. But they kept telling us they didn\u2019t have any available
-      appointments\u2026"
-    imagePrefab: {fileID: 5004795749433911940, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
+    name: Proud Parent
+    text: Really? But Arix was always such a good student. Honestly, what are the
+      admission officers thinking?
+    imagePrefab: {fileID: 2701303623248345913, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
@@ -812,8 +811,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
+    name: Diligent Parent
+    text: " Eavesdropping isn\u2019t very polite, you know?"
+    imagePrefab: {fileID: 5004795749433911940, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 2
+      enabled: 0
+  - id: 2
     name: Proud Parent
-    text: Follow up dialogue
+    text: Tourists these days.
     imagePrefab: {fileID: 2701303623248345913, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -964,12 +976,25 @@ MonoBehaviour:
       text: Perhaps it would be best to show you
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 3
+      targetId: 2.6
       enabled: 0
   - id: 2.5
     name: Nanoi
+    text: We had a collision with an astroid and our ship is in drastic need of repairs.
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 2.5.1
+      enabled: 0
+  - id: 2.5.1
+    name: Nanoi
     text: "Well, I can certainly help with that! I\u2019m specialized in systems
-      repair. Can you show me to the ship?"
+      repair. Can you show\r me to the ship?\r"
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -3868,9 +3893,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - id: 1
-    name: 'Guardian '
-    text: Follow up dialogue
-    imagePrefab: {fileID: 7467531556956409929, guid: 6d6ea998e6a4a98468024c54dd564b73, type: 3}
+    name: Eager Kid
+    text: 'I want to be in the museum someday, too! '
+    imagePrefab: {fileID: 4998545957580378296, guid: 20ec1218fbc004942b35c036c2ff5d6a, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
@@ -3920,7 +3945,21 @@ MonoBehaviour:
   items:
   - id: 1
     name: Bot Enthusiast
-    text: Follow up dialogue
+    text: ' Hey! You remember what we talked about?'
+    imagePrefab: {fileID: 13539909091326971, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 2
+      enabled: 0
+  - id: 2
+    name: Bot Enthusiast
+    text: "Bots are made by people and sometimes people mess up. They\u2019re not
+      all-knowing, but they can have a slime ray if you so choose!"
     imagePrefab: {fileID: 13539909091326971, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -5075,7 +5114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2765248476228297709, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
       propertyPath: m_RootOrder

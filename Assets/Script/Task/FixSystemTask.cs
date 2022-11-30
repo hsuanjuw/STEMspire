@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using RPGM.Gameplay;
 
-public class FixShipTask : Task
+public class FixSystemTask : Task
 {
-    public GameObject blackScreen;
-    
+    public GameObject systemStatic;
+    public GameObject wheelStatic;
     public override void StartTask()
     {
         base.StartTask();
@@ -15,20 +15,20 @@ public class FixShipTask : Task
     public override void DoTask()
     {
         base.DoTask();
-        StartCoroutine(FixShip());
+        StartCoroutine(FixSystem());
     }
 
-    IEnumerator FixShip()
+    IEnumerator FixSystem()
     {
         FindObjectOfType<ScreenFader>().levelChangeAnimator.SetTrigger("FinaleFadeOut");
         yield return new WaitForSeconds(6f);
-        FindObjectOfType<PowerCoreColorChanger>().SetColor(PowerCoreColorChanger.CoreColor.Blue);
+        systemStatic.SetActive(false);
+        wheelStatic.SetActive(false);
         FindObjectOfType<ScreenFader>().levelChangeAnimator.SetTrigger("FinaleFadeIn");
-        
+
         DialogueSystem dialogueSystem = FindObjectOfType<DialogueSystem>();
         ConversationScript npcConversation = dialogueSystem.transform.GetChild(1).GetComponent<ConversationScript>();
-        Task _task = dialogueSystem.transform.Find("ConversationScript").transform.Find("StartFinaleTask").GetComponent<Task>();
+        Task _task = npcConversation.transform.GetComponentInChildren<Task>();
         dialogueSystem.StartDialogue(npcConversation, _task);
     }
-
 }

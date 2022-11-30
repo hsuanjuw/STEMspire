@@ -273,7 +273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 360343271454902142, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 374247888733318585, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_IsActive
@@ -481,7 +481,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: eb8ded253111ed84fb439ba15aa32e80, type: 3}
     - target: {fileID: 5748249657139659859, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6328115663522162821, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -800,6 +800,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &91415192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5748249657139659859, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+  m_PrefabInstance: {fileID: 91415162}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &91415193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 360343271454902142, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+  m_PrefabInstance: {fileID: 91415162}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &104382617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -884,6 +894,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerActive: 0
   sceneToLoad: 2
+--- !u!1 &144727604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 144727605}
+  - component: {fileID: 144727606}
+  m_Layer: 0
+  m_Name: Task
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &144727605
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144727604}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2089568440}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &144727606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144727604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5cae62a2df105440816ebf50816e84b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStartTask: 0
+  startTaskBtntxt: 
+  systemStatic: {fileID: 91415192}
+  wheelStatic: {fileID: 91415193}
 --- !u!1001 &155975175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1168,6 +1225,202 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &606100287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 606100288}
+  - component: {fileID: 606100289}
+  m_Layer: 0
+  m_Name: ConversationScript_BeforeGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &606100288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606100287}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.976979, y: -2.1207285, z: 1.4607432}
+  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
+  m_Children: []
+  m_Father: {fileID: 988719544}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &606100289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606100287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 480bd61063c82b146a9105160f69b0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - id: 14.1
+    name: Nanoi
+    text: Do you want advice on how to start the ship?
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: Yes
+      imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+      audio: {fileID: 0}
+      targetId: 14.2
+      enabled: 0
+    - name: 
+      text: No
+      imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+      audio: {fileID: 0}
+      targetId: 14.3
+      enabled: 0
+  - id: 14.2
+    name: Nanoi
+    text: I noticed you were having trouble with the control buttons.
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 14.2.1
+      enabled: 0
+  - id: 14.2.1
+    name: Nanoi
+    text: Whenever a symbol on the panel turns blue, you need to make sure the button
+      for that symbol is also blue.  Keep an eye on the timer too!
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: What about the other tasks?
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 14.4
+      enabled: 0
+    - name: 
+      text: "I\u2019ll keep that in mind."
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 14.7
+      enabled: 0
+  - id: 14.4
+    name: Nanoi
+    text: "Well, I\u2019m not quite sure about those myself. "
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 14.4.1
+      enabled: 0
+  - id: 14.4.1
+    name: R.C.
+    text: 'Nonsense. My algorithm has identified you as a reliable source of information.
+      I am sure any guidance you give will be correct. '
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 14.4.2
+      enabled: 0
+  - id: 14.4.2
+    name: R.C.
+    text: "Captain, start up the ship so Nanoi can see \rwhat\u2019s wrong."
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 14.3
+      enabled: 0
+  - id: 14.7
+    name: R.C.
+    text: What about the other tasks?
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 14.7.1
+      enabled: 0
+  - id: 14.7.1
+    name: Nanoi
+    text: "Well, I\u2019m not quite sure about those myself."
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 14.7.2
+      enabled: 0
+  - id: 14.7.2
+    name: R.C.
+    text: Nonsense. My algorithm has identified you as a reliable source of information.
+      I am sure any guidance you give will be correct.
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 14.7.3
+      enabled: 0
+  - id: 14.7.3
+    name: R.C.
+    text: "Captain, start up the ship so Nanoi can see \rwhat\u2019s wrong."
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 14.3
+      enabled: 0
+  - id: 14.3
+    name: 
+    text: 
+    imagePrefab: {fileID: 0}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options: []
 --- !u!1 &928453962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,6 +1531,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2089568440}
+  - {fileID: 606100288}
   - {fileID: 1610809917}
   m_Father: {fileID: 2077771520}
   m_RootOrder: 0
@@ -1358,6 +1612,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: timeRemaining
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: completionTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: timeAfterGameStart
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: systemSymbols.Array.data[0]
       value: 
       objectReference: {fileID: 91415182}
@@ -1410,9 +1676,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 91415186}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: leftSwitchTime
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: leftDangerLight
       value: 
       objectReference: {fileID: 91415187}
+    - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: rightSwitchTime
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: rightDangerLight
       value: 
@@ -1420,6 +1694,14 @@ PrefabInstance:
     - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: hintActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: completionTime
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: timeAfterGameStart
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: wheelIDs.Array.data[0]
@@ -1632,6 +1914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueNotRepeatable: 0
+  isClicked: 0
   characterPrefs: 0
 --- !u!212 &1576857128
 SpriteRenderer:
@@ -1771,7 +2054,7 @@ Transform:
   m_Children:
   - {fileID: 928453963}
   m_Father: {fileID: 988719544}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1610809918
 MonoBehaviour:
@@ -1788,9 +2071,9 @@ MonoBehaviour:
   items:
   - id: 14.3
     name: Nanoi
-    text: "You need to find someone else who is specialized in power cores to fix
-      everything else unless you want your ship to become a pile of scrap metal \rduring
-      take off."
+    text: "I fixed your displays. You need to find someone else who is specialized
+      in power cores to fix everything else unless you want your ship to become a
+      pile of scrap metal \rduring take off."
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1862,9 +2145,9 @@ MonoBehaviour:
       enabled: 0
   - id: 15.1
     name: R.C.
-    text: "My creators programmed me to take in data to build skill profiles. I use
-      these profiles to give recommendations to my user on which people are most
-      \rable to help."
+    text: "My creators programmed me to take in data to build profiles of locations.
+      I then use\r these profiles to give recommendations to my user on which areas
+      are most able to have\r qualified help. "
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1877,8 +2160,8 @@ MonoBehaviour:
       enabled: 0
   - id: 15.2
     name: R.C.
-    text: Based on the lack of reviews and other sources of data, Zun does not fit
-      the profile of a qualified engineer.
+    text: "Based on the lack of reviews and other sources of data, Zun does not fit
+      the profile of\r a qualified engineer."
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1900,6 +2183,20 @@ MonoBehaviour:
     text: "My creators programmed me to take in data to build skill profiles. I use
       these profiles to give recommendations to my user on which people are most
       \rable to help."
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 15.3.1
+      enabled: 0
+  - id: 15.3.1
+    name: R.C.
+    text: "Based on visual data, the side district does not have any qualified\r
+      engineers."
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -2068,7 +2365,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.976979, y: -2.1207285, z: 1.4607432}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
-  m_Children: []
+  m_Children:
+  - {fileID: 144727605}
   m_Father: {fileID: 988719544}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2101,154 +2399,9 @@ MonoBehaviour:
       enabled: 0
   - id: 14.1
     name: Nanoi
-    text: "Turn on the power and I\u2019ll see what\u2019s going on. Do you want
-      advice on how to start the ship?"
+    text: "I noticed there were some issues with the system control buttons. Let
+      me deal with\r that real quick\u2026\r"
     imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: Yes
-      imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
-      audio: {fileID: 0}
-      targetId: 14.2
-      enabled: 0
-    - name: 
-      text: No
-      imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
-      audio: {fileID: 0}
-      targetId: 14.3
-      enabled: 0
-  - id: 14.2
-    name: Nanoi
-    text: 'I noticed there were some issues with the system control buttons. '
-    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: 
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 14.2.1
-      enabled: 0
-  - id: 14.2.1
-    name: Nanoi
-    text: Whenever a symbol on the panel turns blue, you need to make sure the button
-      for that symbol is also blue.  Keep an eye on the timer too!
-    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: What about the other tasks?
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 14.4
-      enabled: 0
-    - name: 
-      text: "I\u2019ll keep that in mind."
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 14.7
-      enabled: 0
-  - id: 14.4
-    name: Nanoi
-    text: "Well, I\u2019m not quite sure about those myself. "
-    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: 
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 14.4.1
-      enabled: 0
-  - id: 14.4.1
-    name: R.C.
-    text: 'Nonsense. My algorithm has identified you as a reliable source of information.
-      I am sure any guidance you give will be correct. '
-    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: 
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 14.4.2
-      enabled: 0
-  - id: 14.4.2
-    name: R.C.
-    text: "Captain, start up the ship so Nanoi can see \rwhat\u2019s wrong."
-    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: 
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 14.3
-      enabled: 0
-  - id: 14.7
-    name: R.C.
-    text: What about the other tasks?
-    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: 
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 14.7.1
-      enabled: 0
-  - id: 14.7.1
-    name: Nanoi
-    text: "Well, I\u2019m not quite sure about those myself."
-    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: 
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 14.7.2
-      enabled: 0
-  - id: 14.7.2
-    name: R.C.
-    text: Nonsense. My algorithm has identified you as a reliable source of information.
-      I am sure any guidance you give will be correct.
-    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: 
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 14.7.3
-      enabled: 0
-  - id: 14.7.3
-    name: R.C.
-    text: "Captain, start up the ship so Nanoi can see \rwhat\u2019s wrong."
-    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: 
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 14.3
-      enabled: 0
-  - id: 14.3
-    name: 
-    text: 
-    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []

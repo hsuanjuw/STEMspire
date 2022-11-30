@@ -1438,10 +1438,79 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
+  - id: 1
+    name: Zun
+    text: "Oh! You have a Voyager Model 3... top of the line controls, state of the\r
+      art enginine, and the newest power source. Wow... you weren't exaggerating
+      about the damage.\r You\u2019re lucky you made it here without any issues."
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: Advice would be great.
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 1.1
+      enabled: 0
+    - name: 
+      text: I think I know how it works.
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 2
+      enabled: 0
+  - id: 1.1
+    name: Zun
+    text: Okay. You can use the levers to make sure the electricity makes it to the
+      power core.
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 1.1.1
+      enabled: 0
+  - id: 1.1.1
+    name: Zun
+    text: "You also have to turn on the different systems at the correct time by
+      pushing the button\r whenever the corresponding symbol lights up blue."
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 1.1.2
+      enabled: 0
+  - id: 1.1.2
+    name: Zun
+    text: "Finally, in order to turn off the emergency\r systems, you need to press
+      the buttons on the screen in numerical order. Got it?"
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: Yep!
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 2
+      enabled: 0
+    - name: 
+      text: Can you run that by me again?
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 1.1
+      enabled: 0
   - id: 2
     name: Zun
-    text: I notice a couple repairs straight away, so I'll get started with those.
-      Give me a moment.
+    text: "I notice a couple repairs straight away, so I'll get started with those.
+      Give me a\r moment."
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1729,112 +1798,44 @@ MonoBehaviour:
   items:
   - id: 0
     name: Zun
-    text: Alright! I fixed the power core, that should be good as new.
+    text: "That did it! You should be good to go!\r"
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - name: You
-      text: Thank you so much!
+      text: 'Thank you so much! '
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 1
+      enabled: 0
+  - id: 1
+    name: Zun
+    text: "No problem! The issue seems complicated, but is actually very simple to
+      fix once you\r learn how."
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: No way! I couldn't have done that without you!
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 2
+      enabled: 0
+    - name: 
+      text: Oh alright, if you say so!
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
   - id: 2
-    name: Zun
-    text: No problem! The issue seems complicated, but is actually very simple to
-      fix once you learn how.
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: You
-      text: No way! I couldn't have done that without you!
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 5
-      enabled: 0
-    - name: You
-      text: Oh alright, if you say so!
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 5
-      enabled: 0
-  - id: 5
-    name: Zun
-    text: I'll power up the ship to make the last few repairs. I could use your help
-      on the different modules, do you want instructions on what to do?
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: You
-      text: Advice would be great.
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 5.1
-      enabled: 0
-    - name: You
-      text: I think I know how it works.
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 6
-      enabled: 0
-  - id: 6
-    name: Zun
-    text: Well then! Let's get started!
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    name: 
+    text: 
+    imagePrefab: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
-  - id: 5.1
-    name: Zun
-    text: Okay. You can use the levers on the left to make sure the electricity makes
-      it to the power core.
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: 
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 5.2
-      enabled: 0
-  - id: 5.2
-    name: Zun
-    text: You also have to turn on the different systems in the top right by making
-      sure the color of the buttons match  the screen above.
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: 
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 5.3
-      enabled: 0
-  - id: 5.3
-    name: Zun
-    text: Finally, in order to turn off the emergency systems, click the buttons
-      in the bottom right in ascending order. Got it?
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: You
-      text: Yep!
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 6
-      enabled: 0
-    - name: You
-      text: Can you run that by me again?
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 5.1
-      enabled: 0
 --- !u!1001 &1315811405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2057,7 +2058,6 @@ MonoBehaviour:
   isStartTask: 0
   startTaskBtntxt: Continue
   blackScreen: {fileID: 704023566}
-  fixTime: 6
 --- !u!1 &1966294343
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,7 +2103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - id: 0
+  - id: 1
     name: Zun
     text: That's the last repair! You're all set.
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
@@ -2114,76 +2114,75 @@ MonoBehaviour:
       text: 
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
-      targetId: 3
+      targetId: 1.1
       enabled: 0
-  - id: 3
+  - id: 1.1
     name: Zun
-    text: Well, I have to get back. I have more work to do. Have a safe launch and
-      good luck in your travels!
+    text: "Well, I have to get back. I have more work to do. Have a safe launch and
+      good luck in\r your travels!"
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options:
     - name: 
-      text: 
+      text: "Wait! Before you leave, I wanted to talk to you about earlier\u2026"
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 2.1
+      enabled: 0
+    - name: 
+      text: Thanks.
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 2.2
+      enabled: 0
+  - id: 2.1
+    name: Zun
+    text: "Yes?\r"
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: I wanted to apoligze about how R.C. treated you.
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 3
+      enabled: 0
+    - name: 
+      text: "I\u2019m sorry I didn\u2019t stop R.C. from making those comments earlier\u2026"
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 3
+      enabled: 0
+  - id: 2.2
+    name: Zun
+    text: "Well, if you\u2019re sure that\u2019s all\u2026\r"
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: "Actually, wait. About earlier\u2026"
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 2.1
+      enabled: 0
+    - name: 
+      text: Bye.
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 4
       enabled: 0
+  - id: 3
+    name: Zun
+    text: "Thank you for your apology. Most people pretend stuff like that doesn\u2019t
+      happen."
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options: []
   - id: 4
-    name: Zun
-    text: Oh, wait! One last thing!
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: 
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 1
-      enabled: 0
-  - id: 1
-    name: Zun
-    text: Now that you are ready to leave, what are you going to do with R.C.? If
-      you want, I could try teaching it more?
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: What would you be teaching it?
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 2
-      enabled: 0
-    - name: 
-      text: I was thinking of scrapping it.
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 5
-      enabled: 0
-  - id: 2
-    name: Zun
-    text: I would be updating the data to make it more open minded. Perhaps it will
-      be able to help teach others.
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: Well, that sounds like a good idea. RC, go with Zun.
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 5
-      enabled: 0
-    - name: 
-      text: I was planning on scrapping it.
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
-      audio: {fileID: 0}
-      targetId: 5
-      enabled: 0
-  - id: 5
     name: 
     text: 
     imagePrefab: {fileID: 0}
@@ -2214,12 +2213,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: timeRemaining
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: completionTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: hintTextActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: systemInfoActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: timeAfterGameStart
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: systemSymbols.Array.data[0]
@@ -2282,9 +2293,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: leftSwitchTime
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: leftDangerLight
       value: 
       objectReference: {fileID: 612175632}
+    - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: rightSwitchTime
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: rightDangerLight
       value: 
@@ -2294,8 +2313,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: completionTime
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: hintTextActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: timeAfterGameStart
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: wheelIDs.Array.data[0]

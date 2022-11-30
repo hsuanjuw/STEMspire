@@ -603,6 +603,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1102287245}
     - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: timeRemaining
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: completionTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: timeAfterGameStart
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529060, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: systemSymbols.Array.data[0]
       value: 
       objectReference: {fileID: 829924342}
@@ -639,6 +651,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 593489169}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: fillSpeed
+      value: 0.115
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: rightFill
       value: 
       objectReference: {fileID: 1544387183}
@@ -651,13 +667,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1096685060}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: leftSwitchTime
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: leftDangerLight
       value: 
       objectReference: {fileID: 277157928}
     - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: rightSwitchTime
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: rightDangerLight
       value: 
       objectReference: {fileID: 1131537912}
+    - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: completionTime
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: timeAfterGameStart
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5171305791500529062, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: wheelIDs.Array.data[0]
       value: 
