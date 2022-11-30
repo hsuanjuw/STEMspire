@@ -1441,28 +1441,8 @@ MonoBehaviour:
   - id: 1
     name: Zun
     text: "Oh! Your spaceship is a Voyager Model 3... state of the\r art engine and
-      a next-gen power source. Wow... you weren't exaggerating about the damage.\r
-      You\u2019re lucky you made it here without any issues."
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: Advice would be great.
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 1.1
-      enabled: 0
-    - name: 
-      text: I think I know how it works.
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 2
-      enabled: 0
-  - id: 1.1
-    name: Zun
-    text: Okay. You can use the levers to make sure the electricity makes it to the
-      power core.
+      a next-gen power source. Shame it is so damaged.\r You\u2019re lucky you made
+      it here without any issues."
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1471,41 +1451,7 @@ MonoBehaviour:
       text: 
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
-      targetId: 1.1.1
-      enabled: 0
-  - id: 1.1.1
-    name: Zun
-    text: "You also have to turn on the different systems at the correct time by
-      pushing the button\r whenever the corresponding symbol lights up blue."
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: 
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 1.1.2
-      enabled: 0
-  - id: 1.1.2
-    name: Zun
-    text: "Finally, in order to turn off the emergency\r systems, you need to press
-      the buttons on the screen in numerical order. Got it?"
-    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
-    audio: {fileID: 0}
-    quest: {fileID: 0}
-    options:
-    - name: 
-      text: Yep!
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
       targetId: 2
-      enabled: 0
-    - name: 
-      text: Can you run that by me again?
-      imagePrefab: {fileID: 0}
-      audio: {fileID: 0}
-      targetId: 1.1
       enabled: 0
   - id: 2
     name: Zun
@@ -1567,6 +1513,176 @@ MonoBehaviour:
   looping: 0
   finishedLoop: 0
   nextPattern: 0
+--- !u!1 &911607308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 911607309}
+  - component: {fileID: 911607310}
+  m_Layer: 0
+  m_Name: ConversationScript_Help
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &911607309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911607308}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.976979, y: -2.1207285, z: 1.4607432}
+  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
+  m_Children: []
+  m_Father: {fileID: 1643820082}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &911607310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911607308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 480bd61063c82b146a9105160f69b0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - id: 0
+    name: Zun
+    text: Ok. What can I help you with?
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: You
+      text: I have questions about how I can help.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 1
+      enabled: 0
+    - name: You
+      text: Nothing
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: END
+      enabled: 0
+  - id: 1
+    name: Zun
+    text: Do you want to know how to help with the Power switches or how to help
+      with the System Symbols & Sequence?
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: I could use more information about the Power switches.
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: POW1
+      enabled: 0
+    - name: 
+      text: I want to know more about the System Symbols & Sequence.
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: SYS1
+      enabled: 0
+  - id: POW1
+    name: Zun
+    text: For the Power switches, use the levers on the left to make sure the electricity
+      makes it to the power core. If the timers are red, flip the switches!
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: You
+      text: I think that's all I need to know.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: END
+      enabled: 0
+    - name: You
+      text: I have more questions.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 1
+      enabled: 0
+  - id: SYS1
+    name: Zun
+    text: 'Which part do you want me to talk about: the System Symbols or the Number
+      Sequence?'
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: You
+      text: The Symbols, please.
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: SEQ1
+      enabled: 0
+    - name: You
+      text: What should I do for the Sequence?
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 0
+      enabled: 0
+  - id: SYS2
+    name: Zun
+    text: Looking in the top right, turn on the different systems by making sure
+      the buttons and symbols on the monitor are the same color.
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: I want to ask about something else.
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 1
+      enabled: 0
+    - name: 
+      text: Ok let me see if I got it.
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: END
+      enabled: 0
+  - id: SEQ1
+    name: Zun
+    text: In order to turn off the emergency sequence, click the buttons in the bottom
+      right in ascending order.
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: I think I got it.
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: END
+      enabled: 0
+    - name: 
+      text: I have a different question.
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 1
+      enabled: 0
+  - id: END
+    name: Zun
+    text: 
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options: []
 --- !u!114 &932598042 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5171305791500529061, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
@@ -1798,7 +1914,7 @@ MonoBehaviour:
   items:
   - id: 0
     name: Zun
-    text: "That did it! You should be good to go!\r"
+    text: Alright! I fixed the power core, it should work as if it was brand new.
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1809,10 +1925,16 @@ MonoBehaviour:
       audio: {fileID: 0}
       targetId: 1
       enabled: 0
+    - name: You
+      text: Was fixing it a big problem?
+      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 1
+      enabled: 0
   - id: 1
     name: Zun
-    text: "No problem! The issue seems complicated, but is actually very simple to
-      fix once you\r learn how."
+    text: "It was no problem at all! The issue seems complicated, but is actually
+      very simple to fix once you\r learn how."
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1824,15 +1946,17 @@ MonoBehaviour:
       targetId: 2
       enabled: 0
     - name: 
-      text: Oh alright, if you say so!
+      text: Oh alright, if you say so.
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
   - id: 2
-    name: 
-    text: 
-    imagePrefab: {fileID: 0}
+    name: Zun
+    text: I'll power up the ship to make the last few repairs. I could use your help
+      with the different modules, so let's work on this together. If you have any
+      questions, just talk to me again.
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
@@ -1997,6 +2121,7 @@ Transform:
   m_Children:
   - {fileID: 794762430}
   - {fileID: 1180850645}
+  - {fileID: 911607309}
   - {fileID: 1966294344}
   m_Father: {fileID: 869942610}
   m_RootOrder: 0
@@ -2088,7 +2213,7 @@ Transform:
   m_Children:
   - {fileID: 1563672405}
   m_Father: {fileID: 1643820082}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1966294345
 MonoBehaviour:
@@ -2131,7 +2256,7 @@ MonoBehaviour:
       targetId: 2.1
       enabled: 0
     - name: 
-      text: Thanks.
+      text: Thanks, I think that's it.
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 2.2
@@ -2163,7 +2288,7 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - name: 
-      text: "Actually, wait. About earlier\u2026"
+      text: "Actually, wait. I want to talk about earlier\u2026"
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 2.1
