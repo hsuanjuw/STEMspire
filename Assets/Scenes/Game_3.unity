@@ -1952,13 +1952,13 @@ MonoBehaviour:
       text: The Symbols, please.
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: SEQ1
+      targetId: SYS2
       enabled: 0
     - name: You
       text: What should I do for the Sequence?
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 0
+      targetId: SEQ1
       enabled: 0
   - id: SYS2
     name: Zun
