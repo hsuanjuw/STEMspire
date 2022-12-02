@@ -106,6 +106,7 @@ public class MiniGameManager : MonoBehaviour
         if (currentStatus == GameStatus.InProgress && AllMinigameStatus() == GameStatus.Completed)
         {
             currentStatus = GameStatus.Completed;
+            FindObjectOfType<FinaleNpcHandler>().MakeNotClickable();
             StartLeaveDialogue();
         }
     }

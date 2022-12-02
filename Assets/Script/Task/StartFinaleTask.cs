@@ -15,7 +15,6 @@ public class StartFinaleTask : Task
         FindObjectOfType<MiniGameManager>().GameStart();
         FindObjectOfType<PityTimer>().StartTimer();
         FindObjectOfType<FinaleNpcHandler>().MakeClickable();
-        
     }
 
     
