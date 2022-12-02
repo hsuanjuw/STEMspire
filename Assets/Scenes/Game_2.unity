@@ -2223,14 +2223,27 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - name: 
-      text: R.C., wait on the ship.
+      text: 
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      audio: {fileID: 0}
+      targetId: 15.2.1
+      enabled: 0
+  - id: 15.2.1
+    name: Nanoi
+    text: "This is ridiculous. I\u2019m going back to my shop."
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: R.C., wait on the ship.
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 16
       enabled: 0
     - name: 
       text: "R.C., we\u2019re going to find Zun. Keep quiet and come with me."
-      imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
+      imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 16
       enabled: 0
@@ -2258,13 +2271,27 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 15.3.2
+      enabled: 0
+  - id: 15.3.2
+    name: Nanoi
+    text: "This is ridiculous. I\u2019m going back to my shop."
+    imagePrefab: {fileID: 2765248476228297708, guid: 62d834cecef46904abe724d4c2ab21d8, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
       text: R.C., wait on the ship.
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 16
       enabled: 0
     - name: 
-      text: "R.C., we\u2019re going to find Zun. Keep quiet and come with me."
+      text: "R.C., we\u2019re going to the side district. Keep quiet and come with
+        me."
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 16

@@ -1062,8 +1062,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - id: 1
+  - id: 0
     name: Robot Companion
+    text: Emergency. Robot companion designation R.C. booting up.
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 1
+      enabled: 0
+  - id: 1
+    name: R.C.
     text: Captain, the ship is damaged. We have docked at the nearest space port
       for repairs.
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
@@ -1078,8 +1091,8 @@ MonoBehaviour:
       enabled: 0
   - id: 2
     name: R.C.
-    text: The ship sustained major damage from an asteroid collision. As your personal
-      robot companion, I recommend getting an expert to aid in repairs.
+    text: The ship sustained major damage from an asteroid collision.  I am scanning
+      the ship for specifics.
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1092,8 +1105,23 @@ MonoBehaviour:
       enabled: 0
   - id: 3
     name: R.C.
-    text: "The probability of finding\r such an expert is highest in the Main Commercial
-      District."
+    text: "The damage I found is as follows: the power core is no longer stable and\r
+      several monitors have parts that need to be replaced."
+    imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 4
+      enabled: 0
+  - id: 4
+    name: R.C.
+    text: As your personal robot companion, I recommend getting an expert to aid
+      in repairs. The probability of finding such an expert is highest in the Main
+      Commercial District.
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}

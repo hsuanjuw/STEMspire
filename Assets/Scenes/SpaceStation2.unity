@@ -414,7 +414,7 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - name: 
-      text: I think I understand
+      text: I think I understand.
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 5
