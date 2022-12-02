@@ -19,6 +19,8 @@ public class FinaleNpcHandler : MonoBehaviour
 
     private Task task;
 
+    private bool clickable = false;
+
     private void Awake()
     {
         //PlayerPrefs.SetInt("Game3_DialogueStarted", 0);
@@ -33,13 +35,20 @@ public class FinaleNpcHandler : MonoBehaviour
 
         // See if there is task object in the children
         task = this.GetComponentInChildren<Task>();
-
     }
 
+    public void MakeClickable()
+    {
+        clickable = true;
+    }
 
+    public void MakeNotClickable()
+    {
+        clickable = false;
+    }
     public void OnMouseDown()
     {
-        if (!dialogueSystem.dialogueOpened)
+        if (!dialogueSystem.dialogueOpened && clickable)
         {
                 dialogueSystem.StartDialogue(conversations[0], task);
                 // Destroy interaction icon if is triggered
