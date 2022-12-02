@@ -31,6 +31,6 @@ public class LoadEndTask : Task
         {
             FindObjectOfType<RobotMovement>().ChangeMovement(CharacterMovement.MovementType.FollowEngineer);
         }
-
+        FindObjectOfType<ButtonFlash>().MakeClickable();
     } 
 }

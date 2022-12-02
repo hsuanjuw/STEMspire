@@ -107,7 +107,6 @@ public class MiniGameManager : MonoBehaviour
         {
             currentStatus = GameStatus.Completed;
             StartLeaveDialogue();
-            FindObjectOfType<ButtonFlash>().MakeClickable();
         }
     }
 
