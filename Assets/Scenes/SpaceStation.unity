@@ -999,8 +999,9 @@ MonoBehaviour:
       targetId: 2.6
       enabled: 0
   - id: 2.5
-    name: Nanoi
-    text: We had a collision with an astroid and our ship is in drastic need of repairs.
+    name: R.C.
+    text: We had a collision with an asteroid and our ship is in drastic need of
+      repairs.
     imagePrefab: {fileID: 5508742423013240914, guid: 0550bd0136fdf2644a766a507a229aab, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
