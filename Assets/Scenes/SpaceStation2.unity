@@ -327,7 +327,7 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - name: 
-      text: "Not great. RC was being\u2026"
+      text: "Not great. R.C. was being\u2026"
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 2.1
@@ -347,13 +347,13 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - name: 
-      text: " I don\u2019t understand why RC is acting like this."
+      text: " I don\u2019t understand why R.C. is acting like this."
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
     - name: 
-      text: Can you fix RC?
+      text: Can you fix R.C.?
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: 3.2
@@ -367,13 +367,13 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - name: 
-      text: "I don\u2019t understand why RC is acting like this."
+      text: "I don\u2019t understand why R.C. is acting like this."
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 3.1
       enabled: 0
     - name: 
-      text: Can you fix RC?
+      text: Can you fix R.C.?
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 3.2
@@ -648,13 +648,13 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - name: You
-      text: "I\u2019m sorry about R.C. I will be dealing with it later."
+      text: "I\u2019m sorry about R.C.. I will be dealing with it later."
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 2
       enabled: 0
     - name: You
-      text: "We were wrong and I\u2019m sorry, It won\u2019t happen again."
+      text: "We were wrong and I\u2019m sorry. It won\u2019t happen again."
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 2
@@ -1332,7 +1332,21 @@ MonoBehaviour:
   items:
   - id: 1
     name: Bot Enthusiast
-    text: Follow up dialogue
+    text: 'Hey! You remember what we talked about? '
+    imagePrefab: {fileID: 13539909091326971, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 2
+      enabled: 0
+  - id: 2
+    name: Bot Enthusiast
+    text: "Bots are made by people and sometimes people mess up. They\u2019re not
+      all-knowing, but they can have a slime ray if you so choose! "
     imagePrefab: {fileID: 13539909091326971, guid: 894f44c763b8aad4295df02576132b0b, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
