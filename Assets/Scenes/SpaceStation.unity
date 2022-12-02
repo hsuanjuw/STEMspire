@@ -278,6 +278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: restaurant guest 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2701303623248345918, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2701303623248345919, guid: 79f831df087a1ed49982d81cebc94f84, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4207,6 +4211,10 @@ PrefabInstance:
     - target: {fileID: 5004795749433911940, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
       propertyPath: m_Name
       value: restaurant guest 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004795749433911941, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5004795749433912058, guid: 5e6894ea52da87b4ba9e7f8912a2d233, type: 3}
       propertyPath: m_RootOrder
