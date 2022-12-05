@@ -2197,7 +2197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueNotRepeatable: 0
   isClicked: 0
-  characterPrefs: 2
+  characterPrefs: 3
 --- !u!114 &602021271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2492,7 +2492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueNotRepeatable: 0
   isClicked: 0
-  characterPrefs: 1
+  characterPrefs: 2
 --- !u!114 &684590252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3505,7 +3505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueNotRepeatable: 0
   isClicked: 0
-  characterPrefs: 0
+  characterPrefs: 1
 --- !u!114 &1168963002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3602,7 +3602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueNotRepeatable: 0
   isClicked: 0
-  characterPrefs: 3
+  characterPrefs: 4
 --- !u!114 &1180670152
 MonoBehaviour:
   m_ObjectHideFlags: 0
