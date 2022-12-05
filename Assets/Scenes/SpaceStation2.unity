@@ -648,24 +648,95 @@ MonoBehaviour:
     quest: {fileID: 0}
     options:
     - name: You
-      text: "I\u2019m sorry about R.C.. I will be dealing with it later."
+      text: "About that\u2026"
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 2
+      targetId: APOLOGYTOZUN
       enabled: 0
     - name: You
-      text: "We were wrong and I\u2019m sorry. It won\u2019t happen again."
+      text: "But I didn\u2019t say that!"
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
-      targetId: 2
+      targetId: ZUNPUSHBACK
       enabled: 0
-  - id: 2
+  - id: APOLOGYTOZUN
+    name: Zun
+    text: Yes?
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: "I\u2019m sorry about R.C. I will be dealing with it later. "
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: AGREETOHELP
+      enabled: 0
+    - name: 
+      text: "We were wrong and I\u2019m sorry. It won\u2019t happen again."
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: AGREETOHELP
+      enabled: 0
+  - id: ZUNPUSHBACK
+    name: Zun
+    text: But you went along with your robot when it said that.
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: "I see your point and I want to say\u2026"
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: APOLOGYTOZUN
+      enabled: 0
+    - name: 
+      text: I just wanted to fix my ship!
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: PLAYERINDENIAL
+      enabled: 0
+  - id: AGREETOHELP
     name: Zun
     text: "Okay then, let\u2019s go."
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
     options: []
+  - id: PLAYERINDENIAL
+    name: Zun
+    text: "Look\u2026 I don\u2019t want to sound accusatory, but your actions were
+      upsetting to me."
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: 
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: PLAYERINDENIAL2
+      enabled: 0
+  - id: PLAYERINDENIAL2
+    name: Zun
+    text: "Do you see where I\u2019m coming from?"
+    imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - name: 
+      text: "I do. And about what happened\u2026"
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: APOLOGYTOZUN
+      enabled: 0
+    - name: 
+      text: "\u2026"
+      imagePrefab: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: APOLOGYTOZUN
+      enabled: 0
 --- !u!1001 &486870068
 PrefabInstance:
   m_ObjectHideFlags: 0
