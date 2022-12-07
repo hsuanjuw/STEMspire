@@ -1252,6 +1252,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7bd506d33af5294bb081a1f9a68f2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &612175636 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3150603906808815225, guid: 1651340ba7dd98d4fb1dc35f38e8d7d7, type: 3}
+  m_PrefabInstance: {fileID: 612175606}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &704023566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2776,6 +2787,10 @@ PrefabInstance:
       propertyPath: ErrorTxt
       value: 
       objectReference: {fileID: 612175609}
+    - target: {fileID: 5171305791500529057, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
+      propertyPath: LaunchTxt
+      value: 
+      objectReference: {fileID: 612175636}
     - target: {fileID: 5171305791500529057, guid: 19937c977957e53449a3034ed3b4541a, type: 3}
       propertyPath: CountdownTxt
       value: 

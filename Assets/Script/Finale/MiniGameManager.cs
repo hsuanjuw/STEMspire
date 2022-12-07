@@ -47,7 +47,7 @@ public class MiniGameManager : MonoBehaviour
     [SerializeField] private int cameraShakeSpeed = 3;
     [SerializeField] private Text CountdownTxt;
     [SerializeField] private Text ErrorTxt;
-
+    [SerializeField] private Text LaunchTxt;
 
     void Awake()
     {
@@ -164,10 +164,11 @@ public class MiniGameManager : MonoBehaviour
                 CountdownTxt.text = i.ToString();
                 yield return new WaitForSeconds(1f);
             }
-            CountdownTxt.text = "Launch!";
+            CountdownTxt.gameObject.SetActive(false);
+            LaunchTxt.gameObject.SetActive(true);
             FindObjectOfType<SpaceScrolling>().currentScroll = SpaceScrolling.ScrollType.Up;
             yield return new WaitForSeconds(1f);
-            CountdownTxt.gameObject.SetActive(false);
+            LaunchTxt.gameObject.SetActive(false);
             CallSuccess();
         }
     }
