@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 public class InitWithDefault : MonoBehaviour
 {
+    /// <summary>
+    /// Initial Default when starting Unity Analytics   
+    /// </summary>
     async void Start()
     {
         try

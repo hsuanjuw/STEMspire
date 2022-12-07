@@ -16,7 +16,7 @@ public class Analytic : MonoBehaviour
     /// Type 5. Includes eventname, time, npcName
     /// 
     /// Events included:
-    /// Type 1: GameStart, EnterSpaceStation, EnterSpaceStation2
+    /// Type 1: GameStart, EnterSpaceStation, EnterSpaceStation2, minigamePassed
     /// Type 2: LaunchBtnPressedCount
     /// Type 3: DialogueChoices
     /// Type 4: EnvirObjClicked

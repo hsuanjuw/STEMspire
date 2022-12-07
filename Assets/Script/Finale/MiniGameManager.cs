@@ -245,6 +245,7 @@ public class MiniGameManager : MonoBehaviour
             lightningBalls.StopSpawning();
         FindObjectOfType<PowerCoreExplosion>().ResetLightning();
         yield return new WaitForSeconds(3f);
+        analytic.SaveData("minigamePassed", Time.time);
         FindObjectOfType<ScreenFader>().SwitchScene("Thanks");
     }
     private IEnumerator Restart()
