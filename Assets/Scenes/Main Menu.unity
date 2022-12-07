@@ -513,7 +513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: v 12.7.2
+  m_text: v 12.7.3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1ba20f6add4bed4f813d6e6bbcff30e, type: 2}
   m_sharedMaterial: {fileID: 7802801897932703688, guid: c1ba20f6add4bed4f813d6e6bbcff30e, type: 2}
@@ -1267,7 +1267,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 436987069}
         m_TargetAssemblyTypeName: MusicPlayer, Assembly-CSharp
-        m_MethodName: StartLoweringVolume
+        m_MethodName: SetFinaleMusic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2063,10 +2063,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allSprites:
   - {fileID: 21300000, guid: 2876926e3bd2883449150a63f6d0f6bc, type: 3}
-  - {fileID: 21300000, guid: cebd30ae1b6cda843aba8eca38f4b954, type: 3}
+  - {fileID: 21300000, guid: b5934730df26a1c4e84ac808fed5577a, type: 3}
   - {fileID: 21300000, guid: 8e7eeeee415e68e4db0c9d1cf7d6cbfa, type: 3}
   renderPoint: {fileID: 459179851}
-  displayTime: 2
+  displayTime: 3
   playOnFinish:
     m_PersistentCalls:
       m_Calls:
@@ -2082,6 +2082,35 @@ MonoBehaviour:
           m_StringArgument: Game
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 436987069}
+        m_TargetAssemblyTypeName: MusicPlayer, Assembly-CSharp
+        m_MethodName: StartLoweringVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _indexEvents:
+  - frame: 1
+    _event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1945984248}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 5fb52dfc92d50324baccc69e622704dc, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &644572140
 Transform:
   m_ObjectHideFlags: 0
@@ -4803,6 +4832,11 @@ Transform:
   m_Father: {fileID: 1611276287}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1945984248 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8474406664293791714, guid: 83aad084b475c7947b47e381ddb2e435, type: 3}
+  m_PrefabInstance: {fileID: 8474406663856903003}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1967417816
 GameObject:
   m_ObjectHideFlags: 0
@@ -5617,6 +5651,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8474406664293791718, guid: 83aad084b475c7947b47e381ddb2e435, type: 3}
+      propertyPath: finaleMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: bccce98752fce254db259362db6964d4, type: 3}
     - target: {fileID: 8474406664293791719, guid: 83aad084b475c7947b47e381ddb2e435, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

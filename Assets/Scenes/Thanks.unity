@@ -1183,7 +1183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 74.5}
+  m_AnchoredPosition: {x: 0, y: 63.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1471979426
@@ -1484,7 +1484,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 32.7}
+  m_AnchoredPosition: {x: 0, y: 24.5}
   m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1642439644
@@ -1653,12 +1653,19 @@ MonoBehaviour:
     "Space X-plorers"
     Kevin MacLeod
 
+    "Wretched Destroyer" Kevin MacLeod
+
     incompetech.com
 
 
-    "Space Chillout" penguinmusic
+    "Space
+    Chillout" penguinmusic
 
-    pixabay.com/users/penguinmusic-24940186/'
+    pixabay.com/users/penguinmusic-24940186/
+
+
+    Additional
+    sound effects from https://www.zapsplat.com'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d91ae82e6c5c0ba428eba9d70e816423, type: 2}
   m_sharedMaterial: {fileID: 4377840786494701171, guid: d91ae82e6c5c0ba428eba9d70e816423, type: 2}
