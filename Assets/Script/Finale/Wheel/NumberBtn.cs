@@ -25,6 +25,7 @@ public class NumberBtn : MonoBehaviour
             else SetRed();
             wheel.ButtonClicked(num);
         }
+        else if (wheel.currentStatus == MiniGameManager.GameStatus.Completed) ;
         else SetYellow();
     }
 
