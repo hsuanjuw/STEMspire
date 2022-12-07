@@ -5491,7 +5491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2885033665884380753, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
       propertyPath: items.Array.data[0].text
-      value: Attention! Outdoor seating is not avaliable at the Gravi-Tea.
+      value: Attention! Outdoor seating is not available at the Gravi-Tea.
       objectReference: {fileID: 0}
     - target: {fileID: 2985492060564425627, guid: 3d2a94b7c68284b4ebb555fd7465719c, type: 3}
       propertyPath: m_LocalPosition.x
