@@ -161,6 +161,7 @@ public class Wheel : MonoBehaviour
         {
             wheelIDs[i].GetComponent<SpriteRenderer>().color = Color.green;
         }
+        FindObjectOfType<Power>().fillSpeed *= 1.4f;
     }
     public void Fail()
     {

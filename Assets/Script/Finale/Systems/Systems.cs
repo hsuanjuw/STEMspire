@@ -173,6 +173,8 @@ public class Systems : MonoBehaviour
         {
             systemSymbols[i].GetComponent<Image>().color = Color.green;
         }
+
+        FindObjectOfType<Power>().fillSpeed *= 1.4f;
     }
     public void EndGame()
     {
