@@ -953,7 +953,8 @@ MonoBehaviour:
       targetId: 2.4
       enabled: 0
     - name: 
-      text: "I\u2019m not exactly sure. The monitors aren\u2019t working properly."
+      text: "I\u2019m not exactly sure. I think the monitors aren\u2019t working
+        properly?"
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 2.5
@@ -974,7 +975,8 @@ MonoBehaviour:
       targetId: 2.4
       enabled: 0
     - name: 
-      text: "I\u2019m not exactly sure. The monitors aren\u2019t working properly."
+      text: "I\u2019m not exactly sure. I think the monitors aren\u2019t working
+        properly?"
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 2.5
@@ -993,7 +995,7 @@ MonoBehaviour:
       targetId: 2.5
       enabled: 0
     - name: 
-      text: Perhaps it would be best to show you
+      text: Perhaps it would be best to show you?
       imagePrefab: {fileID: 6726699697676492323, guid: 82a5df034d9f35a4cba09de3a8fd00f3, type: 3}
       audio: {fileID: 0}
       targetId: 2.6

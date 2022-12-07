@@ -21,6 +21,7 @@ public class LoadEndTask : Task
         //FindObjectOfType<ScreenFader>().SwitchScene("Thanks");
         FindObjectOfType<EngineerMovement>().ChangeMovement(CharacterMovement.MovementType.Hide);
         //SetRobotStatus();
+        FindObjectOfType<ButtonFlash>().MakeClickable();
     }
     private void SetRobotStatus()
     {
@@ -31,6 +32,5 @@ public class LoadEndTask : Task
         {
             FindObjectOfType<RobotMovement>().ChangeMovement(CharacterMovement.MovementType.FollowEngineer);
         }
-        FindObjectOfType<ButtonFlash>().MakeClickable();
     } 
 }
