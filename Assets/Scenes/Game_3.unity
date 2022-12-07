@@ -1902,8 +1902,8 @@ MonoBehaviour:
       enabled: 0
   - id: 1
     name: Zun
-    text: Do you want to know how to help with the Power switches or how to help
-      with the System Symbols & Sequence?
+    text: Do you want to know how to help with the Power switches or the two modules
+      on the right side?
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
@@ -1915,7 +1915,7 @@ MonoBehaviour:
       targetId: POW1
       enabled: 0
     - name: 
-      text: I want to know more about the System Symbols & Sequence.
+      text: I want to know more about the modules on the right.
       imagePrefab: {fileID: 0}
       audio: {fileID: 0}
       targetId: SYS1
@@ -1942,7 +1942,7 @@ MonoBehaviour:
       enabled: 0
   - id: SYS1
     name: Zun
-    text: 'Which part do you want me to talk about: the System Symbols or the Number
+    text: 'Which part do you want me to talk about: the System Symbols or the Emergency
       Sequence?'
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
@@ -1962,8 +1962,8 @@ MonoBehaviour:
       enabled: 0
   - id: SYS2
     name: Zun
-    text: Looking in the top right, turn on the different systems by making sure
-      the buttons and symbols on the monitor are the same color.
+    text: For the module on top, turn on the different systems by making sure the
+      buttons and the symbols on the monitor are the same color.
     imagePrefab: {fileID: 265952113170092822, guid: 32227b62a0059f340a1b1f011a04c1ad, type: 3}
     audio: {fileID: 0}
     quest: {fileID: 0}
