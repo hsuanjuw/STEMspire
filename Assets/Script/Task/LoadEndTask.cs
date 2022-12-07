@@ -20,6 +20,7 @@ public class LoadEndTask : Task
         base.DoTask();
         //FindObjectOfType<ScreenFader>().SwitchScene("Thanks");
         FindObjectOfType<EngineerMovement>().ChangeMovement(CharacterMovement.MovementType.Hide);
+        FindObjectOfType<PityTimer>().Hide();
         //SetRobotStatus();
         FindObjectOfType<ButtonFlash>().MakeClickable();
     }

@@ -88,4 +88,10 @@ public class PityTimer : MonoBehaviour
     {
         pityTimeRemaining = 0f;
     }
+
+    public void Hide()
+    {
+        EndTimer();
+        _spre.enabled = false;
+    }
 }
