@@ -132,7 +132,7 @@ MonoBehaviour:
   _currentDirection: {x: 0, y: 0}
   defaultPosition: {x: 1.5, y: 0, z: 0}
   _hidingPlace: {x: 0.44, y: -3.23, z: 0}
-  _hidingLayer: 0
+  _hidingLayer: 2
 --- !u!95 &5498298581573460844
 Animator:
   serializedVersion: 3

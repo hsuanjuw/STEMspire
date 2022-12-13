@@ -88,8 +88,8 @@ public class CharacterMovement : MonoBehaviour
                     ChangeMovement(MovementType.FollowPlayer);
                 break;
             case MovementType.Hide:
-                if (GetComponent<SpriteRenderer>().sortingLayerID != _hidingLayer)
-                    GetComponent<SpriteRenderer>().sortingLayerID = _hidingLayer;
+                if (GetComponent<SpriteRenderer>().sortingOrder != _hidingLayer)
+                    GetComponent<SpriteRenderer>().sortingOrder = _hidingLayer;
                 _currentDirection = _hidingPlace - transform.position;
                 if (_currentDirection.magnitude < .1)
                 {

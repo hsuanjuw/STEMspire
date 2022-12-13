@@ -49,7 +49,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23b9eb313e91a7d4096cca91a6ac706c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onDeathPrefab: {fileID: 849475069255538034, guid: 0f44e303d1d4282478f3564d848ce68f, type: 3}
 --- !u!58 &4474281363450759185
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -136,7 +135,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 116122357
   m_SortingLayer: 1
-  m_SortingOrder: 3
+  m_SortingOrder: 998
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -234,14 +233,6 @@ PrefabInstance:
     - target: {fileID: 12010332, guid: a9892f6a83fd8d4468ce0c8a3d09d3cd, type: 3}
       propertyPath: m_SortingLayer
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 12010332, guid: a9892f6a83fd8d4468ce0c8a3d09d3cd, type: 3}
-      propertyPath: m_SortingOrder
-      value: 999
-      objectReference: {fileID: 0}
-    - target: {fileID: 12010332, guid: a9892f6a83fd8d4468ce0c8a3d09d3cd, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 116122357
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9892f6a83fd8d4468ce0c8a3d09d3cd, type: 3}
