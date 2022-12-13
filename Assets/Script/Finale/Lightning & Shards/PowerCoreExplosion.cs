@@ -8,9 +8,9 @@ public class PowerCoreExplosion : MonoBehaviour
     public LightningBoltScript lightningOne;
     public LightningBoltScript lightningTwo;
     public LightningBoltScript lightningThree;
-    private LightningBoltScript defaultOne = new LightningBoltScript();
-    private LightningBoltScript defaultTwo = new LightningBoltScript();
-    private LightningBoltScript defaultThree = new LightningBoltScript();
+    private LightningBoltScript defaultOne;
+    private LightningBoltScript defaultTwo;
+    private LightningBoltScript defaultThree;
 
     public bool makeExplode = false;
     public bool makeReset = false;
@@ -31,6 +31,10 @@ public class PowerCoreExplosion : MonoBehaviour
     }
     void Start()
     {
+        defaultOne = gameObject.AddComponent<LightningBoltScript>();
+        defaultTwo = gameObject.AddComponent<LightningBoltScript>();
+        defaultThree = gameObject.AddComponent<LightningBoltScript>();
+
         defaultOne.ChaosFactor = lightningOne.ChaosFactor;
         defaultOne.EndPosition = lightningOne.EndPosition;
 

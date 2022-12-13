@@ -17,6 +17,7 @@ public class InitWithDefault : MonoBehaviour
         }
         catch (ConsentCheckException e)
         {
+            Debug.Log(e.Message);
             // Something went wrong when checking the GeoIP, check the e.Reason and handle appropriately.
         }
     }
